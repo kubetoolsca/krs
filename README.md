@@ -10,7 +10,7 @@ A GenAI-powered Kubetools Recommender system for your Kubernetes cluster. It com
 - Ability to scan your existing Kubernetes cluster 
 - Available in the form of CLI tool as well as listed on the [Kubetools](https://kubetools.io) webpage
 - Ability to recommend you with the best tool and categories based on your running workloads
-- Support OpenAI and Hugging Face
+- Supports OpenAI and Hugging Face models
 
 <img width="300" alt="image" src="https://github.com/KrsGPTs/krs/assets/313480/ea071bb8-1282-4b06-8bb6-01f082e4cce0">
 
@@ -34,7 +34,7 @@ Note: If the kube config path for your cluster is not the default *(~/.kube/conf
 ## Clone the repository
 
 ```
-git clone https://github.com/KrsGPTs/krs.git
+git clone https://github.com/kubetoolsca/krs.git
 ```
 
 ### Install the Tool
