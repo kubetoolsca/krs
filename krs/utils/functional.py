@@ -89,7 +89,7 @@ def filter_similar_entries(log_entries : list) -> list:
         return []
 
 
-def extract_log_entries(log_contents : str) -> list:
+def extract_log_entries(log_contents : str, severity: array = ["error"]) -> list:
     
     """
     Extract log entries from a string containing log data.
@@ -120,7 +120,8 @@ def extract_log_entries(log_contents : str) -> list:
                         # Handle JSON formatted log entries
                         try:
                             log_json = json.loads(match.group(1)) # Extract JSON object
-                            if 'severity' in log_json and log_json['severity'].lower() in ['error', 'warning']: # Check for severity
+                           # if 'severity' in log_json and log_json['severity'].lower() in ['error', 'warning']: # Check for severity
+                            if 'severity' in log_json and log_json['severity'].lower() in severity:
                                 level = "Error" if log_json['severity'] == "ERROR" else "Warning" # Map severity to Error or Warning
                                 message = log_json.get('error', '') if 'error' in log_json.keys() else line # Extract error message
                                 log_entries.add(f"{level}: {message.strip()}") # Add formatted log entry
