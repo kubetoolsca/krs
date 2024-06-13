@@ -17,15 +17,18 @@ def check_initialized() -> None:
         if not os.path.exists(KRSSTATE_PICKLE_FILEPATH):
             typer.echo("KRS is not initialized. Please run 'krs init' first.")
             raise typer.Exit()
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
     except KeyboardInterrupt:
         typer.echo("\nExiting...")
         raise typer.Abort()
     except typer.Exit:
         raise typer.Abort()
     except typer.Abort:
+        raise typer.Abort()
+    except FileNotFoundError as e:
+        typer.echo("Error: ", e)
+        raise typer.Abort()
+    except Exception as e:
+        typer.echo("Error: ", e)
         raise typer.Abort()
     except:
         typer.echo("An error occured. Please try again.")
@@ -34,9 +37,6 @@ def check_initialized() -> None:
 try:
     if not os.path.exists(KRS_DATA_DIRECTORY): # Create data directory if not exists
         os.mkdir(KRS_DATA_DIRECTORY)
-except Exception as e:
-    typer.echo("Error: ", e)
-    raise typer.Abort()
 except KeyboardInterrupt as e:
     typer.echo("\nInterruption: ", e)
     raise typer.Abort()
@@ -45,6 +45,12 @@ except typer.Exit as e:
     raise typer.Abort()
 except typer.Abort as e:
     typer.echo("\nAborting: ", e)
+    raise typer.Abort()
+except FileNotFoundError as e:
+    typer.echo("Error: ", e)
+    raise typer.Abort()
+except Exception as e:
+    typer.echo("Error: ", e)
     raise typer.Abort()
 except:
     typer.echo("An error occured. Please try again.")
@@ -59,9 +65,6 @@ def init() -> None: # Function to initialize the services
     try:
         krs.initialize()
         typer.echo("Services initialized and scanner loaded.")
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
     except KeyboardInterrupt as e:
         typer.echo("\nInterruption: ", e)
         raise typer.Abort()
@@ -70,6 +73,12 @@ def init() -> None: # Function to initialize the services
         raise typer.Abort()
     except typer.Abort as e:
         typer.echo("\nAborting: ", e)
+        raise typer.Abort()
+    except ValueError as e:
+        typer.echo("Error: " + str(e))
+        raise typer.Abort()
+    except Exception as e:
+        typer.echo("Error: ", e)
         raise typer.Abort()
     except:
         typer.echo("An error occured. Please try again.")
@@ -84,9 +93,6 @@ def scan() -> None:
     try:
         check_initialized()
         krs.scan_cluster()
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
     except KeyboardInterrupt as e:
         typer.echo("\nInterruption: ", e)
         raise typer.Abort()
@@ -95,6 +101,9 @@ def scan() -> None:
         raise typer.Abort()
     except typer.Abort as e:
         typer.echo("\nAborting: ", e)
+        raise typer.Abort()
+    except Exception as e:
+        typer.echo("Error: ", e)
         raise typer.Abort()
     except:
         typer.echo("An error occured. Please try again.")
@@ -113,9 +122,6 @@ def namespaces() -> None:
         typer.echo("Namespaces in your cluster are: \n")
         for i, namespace in enumerate(namespaces):
             typer.echo(str(i+1)+ ". "+ namespace)
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
     except KeyboardInterrupt as e:
         typer.echo("\nInterruption: ", e)
         raise typer.Abort()
@@ -124,6 +130,9 @@ def namespaces() -> None:
         raise typer.Abort()
     except typer.Abort as e:
         typer.echo("\nAborting: ", e)
+        raise typer.Abort()
+    except Exception as e:
+        typer.echo("Error: ", e)
         raise typer.Abort()
     except:
         typer.echo("An error occured. Please try again.")
@@ -155,9 +164,6 @@ def pods(namespace: str = typer.Option(None, help="Specify namespace to list pod
         
         for i, pod in enumerate(pods):
             typer.echo(str(i+1)+ '. '+ pod)
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
     except KeyboardInterrupt as e:
         typer.echo("\nInterruption: ", e)
         raise typer.Abort()
@@ -166,6 +172,9 @@ def pods(namespace: str = typer.Option(None, help="Specify namespace to list pod
         raise typer.Abort()
     except typer.Abort as e:
         typer.echo("\nAborting: ", e)
+        raise typer.Abort()
+    except Exception as e:
+        typer.echo("Error: ", e)
         raise typer.Abort()
     except:
         typer.echo("An error occured. Please try again.")

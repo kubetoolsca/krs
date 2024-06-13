@@ -37,12 +37,15 @@ class KrsMain:
 
             self.load_state()
             
+        except ValueError as e:
+            print(f"An error occurred during initialization: {e}")
+            raise e
         except Exception as e:
             print(f"An error occurred during initialization: {e}")
             raise e
         except:
             print("An error occurred during initialization.")
-            raise Exception("An error occurred during initialization.")
+            raise e
 
 
     def initialize(self, config_file : str = '~/.kube/config'):
@@ -59,16 +62,44 @@ class KrsMain:
         
         try:
             self.config_file = config_file
-            self.tools_dict, self.category_dict, cncf_status_dict = krs_tool_ranking_info() # Get the tools and their rankings
+            
+            try:
+                self.tools_dict, self.category_dict, cncf_status_dict = krs_tool_ranking_info() # Get the tools and their rankings
+            except ValueError as e:
+                print(f"An error occurred during fetching the tools information: {e}")
+                raise e
+            except Exception as e:
+                print(f"An error occurred during fetching the tools information: {e}")
+                raise e
+            except:
+                print("An error occurred during fetching the tools information.")
+                raise e
+            
             self.cncf_status = cncf_status_dict['cncftools'] # Get the CNCF status of the tools
-            self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file) # Initialize the scanner
+            
+            try:
+                self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file) # Initialize the scanner
+            except ValueError as e:
+                print(f"An error occurred during initializing the scanner: {e}")
+                raise e
+            except Exception as e:
+                print(f"An error occurred during initializing the scanner: {e}")
+                raise e
+            except:
+                print("An error occurred during initializing the scanner.")
+                raise e
+            
             self.save_state() # Save the state
+        except ValueError as e:
+            print(f"An error occurred during initialization: {e}")
+            raise e
         except Exception as e:
             print(f"An error occurred during initialization: {e}")
             raise e
         except:
             print("An error occurred during initialization.")
-            raise Exception("An error occurred during initialization.")
+            raise e
+        
         
 
     def save_state(self) -> None:

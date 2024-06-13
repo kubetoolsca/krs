@@ -15,4 +15,6 @@ POD_INFO_FILEPATH = './exported_pod_info.json'
 
 MAX_OUTPUT_TOKENS = 512
 
+LOG_HISTORY_PATH = 'krs/logs'
+
 KRS_DATA_DIRECTORY = 'krs/data'

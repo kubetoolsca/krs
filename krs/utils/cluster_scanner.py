@@ -20,12 +20,27 @@ class KubetoolsScanner:
             None
         
         """
-        self.get_events = get_events
-        self.get_logs = get_logs
-        self.config_file = config_file
-        self.v1 = None
-        self.v2 = None
-        self.setup_kubernetes_client()
+        
+        try:
+        
+            self.get_events = get_events
+            self.get_logs = get_logs
+            self.config_file = config_file
+            self.v1 = None
+            self.v2 = None
+            self.setup_kubernetes_client()
+        except client.rest.ApiException as e:
+            logging.error(f"An error occurred while initializing the KubetoolsScanner: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"An error occurred while initializing the KubetoolsScanner: {e}", exc_info=True)
+            raise
+        except Exception as e:
+            logging.error(f"An error occurred while initializing the KubetoolsScanner: {e}", exc_info=True)
+            raise
+        except:
+            logging.error("An error occurred while initializing the KubetoolsScanner.", exc_info=True)
+            raise
 
     def setup_kubernetes_client(self) -> None:
         
@@ -45,11 +60,20 @@ class KubetoolsScanner:
             config.load_kube_config(config_file=self.config_file) # Load the Kubernetes configuration
             self.v1 = client.AppsV1Api() # Create an instance of the Kubernetes AppsV1 API
             self.v2 = client.CoreV1Api() # Create an instance of the Kubernetes CoreV1 API
+        except client.rest.ApiException as e:
+            logging.error(f"Failed to load Kubernetes configuration: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Failed to load Kubernetes configuration: {e}", exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error(f"Failed to load Kubernetes configuration: {e}", exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Failed to load Kubernetes configuration: %s", e)
+            logging.error(f"Failed to load Kubernetes configuration: {e}",exc_info=True)
             raise
         except:
-            logging.error("An error occurred while setting up the Kubernetes client.")
+            logging.error("An error occurred while setting up the Kubernetes client.", exc_info=True)
             raise
 
     def scan_kubernetes_deployment(self) -> tuple:
@@ -82,14 +106,20 @@ class KubetoolsScanner:
             return pod_list, pod_dict, deployment_list, namespaces # Return the list of pods, pod info, deployments, and namespaces
         
         except client.rest.ApiException as e:
-            logging.error("Error fetching data from Kubernetes API: %s", e)
-            return [], {}, [], []
+            logging.error(f"Error fetching data from Kubernetes API: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Error fetching data from Kubernetes API: {e}", exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error(f"Error fetching data from Kubernetes API: {e}", exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Error fetching data from Kubernetes API: %s", e)
-            return {}, {}, []
+            logging.error(f"Error fetching data from Kubernetes API: {e}", exc_info=True)
+            raise
         except:
-            logging.error("An error occurred while fetching data from the Kubernetes API.")
-            return {}, {}, []
+            logging.error("An error occurred while fetching data from the Kubernetes API.", exc_info=True)
+            raise
 
 
     def list_namespaces(self) -> list:
@@ -107,12 +137,21 @@ class KubetoolsScanner:
         try:
             namespaces = self.v2.list_namespace() # List all namespaces
             return [namespace.metadata.name for namespace in namespaces.items] # Extract namespace names
+        except client.rest.ApiException as e:
+            logging.error(f"Failed to list namespaces: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Failed to list namespaces: {e}", exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error(f"Failed to list namespaces: {e}", exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Failed to list namespaces: %s", e)
-            return []
+            logging.error(f"Failed to list namespaces: {e}", exc_info=True)
+            raise
         except:
-            logging.error("An error occurred while listing namespaces.")
-            return []
+            logging.error("An error occurred while listing namespaces.", exc_info=True)
+            raise
     
     def list_pods_all(self) -> list:
         
@@ -129,24 +168,42 @@ class KubetoolsScanner:
         try:
             pods = self.v2.list_pod_for_all_namespaces() # List all pods
             return [pod.metadata.name for pod in pods.items] # Extract pod names
+        except client.rest.ApiException as e:
+            logging.error(f"Failed to list pods: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Failed to list pods: {e}", exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error(f"Failed to list pods: {e}", exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Failed to list pods: %s", e)
-            return []
+            logging.error(f"Failed to list pods: {e}", exc_info=True)
+            raise
         except:
-            logging.error("An error occurred while listing pods.")
-            return []
+            logging.error(f"An error occurred while listing pods.", exc_info=True)
+            raise
 
     def list_pods(self, namespace : str) -> list:
         
         try:
             pods = self.v2.list_namespaced_pod(namespace) # List pods in a specific namespace
             return [pod.metadata.name for pod in pods.items] # Extract pod names
+        except client.rest.ApiException as e:
+            logging.error(f"Failed to list pods in namespace {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Failed to list pods in namespace {e}", exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error(f"Failed to list pods in namespace {e}", exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Failed to list pods in namespace %s: %s", namespace, e)
-            return []
+            logging.error(f"Failed to list pods in namespace {e}", exc_info=True)
+            raise
         except:
-            logging.error("An error occurred while listing pods in namespace %s.", namespace)
-            return []
+            logging.error(f"An error occurred while listing pods in namespace {e}.", exc_info=True)
+            raise
 
     def get_pod_info(self, namespace : str, pod: str, include_events: bool =True, include_logs: bool = True) -> dict:
         """
@@ -190,14 +247,20 @@ class KubetoolsScanner:
 
             return info
         except client.rest.ApiException as e:
-            logging.error("Error fetching pod info: %s", e)
-            return {}
+            logging.error(f"Error fetching pod info: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Error fetching pod info: {e}", exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error(f"Error fetching pod info: {e}", exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Error fetching pod info: %s", e)
-            return {}
+            logging.error(f"Error fetching pod info: {e}", exc_info=True)
+            raise
         except:
-            logging.error("An error occurred while fetching pod info.")
-            return {}
+            logging.error("An error occurred while fetching pod info.", exc_info=True)
+            raise
 
     def fetch_pod_events(self, namespace: str, pod: str) -> list:
         
@@ -221,14 +284,20 @@ class KubetoolsScanner:
                 'Reason': event.reason
             } for event in events.items if event.involved_object.name == pod]
         except client.rest.ApiException as e:
-            logging.error("Error fetching events for pod %s in namespace %s: %s", pod, namespace, e)
-            return []
+            logging.error("Error fetching events for pod %s in namespace %s: %s", pod, namespace, e, exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error("Error fetching events for pod %s in namespace %s: %s", pod, namespace, e, exc_info=True)
+            raise
+        except FileNotFoundError as e:
+            logging.error("Error fetching events for pod %s in namespace %s: %s", pod, namespace, e, exc_info=True)
+            raise
         except Exception as e:
-            logging.error("Error fetching events for pod %s in namespace %s: %s", pod, namespace, e)
-            return []
+            logging.error("Error fetching events for pod %s in namespace %s: %s", pod, namespace, e, exc_info=True)
+            raise
         except:
-            logging.error("An error occurred while fetching events for pod %s in namespace %s.", pod, namespace)
-            return []
+            logging.error("An error occurred while fetching events for pod %s in namespace %s.", pod, namespace, exc_info=True)
+            raise
 
 
 if __name__ == '__main__':
