@@ -123,7 +123,7 @@ Namespaces in your cluster are:
 4. kube-system
 ```
 
-## Installing Kubetools
+## Installing sample Kubernetes Tools
 
 Assuming that you already have a bunch of Kubernetes tools running in your infrastructure.
 If not, you can leverage [samples/install-tools.sh](samples/install-tools.sh) script to install these sample tools.
