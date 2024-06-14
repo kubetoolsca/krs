@@ -104,13 +104,10 @@ Extracted tools used in cluster...
 
 The cluster is using the following tools:
 
-+-------------+--------+-----------------------------+---------------+
-| Tool Name   |   Rank | Category                    | CNCF Status   |
-+=============+========+=============================+===============+
-| kubeview    |     30 | Cluster with Core CLI tools | unlisted      |
-+-------------+--------+-----------------------------+---------------+
-|             |      3 | Cluster Management          | unlisted      |
-+-------------+--------+-----------------------------+---------------+
++-------------+--------+------------+---------------+
+| Tool Name   | Rank   | Category   | CNCF Status   |
++=============+========+============+===============+
++-------------+--------+------------+---------------+
 ```
 
 
@@ -124,10 +121,12 @@ Namespaces in your cluster are:
 2. kube-node-lease
 3. kube-public
 4. kube-system
-5. ns1
 ```
 
+
 ## List pods under a specified namespace
+
+Assuming that there is a Nginx Pod under the namespace ns1
 
 ```
 krs pods --namespace ns1
