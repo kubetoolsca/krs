@@ -4,7 +4,7 @@ import typer, os
 from krs.main import KrsMain
 from krs.utils.constants import KRSSTATE_PICKLE_FILEPATH, KRS_DATA_DIRECTORY
 
-app = typer.Typer()
+app = typer.Typer(help="krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster")
 krs = KrsMain()
 
 def check_initialized():
@@ -16,11 +16,11 @@ if not os.path.exists(KRS_DATA_DIRECTORY):
     os.mkdir(KRS_DATA_DIRECTORY)
 
 @app.command()
-def init():
+def init(kubeconfig: str = typer.Option('~/.kube/config', help="Custom path for kubeconfig file if not default")):
     """
     Initializes the services and loads the scanner.
     """
-    krs.initialize()
+    krs.initialize(kubeconfig)
     typer.echo("Services initialized and scanner loaded.")
 
 @app.command()
@@ -71,13 +71,14 @@ def recommend():
     krs.generate_recommendations()
 
 @app.command()
-def health(change_model: bool = typer.Option(False, help="Option to reinitialize/change the LLM, if set to True")):
+def health(change_model: bool = typer.Option(False, help="Option to reinitialize/change the LLM, if set to True"),
+           device: str = typer.Option('cpu', help='Option to run Huggingface models on GPU by entering the option as "gpu"')):
     """
-    Starts an interactive terminal to chat with user.
+    Starts an interactive terminal using an LLM of your choice to detect and fix issues with your cluster
     """
     check_initialized()
     typer.echo("\nStarting interactive terminal...\n")
-    krs.health_check(change_model)
+    krs.health_check(change_model, device)
 
 @app.command()
 def export():

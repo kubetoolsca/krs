@@ -5,7 +5,7 @@ from krs.utils.constants import (MAX_OUTPUT_TOKENS, LLMSTATE_PICKLE_FILEPATH)
 
 class KrsGPTClient:
 
-    def __init__(self, reinitialize=False, reset_history=False):
+    def __init__(self, reinitialize=False, reset_history=False, device='cpu'):
 
         self.reinitialize = reinitialize
         self.client = None
@@ -16,6 +16,7 @@ class KrsGPTClient:
         self.continue_chat = False
         self.history = []
         self.max_tokens = MAX_OUTPUT_TOKENS
+        self.device = device
 
 
         if not self.reinitialize:
@@ -137,7 +138,7 @@ class KrsGPTClient:
         try:
             self.tokenizer = AutoTokenizer.from_pretrained(self.model)
             self.model_hf = AutoModelForCausalLM.from_pretrained(self.model)
-            self.pipeline = pipeline('text-generation', model=self.model_hf, tokenizer=self.tokenizer)
+            self.pipeline = pipeline('text-generation', model=self.model_hf, tokenizer=self.tokenizer, device=0 if self.device == 'gpu' else -1)
 
         except OSError as e:
             print("\nError loading model: ", e)
