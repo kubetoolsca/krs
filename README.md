@@ -91,8 +91,9 @@ Run the following command to scan the cluster and extract a list of tools that a
 krs scan
 ```
 
+You will see the following results:
+
 ```
-krs scan
 
 Scanning your cluster...
 
