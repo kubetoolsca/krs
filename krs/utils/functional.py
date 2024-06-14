@@ -1,7 +1,9 @@
+import array
 from difflib import SequenceMatcher
-from math import e
+from math import e, log
 import re, json
 from datetime import datetime
+import logging
 
 class CustomJSONEncoder(json.JSONEncoder):
     """
@@ -25,11 +27,13 @@ class CustomJSONEncoder(json.JSONEncoder):
             # Let the base class default method raise the TypeError
             return json.JSONEncoder.default(self, obj)
         except TypeError as e:
-            return str(obj)
+            logging.error(f"Error serializing object: {e}", exc_info=True)
+            raise
         except Exception as e:
-            raise e
+            logging.error(f"An error occurred during serialization: {e}", exc_info=True)
+            raise 
         except:
-            print("An error occurred during serialization.")
+            print("An error occurred during serialization.", exc_info=True)
             raise
 
 def similarity(a : str, b: str) -> float:
@@ -46,12 +50,30 @@ def similarity(a : str, b: str) -> float:
     
     try:
         return SequenceMatcher(None, a, b).ratio()
+    except TypeError as e:
+        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        raise
+    except ValueError as e:
+        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        raise
+    except ZeroDivisionError as e:
+        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        raise
+    except MemoryError as e:
+        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        raise
+    except RecursionError as e:
+        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        raise
+    except OverflowError as e:
+        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        raise
     except Exception as e:
-        print(f"An error occurred during similarity calculation: {e}")
-        return 0.0
+        logging.error(f"An error occurred during similarity calculation: {e}", exc_info=True)
+        raise
     except:
-        print("An error occurred during similarity calculation.")
-        return 0.0
+        print("An error occurred during similarity calculation.", exc_info=True)
+        raise
 
 def filter_similar_entries(log_entries : list) -> list:
     
@@ -81,12 +103,18 @@ def filter_similar_entries(log_entries : list) -> list:
         # Filter out the highly similar entries
         filtered_entries = {entry for entry in unique_entries if entry not in to_remove}
         return filtered_entries
+    except TypeError as e:
+        logging.error(f"Error filtering log entries: {e}", exc_info=True)
+        raise
+    except ValueError as e:
+        logging.error(f"Error filtering log entries: {e}", exc_info=True)
+        raise
     except Exception as e:
-        print(f"An error occurred during filtering of log entries: {e}")
-        return []
+        logging.error(f"An error occurred during filtering of log entries: {e}", exc_info=True)
+        raise
     except:
-        print("An error occurred during filtering of log entries.")
-        return []
+        print("An error occurred during filtering of log entries.", exc_info=True)
+        raise
 
 
 def extract_log_entries(log_contents : str, severity: array = ["error"]) -> list:
@@ -112,42 +140,75 @@ def extract_log_entries(log_contents : str, severity: array = ["error"]) -> list
 
         log_entries = set()
         # Attempt to match each line with all patterns
-        for line in log_contents.split('\n'):
-            for pattern in patterns:
-                match = pattern.search(line)
-                if match:
-                    if match.groups()[0].startswith('{'):
-                        # Handle JSON formatted log entries
-                        try:
-                            log_json = json.loads(match.group(1)) # Extract JSON object
-                           # if 'severity' in log_json and log_json['severity'].lower() in ['error', 'warning']: # Check for severity
-                            if 'severity' in log_json and log_json['severity'].lower() in severity:
-                                level = "Error" if log_json['severity'] == "ERROR" else "Warning" # Map severity to Error or Warning
-                                message = log_json.get('error', '') if 'error' in log_json.keys() else line # Extract error message
-                                log_entries.add(f"{level}: {message.strip()}") # Add formatted log entry
-                            elif 'level' in log_json: # Check for level
-                                level = "Error" if log_json['level'] == "error" else "Warning" # Map level to Error or Warning
-                                message = log_json.get('msg', '')  + log_json.get('error', '') # Extract message
-                                log_entries.add(f"{level}: {message.strip()}") # Add formatted log entry
-                        except json.JSONDecodeError: # Skip if JSON is not valid
-                            continue  # Skip if JSON is not valid
-                    else:
-                        if len(match.groups()) == 2:
-                            level, message = match.groups()
-                        elif len(match.groups()) == 1:
-                            message = match.group(1)  # Assuming error as default
-                            level = "ERROR"  # Default if not specified in the log
+        try:
+            for line in log_contents.split('\n'):
+                for pattern in patterns:
+                    match = pattern.search(line)
+                    if match:
+                        if match.groups()[0].startswith('{'):
+                            # Handle JSON formatted log entries
+                            try:
+                                log_json = json.loads(match.group(1)) # Extract JSON object
+                            # if 'severity' in log_json and log_json['severity'].lower() in ['error', 'warning']: # Check for severity
+                                if 'severity' in log_json and log_json['severity'].lower() in severity:
+                                    level = "Error" if log_json['severity'] == "ERROR" else "Warning" # Map severity to Error or Warning
+                                    message = log_json.get('error', '') if 'error' in log_json.keys() else line # Extract error message
+                                    log_entries.add(f"{level}: {message.strip()}") # Add formatted log entry
+                                elif 'level' in log_json: # Check for level
+                                    level = "Error" if log_json['level'] == "error" else "Warning" # Map level to Error or Warning
+                                    message = log_json.get('msg', '')  + log_json.get('error', '') # Extract message
+                                    log_entries.add(f"{level}: {message.strip()}") # Add formatted log entry
+                            except json.JSONDecodeError: # Skip if JSON is not valid
+                                continue  # Skip if JSON is not valid
+                        else:
+                            if len(match.groups()) == 2:
+                                level, message = match.groups()
+                            elif len(match.groups()) == 1:
+                                message = match.group(1)  # Assuming error as default
+                                level = "ERROR"  # Default if not specified in the log
 
-                        level = "Error" if "error" in level.lower() else "Warning" # Map level to Error or Warning
-                        formatted_message = f"{level}: {message.strip()}" # Format log entry
-                        log_entries.add(formatted_message) # Add formatted log entry
-                    break  # Stop after the first match
+                            level = "Error" if "error" in level.lower() else "Warning" # Map level to Error or Warning
+                            formatted_message = f"{level}: {message.strip()}" # Format log entry
+                            log_entries.add(formatted_message) # Add formatted log entry
+                        break  # Stop after the first match
 
-        return filter_similar_entries(log_entries) # Filter out highly similar log entries
+        except TypeError as e:
+            logging.error(f"Error extracting log entries: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Error extracting log entries: {e}", exc_info=True)
+            raise
+        except Exception as e:
+            logging.error(f"An error occurred during log entry extraction: {e}", exc_info=True)
+            raise
+        except:
+            print("An error occurred during log entry extraction.", exc_info=True)
+            raise
 
+        try:
+            return filter_similar_entries(log_entries) # Filter out highly similar log entries
+        except TypeError as e:
+            logging.error(f"Error filtering log entries: {e}", exc_info=True)
+            raise
+        except ValueError as e:
+            logging.error(f"Error filtering log entries: {e}", exc_info=True)
+            raise
+        except Exception as e:
+            logging.error(f"An error occurred during filtering of log entries: {e}", exc_info=True)
+            raise
+        except:
+            print("An error occurred during filtering of log entries.", exc_info=True)
+            raise
+
+    except TypeError as e:
+        logging.error(f"Error extracting log entries: {e}", exc_info=True)
+        raise
+    except ValueError as e:
+        logging.error(f"Error extracting log entries: {e}", exc_info=True)
+        raise
     except Exception as e:
-        print(f"An error occurred during pattern creation: {e}")
-        return []
+        logging.error(f"An error occurred during pattern creation: {e}", exc_info=True)
+        raise
     except:
-        print("An error occurred during pattern creation.")
-        return []
+        print("An error occurred during pattern creation.", exc_info=True)
+        raise
