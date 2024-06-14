@@ -2,7 +2,6 @@ from krs.utils.fetch_tools_krs import krs_tool_ranking_info
 from krs.utils.cluster_scanner import KubetoolsScanner
 from krs.utils.llm_client import KrsGPTClient
 from krs.utils.functional import extract_log_entries, CustomJSONEncoder
-from termcolor import colored
 import os, pickle, time, json
 from tabulate import tabulate
 from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY)
