@@ -4,176 +4,66 @@ import typer, os
 from krs.main import KrsMain
 from krs.utils.constants import KRSSTATE_PICKLE_FILEPATH, KRS_DATA_DIRECTORY
 
-app = typer.Typer() # Main typer app
-krs = KrsMain() # Main class object
+app = typer.Typer()
+krs = KrsMain()
 
+def check_initialized():
+    if not os.path.exists(KRSSTATE_PICKLE_FILEPATH):
+        typer.echo("KRS is not initialized. Please run 'krs init' first.")
+        raise typer.Exit()
 
-def check_initialized() -> None:
-    
-    """
-    Checks if KRS is initialized or not.
-    """
-    try:
-        if not os.path.exists(KRSSTATE_PICKLE_FILEPATH):
-            typer.echo("KRS is not initialized. Please run 'krs init' first.")
-            raise typer.Exit()
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
-    except KeyboardInterrupt:
-        typer.echo("\nExiting...")
-        raise typer.Abort()
-    except typer.Exit:
-        raise typer.Abort()
-    except typer.Abort:
-        raise typer.Abort()
-    except:
-        typer.echo("An error occured. Please try again.")
-        raise typer.Abort()
+if not os.path.exists(KRS_DATA_DIRECTORY):
+    os.mkdir(KRS_DATA_DIRECTORY)
 
-try:
-    if not os.path.exists(KRS_DATA_DIRECTORY): # Create data directory if not exists
-        os.mkdir(KRS_DATA_DIRECTORY)
-except Exception as e:
-    typer.echo("Error: ", e)
-    raise typer.Abort()
-except KeyboardInterrupt as e:
-    typer.echo("\nInterruption: ", e)
-    raise typer.Abort()
-except typer.Exit as e:
-    typer.echo("\nExiting: ", e)
-    raise typer.Abort()
-except typer.Abort as e:
-    typer.echo("\nAborting: ", e)
-    raise typer.Abort()
-except:
-    typer.echo("An error occured. Please try again.")
-    raise typer.Abort()
-
-
-@app.command() # Command to initialize the services
-def init() -> None: # Function to initialize the services
+@app.command()
+def init():
     """
     Initializes the services and loads the scanner.
     """
-    try:
-        krs.initialize()
-        typer.echo("Services initialized and scanner loaded.")
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
-    except KeyboardInterrupt as e:
-        typer.echo("\nInterruption: ", e)
-        raise typer.Abort()
-    except typer.Exit as e:
-        typer.echo("\nExiting: ", e)
-        raise typer.Abort()
-    except typer.Abort as e:
-        typer.echo("\nAborting: ", e)
-        raise typer.Abort()
-    except:
-        typer.echo("An error occured. Please try again.")
-        raise typer.Abort()
+    krs.initialize()
+    typer.echo("Services initialized and scanner loaded.")
 
-# Command to scan the cluster
 @app.command()
-def scan() -> None:
+def scan():
     """
     Scans the cluster and extracts a list of tools that are currently used.
     """
-    try:
-        check_initialized()
-        krs.scan_cluster()
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
-    except KeyboardInterrupt as e:
-        typer.echo("\nInterruption: ", e)
-        raise typer.Abort()
-    except typer.Exit as e:
-        typer.echo("\nExiting: ", e)
-        raise typer.Abort()
-    except typer.Abort as e:
-        typer.echo("\nAborting: ", e)
-        raise typer.Abort()
-    except:
-        typer.echo("An error occured. Please try again.")
-        raise typer.Abort()
+    check_initialized()
+    krs.scan_cluster()
 
-# Command to list all the namespaces
+
 @app.command()
-def namespaces() -> None:
+def namespaces():
     """
     Lists all the namespaces.
     """
-    
-    try:
-        check_initialized()
-        namespaces = krs.list_namespaces()
-        typer.echo("Namespaces in your cluster are: \n")
-        for i, namespace in enumerate(namespaces):
-            typer.echo(str(i+1)+ ". "+ namespace)
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
-    except KeyboardInterrupt as e:
-        typer.echo("\nInterruption: ", e)
-        raise typer.Abort()
-    except typer.Exit as e:
-        typer.echo("\nExiting: ", e)
-        raise typer.Abort()
-    except typer.Abort as e:
-        typer.echo("\nAborting: ", e)
-        raise typer.Abort()
-    except:
-        typer.echo("An error occured. Please try again.")
-        raise typer.Abort()
+    check_initialized()
+    namespaces = krs.list_namespaces()
+    typer.echo("Namespaces in your cluster are: \n")
+    for i, namespace in enumerate(namespaces):
+        typer.echo(str(i+1)+ ". "+ namespace)
 
-# Command to list all the pods
 @app.command()
-def pods(namespace: str = typer.Option(None, help="Specify namespace to list pods from")) -> None:
-    
+def pods(namespace: str = typer.Option(None, help="Specify namespace to list pods from")):
     """
     Lists all the pods with namespaces, or lists pods under a specified namespace.
-    
-    Args:
-        namespace: str: Namespace name to list pods from.
-    Returns:
-        None
     """
-    try:
-        check_initialized()
-        if namespace:
-            pods = krs.list_pods(namespace)
-            if pods == 'wrong namespace name':
-                typer.echo(f"\nWrong namespace name entered, try again!\n")
-                raise typer.Abort()
-            typer.echo(f"\nPods in namespace '{namespace}': \n")
-        else:
-            pods = krs.list_pods_all()
-            typer.echo("\nAll pods in the cluster: \n")
-        
-        for i, pod in enumerate(pods):
-            typer.echo(str(i+1)+ '. '+ pod)
-    except Exception as e:
-        typer.echo("Error: ", e)
-        raise typer.Abort()
-    except KeyboardInterrupt as e:
-        typer.echo("\nInterruption: ", e)
-        raise typer.Abort()
-    except typer.Exit as e:
-        typer.echo("\nExiting: ", e)
-        raise typer.Abort()
-    except typer.Abort as e:
-        typer.echo("\nAborting: ", e)
-        raise typer.Abort()
-    except:
-        typer.echo("An error occured. Please try again.")
-        raise typer.Abort()
-
+    check_initialized()
+    if namespace:
+        pods = krs.list_pods(namespace)
+        if pods == 'wrong namespace name':
+            typer.echo(f"\nWrong namespace name entered, try again!\n")
+            raise typer.Abort()
+        typer.echo(f"\nPods in namespace '{namespace}': \n")
+    else:
+        pods = krs.list_pods_all()
+        typer.echo("\nAll pods in the cluster: \n")
+    
+    for i, pod in enumerate(pods):
+        typer.echo(str(i+1)+ '. '+ pod)
 
 @app.command()
-def recommend(): # Command to recommend tools
+def recommend():
     """
     Generates a table of recommended tools from our ranking database and their CNCF project status.
     """
