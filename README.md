@@ -189,6 +189,7 @@ Our recommended tools for this deployment are:
 ## Krs health
 
 
+
 Assuming that there is a Nginx Pod under the namespace ns1
 
 ```
@@ -213,7 +214,10 @@ Choose the model provider for healthcheck:
 >>
 ```
 
-Let's say you choose 1, the it will install necessary libraries.
+The user is prompted to choose a model provider for the health check. 
+The options provided are "OpenAI" and "Huggingface". The selected option determines which LLM model will be used for the health check.
+
+Let's say you choose the option "1", then it will install the necessary libraries.
 
 
 ```
