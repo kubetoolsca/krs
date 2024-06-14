@@ -173,7 +173,7 @@ class KrsMain:
         print(tabulate(recommendations, headers=["Category", "Recommendation", "Tool Name", "CNCF Status"], tablefmt="grid"))
 
     
-    def health_check(self, change_model=False):
+    def health_check(self, change_model=False, device='cpu'):
 
         if os.path.exists(LLMSTATE_PICKLE_FILEPATH) and not change_model:
             continue_previous_chat = input("\nDo you want to continue fixing the previously selected pod ? (y/n): >> ")
@@ -184,13 +184,13 @@ class KrsMain:
                     break
 
             if continue_previous_chat=='y':
-                krsllmclient = KrsGPTClient()
+                krsllmclient = KrsGPTClient(device=device)
                 self.continue_chat = True
             else:
-                krsllmclient = KrsGPTClient(reset_history=True)
+                krsllmclient = KrsGPTClient(reset_history=True, device=device)
             
         else:
-            krsllmclient = KrsGPTClient(reinitialize=True)
+            krsllmclient = KrsGPTClient(reinitialize=True, device=device)
             self.continue_chat = False
 
         if not self.continue_chat:
@@ -244,7 +244,7 @@ class KrsMain:
         try:
             namespace_index -= 1
             pod_index -= 1
-            namespace = list(self.pod_info.keys())[namespace_index]
+            namespace = list(self.list_namespaces())[namespace_index]
             return list(self.pod_info[namespace][pod_index]['info']['Logs'].values())[0]
         except KeyError as e:
             print("\nKindly enter a value from the available namespaces and pods")
