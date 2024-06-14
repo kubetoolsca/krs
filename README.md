@@ -17,6 +17,11 @@ The main functionalities of the project include:
 - Cleaning up: The tool provides an option to clean up the project's data directory by deleting all files and directories within it.
 - Supports OpenAI and Hugging Face models
 
+The project uses various Python libraries, such as typer, requests, kubernetes, tabulate, and pickle, to accomplish its functionalities. 
+It also utilizes a language model (LLM) for the health check feature. 
+The project's directory structure and package management are managed using requirements.txt. 
+The project's data, such as tool rankings, CNCF status, and Kubernetes cluster information, are stored in JSON files and pickled files.
+
 <img width="300" alt="image" src="https://github.com/KrsGPTs/krs/assets/313480/ea071bb8-1282-4b06-8bb6-01f082e4cce0">
 
 
