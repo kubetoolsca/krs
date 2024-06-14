@@ -3,7 +3,10 @@ from difflib import SequenceMatcher
 from math import e, log
 import re, json
 from datetime import datetime
-import logging
+from krs.utils.log_manager import krs_logger
+
+
+logger, log_with_exception = krs_logger()
 
 class CustomJSONEncoder(json.JSONEncoder):
     """
@@ -27,10 +30,10 @@ class CustomJSONEncoder(json.JSONEncoder):
             # Let the base class default method raise the TypeError
             return json.JSONEncoder.default(self, obj)
         except TypeError as e:
-            logging.error(f"Error serializing object: {e}", exc_info=True)
+            log_with_exception(f"Error serializing object: {e}", exc_info=True)
             raise
         except Exception as e:
-            logging.error(f"An error occurred during serialization: {e}", exc_info=True)
+            log_with_exception(f"An error occurred during serialization: {e}", exc_info=True)
             raise 
         except:
             print("An error occurred during serialization.", exc_info=True)
@@ -51,25 +54,25 @@ def similarity(a : str, b: str) -> float:
     try:
         return SequenceMatcher(None, a, b).ratio()
     except TypeError as e:
-        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        log_with_exception(f"Error calculating similarity: {e}", exc_info=True)
         raise
     except ValueError as e:
-        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        log_with_exception(f"Error calculating similarity: {e}", exc_info=True)
         raise
     except ZeroDivisionError as e:
-        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        log_with_exception(f"Error calculating similarity: {e}", exc_info=True)
         raise
     except MemoryError as e:
-        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        log_with_exception(f"Error calculating similarity: {e}", exc_info=True)
         raise
     except RecursionError as e:
-        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        log_with_exception(f"Error calculating similarity: {e}", exc_info=True)
         raise
     except OverflowError as e:
-        logging.error(f"Error calculating similarity: {e}", exc_info=True)
+        log_with_exception(f"Error calculating similarity: {e}", exc_info=True)
         raise
     except Exception as e:
-        logging.error(f"An error occurred during similarity calculation: {e}", exc_info=True)
+        log_with_exception(f"An error occurred during similarity calculation: {e}", exc_info=True)
         raise
     except:
         print("An error occurred during similarity calculation.", exc_info=True)
@@ -104,13 +107,13 @@ def filter_similar_entries(log_entries : list) -> list:
         filtered_entries = {entry for entry in unique_entries if entry not in to_remove}
         return filtered_entries
     except TypeError as e:
-        logging.error(f"Error filtering log entries: {e}", exc_info=True)
+        log_with_exception(f"Error filtering log entries: {e}", exc_info=True)
         raise
     except ValueError as e:
-        logging.error(f"Error filtering log entries: {e}", exc_info=True)
+        log_with_exception(f"Error filtering log entries: {e}", exc_info=True)
         raise
     except Exception as e:
-        logging.error(f"An error occurred during filtering of log entries: {e}", exc_info=True)
+        log_with_exception(f"An error occurred during filtering of log entries: {e}", exc_info=True)
         raise
     except:
         print("An error occurred during filtering of log entries.", exc_info=True)
@@ -173,13 +176,13 @@ def extract_log_entries(log_contents : str, severity: array = ["error"]) -> list
                         break  # Stop after the first match
 
         except TypeError as e:
-            logging.error(f"Error extracting log entries: {e}", exc_info=True)
+            log_with_exception(f"Error extracting log entries: {e}", exc_info=True)
             raise
         except ValueError as e:
-            logging.error(f"Error extracting log entries: {e}", exc_info=True)
+            log_with_exception(f"Error extracting log entries: {e}", exc_info=True)
             raise
         except Exception as e:
-            logging.error(f"An error occurred during log entry extraction: {e}", exc_info=True)
+            log_with_exception(f"An error occurred during log entry extraction: {e}", exc_info=True)
             raise
         except:
             print("An error occurred during log entry extraction.", exc_info=True)
@@ -188,26 +191,26 @@ def extract_log_entries(log_contents : str, severity: array = ["error"]) -> list
         try:
             return filter_similar_entries(log_entries) # Filter out highly similar log entries
         except TypeError as e:
-            logging.error(f"Error filtering log entries: {e}", exc_info=True)
+            log_with_exception(f"Error filtering log entries: {e}", exc_info=True)
             raise
         except ValueError as e:
-            logging.error(f"Error filtering log entries: {e}", exc_info=True)
+            log_with_exception(f"Error filtering log entries: {e}", exc_info=True)
             raise
         except Exception as e:
-            logging.error(f"An error occurred during filtering of log entries: {e}", exc_info=True)
+            log_with_exception(f"An error occurred during filtering of log entries: {e}", exc_info=True)
             raise
         except:
             print("An error occurred during filtering of log entries.", exc_info=True)
             raise
 
     except TypeError as e:
-        logging.error(f"Error extracting log entries: {e}", exc_info=True)
+        log_with_exception(f"Error extracting log entries: {e}", exc_info=True)
         raise
     except ValueError as e:
-        logging.error(f"Error extracting log entries: {e}", exc_info=True)
+        log_with_exception(f"Error extracting log entries: {e}", exc_info=True)
         raise
     except Exception as e:
-        logging.error(f"An error occurred during pattern creation: {e}", exc_info=True)
+        log_with_exception(f"An error occurred during pattern creation: {e}", exc_info=True)
         raise
     except:
         print("An error occurred during pattern creation.", exc_info=True)
