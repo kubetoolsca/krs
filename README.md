@@ -1,5 +1,7 @@
 # Kubetools Recommender System
 
+A GenAI-powered Python-based Kubetools Recommender system for your Kubernetes cluster. 
+
 # Table of Contents
 
 - [Kubetools Recommender System](#kubetools-recommender-system)
@@ -23,7 +25,6 @@
 
 ![Twitter](https://img.shields.io/twitter/follow/kubetools?style=social)
 
-A GenAI-powered Python-based Kubetools Recommender system for your Kubernetes cluster. 
 The main functionalities of the project include:
 
 - Scanning the Kubernetes cluster: The tool scans the cluster to identify the deployed pods, services, and deployments. It retrieves information about the tools used in the cluster and their rankings.
