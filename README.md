@@ -5,11 +5,18 @@
 
 ![Twitter](https://img.shields.io/twitter/follow/kubetools?style=social)
 
-A GenAI-powered Kubetools Recommender system for your Kubernetes cluster. It comes with the following capabilities:
+A GenAI-powered Python-based Kubetools Recommender system for your Kubernetes cluster. It comes with the following capabilities:
 
-- Ability to scan your existing Kubernetes cluster 
-- Available in the form of CLI tool as well as listed on the [Kubetools](https://kubetools.io) webpage
-- Ability to recommend you with the best tool and categories based on your running workloads
+
+The main functionalities of the project include:
+
+- Scanning the Kubernetes cluster: The tool scans the cluster to identify the deployed pods, services, and deployments. It retrieves information about the tools used in the cluster and their rankings.
+- Detecting tools from the repository: The tool detects the tools used in the cluster by analyzing the names of the pods and deployments.
+- Extracting rankings: The tool extracts the rankings of the detected tools based on predefined criteria. It categorizes the tools into different categories and provides the rankings for each category.
+- Generating recommendations: The tool generates recommendations for Kubernetes tools based on the detected tools and their rankings. It suggests the best tools for each category and compares them with the tools already used in the cluster.
+- Health check: The tool provides a health check for a selected pod in the cluster. It extracts logs and events from the pod and analyzes them using a language model (LLM) to identify potential issues and provide recommendations for resolving them.
+- Exporting pod information: The tool exports the information about the pods, services, and deployments in the cluster to a JSON file.
+- Cleaning up: The tool provides an option to clean up the project's data directory by deleting all files and directories within it.
 - Supports OpenAI and Hugging Face models
 
 <img width="300" alt="image" src="https://github.com/KrsGPTs/krs/assets/313480/ea071bb8-1282-4b06-8bb6-01f082e4cce0">
