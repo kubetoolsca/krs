@@ -38,7 +38,7 @@ Note: If the kube config path for your cluster is not the default *(~/.kube/conf
 git clone https://github.com/kubetoolsca/krs.git
 ```
 
-### Install the Tool
+### Install the Krs Tool
 
 Change directory to /krs and run the following command to install krs locally on your system:
 
@@ -125,7 +125,8 @@ Namespaces in your cluster are:
 
 ## Installing Kubetools
 
-Run the following script to install a bunch of tools for your Kubernetes cluster.
+Assuming that you already have a bunch of Kubernetes tools running in your infrastructure.
+If not, you can leverage [samples/install-tools.sh](samples/install-tools.sh) script to install these sample tools.
 
 ```
 cd samples
