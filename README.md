@@ -221,7 +221,7 @@ Let's say you choose the option "1", then it will install the necessary librarie
 
 
 ```
-Enter your OpenAI API key: sk-3im1ZgCbKXXXXXXXXegTpTyyOq2mR
+Enter your OpenAI API key: sk-3iXXXXXTpTyyOq2mR
 
 Enter the OpenAI model name: gpt-3.5-turbo
 API key and model are valid.
@@ -251,6 +251,40 @@ Logs and events from the pod extracted successfully!
 Interactive session started. Type 'end chat' to exit from the session!
 
 >>  The provided log entries are empty, as there is nothing between the curly braces {}. Therefore, everything looks good and there are no warnings or errors to report.
+```
+
+
+## Using Hugging Face
+
+```
+krs health
+
+Starting interactive terminal...
+
+
+Choose the model provider for healthcheck:
+
+[1] OpenAI
+[2] Huggingface
+
+>> 2
+
+Installing necessary libraries..........
+
+transformers is already installed.
+
+torch is already installed.
+/opt/homebrew/lib/python3.11/site-packages/transformers/utils/generic.py:311: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+
+Enter the Huggingface model name: codellama/CodeLlama-13b-hf
+tokenizer_config.json: 100%|█████████████████████████████████████████████| 749/749 [00:00<00:00, 768kB/s]
+tokenizer.model: 100%|████████████████████████████████████████████████| 500k/500k [00:00<00:00, 1.94MB/s]
+tokenizer.json: 100%|███████████████████████████████████████████████| 1.84M/1.84M [00:01<00:00, 1.78MB/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████| 411/411 [00:00<00:00, 1.49MB/s]
+config.json: 100%|██████████████████████████████████████████████████████| 589/589 [00:00<00:00, 1.09MB/s]
+model.safetensors.index.json: 100%|█████████████████████████████████| 31.4k/31.4k [00:00<00:00, 13.9MB/s]
+...
 ```
 
 
