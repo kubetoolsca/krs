@@ -16,4 +16,8 @@ uninstall_helm_release kubeshark
 # Uninstall Portainer
 uninstall_helm_release portainer
 
+## deleting the namespaces
+kubectl delete ns portainer
+kubectl delete ns kubeshark
+
 echo "Kubeshark and Portainer uninstalled (if previously installed)."
