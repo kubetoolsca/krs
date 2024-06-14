@@ -1,5 +1,23 @@
 # Kubetools Recommender System
 
+# Table of Contents
+
+- [Kubetools Recommender System](#kubetools-recommender-system)
+- [Getting Started](#getting-started)
+  - [Clone the repository](#clone-the-repository)
+  - [Install the Krs Tool](#install-the-krs-tool)
+  - [Krs CLI](#krs-cli)
+- [Initialise and load the scanner](#initialise-and-load-the-scanner)
+- [Scan your cluster](#scan-your-cluster)
+- [Lists all the namespaces](#lists-all-the-namespaces)
+- [Installing sample Kubernetes Tools](#installing-sample-kubernetes-tools)
+- [Use scanner](#use-scanner)
+- [Kubetools Recommender System](#kubetools-recommender-system-1)
+- [Krs health](#krs-health)
+  - [Using OpenAI](#using-openai)
+  - [Using Hugging Face](#using-hugging-face)# Kubetools Recommender System
+
+
 
 <img width="117" alt="image" src="https://github.com/KrsGPTs/krs/assets/313480/582cf437-5dcf-4039-9c59-397db6e8b644">
 
