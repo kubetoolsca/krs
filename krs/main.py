@@ -1,4 +1,5 @@
 from math import e
+from sys import exc_info
 from krs.utils.fetch_tools_krs import krs_tool_ranking_info 
 from krs.utils.cluster_scanner import KubetoolsScanner
 from krs.utils.llm_client import KrsGPTClient
@@ -8,6 +9,10 @@ import os, pickle, time, json
 from tabulate import tabulate
 from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY)
 
+from krs.utils.log_manager import krs_logger
+
+
+logger, log_with_exception = krs_logger()
 
 class KrsMain:
     # Class to handle the main functionality of the KRS tool
@@ -36,16 +41,15 @@ class KrsMain:
             self.category_cluster_tools_dict = None
 
             self.load_state()
-            
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise e
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during initialization.")
-            raise e
+            log_with_exception(f"An error occurred during initialization: ", exc_info=True)
+            raise
 
 
     def initialize(self, config_file : str = '~/.kube/config'):
@@ -66,40 +70,39 @@ class KrsMain:
             try:
                 self.tools_dict, self.category_dict, cncf_status_dict = krs_tool_ranking_info() # Get the tools and their rankings
             except ValueError as e:
-                print(f"An error occurred during fetching the tools information: {e}")
+                log_with_exception(f"An error occurred during fetching the tools information: {e}", exc_info=True)
                 raise e
             except Exception as e:
-                print(f"An error occurred during fetching the tools information: {e}")
+                log_with_exception(f"An error occurred during fetching the tools information: {e}", exc_info=True)
                 raise e
             except:
-                print("An error occurred during fetching the tools information.")
-                raise e
+                log_with_exception(f"An error occurred during initialization: ", exc_info=True)
+                raise
             
             self.cncf_status = cncf_status_dict['cncftools'] # Get the CNCF status of the tools
             
             try:
                 self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file) # Initialize the scanner
             except ValueError as e:
-                print(f"An error occurred during initializing the scanner: {e}")
+                log_with_exception(f"An error occurred during initializing the scanner: {e}", exc_info=True)
                 raise e
             except Exception as e:
-                print(f"An error occurred during initializing the scanner: {e}")
+                log_with_exception(f"An error occurred during initializing the scanner: {e}", exc_info=True)
                 raise e
             except:
-                print("An error occurred during initializing the scanner.")
-                raise e
+                log_with_exception(f"An error occurred during initialization: ", exc_info=True)
+                raise
             
             self.save_state() # Save the state
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise e
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during initialization.")
-            raise e
-        
+            log_with_exception(f"An error occurred during initialization:", exc_info=True)
+            raise
         
 
     def save_state(self) -> None:
@@ -131,23 +134,56 @@ class KrsMain:
                 'detailed_tool_list': self.detailed_cluster_tool_list,
                 'category_tool_list': self.category_cluster_tools_dict
             }
+        except ValueError as e:
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
+            raise e
+        except KeyError as e:
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during saving the state: {e}")
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during saving the state.")
-            raise Exception("An error occurred during saving the state.")
+            log_with_exception(f"An error occurred during initialization: ", exc_info=True)
+            raise
         
         try:
             os.makedirs(os.path.dirname(self.state_file), exist_ok=True) # Create the directory if it doesn't exist
             with open(self.state_file, 'wb') as f: # Open the file in write mode
                 pickle.dump(state, f) # Dump the state to the file
+        except FileNotFoundError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except ValueError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during saving the state: {e}")
+            log_with_exception(f"An error occurred during saving the state: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during saving the state.")
-            raise Exception("An error occurred during saving the state.")
+            log_with_exception(f"An error occurred during saving the state: ", exc_info=True)
+            raise
 
 
     def load_state(self)-> None:
@@ -179,12 +215,24 @@ class KrsMain:
                     self.detailed_cluster_tool_list = state.get('detailed_tool_list')
                     self.category_cluster_tools_dict = state.get('category_tool_list')
                 self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file) # Reinitialize the scanner
+        except FileNotFoundError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except ValueError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during loading the state: {e}")
+            log_with_exception(f"An error occurred during loading the state: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during loading the state.")
-            raise Exception("An error occurred during loading the state.")
+            log_with_exception(f"An error occurred during loading the state", exc_info=True)
+            raise
         
         
     def check_scanned(self) -> None:
@@ -203,11 +251,11 @@ class KrsMain:
                 self.pod_list, self.pod_info, self.deployments, self.namespaces = self.scanner.scan_kubernetes_deployment() # Scan the cluster
                 self.save_state()
         except Exception as e:
-            print(f"An error occurred during scanning the cluster: {e}")
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during scanning the cluster.")
-            raise Exception("An error occurred during scanning the cluster.")
+            log_with_exception(f"An error occurred during scanning the cluster: ", exc_info=True)
+            raise
         
 
     def list_namespaces(self) -> list:
@@ -224,11 +272,11 @@ class KrsMain:
             self.check_scanned()
             return self.scanner.list_namespaces()
         except Exception as e:
-            print(f"An error occurred during listing the namespaces: {e}")
+            log_with_exception(f"An error occurred during listing the namespaces: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during listing the namespaces.")
-            raise Exception("An error occurred during listing the namespaces.")
+            log_with_exception("An error occurred during listing the namespaces.", exc_info=True)
+            raise
         
     
     def list_pods(self, namespace: str) -> list:
@@ -248,11 +296,11 @@ class KrsMain:
                 return "wrong namespace name"
             return self.scanner.list_pods(namespace)
         except Exception as e:
-            print(f"An error occurred during listing the pods: {e}")
+            log_with_exception(f"An error occurred during listing the pods: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during listing the pods.")
-            raise Exception("An error occurred during listing the pods.")
+            log_with_exception("An error occurred during listing the pods.", exc_info=True)
+            raise
         
     
     def list_pods_all(self) -> list:
@@ -270,11 +318,11 @@ class KrsMain:
             self.check_scanned()
             return self.scanner.list_pods_all() # List all the pods in the cluster.
         except Exception as e:
-            print(f"An error occurred during listing all the pods: {e}")
+            log_with_exception(f"An error occurred during listing all the pods: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during listing all the pods.")
-            raise Exception("An error occurred during listing all the pods.")
+            log_with_exception("An error occurred during listing all the pods.", exc_info=True)
+            raise
     
     def detect_tools_from_repo(self) -> list:
         
@@ -303,12 +351,36 @@ class KrsMain:
                         tool_set.add(service_name)
             
             return list(tool_set)
+        except KeyError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
+        except ValueError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e 
+        except OSError as e:
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during detecting the tools: {e}")
+            log_with_exception(f"An error occurred during detecting the tools: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during detecting the tools.")
-            raise Exception("An error occurred during detecting the tools.")
+            log_with_exception("An error occurred during detecting the tools.", exc_info=True)
+            raise
         
     
     def extract_rankings(self) -> tuple:
@@ -339,12 +411,36 @@ class KrsMain:
                 tool_dict[tool] = tool_details
             
             return tool_dict, category_tools_dict
+        except KeyError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except ValueError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during extracting the rankings: {e}")
+            log_with_exception(f"An error occurred during extracting the rankings: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during extracting the rankings.")
-            raise Exception("An error occurred during extracting the rankings.")
+            log_with_exception("An error occurred during extracting the rankings.", exc_info=True)
+            raise
     
     def generate_recommendations(self) -> None:
 
@@ -362,12 +458,36 @@ class KrsMain:
                 self.scan_cluster()
 
             self.print_recommendations()
+        except ValueError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
+        except KeyError as e:
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during generating recommendations: {e}")
+            log_with_exception(f"An error occurred during generating recommendations: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during generating recommendations.")
-            raise Exception("An error occurred during generating recommendations.")
+            log_with_exception("An error occurred during generating recommendations.", exc_info=True)
+            raise e
     
     
     def scan_cluster(self) -> None:
@@ -392,12 +512,36 @@ class KrsMain:
 
             self.print_scan_results()
             self.save_state()
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except KeyError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
+        except ValueError as e:
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during scanning the cluster: {e}")
+            log_with_exception(f"An error occurred during scanning the cluster: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during scanning the cluster.")
-            raise Exception("An error occurred during scanning the cluster.")
+            log_with_exception("An error occurred during scanning the cluster.", exc_info=True)
+            raise
 
     def print_scan_results(self) -> None:
         
@@ -422,13 +566,37 @@ class KrsMain:
 
             print("\nThe cluster is using the following tools:\n")
             print(tabulate(scan_results, headers=["Tool Name", "Rank", "Category", "CNCF Status"], tablefmt="grid"))
+        except ValueError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
+        except KeyError as e:
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during printing the scan results: {e}")
+            log_with_exception(f"An error occurred during printing the scan results: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during printing the scan results.")
-            raise Exception("An error occurred during printing the scan results.")
-
+            log_with_exception(f"An error occurred during printing the scan results: ", exc_info=True)
+            raise e
+        
     def print_recommendations(self) -> None:
         
         """
@@ -457,12 +625,36 @@ class KrsMain:
             print("\nOur recommended tools for this deployment are:\n")
             # Print the recommendations
             print(tabulate(recommendations, headers=["Category", "Recommendation", "Tool Name", "CNCF Status"], tablefmt="grid"))
+        except ValueError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
+        except KeyError as e:
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during printing the recommendations: {e}")
+            log_with_exception(f"An error occurred during printing the recommendations: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during printing the recommendations.")
-            raise Exception("An error occurred during printing the recommendations.")
+            log_with_exception(f"An error occurred during printing the recommendations: ", exc_info=True)
+            raise
     
     def health_check(self, change_model: bool = False) -> None:
 
@@ -543,12 +735,36 @@ class KrsMain:
             krsllmclient.interactive_session(prompt_to_llm)
 
             self.save_state()
+        except ValueError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
+        except KeyError as e:
+            log_with_exception(f"An error occurred during health check: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during the health check: {e}")
+            log_with_exception(f"An error occurred during the health check: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during the health check.")
-            raise Exception("An error occurred during the health check.")
+            log_with_exception("An error occurred during the health check.", exc_info=True)
+            raise
         
 
     def get_logs_from_pod(self, namespace_index: int, pod_index: int) -> list:
@@ -569,16 +785,36 @@ class KrsMain:
             namespace = list(self.pod_info.keys())[namespace_index]
             return list(self.pod_info[namespace][pod_index]['info']['Logs'].values())[0]
         except KeyError as e:
-            print("\nKindly enter a value from the available namespaces and pods")
+            log_with_exception("\nKindly enter a value from the available namespaces and pods: ", exc_info=True)
             return []
+        except ValueError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during getting logs from the pod: {e}")
+            log_with_exception(f"An error occurred during getting logs from the pod: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during getting logs from the pod.")
-            raise Exception("An error occurred during getting logs from the pod.")
+            log_with_exception("An error occurred during getting logs from the pod.", exc_info=True)
+            raise
         
-
     def create_prompt(self, log_entries: list) -> str:
             
         """
@@ -596,12 +832,33 @@ class KrsMain:
                 prompt += f"{entry}\n"
             prompt += "}\nIf there is nothing of concern in between { }, return a message stating that 'Everything looks good!'. Explain the warnings and errors and the steps that should be taken to resolve the issues, only if they exist."
             return prompt
+        except ValueError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during creating the prompt: {e}")
+            log_with_exception(f"An error occurred during creating the prompt: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during creating the prompt.")
-            raise Exception("An error occurred during creating the prompt.")
+            log_with_exception("An error occurred during creating the prompt.", exc_info=True)
+            raise
         
     
     def export_pod_info(self) -> None:
@@ -620,12 +877,33 @@ class KrsMain:
 
             with open(POD_INFO_FILEPATH, 'w') as f: # Open the file in write mode
                 json.dump(self.pod_info, f, cls=CustomJSONEncoder) # Dump the pod info to the file
+        except ValueError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
+        except FileNotFoundError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
+        except TypeError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
+        except AttributeError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
+        except IndexError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"An error occurred during exporting the pod info: {e}")
+            log_with_exception(f"An error occurred during exporting the pod info: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during exporting the pod info.")
-            raise Exception("An error occurred during exporting the pod info.")
+            log_with_exception("An error occurred during exporting the pod info.", exc_info=True)
+            raise
             
 
     def exit(self)-> None:
@@ -648,13 +926,24 @@ class KrsMain:
                 if os.path.isfile(file_path):
                     os.remove(file_path)  # Delete the file
                     print(f"Deleted file: {file_path}")
-
+        except FileNotFoundError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except OSError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except EOFError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
+        except ValueError as e:
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
+            raise e
         except Exception as e:
-            print(f"Error occurred: {e}")
+            log_with_exception(f"Error occurred: {e}", exc_info=True)
             raise e
         except:
-            print("An error occurred during deleting the files.")
-            raise Exception("An error occurred during deleting the files.")
+            log_with_exception("An error occurred during deleting the files.", exc_info=True)
+            raise
 
     def main(self):
         self.scan_cluster() # Scan the cluster
