@@ -123,8 +123,60 @@ Namespaces in your cluster are:
 4. kube-system
 ```
 
+## Installing Kubetools
 
-## List pods under a specified namespace
+Run the following script to install a bunch of tools for your Kubernetes cluster.
+
+```
+cd samples
+sh install-tools.sh
+```
+
+## Use scanner 
+
+```
+krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+----------------------+---------------+
+| Tool Name   |   Rank | Category             | CNCF Status   |
++=============+========+======================+===============+
+| kubeshark   |      4 | Alert and Monitoring | unlisted      |
++-------------+--------+----------------------+---------------+
+| portainer   |     39 | Cluster Management   | listed        |
++-------------+--------+----------------------+---------------+
+```
+
+## Kubetools Recommender System
+
+Generates a table of recommended tools from our ranking database and their CNCF project status.
+
+
+```
+krs recommend
+
+Our recommended tools for this deployment are:
+
++----------------------+------------------+-------------+---------------+
+| Category             | Recommendation   | Tool Name   | CNCF Status   |
++======================+==================+=============+===============+
+| Alert and Monitoring | Recommended tool | grafana     | listed        |
++----------------------+------------------+-------------+---------------+
+| Cluster Management   | Recommended tool | rancher     | unlisted      |
++----------------------+------------------+-------------+---------------+
+```
+
+
+## Krs health
+
 
 Assuming that there is a Nginx Pod under the namespace ns1
 
@@ -135,26 +187,6 @@ Pods in namespace 'ns1':
 
 1. nginx-pod
 ```
-
-## krs recommend
-
-Generates a table of recommended tools from our ranking database and their CNCF project status.
-
-```
-krs recommend
-
-Our recommended tools for this deployment are:
-
-+-----------------------------+------------------+-------------+---------------+
-| Category                    | Recommendation   | Tool Name   | CNCF Status   |
-+=============================+==================+=============+===============+
-| Cluster with Core CLI tools | Recommended tool | k9s         | unlisted      |
-+-----------------------------+------------------+-------------+---------------+
-| Cluster Management          | Recommended tool | rancher     | unlisted      |
-+-----------------------------+------------------+-------------+---------------+
-```
-
-## Krs health
 
 ```
 krs health
