@@ -27,6 +27,9 @@ A GenAI-powered Python-based Kubetools Recommender system for your Kubernetes cl
 
 The main functionalities of the project include:
 
+<img width="1499" alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/14fa0beb-2203-4ab4-b34b-d90888584177">
+
+
 - Scanning the Kubernetes cluster: The tool scans the cluster to identify the deployed pods, services, and deployments. It retrieves information about the tools used in the cluster and their rankings.
 - Detecting tools from the repository: The tool detects the tools used in the cluster by analyzing the names of the pods and deployments.
 - Extracting rankings: The tool extracts the rankings of the detected tools based on predefined criteria. It categorizes the tools into different categories and provides the rankings for each category.
