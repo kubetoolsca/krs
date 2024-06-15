@@ -275,6 +275,99 @@ Interactive session started. Type 'end chat' to exit from the session!
 >>  The provided log entries are empty, as there is nothing between the curly braces {}. Therefore, everything looks good and there are no warnings or errors to report.
 ```
 
+Let us pick up an example of Pod that throws an error:
+
+```
+krs health
+
+Starting interactive terminal...
+
+
+Do you want to continue fixing the previously selected pod ? (y/n): >> n
+
+Loading LLM State..
+
+Model:  gpt-3.5-turbo
+
+Namespaces in the cluster:
+
+1. default
+2. kube-node-lease
+3. kube-public
+4. kube-system
+5. portainer
+
+Which namespace do you want to check the health for? Select a namespace by entering its number: >> 4
+
+Pods in the namespace kube-system:
+
+1. coredns-76f75df574-mdk6w
+2. coredns-76f75df574-vg6z2
+3. etcd-docker-desktop
+4. kube-apiserver-docker-desktop
+5. kube-controller-manager-docker-desktop
+6. kube-proxy-p5hw4
+7. kube-scheduler-docker-desktop
+8. storage-provisioner
+9. vpnkit-controller
+
+Which pod from kube-system do you want to check the health for? Select a pod by entering its number: >> 4
+
+Checking status of the pod...
+
+Extracting logs and events from the pod...
+
+Logs and events from the pod extracted successfully!
+
+
+Interactive session started. Type 'end chat' to exit from the session!
+
+>>  Warning/Error 1:
+"Unable to authenticate the request" with err="[invalid bearer token, service account token has expired]"
+This indicates that there was an issue with authenticating the request due to an invalid bearer token and an expired service account token. To resolve this issue, the bearer token needs to be updated or regenerated, and the service account token needs to be renewed.
+
+Warning/Error 2:
+"Failed to update lease" with err="StorageError: invalid object, Code: 4, Key: /registry/leases/kube-system/apiserver-457xdkumpkdqmkwikdt6khrbya"
+This error indicates a storage error while trying to update a lease, possibly due to an invalid object or a conflict in UIDs. To resolve this issue, the lease object needs to be checked and possibly recreated with the correct UID.
+
+Warning/Error 3:
+"Error removing old endpoints from kubernetes service: no API server IP addresses were listed in storage, refusing to erase all endpoints for the kubernetes Service"
+This warning indicates that there were no API server IP addresses listed in storage, causing the removal of old endpoints from the Kubernetes service to fail. To resolve this issue, the API server IP addresses need to be correctly listed in storage.
+
+Warning/Error 4:
+"Skipping API apps/v1beta1 because it has no resources."
+This warning indicates that the API version 'apps/v1beta1' is being skipped because it has no associated resources. This might be an informational warning and may not necessarily require immediate action, depending on the use case.
+
+Warning/Error 5:
+"watch chan error: etcdserver: mvcc: required revision has been compacted"
+This error indicates a watch channel error related to the revision being compacted in etcdserver. To resolve this issue, the etcd database revision or configuration may need to be checked and potentially adjusted.
+
+Overall, it is important to investigate and address each warning and error to ensure the stability and reliability of the Kubernetes cluster. If there are no concerns in the log entries provided, the message 'Everything looks good!' can be returned.
+
+>> can you help me in fixing this error message
+>>  To help you fix the error messages mentioned in the log entries, here are some steps you can take:
+
+1. For the "Unable to authenticate the request" error:
+   - Generate a new bearer token and update it in the relevant configuration files.
+   - Renew the service account token to prevent expiration issues.
+
+2. For the "Failed to update lease" error:
+   - Investigate the storage error and check for any invalid objects.
+   - Recreate the lease object with the correct UID if needed.
+
+3. For the "Error removing old endpoints from Kubernetes service" error:
+   - Ensure that the API server IP addresses are correctly listed in the storage.
+   - Verify the configuration of the Kubernetes service and update it if necessary.
+
+4. For the "watch chan error: etcdserver: mvcc: required revision has been compacted" error:
+   - Check the etcd server configuration and ensure that the revision is maintained correctly.
+   - Monitor the etcd server for any potential issues causing revision compaction.
+
+After performing these steps, restart relevant services or components as needed to apply the changes. Monitor the Kubernetes cluster for any further errors and ensure that the issues have been resolved successfully.
+
+Feel free to provide more specific details or additional logs if you need further assistance with resolving the error messages.
+```
+
 
 ## Using Hugging Face
 
