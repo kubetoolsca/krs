@@ -43,6 +43,68 @@ class RotatingFileHandlerWithLevel(TimedRotatingFileHandler):
         if record.levelno >= self.level:
             super().emit(record)
 
+def handle_old_file():
+    """
+    Handle old log files.
+
+    args:
+        None
+    returns:
+        None
+    """
+
+    seven_days_ago = datetime.now() - timedelta(days=7)
+
+    # Get the absolute path to the target folder
+    script_dir = Path(__file__).parent.absolute()
+    target_folder = script_dir / "logs"
+
+    try:
+        target_folder.mkdir(parents=True, exist_ok=True)
+        filename = f"{target_folder}/{seven_days_ago.date()}.log"
+        remove_a_file(filename)
+    except PermissionError as e:
+        print(f"Permission denied: You do not have the necessary permissions to create the directory {target_folder}: {e}.")
+        return None
+    except FileNotFoundError as e:
+        print(f"FileNotFoundError: The system cannot find the path specified: {target_folder}: {e}.")
+        return None
+    except Exception as e:
+        print(f"An error occurred while creating the directory {target_folder}: {e}")
+        return None
+    except:
+        print(f"An error occurred while creating the directory {target_folder}.")
+        return None
+
+
+def remove_a_file(filename: str) -> None:
+    """
+    Remove log files older than a week.
+    
+    args:
+        filename: str: The file containing the logs .
+    
+    returns:
+        None
+    """
+    
+    try:
+
+        if os.path.isfile(filename):
+            os.remove(filename)
+            print(f"{filename} has been deleted.")
+        else:
+            print(f"The file {filename} does not exist.")
+
+    except PermissionError as e:
+        print(f"Permission denied: You do not have the necessary permissions to delete {filename}: {e}.")
+    except FileNotFoundError as e:
+        print(f"FileNotFoundError: The system cannot find the file specified: {filename}: {e}.")
+    except Exception as e:
+        print(f"An error occurred while deleting {filename}: {e}")
+    except:
+        print(f"An error occurred while deleting the file {filename}.")
+
 
 def krs_logger(log_level: any=logging.ERROR, target_folder: str ="logs") -> tuple:
     """
@@ -59,6 +121,8 @@ def krs_logger(log_level: any=logging.ERROR, target_folder: str ="logs") -> tupl
     # Get the absolute path to the target folder
     script_dir = Path(__file__).parent.absolute()
     target_folder = script_dir / target_folder
+
+    handle_old_file()
 
     try:
         target_folder.mkdir(parents=True, exist_ok=True)
