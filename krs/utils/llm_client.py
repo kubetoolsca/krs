@@ -3,6 +3,9 @@ import subprocess
 import os, time
 from krs.utils.constants import (MAX_OUTPUT_TOKENS, LLMSTATE_PICKLE_FILEPATH)
 
+from krs.utils.log_manager import krs_logger
+
+logger, log_with_exception = krs_logger()
 
 # This class is used to interact with the OpenAI API or Huggingface API to generate responses for the given prompts.
 class KrsGPTClient:
@@ -36,22 +39,22 @@ class KrsGPTClient:
             self.max_tokens = MAX_OUTPUT_TOKENS
         
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise     
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during initialization.")
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
 
 
@@ -75,22 +78,22 @@ class KrsGPTClient:
                 else:
                     self.continue_chat = True
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during initialization.")
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
 
     def save_state(self, filename: str = LLMSTATE_PICKLE_FILEPATH) -> None:
@@ -114,11 +117,14 @@ class KrsGPTClient:
             with open(filename, 'wb') as output:
                 pickle.dump(state, output, pickle.HIGHEST_PROTOCOL) # Save the state to a pickle file
         except FileNotFoundError as e:
-            print(f"Error: {e}")
+            log_with_exception(f"Error: {e}", exc_info=True)
             return {}
         except Exception as e:
-            print(f"Error: {e}")
+            log_with_exception(f"Error: {e}", exc_info=True)
             return {}
+        except:
+            log_with_exception("An error occurred during state saving.", exc_info=True)
+            raise
 
 
     def load_state(self) -> None:
@@ -146,10 +152,10 @@ class KrsGPTClient:
         except (FileNotFoundError, EOFError):
             print("No previous state found.")
         except Exception as e:
-            print(f"Error loading state: {e}")
+            log_with_exception(f"Error loading state: {e}", exc_info=True)
             return {}
         except:
-            print("An error occurred while loading the state.")
+            log_with_exception("An error occurred while loading the state.", exc_info=True)
             return {}
 
     def install_package(self, package_name: str) -> None:
@@ -178,10 +184,10 @@ class KrsGPTClient:
             else:
                 print(f" \nFailed to install {package_name}.")
         except Exception as e:
-            print(f"An error occurred while installing the package: {e}")
+            log_with_exception(f"An error occurred while installing the package: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred while installing the package.")
+            log_with_exception("An error occurred while installing the package.", exc_info=True)
             raise
 
 
@@ -207,22 +213,22 @@ class KrsGPTClient:
                 else:
                     raise ValueError("Invalid option selected")
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during initialization.")
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
 
     def init_openai_client(self, reinitialize: bool = False) -> None:
@@ -245,22 +251,22 @@ class KrsGPTClient:
                 print("\nInstalling necessary libraries..........")
                 self.install_package('openai')
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during initialization.")
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
         
         try:
@@ -287,25 +293,28 @@ class KrsGPTClient:
                     except openai.APIConnectionError as e:
                         print(e)
                         self.init_openai_client(reinitialize=False)
+                    except:
+                        log_with_exception("An error occurred during open ai initialization.", exc_info=True)
+                        raise
 
             self.save_state()
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during initialization.")
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
 
     def init_huggingface_client(self, reinitialize: bool = False) -> None:
@@ -330,16 +339,19 @@ class KrsGPTClient:
                 self.install_package('torch')
                 
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
+            raise
+        except:
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
         
         try:
@@ -365,19 +377,22 @@ class KrsGPTClient:
 
             self.save_state()
         except ValueError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during initialization: {e}")
+            log_with_exception(f"An error occurred during initialization: {e}", exc_info=True)
+            raise
+        except:
+            log_with_exception("An error occurred during initialization.", exc_info=True)
             raise
 
 
@@ -404,16 +419,19 @@ class KrsGPTClient:
                     )
             print("API key and model are valid.")
         except openai.error.InvalidRequestError as e:
-            print(f"Error: {e}")
+            log_with_exception(f"Error: {e}", exc_info=True)
             raise
         except openai.error.AuthenticationError as e:
-            print(f"Error: {e}")
+            log_with_exception(f"Error: {e}", exc_info=True)
             raise
         except openai.APIConnectionError as e:
-            print(f"Error: {e}")
+            log_with_exception(f"Error: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"Error: {e}")
+            log_with_exception(f"Error: {e}", exc_info=True)
+            raise
+        except:
+            log_with_exception("An error occurred during openai validation.", exc_info=True)
             raise
 
 
@@ -448,22 +466,22 @@ class KrsGPTClient:
             self.history.append({"role": "assistant", "content": output})
             print(">> ", output)
         except ValueError as e:
-            print(f"An error occurred during inference: {e}")
+            log_with_exception(f"An error occurred during inference: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during inference: {e}")
+            log_with_exception(f"An error occurred during inference: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during inference: {e}")
+            log_with_exception(f"An error occurred during inference: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during inference: {e}")
+            log_with_exception(f"An error occurred during inference: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during inference: {e}")
+            log_with_exception(f"An error occurred during inference: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during inference.")
+            log_with_exception("An error occurred during inference.", exc_info=True)
             raise
 
     def interactive_session(self, prompt_input: str) -> None:
@@ -496,22 +514,22 @@ class KrsGPTClient:
             self.save_state()
             
         except ValueError as e:
-            print(f"An error occurred during the interactive session: {e}")
+            log_with_exception(f"An error occurred during the interactive session: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during the interactive session: {e}")
+            log_with_exception(f"An error occurred during the interactive session: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during the interactive session: {e}")
+            log_with_exception(f"An error occurred during the interactive session: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during the interactive session: {e}")
+            log_with_exception(f"An error occurred during the interactive session: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during the interactive session: {e}")
+            log_with_exception(f"An error occurred during the interactive session: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during the interactive session.")
+            log_with_exception("An error occurred during the interactive session.", exc_info=True)
             raise
 
 
@@ -533,22 +551,22 @@ class KrsGPTClient:
             elif self.provider == 'huggingface':
                 return " ".join([item["content"] for item in self.history])
         except ValueError as e:
-            print(f"An error occurred during history conversion: {e}")
+            log_with_exception(f"An error occurred during history conversion: {e}", exc_info=True)
             raise
         except TypeError as e:
-            print(f"An error occurred during history conversion: {e}")
+            log_with_exception(f"An error occurred during history conversion: {e}", exc_info=True)
             raise
         except AttributeError as e:
-            print(f"An error occurred during history conversion: {e}")
+            log_with_exception(f"An error occurred during history conversion: {e}", exc_info=True)
             raise
         except KeyError as e:
-            print(f"An error occurred during history conversion: {e}")
+            log_with_exception(f"An error occurred during history conversion: {e}", exc_info=True)
             raise
         except Exception as e:
-            print(f"An error occurred during history conversion: {e}")
+            log_with_exception(f"An error occurred during history conversion: {e}", exc_info=True)
             raise
         except:
-            print("An error occurred during history conversion.")
+            log_with_exception("An error occurred during history conversion.", exc_info=True)
             raise
 
 if __name__ == "__main__":

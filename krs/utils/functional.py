@@ -2,6 +2,9 @@ from difflib import SequenceMatcher
 from math import e
 import re, json
 from datetime import datetime
+from krs.utils.log_manager import krs_logger
+
+logger, log_with_exception = krs_logger()
 
 class CustomJSONEncoder(json.JSONEncoder):
     """
@@ -24,12 +27,14 @@ class CustomJSONEncoder(json.JSONEncoder):
                 return obj.isoformat()
             # Let the base class default method raise the TypeError
             return json.JSONEncoder.default(self, obj)
-        except TypeError as e:
+        except TypeError as  e:
+            log_with_exception("An error occurred during serialization.", exc_info=True)
             return str(obj)
-        except Exception as e:
+        except Exception as  e:
+            log_with_exception("An error occurred during serialization.", exc_info=True)
             raise e
         except:
-            print("An error occurred during serialization.")
+            log_with_exception("An error occurred during serialization.", exc_info=True)
             raise
 
 def similarity(a : str, b: str) -> float:
@@ -47,10 +52,10 @@ def similarity(a : str, b: str) -> float:
     try:
         return SequenceMatcher(None, a, b).ratio()
     except Exception as e:
-        print(f"An error occurred during similarity calculation: {e}")
+        log_with_exception(f"An error occurred during similarity calculation: {e}", exc_info=True)
         return 0.0
     except:
-        print("An error occurred during similarity calculation.")
+        log_with_exception("An error occurred during similarity calculation.", exc_info=True)
         return 0.0
 
 def filter_similar_entries(log_entries : list) -> list:
@@ -82,10 +87,10 @@ def filter_similar_entries(log_entries : list) -> list:
         filtered_entries = {entry for entry in unique_entries if entry not in to_remove}
         return filtered_entries
     except Exception as e:
-        print(f"An error occurred during filtering of log entries: {e}")
+        log_with_exception(f"An error occurred during filtering of log entries: {e}", exc_info=True)
         return []
     except:
-        print("An error occurred during filtering of log entries.")
+        log_with_exception("An error occurred during filtering of log entries.", exc_info=True)
         return []
 
 
@@ -145,8 +150,8 @@ def extract_log_entries(log_contents : str) -> list:
         return filter_similar_entries(log_entries) # Filter out highly similar log entries
 
     except Exception as e:
-        print(f"An error occurred during pattern creation: {e}")
+        log_with_exception(f"An error occurred during pattern creation: {e}", exc_info=True)
         return []
     except:
-        print("An error occurred during pattern creation.")
+        log_with_exception("An error occurred during pattern creation.", exc_info=True)
         return []

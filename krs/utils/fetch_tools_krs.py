@@ -2,7 +2,9 @@ import json
 import requests
 import yaml
 from krs.utils.constants import (KUBETOOLS_DATA_JSONURL, KUBETOOLS_JSONPATH, CNCF_YMLPATH, CNCF_YMLURL, CNCF_TOOLS_JSONPATH, TOOLS_RANK_JSONPATH, CATEGORY_RANK_JSONPATH)
+from krs.utils.log_manager import krs_logger
 
+logger, log_with_exception = krs_logger()
 
 
 # Function to convert 'githubStars' to a float, or return 0 if it cannot be converted
@@ -23,16 +25,16 @@ def get_github_stars(tool: dict) -> float:
         stars = tool.get('githubStars', 0)
         return float(stars)
     except ValueError as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except TypeError as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except Exception as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:
-        print("An error occurred while converting the star rating.")
+        log_with_exception("An error occurred while converting the star rating.", exc_info=True)
         return {}
     
     
@@ -55,16 +57,16 @@ def download_file(url: str, filename: str) -> None:
         with open(filename, 'wb') as file:
             file.write(response.content)
     except requests.exceptions.RequestException as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except FileNotFoundError as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except Exception as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:
-        print("An error occurred while downloading the file.")
+        log_with_exception("An error occurred while downloading the file.", exc_info=True)
         return {}
 
 def parse_yaml_to_dict(yaml_file_path: str) -> dict:
@@ -88,13 +90,13 @@ def parse_yaml_to_dict(yaml_file_path: str) -> dict:
         print(f"Error: The file {yaml_file_path} was not found.")
         return {}
     except yaml.YAMLError as e:
-        print(f"Error parsing the YAML file: {e}")
+        log_with_exception(f"Error parsing the YAML file: {e}", exc_info=True)
         return {}
     except Exception as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:    
-        print("An error occurred while parsing the YAML file.")
+        log_with_exception("An error occurred while parsing the YAML file.", exc_info=True)
         return {}
     
     cncftools = {}
@@ -109,16 +111,16 @@ def parse_yaml_to_dict(yaml_file_path: str) -> dict:
                     project_status = item.get('project', 'listed')
                     cncftools[item_name] = project_status
     except AttributeError as e:
-        print(f"Error processing the YAML file: {e}")
+        log_with_exception(f"Error processing the YAML file: {e}", exc_info=True)
         return {}
     except ValueError as e:
-        print(f"Error processing data: {e}")
+        log_with_exception(f"Error processing data: {e}", exc_info=True)
         return {}
     except Exception as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:
-        print("An error occurred while processing the YAML file.")
+        log_with_exception("An error occurred while processing the YAML file.", exc_info=True)
         return {}
     
     return {'cncftools': cncftools}
@@ -143,13 +145,13 @@ def save_json_file(jsondict: dict, jsonpath: str) -> None:
         with open(jsonpath, 'w') as f:
             json.dump(jsondict, f, indent=4)
     except FileNotFoundError as e:  
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except Exception as e:        
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:
-        print("An error occurred while saving the JSON file.")
+        log_with_exception("An error occurred while saving the JSON file.", exc_info=True)
         return {}
 
 
@@ -175,10 +177,10 @@ def krs_tool_ranking_info()-> tuple:
         download_file(KUBETOOLS_DATA_JSONURL, KUBETOOLS_JSONPATH) # Download the KubeTools JSON file
         download_file(CNCF_YMLURL, CNCF_YMLPATH) # Download the CNCF landscape YAML file
     except Exception as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:
-        print("An error occurred while downloading the files.")
+        log_with_exception("An error occurred while downloading the files.", exc_info=True)
         return {}
     
     try:
@@ -213,16 +215,16 @@ def krs_tool_ranking_info()-> tuple:
         return tools_dict, category_tools_dict, cncf_tools_dict
 
     except FileNotFoundError as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except json.JSONDecodeError as e:
-        print(f"Error decoding JSON: {e}")
+        log_with_exception(f"Error decoding JSON: {e}", exc_info=True)
         return {}
     except Exception as e:
-        print(f"Error: {e}")
+        log_with_exception(f"Error: {e}", exc_info=True)
         return {}
     except:   
-        print("An error occurred while processing the data.")
+        log_with_exception("An error occurred while processing the data.", exc_info=True)
         return {}
 
 if __name__=='__main__':
