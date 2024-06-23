@@ -4,7 +4,7 @@
 
 # Kubetools Recommender System(a.k.a Krs)
 
-A Python-based Kubetools Recommender system for your Kubernetes cluster. 
+A GenAI-powered Python-based Kubetools Recommender system for your Kubernetes cluster. 
 
 # Table of Contents
 
