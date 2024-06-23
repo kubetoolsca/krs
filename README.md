@@ -30,14 +30,14 @@ The main functionalities of the project include:
 <img width="1499" alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/14fa0beb-2203-4ab4-b34b-d90888584177">
 
 
-- Scanning the Kubernetes cluster: The tool scans the cluster to identify the deployed pods, services, and deployments. It retrieves information about the tools used in the cluster and their rankings.
-- Detecting tools from the repository: The tool detects the tools used in the cluster by analyzing the names of the pods and deployments.
-- Extracting rankings: The tool extracts the rankings of the detected tools based on predefined criteria. It categorizes the tools into different categories and provides the rankings for each category.
-- Generating recommendations: The tool generates recommendations for Kubernetes tools based on the detected tools and their rankings. It suggests the best tools for each category and compares them with the tools already used in the cluster.
-- Health check: The tool provides a health check for a selected pod in the cluster. It extracts logs and events from the pod and analyzes them using a language model (LLM) to identify potential issues and provide recommendations for resolving them.
-- Exporting pod information: The tool exports the information about the pods, services, and deployments in the cluster to a JSON file.
-- Cleaning up: The tool provides an option to clean up the project's data directory by deleting all files and directories within it.
-- Supports OpenAI and Hugging Face models
+- **Scanning the Kubernetes cluster**: The tool scans the cluster to identify the deployed pods, services, and deployments. It retrieves information about the tools used in the cluster and their rankings.
+- **Detecting tools from the repository**: The tool detects the tools used in the cluster by analyzing the names of the pods and deployments.
+- **Extracting rankings**: The tool extracts the rankings of the detected tools based on predefined criteria. It categorizes the tools into different categories and provides the rankings for each category.
+- **Generating recommendations**: The tool generates recommendations for Kubernetes tools based on the detected tools and their rankings. It suggests the best tools for each category and compares them with the tools already used in the cluster.
+- **Health check**: The tool provides a health check for a selected pod in the cluster. It extracts logs and events from the pod and analyzes them using a language model (LLM) to identify potential issues and provide recommendations for resolving them.
+- **Exporting pod information**: The tool exports the information about the pods, services, and deployments in the cluster to a JSON file.
+- **Cleaning up**: The tool provides an option to clean up the project's data directory by deleting all files and directories within it.
+- **Model**: Supports OpenAI and Hugging Face models
 
 The project uses various Python libraries, such as typer, requests, kubernetes, tabulate, and pickle, to accomplish its functionalities. 
 It also utilizes a language model (LLM) for the health check feature. 
