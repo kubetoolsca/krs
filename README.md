@@ -2,7 +2,7 @@
 
 ![Twitter](https://img.shields.io/twitter/follow/kubetools?style=social)
 
-# Kubetools Recommender System
+# Kubetools Recommender System(a.k.a Krs)
 
 A GenAI-powered Python-based Kubetools Recommender system for your Kubernetes cluster. 
 
