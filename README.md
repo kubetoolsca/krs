@@ -402,7 +402,12 @@ model.safetensors.index.json: 100%|███████████████
 ...
 ```
 
+## Community
+Find us on [Slack](https://www.launchpass.com/kubetoolsio)
 
+<a href="https://github.com/kubetoolsca/krs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kubetoolsca/krs" />
+</a>
 
 
 
