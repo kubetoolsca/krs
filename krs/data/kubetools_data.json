@@ -1,0 +1,5231 @@
+[
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e6f1"
+      },
+      "category": {
+         "name": "Cluster with Core CLI tools"
+      },
+      "tools": [
+         {
+            "name": "K9s",
+            "description": "Kubernetes CLI To Manage Your Clusters In Style!",
+            "link": "https://github.com/derailed/k9s",
+            "githubStars": "710.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647545fb780813c2d7c5e14"
+            }
+         },
+         {
+            "name": "Krew",
+            "description": "Package manager for kubectl plugins",
+            "link": "https://github.com/kubernetes-sigs/krew",
+            "githubStars": "603.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647546bb780813c2d7c5fcb"
+            }
+         },
+         {
+            "name": "kubectx + kubens",
+            "description": "Switch faster between clusters and namespaces in kubectl",
+            "link": "https://github.com/ahmetb/kubectx",
+            "githubStars": "536.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647549bb780813c2d7c6182"
+            }
+         },
+         {
+            "name": "KubeOperator",
+            "description": "Run kubectl command in Web Browser",
+            "link": "https://kubeoperator.io/",
+            "githubStars": "335.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754a3b780813c2d7c6339"
+            }
+         },
+         {
+            "name": "Vimkubectl",
+            "description": "Manage any Kubernetes resource from Vim",
+            "link": "https://github.com/WsdlToPhp/Vimkubectl",
+            "githubStars": "268.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754acb780813c2d7c64f0"
+            }
+         },
+         {
+            "name": "KubeHelper",
+            "description": "Simplify many daily Kubernetes cluster tasks through a web interface",
+            "link": "https://github.com/IlyaKruglov/kube-helper",
+            "githubStars": "234.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754b5b780813c2d7c66a7"
+            }
+         },
+         {
+            "name": "Conftest",
+            "description": "Write tests against structured configuration data using the Open Policy Agent Rego query language",
+            "link": "https://github.com/open-policy-agent/conftest",
+            "githubStars": "234.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754beb780813c2d7c685e"
+            }
+         },
+         {
+            "name": "Bootkube",
+            "description": "Launch a self-hosted Kubernetes cluster",
+            "link": "https://github.com/kubernetes-sigs/bootkube",
+            "githubStars": "201.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754c6b780813c2d7c6a15"
+            }
+         },
+         {
+            "name": "Ktunnel",
+            "description": "A CLI that exposes your local resources to Kubernetes",
+            "link": "https://github.com/omrikiei/ktunnel",
+            "githubStars": "201.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754d1b780813c2d7c6bcc"
+            }
+         },
+         {
+            "name": "kube-ps1",
+            "description": "Kubernetes prompt for bash and zsh",
+            "link": "https://github.com/jonmosco/kube-ps1",
+            "githubStars": "180.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754dab780813c2d7c6d83"
+            }
+         },
+         {
+            "name": "kube-shell",
+            "description": "Kubernetes shell: An integrated shell for working with Kubernetes",
+            "link": "https://github.com/cloudnativelabs/kube-shell",
+            "githubStars": "167.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754e2b780813c2d7c6f3a"
+            }
+         },
+         {
+            "name": "fubectl",
+            "description": "Reduces repetitive interactions with kubectl",
+            "link": "https://github.com/brendandburns/fubectl",
+            "githubStars": "147.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754edb780813c2d7c70f1"
+            }
+         },
+         {
+            "name": "kubectl sudo",
+            "description": "Run Kubernetes commands with the security privileges of another user",
+            "link": "https://github.com/dtan4/kubectl-sudo",
+            "githubStars": "134.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664754f8b780813c2d7c72a8"
+            }
+         },
+         {
+            "name": "kubecolor",
+            "description": "Colorizes kubectl output",
+            "link": "https://github.com/dty1er/kubecolor",
+            "githubStars": " 134.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475504b780813c2d7c745f"
+            }
+         },
+         {
+            "name": "Kueue",
+            "description": "Set of APIs and controller for job queueing",
+            "link": "https://github.com/ameerthehacker/kueue",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475512b780813c2d7c7616"
+            }
+         },
+         {
+            "name": "kuttle",
+            "description": "Kubernetes wrapper for sshuttle",
+            "link": "https://github.com/itaysk/kuttle",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647551eb780813c2d7c77cd"
+            }
+         },
+         {
+            "name": "Kube-capacity\t",
+            "description": "A CLI that provides an overview of the resource requests, limits, and utilization in a k8s cluster",
+            "link": "https://github.com/robscott/kube-capacity",
+            "githubStars": "134.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475527b780813c2d7c7984"
+            }
+         },
+         {
+            "name": "Karpenter\t",
+            "description": "Kubernetes Node Autoscaler built for flexibility, performance, and simplicity",
+            "link": "https://github.com/aws/karpenter-provider-aws",
+            "githubStars": "388.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475530b780813c2d7c7b3b"
+            }
+         },
+         {
+            "name": "Autoscaler\t",
+            "description": "autoscaler Autoscaling components for Kubernetes",
+            "link": "https://github.com/kubernetes/autoscaler",
+            "githubStars": "388.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647553ab780813c2d7c7cf2"
+            }
+         },
+         {
+            "name": "Kured\t",
+            "description": "Kubernetes Reboot Daemon",
+            "link": "https://github.com/kubereboot/kured",
+            "githubStars": "140.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475544b780813c2d7c7ea9"
+            }
+         },
+         {
+            "name": "Kube-prompt\t",
+            "description": "An interactive kubernetes client featuring auto-complete",
+            "link": "https://github.com/c-bata/kube-prompt",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647554cb780813c2d7c8060"
+            }
+         },
+         {
+            "name": "Click\t",
+            "description": "Command Line Interactive Controller for Kubernetes",
+            "link": "https://github.com/databricks/click",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475555b780813c2d7c8217"
+            }
+         },
+         {
+            "name": "Kubie\t",
+            "description": "A more powerful alternative to kubectx and kubens",
+            "link": "https://github.com/sbstp/kubie",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475568b780813c2d7c83ce"
+            }
+         },
+         {
+            "name": "Pluto\t",
+            "description": "A cli tool to help discover deprecated apiVersions in Kubernetes",
+            "link": "https://github.com/FairwindsOps/pluto",
+            "githubStars": "134.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475573b780813c2d7c8585"
+            }
+         },
+         {
+            "name": "ksync\t",
+            "description": "Sync files between your local system and a kubernetes cluster",
+            "link": "https://github.com/collabnix/kubetools",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647557cb780813c2d7c873c"
+            }
+         },
+         {
+            "name": "fleet\t",
+            "description": "Manage large fleets of Kubernetes clusters",
+            "link": "https://github.com/rancher/fleet",
+            "githubStars": "93.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475584b780813c2d7c88f3"
+            }
+         },
+         {
+            "name": "stash\t",
+            "description": "Backup your Kubernetes Stateful Applications",
+            "link": "https://github.com/stashed/stash",
+            "githubStars": "87.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647558eb780813c2d7c8aaa"
+            }
+         },
+         {
+            "name": "Finch\t",
+            "description": "The Finch CLI an open source client for container development",
+            "link": "https://github.com/runfinch/finch",
+            "githubStars": "227.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755a0b780813c2d7c8c61"
+            }
+         },
+         {
+            "name": "KubeView\t",
+            "description": "Kubernetes cluster visualiser and graphical explorer",
+            "link": "https://github.com/benc-uk/kubeview",
+            "githubStars": "60.17",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755bab780813c2d7c8e18"
+            }
+         },
+         {
+            "name": "Descheduler\t",
+            "description": "Descheduler for Kubernetes",
+            "link": "https://github.com/kubernetes-sigs/descheduler",
+            "githubStars": "268.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755c4b780813c2d7c8fcf"
+            }
+         },
+         {
+            "name": "cloudtty\t",
+            "description": "A Friendly Kubernetes CloudShell (Web Terminal) !",
+            "link": "https://github.com/cloudtty/cloudtty",
+            "githubStars": "32.09",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755cdb780813c2d7c9186"
+            }
+         },
+         {
+            "name": "kor\t",
+            "description": "A Tool to discover unused Kubernetes Resources",
+            "link": "https://github.com/yonahd/kor",
+            "githubStars": "58.06",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755d8b780813c2d7c933d"
+            }
+         },
+         {
+            "name": "Kubernetes Image Puller\t",
+            "description": "Caching images on a cluster by creating a DaemonSet downloading and running the container images on each node",
+            "link": "https://github.com/che-incubator/kubernetes-image-puller",
+            "githubStars": "9.72",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755e4b780813c2d7c94f4"
+            }
+         },
+         {
+            "name": "image-builder\t",
+            "description": "A tool for building Kubernetes virtual machine images across multiple infrastructure providers.",
+            "link": "https://github.com/kubernetes-sigs/image-builder",
+            "githubStars": "22.78",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664755ecb780813c2d7c96ab"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 9
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e714"
+      },
+      "category": {
+         "name": "Logging and Tracing"
+      },
+      "tools": [
+         {
+            "name": "ELK",
+            "description": "Elasticsearch, Logstash, Kibana",
+            "link": "https://github.com/elastic",
+            "githubStars": "13735.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647274cb780813c2d7b9136"
+            }
+         },
+         {
+            "name": "Loki",
+            "description": "Like Prometheus, but for logs",
+            "link": "https://github.com/grafana/loki",
+            "githubStars": "1474.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472721b780813c2d7b8ddf"
+            }
+         },
+         {
+            "name": "Jaeger\t\t",
+            "description": "CNCF Jaeger, a Distributed Tracing Platform",
+            "link": "https://github.com/jaegertracing/jaeger\t",
+            "githubStars": "1273.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472746b780813c2d7b8f94"
+            }
+         },
+         {
+            "name": "fluentbit\t",
+            "description": "Fast and Lightweight Log processor and forwarder for Linux, BSD and OSX",
+            "link": "https://github.com/fluent/fluent-bit",
+            "githubStars": "355.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647275fb780813c2d7b92d8"
+            }
+         },
+         {
+            "name": "Kiali\t\t",
+            "description": "Kiali project, observability for the Istio service mesh",
+            "link": "https://github.com/kiali/kiali\t",
+            "githubStars": "221.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647278ab780813c2d7b97be"
+            }
+         },
+         {
+            "name": "goldpinger\t\t",
+            "description": "Debugging tool for Kubernetes which tests and displays connectivity between nodes in the cluster",
+            "link": "https://github.com/bloomberg/goldpinger\t",
+            "githubStars": "160.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472782b780813c2d7b961c"
+            }
+         },
+         {
+            "name": "retina\t\t",
+            "description": "eBPF distributed networking observability tool for Kubernetes",
+            "link": "https://github.com/microsoft/retina",
+            "githubStars": "167.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664727a2b780813c2d7b9960"
+            }
+         },
+         {
+            "name": "kail\t",
+            "description": "kubernetes log viewer\t",
+            "link": "https://github.com/boz/kail\t",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664727b4b780813c2d7b9b02"
+            }
+         },
+         {
+            "name": "k8spacket\t\t",
+            "description": "Packets traffic visualization for Kubernetes",
+            "link": "https://github.com/k8spacket/k8spacket",
+            "githubStars": "62.85",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664727ecb780813c2d7b9ca4"
+            }
+         },
+         {
+            "name": "network mapper",
+            "description": "Map Kubernetes in-cluster traffic and export as text, intents, or an image",
+            "link": "https://github.com/otterize/network-mapper",
+            "githubStars": "38.46",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472864b780813c2d7ba31d"
+            }
+         },
+         {
+            "name": "Otterize network mapper\t\t",
+            "description": "Map Kubernetes in-cluster traffic and export as text, intents, or an image",
+            "link": "https://github.com/otterize/network-mapper\t",
+            "githubStars": "38.46",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472858b780813c2d7ba17b"
+            }
+         },
+         {
+            "name": "kube-audit-rest\t",
+            "description": "Kubernetes audit logging, when you don't control the control plane",
+            "link": "https://github.com/RichardoC/kube-audit-rest",
+            "githubStars": "3.35",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472a97b780813c2d7bab31"
+            }
+         },
+         {
+            "name": "kubectl-mtail\t",
+            "description": "tail logs from multiple pods matching label selector",
+            "link": "https://gitlab.com/grzesuav/kubectl-mtail",
+            "githubStars": "stars repo not found",
+            "publishDate": {
+               "$date": "2024-04-27T19:10:13.674Z"
+            },
+            "_id": {
+               "$oid": "662d4d956a9f1fe6f65de0cf"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 5
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e721"
+      },
+      "category": {
+         "name": "Troubleshooting / Debugging"
+      },
+      "tools": [
+         {
+            "name": "K9s",
+            "description": "Kubernetes CLI To Manage Your Clusters In Style!",
+            "link": "https://github.com/derailed/k9s",
+            "githubStars": "1675.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472a88b780813c2d7ba98f"
+            }
+         },
+         {
+            "name": "kubent\t",
+            "description": "Easily check your clusters for use of deprecated APIs\t",
+            "link": "https://github.com/doitintl/kube-no-trouble\t",
+            "githubStars": "180.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472aadb780813c2d7bacd3"
+            }
+         },
+         {
+            "name": "Kubectl-debug",
+            "description": "Allows you to run a new container with all the troubleshooting tools installed in running pod for debugging purposed",
+            "link": "https://github.com/aylei/kubectl-debug",
+            "githubStars": "154.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472ac9b780813c2d7bae75"
+            }
+         },
+         {
+            "name": "PowerfulSeal\t\t",
+            "description": "A powerful testing tool for Kubernetes clusters",
+            "link": "https://github.com/powerfulseal/powerfulseal\t",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b08b780813c2d7bb35b"
+            }
+         },
+         {
+            "name": "Monokle",
+            "description": "Desktop unified visual tool for authoring, analysis and deployment of Kubernetes configurations",
+            "link": "https://github.com/kubeshop/monokle",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b0db780813c2d7bb4fd"
+            }
+         },
+         {
+            "name": "KubeSkoop\t\t",
+            "description": "Kubernetes networking diagnose tool for different CNI plug-ins and IAAS providers",
+            "link": "https://github.com/alibaba/kubeskoop\t",
+            "githubStars": "32.29",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b22b780813c2d7bb69f"
+            }
+         },
+         {
+            "name": "Koolkits\t",
+            "description": "🧰 Opinionated, language-specific, batteries-included debug container images for Kubernetes",
+            "link": "https://github.com/lightrun-platform/koolkits",
+            "githubStars": "24.12",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b32b780813c2d7bb841"
+            }
+         },
+         {
+            "name": "Kubernetes CLI Plugin - Doctor\t",
+            "description": "kubectl cluster triage plugin for k8s - 🏥 (brew doctor equivalent)d",
+            "link": "https://github.com/emirozer/kubectl-doctor",
+            "githubStars": "23.38",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b45b780813c2d7bb9e3"
+            }
+         },
+         {
+            "name": "Crash-diagnostic\t",
+            "description": "Crash-Diagnostics is a tool to help investigate, analyze, and troubleshoot unresponsive or crashed Kubernetes clustersd",
+            "link": "https://github.com/vmware-tanzu/crash-diagnostics",
+            "githubStars": "12.06",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b55b780813c2d7bbb85"
+            }
+         },
+         {
+            "name": "Kubeman",
+            "description": "To find information from Kubernetes clusters, and to investigate issues related to Kubernetes and Istiod",
+            "link": "https://github.com/walmartlabs/kubeman",
+            "githubStars": "10.99",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b62b780813c2d7bbd27"
+            }
+         },
+         {
+            "name": "kpexec\t",
+            "description": "kpexec is a kubernetes cli that runs commands in a container with high privileges",
+            "link": "https://github.com/ssup2/kpexec",
+            "githubStars": "10.79",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b74b780813c2d7bbec9"
+            }
+         },
+         {
+            "name": "kubespy\t",
+            "description": "pod debugging tool for kubernetes clusters with docker runtimes",
+            "link": "https://github.com/huazhihao/kubespy",
+            "githubStars": "9.18",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b84b780813c2d7bc06b"
+            }
+         },
+         {
+            "name": "Knative Inspect",
+            "description": "A light-weight debugging tool for Knative's system components",
+            "link": "https://github.com/nimakaviani/knative-inspect",
+            "githubStars": "2.88",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472b95b780813c2d7bc20d"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 6
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e730"
+      },
+      "category": {
+         "name": "Development Tools/Kit"
+      },
+      "tools": [
+         {
+            "name": "Kaniko\t",
+            "description": "Build Container Images In Kubernetes\t",
+            "link": "https://github.com/GoogleContainerTools/kaniko",
+            "githubStars": "938.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472c60b780813c2d7bceef"
+            }
+         },
+         {
+            "name": "Terraformer\t\t",
+            "description": "CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code",
+            "link": "https://github.com/GoogleCloudPlatform/terraformer\t",
+            "githubStars": "804.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472c72b780813c2d7bd0b2"
+            }
+         },
+         {
+            "name": "Kompose",
+            "description": "convert docker compose to kubernetes resources",
+            "link": "https://github.com/kubernetes/kompose",
+            "githubStars": "616.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472c9eb780813c2d7bd5f8"
+            }
+         },
+         {
+            "name": "Kubebuilder\t\t",
+            "description": "SDK for building Kubernetes APIs using CRDs",
+            "link": "https://github.com/kubernetes-sigs/kubebuilder\t",
+            "githubStars": "495.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472ca9b780813c2d7bd7ba"
+            }
+         },
+         {
+            "name": "Tilt\t\t",
+            "description": "Define your dev environment as code. For microservice apps on Kubernetes",
+            "link": "https://github.com/tilt-dev/tilt\t",
+            "githubStars": "489.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472cbcb780813c2d7bd97c"
+            }
+         },
+         {
+            "name": "ko\t",
+            "description": "Build and deploy Go applications on Kubernetes",
+            "link": "https://github.com/ko-build/ko",
+            "githubStars": "489.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472ce4b780813c2d7bdb3e"
+            }
+         },
+         {
+            "name": "Tilt: Tilt manages local development instances for teams that deploy to Kubernetes\t",
+            "description": "Local Kubernetes development with no stress",
+            "link": "https://github.com/tilt-dev/tilt",
+            "githubStars": "489.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472cf9b780813c2d7bdd00"
+            }
+         },
+         {
+            "name": "Operator-sdk\t",
+            "description": "SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding",
+            "link": "https://github.com/operator-framework/operator-sdk",
+            "githubStars": "469.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d08b780813c2d7bdec2"
+            }
+         },
+         {
+            "name": "eclipse che IDE for k8s\t",
+            "description": "The Kubernetes-Native IDE for Developer Teams",
+            "link": "https://github.com/eclipse-che/che",
+            "githubStars": "462.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d31b780813c2d7be408"
+            }
+         },
+         {
+            "name": "RELOADER\t",
+            "description": "A Kubernetes controller to watch changes in ConfigMap and Secrets and do rolling upgrades on Pods",
+            "link": "https://github.com/stakater/Reloader",
+            "githubStars": "455.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d2cb780813c2d7be246"
+            }
+         },
+         {
+            "name": "Python client for kuberenetes\t",
+            "description": "Official Python client library for kubernetes",
+            "link": "https://github.com/kubernetes-client/python",
+            "githubStars": "428.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d40b780813c2d7be5ca"
+            }
+         },
+         {
+            "name": "DevSpace\t",
+            "description": "An open-source developer tool for Kubernetes that lets you develop and deploy cloud-native software faster",
+            "link": "https://www.devspace.sh",
+            "githubStars": "274.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d58b780813c2d7be78c"
+            }
+         },
+         {
+            "name": "cdk8s\t",
+            "description": "Kubernetes native apps and abstractions using object-oriented programming",
+            "link": "https://github.com/cdk8s-team/cdk8s",
+            "githubStars": "274.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d74b780813c2d7be94e"
+            }
+         },
+         {
+            "name": "Arkade\t",
+            "description": "Open Source Marketplace For Kubernetes",
+            "link": "https://github.com/alexellis/arkade",
+            "githubStars": "274.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472d83b780813c2d7beb10"
+            }
+         },
+         {
+            "name": "Gitkube\t",
+            "description": "Build and deploy docker images to Kubernetes using git push",
+            "link": "https://github.com/hasura/gitkube",
+            "githubStars": "244.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472dcbb780813c2d7bf056"
+            }
+         },
+         {
+            "name": "mirrord\t",
+            "description": "Run your local process in the context of your cloud cluster",
+            "link": "https://github.com/metalbear-co/mirrord",
+            "githubStars": "227.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472dc7b780813c2d7bee94"
+            }
+         },
+         {
+            "name": "Garden: Kubernetes from source to finish\t",
+            "description": "Development orchestrator for Kubernetes, containers and functions.",
+            "link": "https://github.com/garden-io/garden",
+            "githubStars": "221.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472ddbb780813c2d7bf218"
+            }
+         },
+         {
+            "name": "Garden\t",
+            "description": "Automation for Kubernetes development and testing. Spin up production-like environments for development, testing, and CI on demand.",
+            "link": "https://github.com/garden-io/garden",
+            "githubStars": "221.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472de5b780813c2d7bf3da"
+            }
+         },
+         {
+            "name": "Okteto: A Tool for Cloud Native Developers\t",
+            "description": "Build better applications by developing and testing your code directly in Kubernetes",
+            "link": "https://github.com/okteto/okteto",
+            "githubStars": "214.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472dffb780813c2d7bf59c"
+            }
+         },
+         {
+            "name": "Helmfile\t",
+            "description": "Declaratively deploy your Kubernetes manifests, Kustomize configs, and Charts as Helm releases. Generate all-in-one manifests for use with ArgoCD.",
+            "link": "https://github.com/helmfile/helmfile",
+            "githubStars": "214.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472e12b780813c2d7bf75e"
+            }
+         },
+         {
+            "name": "Brigade\t",
+            "description": "Brigade\tEvent-driven scripting for Kubernetes",
+            "link": "https://github.com/brigadecore/brigade",
+            "githubStars": "160.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472e24b780813c2d7bf920"
+            }
+         },
+         {
+            "name": "\tAtomix\t",
+            "description": "A Kubernetes toolkit for building distributed applications using cloud native principles",
+            "link": "https://github.com/atomix/atomix",
+            "githubStars": "154.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472e3cb780813c2d7bfae2"
+            }
+         },
+         {
+            "name": "KDash\t",
+            "description": "A simple and fast dashboard for Kubernetes",
+            "link": "https://github.com/kdash-rs/kdash",
+            "githubStars": "134.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66472e54b780813c2d7bfca4"
+            }
+         },
+         {
+            "name": "\tSpread\t",
+            "description": "Docker to Kubernetes in one command",
+            "link": "https://github.com/redspread/spread",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474e50b780813c2d7c2246"
+            }
+         },
+         {
+            "name": "KubeBlocks\t",
+            "description": "open-source control plane that runs and manages databases, message queues and other data infrastructure on K8s",
+            "link": "https://github.com/apecloud/kubeblocks",
+            "githubStars": "107.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474e62b780813c2d7c2408"
+            }
+         },
+         {
+            "name": "Monokle\t",
+            "description": "Desktop unified visual tool for authoring, analysis and deployment of Kubernetes configurations",
+            "link": "https://github.com/kubeshop/monokle",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474e78b780813c2d7c278c"
+            }
+         },
+         {
+            "name": "Kubefirst\t",
+            "description": "The Kubefirst CLI creates instant GitOps platforms that integrate some of the best tools in cloud native from scratch in minutes",
+            "link": "https://github.com/kubefirst/kubefirst",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474e84b780813c2d7c294e"
+            }
+         },
+         {
+            "name": "Radius\t",
+            "description": "Radius is a cloud-native, portable application platform that makes app development easier for teams building cloud-native apps",
+            "link": "https://github.com/radius-project/radius",
+            "githubStars": "93.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474e94b780813c2d7c2b10"
+            }
+         },
+         {
+            "name": "Helmify",
+            "description": "\tCreates Helm chart from Kubernetes yaml",
+            "link": "https://github.com/arttor/helmify",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474ea0b780813c2d7c2cd2"
+            }
+         },
+         {
+            "name": "Kueue\t",
+            "description": "Kubernetes-native Job Queueing",
+            "link": "https://github.com/kubernetes-sigs/kueue",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474eeeb780813c2d7c2e94"
+            }
+         },
+         {
+            "name": "k2tf\t",
+            "description": "k2tf - Kubernetes YAML to Terraform HCL converters",
+            "link": "https://github.com/sl1pm4t/k2tf",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474effb780813c2d7c3056"
+            }
+         },
+         {
+            "name": "Sablier\t",
+            "description": "Start your containers on demand, shut them down automatically when there's no activity.",
+            "link": "https://github.com/acouvreur/sablier",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f07b780813c2d7c3218"
+            }
+         },
+         {
+            "name": "Config Syncer\t",
+            "description": "Config Syncer by AppsCode keeps ConfigMaps and Secrets synchronized across namespaces and/or clusters.",
+            "link": "https://github.com/config-syncer/config-syncer",
+            "githubStars": "63.38",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f1bb780813c2d7c33da"
+            }
+         },
+         {
+            "name": "Kubernetes ConfigMap Reload\t",
+            "description": "Simple binary to trigger a reload when a Kubernetes ConfigMap is updated",
+            "link": "https://github.com/jimmidyson/configmap-reload",
+            "githubStars": "63.38",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f45b780813c2d7c359c"
+            }
+         },
+         {
+            "name": "configmap-reload\t",
+            "description": "Simple binary to trigger a reload when a Kubernetes ConfigMap is updated",
+            "link": "https://github.com/jimmidyson/configmap-reload",
+            "githubStars": "62.18",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f54b780813c2d7c375e"
+            }
+         },
+         {
+            "name": "Kor\t",
+            "description": "A Golang Tool to discover unused Kubernetes Resources",
+            "link": "https://github.com/yonahd/kor",
+            "githubStars": "58.16",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f70b780813c2d7c3920"
+            }
+         },
+         {
+            "name": "Docketeer\t",
+            "description": "Docketeer is a developer-friendly application that provides a single interface for container and network management as well as metric visualization.",
+            "link": "https://github.com/open-source-labs/Docketeer",
+            "githubStars": "56.75",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f8bb780813c2d7c3ae2"
+            }
+         },
+         {
+            "name": "kubernetes-replicator\t",
+            "description": "Kubernetes controller for synchronizing secrets & config maps across namespaces",
+            "link": "https://github.com/mittwald/kubernetes-replicator",
+            "githubStars": "53.94",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474f9cb780813c2d7c3ca4"
+            }
+         },
+         {
+            "name": "odo\t",
+            "description": "Developer-focused CLI for fast & iterative application development on Kubernetes and Podman",
+            "link": "https://odo.dev",
+            "githubStars": "51.39",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474fbab780813c2d7c3e66"
+            }
+         },
+         {
+            "name": "KuberNix\t",
+            "description": "Single dependency Kubernetes clusters for local testing, experimenting and development",
+            "link": "https://github.com/saschagrunert/kubernix",
+            "githubStars": "49.65",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474fcbb780813c2d7c4028"
+            }
+         },
+         {
+            "name": "validkube",
+            "description": "\tValidKube combines the best open-source tools to help ensure Kubernetes YAML best practices, hygiene & security.",
+            "link": "https://github.com/komodorio/validkube",
+            "githubStars": "49.04",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474fdcb780813c2d7c41ea"
+            }
+         },
+         {
+            "name": "K8Studio\t",
+            "description": "K8 Studio is a cross-platform client IDE to manage Kubernetes Clusters",
+            "link": "https://github.com/guiqui/k8Studio",
+            "githubStars": "47.24",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66474ff2b780813c2d7c43ac"
+            }
+         },
+         {
+            "name": "k'exp\t",
+            "description": "Understand Kubernetes - the visual way Not yet another attempt to manage production clusters in the browser",
+            "link": "https://github.com/iximiuz/kexp",
+            "githubStars": "43.55",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475003b780813c2d7c456e"
+            }
+         },
+         {
+            "name": "Gefyra",
+            "description": "\tGefyra: Blazingly-fast, rock-solid, local application",
+            "link": "https://github.com/gefyrahq/gefyra",
+            "githubStars": "41.94",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475010b780813c2d7c4730"
+            }
+         },
+         {
+            "name": "\tIngress Monitor Controller\t",
+            "description": "A Kubernetes controller to watch ingresses and create liveness alerts for your apps/microservices in UptimeRobot, StatusCake, Pingdom, etc",
+            "link": "https://github.com/stakater/IngressMonitorController",
+            "githubStars": "36.65",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475023b780813c2d7c48f2"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 7
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e740"
+      },
+      "category": {
+         "name": "Alternative Tools for Development"
+      },
+      "tools": [
+         {
+            "name": "Minikube",
+            "description": "minikube implements a local Kubernetes cluster",
+            "link": "https://github.com/kubernetes/minikube",
+            "githubStars": "1876.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475244b780813c2d7c592c"
+            }
+         },
+         {
+            "name": "KubeSphere",
+            "description": "Easy-to-use Production Ready Container Platform",
+            "link": "https://github.com/kubernetes/minikube",
+            "githubStars": "938.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475236b780813c2d7c578e"
+            }
+         },
+         {
+            "name": "kind",
+            "description": "\tKubernetes IN Docker - local clusters for testing Kubernetes https://kind.sigs.k8s.io/d",
+            "link": "https://github.com/kubernetes-sigs/kind",
+            "githubStars": "871.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647522bb780813c2d7c55f0"
+            }
+         },
+         {
+            "name": "Rainbond",
+            "description": "Offers a serverless experience, and allows you to easily manage containerized applications without needing to understand Kubernetes\t",
+            "link": "\thttps://github.com/goodrain/rainbond\t",
+            "githubStars": "314.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475221b780813c2d7c5452"
+            }
+         },
+         {
+            "name": "Otomi\t\t",
+            "description": "Self-hosted PaaS for Kubernetes\t",
+            "link": "https://github.com/redkubes/otomi-core",
+            "githubStars": "140.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475218b780813c2d7c52b4"
+            }
+         },
+         {
+            "name": "Systemk: virtual kubelet for systemd",
+            "description": "Systemk is a systemd backend for the virtual-kubelet. Instead of starting containers, you start systemd units",
+            "link": "https://github.com/virtual-kubelet/systemk",
+            "githubStars": "10.32",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475209b780813c2d7c5116"
+            }
+         },
+         {
+            "name": "mokbox",
+            "description": "Build verifiably conformant multi-node kubernetes clusters in containers",
+            "link": "https://github.com/bashtools/mokctl",
+            "githubStars": "7.37",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664751fdb780813c2d7c4f78"
+            }
+         },
+         {
+            "name": "skippbox\t",
+            "description": "A Desktop application for k8sd",
+            "link": "https://github.com/skippbox/skippbox",
+            "githubStars": "3.89",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664751d7b780813c2d7c4dda"
+            }
+         },
+         {
+            "name": "k3d\t",
+            "description": "k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernetes distribution) in docker\t",
+            "link": "https://k3d.io/v5.6.3/",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-27T20:38:55.57Z"
+            },
+            "_id": {
+               "$oid": "662d625f847b62274c188614"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 8
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e74a"
+      },
+      "category": {
+         "name": "CI/CD Integration Tools"
+      },
+      "tools": [
+         {
+            "name": "Drone\t",
+            "description": "Drone is a Container-Native, Continuous Delivery Platform",
+            "link": "https://github.com/harness/gitnes",
+            "githubStars": "2077.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471a4fb780813c2d7b5d10"
+            }
+         },
+         {
+            "name": "Argo CD\t\t",
+            "description": "Declarative continuous deployment for Kubernetes",
+            "link": "https://github.com/argoproj/argo-cd\t",
+            "githubStars": "1072.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471a67b780813c2d7b5eba"
+            }
+         },
+         {
+            "name": "Skaffold\t\t",
+            "description": "Easy and Repeatable Kubernetes Development",
+            "link": "https://github.com/GoogleContainerTools/skaffold\t",
+            "githubStars": "1005.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471a8cb780813c2d7b6064"
+            }
+         },
+         {
+            "name": "Spinnaker\t",
+            "description": "Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence. http://www.spinnaker.io/",
+            "link": "https://github.com/spinnaker/spinnaker",
+            "githubStars": "616.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471ab4b780813c2d7b63b8"
+            }
+         },
+         {
+            "name": "Tekton\t",
+            "description": "A cloud native continuous integration and delivery (CI/CD) solution",
+            "link": "https://github.com/tektoncd/pipeline",
+            "githubStars": "556.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471acfb780813c2d7b6562"
+            }
+         },
+         {
+            "name": "Flux",
+            "description": "GitOps Kubernetes operator",
+            "link": "https://github.com/fluxcd/flux",
+            "githubStars": "462.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471b6cb780813c2d7b6f5e"
+            }
+         },
+         {
+            "name": "flagger",
+            "description": "Progressive delivery Kubernetes operator (Canary, A/B Testing and Blue/Green deployments)",
+            "link": "https://github.com/fluxcd/flagger",
+            "githubStars": "314.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471b66b780813c2d7b6db4"
+            }
+         },
+         {
+            "name": "Jenkins X\t",
+            "description": "Jenkins X provides automated CI+CD for Kubernetes with Preview Environments on Pull Requests using Tekton, Knative, Lighthouse, Skaffold and Helm",
+            "link": "https://github.com/jenkins-x/jx",
+            "githubStars": "301.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471b73b780813c2d7b7108"
+            }
+         },
+         {
+            "name": "Devtron",
+            "description": "Software Delivery Workflow for Kubernetes",
+            "link": "https://github.com/devtron-labs/devtron",
+            "githubStars": "261.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471b94b780813c2d7b72b2"
+            }
+         },
+         {
+            "name": "werf\t",
+            "description": "GitOps tool to deliver apps to Kubernetes and integrate this process with GitLab and other CI tools",
+            "link": "https://github.com/werf/werf",
+            "githubStars": "261.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471ba8b780813c2d7b745c"
+            }
+         },
+         {
+            "name": "Kubefirst\t\t",
+            "description": "GitOps Infrastructure & Application Delivery Platform",
+            "link": "https://github.com/kubefirst/kubefirst\t",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471bc3b780813c2d7b7606"
+            }
+         },
+         {
+            "name": "Helmsman\t\t",
+            "description": "Helm Charts as Code",
+            "link": "https://github.com/Praqma/helmsman\t",
+            "githubStars": "93.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471bd8b780813c2d7b77b0"
+            }
+         },
+         {
+            "name": "PipeCD\t",
+            "description": "The One CD for All {applications, platforms, operations}",
+            "link": "https://github.com/pipe-cd/pipecd",
+            "githubStars": "64.99",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471c09b780813c2d7b795a"
+            }
+         },
+         {
+            "name": "Helmwave\t\t",
+            "description": "Helmwave is helm3-native tool for deploy your Helm Charts",
+            "link": "https://github.com/helmwave/helmwave",
+            "githubStars": "45.02",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471c25b780813c2d7b7b04"
+            }
+         },
+         {
+            "name": "kubedog",
+            "description": "Library to watch and follow kubernetes resources in CI/CD deploy pipelines",
+            "link": "https://github.com/werf/kubedog",
+            "githubStars": "41.27",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471c48b780813c2d7b7cae"
+            }
+         },
+         {
+            "name": "Kluctl\t\t",
+            "description": "Kluctl implements templated declarative Kubernetes deployments, supporting push (CLI) and pull (kluctl-controller) based GitOps from the same source",
+            "link": "https://github.com/kluctl/kluctl\t",
+            "githubStars": "31.49",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471c6ab780813c2d7b7e5a"
+            }
+         },
+         {
+            "name": "autoapply",
+            "description": "Automatically apply changes to a Kubernetes cluster",
+            "link": "https://github.com/autoapply/autoapply",
+            "githubStars": "9.98",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471c91b780813c2d7b8004"
+            }
+         },
+         {
+            "name": "Helm Cabin\t",
+            "description": "Web UI that visualizes Helm releases in a Kubernetes cluster",
+            "link": "https://github.com/Nick-Triller/helm-cabin",
+            "githubStars": "2.88",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471cacb780813c2d7b81ae"
+            }
+         },
+         {
+            "name": "Apollo\t",
+            "description": "Apollo - The logz.io continuous deployment solution over kubernetes",
+            "link": "https://github.com/logzio/apollo",
+            "githubStars": "1.88",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66471ceeb780813c2d7b835c"
+            }
+         },
+         {
+            "name": "HybridK8s Droid\t",
+            "description": "Intelligence foor your favourite Delivery Platform\t",
+            "link": "https://hybridk8s.tech",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-27T16:22:18.809Z"
+            },
+            "_id": {
+               "$oid": "662d263a7e72921b4d0f7f0a"
+            }
+         },
+         {
+            "name": "Kubeform\t",
+            "description": "Kubernetes CRDs for Terraform providers https://kubeform.com",
+            "link": "https://github.com/kubeform/kubeform",
+            "githubStars": "stars repo not found",
+            "publishDate": {
+               "$date": "2024-04-27T16:23:20.135Z"
+            },
+            "_id": {
+               "$oid": "662d26787e72921b4d0f80cb"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 3
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e760"
+      },
+      "category": {
+         "name": "Security Tools"
+      },
+      "tools": [
+         {
+            "name": "kube-hunter",
+            "description": "Pentesting tool - Hunts for security weaknesses in Kubernetes clusters",
+            "link": "https://github.com/aquasecurity/kube-hunter",
+            "githubStars": "308.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a75b780813c2d7cf0d2"
+            }
+         },
+         {
+            "name": "Kyverno",
+            "description": "Kubernetes Native Policy Management",
+            "link": "https://github.com/nirmata/kyverno",
+            "githubStars": " 0.94",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a6bb780813c2d7cebd9"
+            }
+         },
+         {
+            "name": "Kubeaudit",
+            "description": "kubeaudit helps you audit your Kubernetes clusters against common security controls",
+            "link": "https://github.com/Shopify/kubeaudit",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a5fb780813c2d7cea1c"
+            }
+         },
+         {
+            "name": "kube-bench",
+            "description": "CIS Kubernetes Benchmark tool",
+            "link": "https://github.com/aquasecurity/kube-bench",
+            "githubStars": "442.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a51b780813c2d7ce85f"
+            }
+         },
+         {
+            "name": "Datree",
+            "description": "CLI tool to prevent K8s misconfigurations by ensuring that manifests and Helm charts follow best practices as well as your organization’s policies",
+            "link": "https://github.com/datreeio/datree",
+            "githubStars": "428.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a46b780813c2d7ce6a2"
+            }
+         },
+         {
+            "name": "starboard",
+            "description": "Kubernetes-native security toolkit",
+            "link": "https://github.com/aquasecurity/starboard",
+            "githubStars": "87.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a3cb780813c2d7ce4e5"
+            }
+         },
+         {
+            "name": "TerraScan",
+            "description": "Detect compliance and security violations across Infrastructure as Code to mitigate risk before provisioning cloud native infrastructure.",
+            "link": "https://github.com/tenable/terrascan",
+            "githubStars": "301.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a30b780813c2d7ce328"
+            }
+         },
+         {
+            "name": "kube-who-can",
+            "description": "Show who has RBAC permissions to perform actions on different resources in Kubernetes",
+            "link": "https://github.com/aquasecurity/kubectl-who-can",
+            "githubStars": " 53.13",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a24b780813c2d7ce16b"
+            }
+         },
+         {
+            "name": "kubestriker",
+            "description": "Security Auditing tool",
+            "link": "https://github.com/vchinnipilli/kubestriker",
+            "githubStars": "65.53",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a16b780813c2d7cdfae"
+            }
+         },
+         {
+            "name": "kube2iam",
+            "description": "IAM credentials to containers running inside a Kubernetes cluster based on annotations.",
+            "link": "https://github.com/jtblin/kube2iam",
+            "githubStars": "59.43",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475a0ab780813c2d7cddf1"
+            }
+         },
+         {
+            "name": "Simulator",
+            "description": "Kubernetes Security Training Platform - Focusing on security mitigation",
+            "link": "https://github.com/controlplaneio/simulator",
+            "githubStars": "59.43",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759f9b780813c2d7cdc34"
+            }
+         },
+         {
+            "name": "kiosk",
+            "description": "Kiosk office Multi-Tenancy Extension For Kubernetes - Secure Cluster Sharing & Self-Service Namespace Provisioning",
+            "link": "https://github.com/loft-sh/kiosk",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759eab780813c2d7cda77"
+            }
+         },
+         {
+            "name": "Kubevious CLI",
+            "description": "Prevent cross-manifest errors and violations of best practices in YAML files, Helm Charts and Kubernetes clusters",
+            "link": "https://github.com/kubevious/cli",
+            "githubStars": "3.08",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759dcb780813c2d7cd57e"
+            }
+         },
+         {
+            "name": "Audit2rbac",
+            "description": "Autogenerate RBAC policies based on Kubernetes audit logs",
+            "link": "https://github.com/liggitt/audit2rbac",
+            "githubStars": "67.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759ceb780813c2d7cd3c1"
+            }
+         },
+         {
+            "name": "Gangway",
+            "description": "An application that can be used to easily enable authentication flows via OIDC for a Kubernetes cluster",
+            "link": "https://github.com/vmware-archive/gangway",
+            "githubStars": "27.47",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759c3b780813c2d7cd204"
+            }
+         },
+         {
+            "name": "klum",
+            "description": "Kubernetes Lazy User Manager",
+            "link": "https://github.com/ibuildthecloud/klum",
+            "githubStars": "20.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759b3b780813c2d7cd047"
+            }
+         },
+         {
+            "name": "RBAC Lookup",
+            "description": "Easily find roles and cluster roles attached to any user, service account, or group name in your Kubernetes cluster",
+            "link": "https://github.com/FairwindsOps/rbac-lookup",
+            "githubStars": "56.01",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664759a4b780813c2d7cce8a"
+            }
+         },
+         {
+            "name": "Chartsec",
+            "description": "Helm Chart security scanner",
+            "link": "https://github.com/banzaicloud/chartsec",
+            "githubStars": "3.02",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475997b780813c2d7ccccd"
+            }
+         },
+         {
+            "name": "Krane\t",
+            "description": "Kubernetes RBAC static Analysis & visualisation tool",
+            "link": "https://github.com/appvia/krane",
+            "githubStars": "44.29",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475989b780813c2d7ccb10"
+            }
+         },
+         {
+            "name": "Falco\t",
+            "description": "The Falco Project - Cloud-Native runtime security",
+            "link": "https://falco.org",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-22T21:08:46.428Z"
+            },
+            "_id": {
+               "$oid": "6626d1de0261447e051a00ed"
+            }
+         },
+         {
+            "name": "Clair",
+            "description": "Vulnerability Static Analysis for Containers",
+            "link": "https://github.com/quay/clair",
+            "githubStars": "670.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647597db780813c2d7cc953"
+            }
+         },
+         {
+            "name": "M9sweeper\t",
+            "description": "Complete Kubernetes Security Platform",
+            "link": "https://github.com/m9sweeper/m9sweeper",
+            "githubStars": "14.54",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475971b780813c2d7cc45a"
+            }
+         },
+         {
+            "name": "Trivy\t",
+            "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in Kubernetes",
+            "link": "https://github.com/aquasecurity/trivy",
+            "githubStars": "1407.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475967b780813c2d7cc29d"
+            }
+         },
+         {
+            "name": "kubesec\t",
+            "description": "Security risk analysis for Kubernetes resources",
+            "link": "https://github.com/controlplaneio/kubesec",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647595eb780813c2d7cc0e0"
+            }
+         },
+         {
+            "name": "Vault-k8s\t",
+            "description": "First-class support for Vault and Kubernetes",
+            "link": "https://github.com/hashicorp/vault-k8s",
+            "githubStars": " 51.46",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475955b780813c2d7cbf23"
+            }
+         },
+         {
+            "name": "Hardeneks\t",
+            "description": "Runs checks to see if an EKS cluster follows EKS Best Practices",
+            "link": "https://github.com/aws-samples/hardeneks",
+            "githubStars": "53.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475931b780813c2d7cbd66"
+            }
+         },
+         {
+            "name": "Hubble\t",
+            "description": "Network, Service & Security Observability for Kubernetes using eBPF",
+            "link": "https://github.com/cilium/hubble",
+            "githubStars": "221.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475917b780813c2d7cbba9"
+            }
+         },
+         {
+            "name": "Kubeval\t",
+            "description": "Validate your Kubernetes configuration files, supports multiple Kubernetes versions",
+            "link": "https://github.com/instrumenta/kubeval",
+            "githubStars": "207.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647590cb780813c2d7cb9ec"
+            }
+         },
+         {
+            "name": "Paralus\t",
+            "description": "Paralus enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero friction",
+            "link": "https://github.com/paralus/paralus",
+            "githubStars": "62.18",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475900b780813c2d7cb82f"
+            }
+         },
+         {
+            "name": "Peirates\t",
+            "description": "Kubernetes Penetration Testing tool",
+            "link": "https://github.com/inguardians/peirates",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758f4b780813c2d7cb672"
+            }
+         },
+         {
+            "name": "Kubectl-kubesec\t",
+            "description": "Security risk analysis for Kubernetes resources",
+            "link": "https://github.com/controlplaneio/kubectl-kubesec",
+            "githubStars": "33.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758e8b780813c2d7cb4b5"
+            }
+         },
+         {
+            "name": "jsPolicy\t",
+            "description": "jsPolicy is a policy engine for Kubernetes that allows you to write policies in JavaScript or TypeScript",
+            "link": "https://github.com/pavan-kumar-99/medium-manifests/tree/jsPolicy",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-22T21:38:19.159Z"
+            },
+            "_id": {
+               "$oid": "6626d8cbea46a5a2c1da6302"
+            }
+         },
+         {
+            "name": "Netchecks\t",
+            "description": "Set of tools for testing network conditions and asserting that they are as expected.",
+            "link": "https://github.com/hardbyte/netchecks/",
+            "githubStars": "9.98",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758d9b780813c2d7cb2f8"
+            }
+         },
+         {
+            "name": "KubeLinter\t",
+            "description": "KubeLinter is a static analysis tool that checks Kubernetes YAML files and Helm charts to ensure the applications represented in them adhere to best practices",
+            "link": "https://github.com/stackrox/kube-linter",
+            "githubStars": "180.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758ccb780813c2d7cb13b"
+            }
+         },
+         {
+            "name": "IceKube\t",
+            "description": "IceKube is a tool to help find attack paths within a Kubernetes cluster from a low privileged point, to a preferred location, typically cluster-admin",
+            "link": "https://github.com/WithSecureLabs/IceKube",
+            "githubStars": "10.65",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758bbb780813c2d7caf7e"
+            }
+         },
+         {
+            "name": "kube-rebac-authorizer\t",
+            "description": "Beyond RBAC: Implementing Relation-based Access Control for Kubernetes with OpenFGA",
+            "link": "https://github.com/luxas/kube-rebac-authorizer",
+            "githubStars": "3.08",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758b0b780813c2d7cadc1"
+            }
+         },
+         {
+            "name": "MTKPI\t",
+            "description": "🧰 Multi Tool Kubernetes Pentest Image",
+            "link": "https://github.com/r0binak/MTKPI",
+            "githubStars": "12.93",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664758a5b780813c2d7cac04"
+            }
+         },
+         {
+            "name": "KubeZoo\t",
+            "description": "a lightweight kubernetes multi-tenancy gateway",
+            "link": "https://github.com/kubewharf/kubezoo",
+            "githubStars": "43.62",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6647589bb780813c2d7caa47"
+            }
+         },
+         {
+            "name": "kubectl-modify-secrets\t",
+            "description": "allows user to directly modify the secret without worrying about base64 encoding/decoding",
+            "link": "https://github.com/rajatjindal/kubectl-modify-secret",
+            "githubStars": "8.64",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475890b780813c2d7ca88a"
+            }
+         },
+         {
+            "name": "rbac-tool\t",
+            "description": "Rapid7 insightCloudSec Kubernetes RBAC Power Toys - Visualize, Analyze, Generate & Query",
+            "link": "https://github.com/alcideio/rbac-tool",
+            "githubStars": "58.09",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66475889b780813c2d7ca6cd"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 10
+   },
+   {
+      "_id": {
+         "$oid": "65da0a3cd8ec32955a20e773"
+      },
+      "category": {
+         "name": "Network Policies"
+      },
+      "tools": [
+         {
+            "name": "Calico",
+            "description": "Cloud native connectivity and network policy",
+            "link": "https://github.com/projectcalico/calico",
+            "githubStars": "24.49",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484b2fb780813c2d7e1bfc"
+            }
+         },
+         {
+            "name": "Cilium",
+            "description": "eBPF-based Networking, Security, and Observability",
+            "link": "https://github.com/cilium/cilium",
+            "githubStars": "1273.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484b25b780813c2d7e1a5a"
+            }
+         },
+         {
+            "name": "MetalLB",
+            "description": "MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols",
+            "link": "https://github.com/metallb/metallb",
+            "githubStars": "442.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484b1ab780813c2d7e18b8"
+            }
+         },
+         {
+            "name": "Kilo (k8s + wg)",
+            "description": "A multi-cloud network overlay built on WireGuard and designed for Kubernetes",
+            "link": "https://github.com/squat/kilo",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484b0ab780813c2d7e1716"
+            }
+         },
+         {
+            "name": "submariner",
+            "description": "Networking component for interconnecting Pods and Services across Kubernetes clusters",
+            "link": "https://github.com/submariner-io/submariner",
+            "githubStars": "154.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484afcb780813c2d7e1574"
+            }
+         },
+         {
+            "name": "Submariner",
+            "description": "Connect all your Kubernetes clusters, no matter where they are in the world",
+            "link": "https://github.com/redhat-nfvpe/kokotap",
+            "githubStars": "154.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484af1b780813c2d7e13d2"
+            }
+         },
+         {
+            "name": "Spiderpool",
+            "description": "Underlay network solution of cloud native, for bare metal, VM and public cloud",
+            "link": "https://github.com/spidernet-io/spiderpool",
+            "githubStars": "31.16",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484ae3b780813c2d7e1230"
+            }
+         },
+         {
+            "name": "kubefwd (Kube Forward)",
+            "description": "Bulk port forwarding Kubernetes services for local development",
+            "link": "https://github.com/txn2/kubefwd",
+            "githubStars": "247.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484ad5b780813c2d7e108e"
+            }
+         },
+         {
+            "name": "Network Policy API",
+            "description": "A further work involving Kubernetes network security beyond the NetworkPolicy v1 resource.",
+            "link": "https://github.com/kubernetes-sigs/network-policy-api",
+            "githubStars": "3.02",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484a99b780813c2d7e0eec"
+            }
+         },
+         {
+            "name": "kokotap",
+            "description": "Tools for Kubernetes pod network tapping",
+            "link": "https://github.com/redhat-nfvpe/kokotap",
+            "githubStars": "2.81",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484a8eb780813c2d7e0d4a"
+            }
+         },
+         {
+            "name": "LoxiLB",
+            "description": "eBPF based cloud-native load-balancer. Powering K8s,Edge,5G,IoT,XaaS Apps",
+            "link": "https://github.com/loxilb-io/loxilb",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484a83b780813c2d7e0ba8"
+            }
+         },
+         {
+            "name": "egress-operator",
+            "description": "An operator to produce egress gateway pods and control access to them with network policies",
+            "link": "https://github.com/monzo/egress-operator",
+            "githubStars": "16.42",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484a7ab780813c2d7e0a06"
+            }
+         },
+         {
+            "name": "netfetch",
+            "description": "Scan k8s clusters for network policies and identifying unprotected workloads.",
+            "link": "https://github.com/deggja/netfetch",
+            "githubStars": "8.84",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484a71b780813c2d7e0864"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-02-24T15:23:39.735Z"
+      },
+      "__v": 0,
+      "index": 11
+   },
+   {
+      "_id": {
+         "$oid": "66239464282c0fecdd12423d"
+      },
+      "index": 26,
+      "category": {
+         "name": "Pods"
+      },
+      "tools": [
+         {
+            "name": "kubetail",
+            "description": "Bash script to tail Kubernetes logs from multiple pods at the same time",
+            "link": "https://github.com/johanhaleby/kubetail",
+            "githubStars": "214.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc5cbb780813c2d82bf0b"
+            }
+         },
+         {
+            "name": "kube-s3",
+            "description": "Kubernetes pods used shared S3 storage",
+            "link": "https://github.com/freegroup/kube-s3",
+            "githubStars": "13.33",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc5c2b780813c2d82bd73"
+            }
+         },
+         {
+            "name": "kubectl-ports-rs",
+            "description": "A kubectl krew plugin to provide a list of exposed ports on kubernetes Pod resources",
+            "link": "https://github.com/widnyana/kubectl-ports-rs",
+            "githubStars": "0.74",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc5bab780813c2d82bbdb"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-20T10:09:40.139Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "6623b39bcaf7373ba5a6b92d"
+      },
+      "index": 12,
+      "category": {
+         "name": "Cluster Management"
+      },
+      "tools": [
+         {
+            "name": "Monokle",
+            "description": "Desktop unified visual tool for authoring, analysis and deployment of Kubernetes configurations",
+            "link": "https://github.com/kubeshop/monokle",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664850d1b780813c2d7e77d0"
+            }
+         },
+         {
+            "name": "kops",
+            "description": "Production Grade K8s Installation, Upgrades, and Management\t",
+            "link": "https://github.com/kubernetes/kops",
+            "githubStars": "1072.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664850c6b780813c2d7e760d"
+            }
+         },
+         {
+            "name": "silver-surfer",
+            "description": "Check ApiVersion compatibility and provide Migration path for Kubernetes objects when upgrading Kubernetes to latest versions",
+            "link": "https://github.com/devtron-labs/silver-surfer",
+            "githubStars": "20.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664850bcb780813c2d7e744a"
+            }
+         },
+         {
+            "name": "Kube-ops-view",
+            "description": "Kubernetes Operational View - read-only system dashboard for multiple K8s clusters",
+            "link": "https://github.com/hjacobs/kube-ops-view",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648509fb780813c2d7e7287"
+            }
+         },
+         {
+            "name": "kubeprompt\t",
+            "description": "Kubernetes prompt info",
+            "link": "https://github.com/jlesquembre/kubeprompt",
+            "githubStars": "5.03",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485094b780813c2d7e70c4"
+            }
+         },
+         {
+            "name": "Metalk8s\t",
+            "description": "An opinionated Kubernetes distribution with a focus on long-term on-prem deployments",
+            "link": "https://github.com/scality/metalk8s",
+            "githubStars": " 23.05",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648508bb780813c2d7e6f01"
+            }
+         },
+         {
+            "name": "kind\t",
+            "description": "Kubernetes IN Docker - local clusters for testing Kubernetes",
+            "link": "https://github.com/kubernetes-sigs/kind",
+            "githubStars": "871.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485081b780813c2d7e6d3e"
+            }
+         },
+         {
+            "name": "Clusterman\t",
+            "description": "Cluster Autoscaler for Kubernetes and Mesos",
+            "link": "https://github.com/Yelp/clusterman",
+            "githubStars": "19.77",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485077b780813c2d7e6b7b"
+            }
+         },
+         {
+            "name": "Cert-manager\t",
+            "description": "Automatically provision and manage TLS certificates",
+            "link": "https://github.com/cert-manager/cert-manager",
+            "githubStars": " 737.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648506db780813c2d7e69b8"
+            }
+         },
+         {
+            "name": "Goldilocks\t",
+            "description": "Get your resource requests \"Just Right\"",
+            "link": "https://github.com/FairwindsOps/goldilock",
+            "githubStars": "154.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485064b780813c2d7e67f5"
+            }
+         },
+         {
+            "name": "katafygio\t",
+            "description": "Dump, or continuously backup Kubernetes objets as yaml files in git",
+            "link": "https://github.com/bpineau/katafygio",
+            "githubStars": "13.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485054b780813c2d7e6632"
+            }
+         },
+         {
+            "name": "Rancher\t",
+            "description": "Complete container management platform",
+            "link": "https://github.com/rancher/rancher",
+            "githubStars": "1541.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648504ab780813c2d7e646f"
+            }
+         },
+         {
+            "name": "Sealed Secrets\t",
+            "description": "A Kubernetes controller and tool for one-way encrypted Secrets",
+            "link": "https://github.com/bitnami-labs/sealed-secrets",
+            "githubStars": "475.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485040b780813c2d7e62ac"
+            }
+         },
+         {
+            "name": "OpenKruise/Kruise\t",
+            "description": "Automate application workloads management on Kubernetes https://openkruise.io",
+            "link": "https://github.com/openkruise/kruise",
+            "githubStars": " 294.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485035b780813c2d7e60e9"
+            }
+         },
+         {
+            "name": "kubectl snapshot\t",
+            "description": "Take Cluster Snapshots",
+            "link": "https://github.com/fbrubbo/kubectl-snapshot",
+            "githubStars": "2.28",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648502cb780813c2d7e5f26"
+            }
+         },
+         {
+            "name": "kapp\t",
+            "description": "simple deployment tool focused on the concept of \"Kubernetes application\" — a set of resources with the same label https://get-kapp.io",
+            "link": "https://github.com/carvel-dev/kapp",
+            "githubStars": "57.55",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648501fb780813c2d7e5d63"
+            }
+         },
+         {
+            "name": "KEDA\t",
+            "description": "Event-driven autoscaler for Kubernetes",
+            "link": "https://keda.sh",
+            "githubStars": "515.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485011b780813c2d7e5ba0"
+            }
+         },
+         {
+            "name": "Octant\t",
+            "description": "To better understand the complexity of Kubernetes clusters",
+            "link": "https://github.com/vmware-archive/octant",
+            "githubStars": "422.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485008b780813c2d7e59dd"
+            }
+         },
+         {
+            "name": "Portainer\t",
+            "description": "Portainer inside a Kubernetes environment",
+            "link": "https://github.com/portainer/k8s",
+            "githubStars": "5.36",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484ffbb780813c2d7e581a"
+            }
+         },
+         {
+            "name": "Gardener\t",
+            "description": "Deliver fully-managed clusters at scale everywhere with your own Kubernetes-as-a-Service",
+            "link": "https://gardener.cloud",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-20T20:30:09.55Z"
+            },
+            "_id": {
+               "$oid": "662425d1ee44933f7555bfcd"
+            }
+         },
+         {
+            "name": "xlskubectl\t",
+            "description": "xlskubectl — a spreadsheet to control your Kubernetes cluster",
+            "link": "https://github.com/learnk8s/xlskubectl",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484ff0b780813c2d7e5657"
+            }
+         },
+         {
+            "name": "Kubefirst\t",
+            "description": "Fully-automated OSS delivery & infrastructure management gitops platforms",
+            "link": "https://github.com/kubefirst/kubefirst",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fe6b780813c2d7e5494"
+            }
+         },
+         {
+            "name": "Kamaji\t",
+            "description": "Build and operate Kubernetes at scale with a fraction of operational burden",
+            "link": "https://github.com/clastix/kamaji",
+            "githubStars": "55.01",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fdcb780813c2d7e52d1"
+            }
+         },
+         {
+            "name": "kustomizer\t",
+            "description": "An experimental package manager for distributing Kubernetes configuration as OCI artifacts",
+            "link": "https://github.com/stefanprodan/kustomizer",
+            "githubStars": "18.76",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fd3b780813c2d7e510e"
+            }
+         },
+         {
+            "name": "Kudo\t",
+            "description": "declarative approach to building production-grade Kubernetes Operators",
+            "link": "https://github.com/kudobuilder/kudo",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fc7b780813c2d7e4f4b"
+            }
+         },
+         {
+            "name": "node-problem-detector\t",
+            "description": "This is a place for various problem detectors running on the Kubernetes nodes",
+            "link": "https://github.com/kubernetes/node-problem-detector",
+            "githubStars": "187.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fbeb780813c2d7e4d88"
+            }
+         },
+         {
+            "name": "k0s\t",
+            "description": "k0s is an all-inclusive Kubernetes distribution, which is configured with all of the features needed to build a Kubernetes cluster and packaged as a single binary for ease of use",
+            "link": "https://github.com/k0sproject/k0s",
+            "githubStars": "180.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fb5b780813c2d7e4bc5"
+            }
+         },
+         {
+            "name": "k0smotron\t",
+            "description": "Deploy and run Kubernetes control planes powered by k0s on any existing cluster",
+            "link": "https://github.com/k0sproject/k0smotron",
+            "githubStars": "24.12",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484fa9b780813c2d7e4a02"
+            }
+         },
+         {
+            "name": "ClusterPedia\t",
+            "description": "The Encyclopedia of Kubernetes clusters",
+            "link": "https://github.com/clusterpedia-io/clusterpedia",
+            "githubStars": "48.04",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f9fb780813c2d7e483f"
+            }
+         },
+         {
+            "name": "kubean\t",
+            "description": "🌱 Kubernetes lifecycle management operator based on kubespray.",
+            "link": "https://github.com/kubean-io/kubean",
+            "githubStars": "27.67",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f95b780813c2d7e467c"
+            }
+         },
+         {
+            "name": "punq\t",
+            "description": "Self-hosted Kubernetes workload manager with team collaboration",
+            "link": "https://github.com/mogenius/punq",
+            "githubStars": "4.62",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f8cb780813c2d7e44b9"
+            }
+         },
+         {
+            "name": "Claudie\t",
+            "description": "Deploy and operate Kubernetes clusters with eapool in a different provider or on-prem",
+            "link": "https://github.com/berops/claudie",
+            "githubStars": "31.89",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f84b780813c2d7e42f6"
+            }
+         },
+         {
+            "name": "Kubemarine\t",
+            "description": "Management tool for Kubernetes cluster deployment and maintenance",
+            "link": "https://github.com/Netcracker/KubeMarine",
+            "githubStars": "7.64",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f7cb780813c2d7e4133"
+            }
+         },
+         {
+            "name": "k8s-duplicator\t",
+            "description": "Kubernetes controller that copies secrets into other namespaces",
+            "link": "https://github.com/Nick-Triller/k8s-duplicator",
+            "githubStars": "0.13",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f6fb780813c2d7e3f70"
+            }
+         },
+         {
+            "name": "k0smotron\t",
+            "description": "run Kubernetes control planes within a management cluster and with the integration of Cluster API",
+            "link": "https://github.com/k0sproject/k0smotron",
+            "githubStars": "24.12",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f67b780813c2d7e3dad"
+            }
+         },
+         {
+            "name": "KubeStellar\t",
+            "description": "a flexible solution for challenges associated with multi-cluster configuration management for edge, multi-cloud, and hybrid cloud",
+            "link": "a flexible solution for challenges associated with multi-cluster configuration management for edge, multi-cloud, and hybrid cloud",
+            "githubStars": "15.14",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f5eb780813c2d7e3bea"
+            }
+         },
+         {
+            "name": "Trolley\t",
+            "description": "Trolley is a multi cloud Kubernetes management system",
+            "link": "https://github.com/Trolley-MGMT/trolleymgmt",
+            "githubStars": "7.37",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f54b780813c2d7e36eb"
+            }
+         },
+         {
+            "name": "Cyclops\t",
+            "description": "a powerful user interface for managing and interacting with Kubernetes clusters",
+            "link": "https://github.com/cyclops-ui/cyclops",
+            "githubStars": " 30.28",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f48b780813c2d7e3528"
+            }
+         },
+         {
+            "name": "Liqo\t",
+            "description": "an open-source project that enables dynamic and seamless Kubernetes multi-cluster topologies, supporting heterogeneous on-premise, cloud and edge infrastructures",
+            "link": "https://github.com/liqotech/liqo",
+            "githubStars": "67.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f3fb780813c2d7e3365"
+            }
+         },
+         {
+            "name": "Guard\t",
+            "description": "🔑 Kubernetes Authentication & Authorization WebHook Server",
+            "link": "https://github.com/kubeguard/guard",
+            "githubStars": "39.13",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f31b780813c2d7e2fdf"
+            }
+         },
+         {
+            "name": "Meshery\t",
+            "description": "Meshery is a Multi-cluster management tool for Kubernetes and Clouds",
+            "link": "https://github.com/meshery/meshery",
+            "githubStars": "328.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484f28b780813c2d7e2e1c"
+            }
+         },
+         {
+            "name": "cluster-template\t",
+            "description": "A template for deploying a Kubernetes cluster with k3s or Talos",
+            "link": "https://github.com/onedr0p/cluster-template",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484d2fb780813c2d7e2933"
+            }
+         },
+         {
+            "name": "Punq\t",
+            "description": "A slim open-source workload manager for Kubernetes with team collaboration, WebApp, and CLI.",
+            "link": "https://github.com/mogenius/punq",
+            "githubStars": "4.62",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484d20b780813c2d7e2770"
+            }
+         },
+         {
+            "name": "vCluster\t",
+            "description": "Create fully functional virtual Kubernetes clusters - Each vcluster runs inside a namespace of the underlying k8s cluster. It's cheaper than creating separate full-blown clusters and it offers better multi-tenancy and isolation than regular namespaces.",
+            "link": "https://github.com/loft-sh/vcluster",
+            "githubStars": "375.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484d16b780813c2d7e25ad"
+            }
+         },
+         {
+            "name": "KindScaler\t",
+            "description": "Node Management for KinD Clusters. Modify the KinD cluster configuration by adding or removing nodes, whether they are control-planes or workers, without regenerating it from scratch.",
+            "link": "https://github.com/lobuhi/kindscaler",
+            "githubStars": "1.27",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66484d0db780813c2d7e23ea"
+            }
+         },
+         {
+            "name": "Kubeview",
+            "description": "Kubernetes cluster visualiser and visual explorer",
+            "link": "https://github.com/benc-uk/kubeview",
+            "githubStars": "902",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664590d7b780813c2d7a5f3e"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-20T12:22:51.309Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "6626dd1bea46a5a2c1da8095"
+      },
+      "index": 15,
+      "category": {
+         "name": "Testing Tools"
+      },
+      "tools": [
+         {
+            "name": "Testkube\t",
+            "description": "Kubernetes-native testing framework for testers and developers",
+            "link": "https://github.com/kubeshop/testkube",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc928b780813c2d830957"
+            }
+         },
+         {
+            "name": "k6d\t",
+            "description": "A modern load testing tool, using Go and JavaScrip",
+            "link": "https://github.com/grafana/k6",
+            "githubStars": "1541.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc91db780813c2d8307b3"
+            }
+         },
+         {
+            "name": "Network bandwith and load testingd -\t",
+            "description": "Test suite for Kubernetes",
+            "link": "https://github.com/mrahbar/k8s-testsuite",
+            "githubStars": "12.06",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc914b780813c2d83060f"
+            }
+         },
+         {
+            "name": "kube2iam\t",
+            "description": "IAM credentials to containers running inside a kubernetes cluster based on annotations.",
+            "link": "https://github.com/jtblin/kube2iam",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc90bb780813c2d83046b"
+            }
+         },
+         {
+            "name": "Kyverno\t",
+            "description": "Kubernetes Native Policy Management https://kyverno.io",
+            "link": "https://github.com/nirmata/kyverno",
+            "githubStars": "0.94",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc901b780813c2d8302c7"
+            }
+         },
+         {
+            "name": "Litmusd\t",
+            "description": "Cloud-Native Chaos Engineering; Kubernetes-Native Chaos Engineering; Chaos Engineering for Kubernetes",
+            "link": "https://github.com/litmuschaos/litmus",
+            "githubStars": "281.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8f9b780813c2d830123"
+            }
+         },
+         {
+            "name": "PowerfulSeald\t",
+            "description": "A powerful testing tool for Kubernetes clusters",
+            "link": "https://github.com/powerfulseal/powerfulseal",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8eeb780813c2d82ff7f"
+            }
+         },
+         {
+            "name": "kube-burnerd\t",
+            "description": "Kube-burner is a tool aimed at stressing kubernetes clusters\t",
+            "link": "https://kube-burner.readthedocs.io/en/latest/",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-22T22:17:43.427Z"
+            },
+            "_id": {
+               "$oid": "6626e207ea46a5a2c1da8f46"
+            }
+         },
+         {
+            "name": "Tracetest\t",
+            "description": "Generate end-to-end and integration tests automatically from your OpenTelemetry traces",
+            "link": "https://github.com/kubeshop/tracetest",
+            "githubStars": "58.63",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8e5b780813c2d82fddb"
+            }
+         },
+         {
+            "name": "Microcks\t",
+            "description": "Kubernetes native tool for mocking and testing API and micro-services",
+            "link": "Kubernetes native tool for mocking and testing API and micro-services",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8ddb780813c2d82fc37"
+            }
+         },
+         {
+            "name": "KWOK\t",
+            "description": "Kubernetes WithOut Kubelet - Simulates thousands of Nodes and Clusters.",
+            "link": "https://github.com/kubernetes-sigs/kwok",
+            "githubStars": "54.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8d0b780813c2d82fa93"
+            }
+         },
+         {
+            "name": "Keploy\t",
+            "description": "Open source Tool for converting user-traffic to Test Cases and Data Stubs.",
+            "link": "https://github.com/keploy/keploy",
+            "githubStars": "221.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8c6b780813c2d82f8ef"
+            }
+         },
+         {
+            "name": "Netchecks\t",
+            "description": "Tool to validate assumptions about the network",
+            "link": "https://github.com/hardbyte/netchecks",
+            "githubStars": "10.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8bdb780813c2d82f74b"
+            }
+         },
+         {
+            "name": "Nighthawk\t",
+            "description": "Nighthawk is Layer5's versatile HTTP load tester. Drills deep with constant & adaptive rates, revealing performance insights",
+            "link": "https://github.com/layer5io/getnighthawk",
+            "githubStars": "7.77",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8b4b780813c2d82f5a7"
+            }
+         },
+         {
+            "name": "perf-tests",
+            "description": "\tPerformance tests and benchmarks",
+            "link": "https://github.com/kubernetes/perf-tests",
+            "githubStars": "57.55",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc8adb780813c2d82f403"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-22T21:56:43.716Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "662771a47cfb94f7824ba4b9"
+      },
+      "index": 16,
+      "category": {
+         "name": "Service Mesh"
+      },
+      "tools": [
+         {
+            "name": "Istio\t",
+            "description": "Connect, secure, control, and observe services",
+            "link": "https://github.com/istio/istio",
+            "githubStars": "2345.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664854b4b780813c2d7e96b1"
+            }
+         },
+         {
+            "name": "Traefik\t",
+            "description": "The Cloud Native Edge Router",
+            "link": "https://github.com/traefik/traefik",
+            "githubStars": "3216.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664854a9b780813c2d7e9510"
+            }
+         },
+         {
+            "name": "NGINX Ingress Controller\t",
+            "description": "NGINX and NGINX Plus Ingress Controllers for Kubernetes",
+            "link": "https://github.com/nginxinc/kubernetes-ingress",
+            "githubStars": "301.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648549eb780813c2d7e936f"
+            }
+         },
+         {
+            "name": "Autopilot\t",
+            "description": "THE SERVICE MESH SDK",
+            "link": "https://docs.solo.io/autopilot/latest",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T08:34:02.328Z"
+            },
+            "_id": {
+               "$oid": "6627727a7cfb94f7824ba975"
+            }
+         },
+         {
+            "name": "linkerd-config\t",
+            "description": "A Kubernetes controller that knows how to reconcile the Linkerd configuration",
+            "link": "https://github.com/ihcsim/linkerd-config",
+            "githubStars": "0.47",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485493b780813c2d7e91ce"
+            }
+         },
+         {
+            "name": "Kong\t",
+            "description": "Kong for Kubernetes: the official Ingress Controller for Kubernetes",
+            "link": "https://github.com/Kong/kubernetes-ingress-controller",
+            "githubStars": "140.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485489b780813c2d7e902d"
+            }
+         },
+         {
+            "name": "OSM\t",
+            "description": "Open Service Mesh (OSM) is a lightweight, extensible, cloud native service mesh",
+            "link": "https://github.com/openservicemesh/osm",
+            "githubStars": "174.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648547fb780813c2d7e8e8c"
+            }
+         },
+         {
+            "name": "Gloo Mesh\t",
+            "description": "The Service Mesh Orchestration Platform",
+            "link": "https://github.com/solo-io/gloo-mesh",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T08:37:55.07Z"
+            },
+            "_id": {
+               "$oid": "662773637cfb94f7824baf82"
+            }
+         },
+         {
+            "name": "APISIX\t",
+            "description": "Apache APISIX is a dynamic, real-time, high-performance API gateway.",
+            "link": "https://github.com/apache/apisix",
+            "githubStars": "938.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485475b780813c2d7e8ceb"
+            }
+         },
+         {
+            "name": "Contour\t",
+            "description": "High performance ingress controller for Kubernetes",
+            "link": "https://projectcontour.io",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T08:39:30.512Z"
+            },
+            "_id": {
+               "$oid": "662773c27cfb94f7824bb1fc"
+            }
+         },
+         {
+            "name": "Kusk Gateway\t",
+            "description": "OpenAPI-driven Ingress Controller for Kubernetes",
+            "link": "https://kusk.io",
+            "githubStars": "0.67",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648546cb780813c2d7e8b4a"
+            }
+         },
+         {
+            "name": "MerBridge\t",
+            "description": "Use eBPF to speed up your Service Mesh like crossing an Einstein-Rosen Bridge.",
+            "link": "https://github.com/merbridge/merbridge",
+            "githubStars": "48.51",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66485464b780813c2d7e89a9"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T08:30:28.709Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "662782bf804a999a7ed23ca2"
+      },
+      "index": 17,
+      "category": {
+         "name": "Observability"
+      },
+      "tools": [
+         {
+            "name": "Kubespy\t",
+            "description": "Tools for observing Kubernetes resources in real time",
+            "link": "https://github.com/pulumi/kubespy",
+            "githubStars": "187.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664871e5b780813c2d7ede49"
+            }
+         },
+         {
+            "name": "Popeye\t",
+            "description": "A Kubernetes cluster resource sanitizer",
+            "link": "https://github.com/derailed/popeye",
+            "githubStars": "335.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664871b9b780813c2d7edc9d"
+            }
+         },
+         {
+            "name": "Stern\t",
+            "description": "Multi pod and container log tailing for Kubernetes",
+            "link": "https://github.com/stern/stern",
+            "githubStars": "187.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664871a8b780813c2d7edaf1"
+            }
+         },
+         {
+            "name": "Cri-tools\t",
+            "description": "CLI and validation tools for Kubelet Container Runtime Interface (CRI)",
+            "link": "https://github.com/kubernetes-sigs/cri-tools",
+            "githubStars": "107.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "6648717fb780813c2d7ed945"
+            }
+         },
+         {
+            "name": "Kubebox\t",
+            "description": "Terminal and Web console for Kubernetes",
+            "link": "https://github.com/astefanutti/kubebox",
+            "githubStars": "140.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664870ebb780813c2d7ed606"
+            }
+         },
+         {
+            "name": "Kubewatch\t",
+            "description": "Watch k8s events and trigger Handlers",
+            "link": "https://github.com/vmware-archive/kubewatch",
+            "githubStars": " 160.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664870adb780813c2d7ed45a"
+            }
+         },
+         {
+            "name": "kube-state-metrics\t",
+            "description": "Add-on agent to generate and expose cluster-level metrics",
+            "link": "https://github.com/kubernetes/kube-state-metrics",
+            "githubStars": "341.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486facb780813c2d7ed11b"
+            }
+         },
+         {
+            "name": "Sloop\t",
+            "description": "Kubernetes History Visualization",
+            "link": "https://github.com/salesforce/sloop?utm_sq=g90yo8t8s1",
+            "githubStars": "93.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486f3db780813c2d7ecddc"
+            }
+         },
+         {
+            "name": "kubectl tree 🎄\t",
+            "description": "Kubectl plugin to observe object hierarchies through ownerReferences",
+            "link": "https://github.com/ahmetb/kubectl-tree",
+            "githubStars": "187.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486f30b780813c2d7ecc30"
+            }
+         },
+         {
+            "name": "chaoskube\t",
+            "description": "chaoskube periodically kills random pods in your Kubernetes cluster",
+            "link": "https://github.com/linki/chaoskube",
+            "githubStars": "120.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486f24b780813c2d7eca84"
+            }
+         },
+         {
+            "name": "BotKube\t",
+            "description": "Helps you monitor your Kubernetes cluster(s), debug critical deployments and gives recommendations for standard practices",
+            "link": "https://botkube.io",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T09:54:35.441Z"
+            },
+            "_id": {
+               "$oid": "6627855b804a999a7ed24bae"
+            }
+         },
+         {
+            "name": "Kubestone\t",
+            "description": "Kubestone is a benchmarking Operator that can evaluate the performance of Kubernetes installations",
+            "link": "https://kubestone.io/en/latest",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T09:56:16.424Z"
+            },
+            "_id": {
+               "$oid": "662785c0804a999a7ed24e3d"
+            }
+         },
+         {
+            "name": "Chaos Mesh\t",
+            "description": "A Chaos Engineering Platform for Kubernetes",
+            "link": "https://github.com/chaos-mesh/chaos-mesh",
+            "githubStars": "428.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486f0ab780813c2d7ec8d8"
+            }
+         },
+         {
+            "name": "Lemur\t",
+            "description": "LEMUR: Observability and Context",
+            "link": "https://github.com/turbonomic/lemur",
+            "githubStars": "1.81",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486efbb780813c2d7ec72c"
+            }
+         },
+         {
+            "name": "kubernetes-event-exporter\t",
+            "description": "Export Kubernetes events to multiple destinations with routing and filtering",
+            "link": "https://github.com/opsgenie/kubernetes-event-exporter",
+            "githubStars": "67.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486ee6b780813c2d7ec580"
+            }
+         },
+         {
+            "name": "Kubevious\t",
+            "description": "Kubevious is an app-centric assurance, validation, and introspection platform for Kubernetes",
+            "link": "https://kubevious.io",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T10:00:16.037Z"
+            },
+            "_id": {
+               "$oid": "662786b0804a999a7ed25610"
+            }
+         },
+         {
+            "name": "OpenTelemetry\t",
+            "description": "High-quality, ubiquitous, and portable telemetry to enable effective observability",
+            "link": "https://opentelemetry.io",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T10:01:28.853Z"
+            },
+            "_id": {
+               "$oid": "662786f8804a999a7ed258ae"
+            }
+         },
+         {
+            "name": "Grafana Tempo\t",
+            "description": "Grafana Tempo is a high volume, minimal dependency distributed tracing backend",
+            "link": "https://github.com/grafana/tempo",
+            "githubStars": "241.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486ed2b780813c2d7ec3d4"
+            }
+         },
+         {
+            "name": "Tracetest\t",
+            "description": "Generate end-to-end and integration tests automatically from your OpenTelemetry traces",
+            "link": "https://github.com/kubeshop/tracetest",
+            "githubStars": "58.69",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486ec5b780813c2d7ec228"
+            }
+         },
+         {
+            "name": "Pumba\t",
+            "description": "Chaos testing, network emulation, and stress testing tool for containers",
+            "link": "https://github.com/alexei-led/pumba",
+            "githubStars": "180.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486eb0b780813c2d7ec07c"
+            }
+         },
+         {
+            "name": "Robusta\t",
+            "description": "Kubernetes observability and automation, with an awesome Prometheus integration",
+            "link": "https://github.com/robusta-dev/robusta",
+            "githubStars": "160.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486e9ab780813c2d7ebed0"
+            }
+         },
+         {
+            "name": "kubeinvaders",
+            "description": "Gamified Chaos Engineering Tool for Kubernetes",
+            "link": "https://github.com/lucky-sideburn/kubeinvaders",
+            "githubStars": "65.12",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486e82b780813c2d7ebd24"
+            }
+         },
+         {
+            "name": "Headlamp\t",
+            "description": "An easy-to-use and extensible web UI for Kubernetes",
+            "link": "https://github.com/headlamp-k8s/headlamp",
+            "githubStars": "107.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66486e6eb780813c2d7ebb78"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T09:43:27.585Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66278851804a999a7ed264e4"
+      },
+      "index": 18,
+      "category": {
+         "name": "Machine Learning/Deep Learning"
+      },
+      "tools": [
+         {
+            "name": "Kubeflow",
+            "description": "Machine Learning Toolkit for Kubernetes",
+            "link": "https://github.com/kubeflow/kubeflow",
+            "githubStars": "938.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc00db780813c2d8261e3"
+            }
+         },
+         {
+            "name": "Volcano\t",
+            "description": "A Kubernetes Native Batch System",
+            "link": "https://github.com/volcano-sh/volcano",
+            "githubStars": "254.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc005b780813c2d82604b"
+            }
+         },
+         {
+            "name": "Nos",
+            "description": "nos is an open-source platform to efficiently run AI workloads on Kubernetes, increasing GPU utilization and reducing infrastructure and operational costs\t",
+            "link": "\thttps://github.com/nebuly-ai/nos\t",
+            "githubStars": "38.26",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbffbb780813c2d825eb3"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:07:13.351Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66278943804a999a7ed26ccd"
+      },
+      "index": 19,
+      "category": {
+         "name": "Compute Edge Tools"
+      },
+      "tools": [
+         {
+            "name": "KubeEdge\t",
+            "description": "Kubernetes Native Edge Computing Framework",
+            "link": "https://github.com/kubeedge/kubeedge",
+            "githubStars": "428.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbff0b780813c2d825d16"
+            }
+         },
+         {
+            "name": "OpenYurt\t",
+            "description": "Extending your native Kubernetes to edge",
+            "link": "https://github.com/openyurtio/openyurt",
+            "githubStars": "113.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfe5b780813c2d825b79"
+            }
+         },
+         {
+            "name": "Akri\t",
+            "description": "A Kubernetes Resource Interface for the Edge",
+            "link": "https://github.com/project-akri/akri",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfdbb780813c2d8259dc"
+            }
+         },
+         {
+            "name": "SuperEdge\t",
+            "description": "An edge-native container management system for edge computing",
+            "link": "https://github.com/superedge/superedge",
+            "githubStars": "67.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfceb780813c2d82583f"
+            }
+         },
+         {
+            "name": "Keylime\t",
+            "description": "A CNCF Project to Bootstrap & Maintain Trust on the Edge / Cloud and IoT",
+            "link": "https://github.com/keylime/keylime",
+            "githubStars": "25.13",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfc4b780813c2d8256a2"
+            }
+         },
+         {
+            "name": "Microk8s",
+            "description": "A small, fast, single-package Kubernetes for developers, IoT and edge",
+            "link": "https://github.com/canonical/microk8s",
+            "githubStars": "542.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfb7b780813c2d825505"
+            }
+         },
+         {
+            "name": "Shifu\t\t",
+            "description": "Kubernetes native IoT software development framework",
+            "link": "https://github.com/Edgenesis/shifu",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfafb780813c2d825368"
+            }
+         },
+         {
+            "name": "kairos\t",
+            "description": "The immutable Linux meta-distribution for edge Kubernetes",
+            "link": "https://github.com/kairos-io/kairos",
+            "githubStars": "62.31",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dbfa7b780813c2d8251cb"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:11:15.815Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66278ade804a999a7ed27ba4"
+      },
+      "index": 20,
+      "category": {
+         "name": "Kubernetes Tools for Specific Cloud"
+      },
+      "tools": [
+         {
+            "name": "Kubernetes on AWS (kube-aws)\t",
+            "description": "A command-line tool to declaratively manage Kubernetes clusters on AWS",
+            "link": "https://github.com/kubernetes-retired/kube-aws",
+            "githubStars": "73.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc0beb780813c2d827060"
+            }
+         },
+         {
+            "name": "Draft: Streamlined Kubernetes Development",
+            "description": "A tool for developers to create cloud-native applications on Kubernetes",
+            "link": "https://github.com/azure/draft",
+            "githubStars": "31.83",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc0b3b780813c2d826ec2"
+            }
+         },
+         {
+            "name": "helm-ssm\t",
+            "description": "A  low dependency tool for retrieving and injecting secrets from AWS SSM into Helm",
+            "link": "https://github.com/totango/helm-ssm",
+            "githubStars": "2.61",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc0a3b780813c2d826d24"
+            }
+         },
+         {
+            "name": "Skupper\t",
+            "description": "Multicloud communication for Kubernetes",
+            "link": "https://skupper.io",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T10:23:18.05Z"
+            },
+            "_id": {
+               "$oid": "66278c16804a999a7ed28270"
+            }
+         },
+         {
+            "name": "AWS workshop for kubernetes",
+            "description": "AWS workshop for kubernetes\t",
+            "link": "https://github.com/aws-samples/aws-workshop-for-kubernetes",
+            "githubStars": "174.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc098b780813c2d826b86"
+            }
+         },
+         {
+            "name": "Sealos\t",
+            "description": "A Kubernetes distribution, a general-purpose Cloud Operating System designed for managing cloud-native applications",
+            "link": "https://github.com/labring/sealos",
+            "githubStars": "871.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc090b780813c2d8269e8"
+            }
+         },
+         {
+            "name": "Porter\t",
+            "description": "Kubernetes-powered PaaS that runs in your own cloud.",
+            "link": "https://github.com/porter-dev/porter",
+            "githubStars": "274.70",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc088b780813c2d82684a"
+            }
+         },
+         {
+            "name": "Kubicorn\t",
+            "description": "Create, manage, snapshot, and scale Kubernetes infrastructure in the public cloud",
+            "link": "https://github.com/kubicorn/kubicorn",
+            "githubStars": "113.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc07fb780813c2d8266ac"
+            }
+         },
+         {
+            "name": "eksdemo\t",
+            "description": "The easy button for learning, testing and demoing Amazon EKS",
+            "link": "https://github.com/awslabs/eksdemo",
+            "githubStars": "11.79",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc077b780813c2d82650e"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:18:06.039Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66278d59804a999a7ed28d98"
+      },
+      "index": 21,
+      "category": {
+         "name": "Storage Providers"
+      },
+      "tools": [
+         {
+            "name": "ChubaoFS\t",
+            "description": "distributed file system and object storage",
+            "link": "https://github.com/cubefs/cubefs",
+            "githubStars": "288.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc28eb780813c2d828564"
+            }
+         },
+         {
+            "name": "Longhorn\t",
+            "description": "Cloud-Native distributed block storage built on and for Kubernetes",
+            "link": "https://github.com/longhorn/longhorn",
+            "githubStars": "375.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc284b780813c2d8283c4"
+            }
+         },
+         {
+            "name": "OpenEBS\t",
+            "description": "Kubernetes native - hyperconverged block storage with multiple storage engines",
+            "link": "https://github.com/openebs/openebs",
+            "githubStars": "576.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc27bb780813c2d828224"
+            }
+         },
+         {
+            "name": "Rook\t",
+            "description": "Storage Orchestration for Kubernetes",
+            "link": "https://github.com/rook/rook",
+            "githubStars": "804.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc273b780813c2d828084"
+            }
+         },
+         {
+            "name": "SeaweedFS\t",
+            "description": "Distributed file system supports read-write many volumes",
+            "link": "https://github.com/seaweedfs/seaweedfs",
+            "githubStars": "1407.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc26ab780813c2d827ee4"
+            }
+         },
+         {
+            "name": "TiKV\t",
+            "description": "Distributed transactional key-value database",
+            "link": "https://github.com/tikv/tikv",
+            "githubStars": "1005.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc262b780813c2d827d44"
+            }
+         },
+         {
+            "name": "TopoLVM\t",
+            "description": "Capacity-aware CSI plugin for Kubernetes",
+            "link": "https://github.com/topolvm/topolvm",
+            "githubStars": "47.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc259b780813c2d827ba4"
+            }
+         },
+         {
+            "name": "velero\t",
+            "description": "Backup and migrate Kubernetes applications and their persistent volumes",
+            "link": "https://github.com/vmware-tanzu/velero",
+            "githubStars": "549.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc24cb780813c2d827a04"
+            }
+         },
+         {
+            "name": "Vitess\t",
+            "description": "Vitess is a database clustering system for horizontal scaling of MySQL",
+            "link": "https://github.com/vitessio/vitess",
+            "githubStars": "1206.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc243b780813c2d827864"
+            }
+         },
+         {
+            "name": "kaDalu\t",
+            "description": "A lightweight Persistent storage solution for Kubernetes / OpenShift using GlusterFS in background",
+            "link": "https://github.com/kadalu/kadalu",
+            "githubStars": "46.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc23ab780813c2d8276c4"
+            }
+         },
+         {
+            "name": "hwameistor\t",
+            "description": "Hwameistor is an HA local storage system for cloud-native stateful workloads.",
+            "link": "https://github.com/hwameistor/hwameistor",
+            "githubStars": "34.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc232b780813c2d827524"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:28:41.164Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66279193a77f11243252ab43"
+      },
+      "index": 22,
+      "category": {
+         "name": "Backup Tools"
+      },
+      "tools": [
+         {
+            "name": "Stash\t",
+            "description": "🛅 Backup your Kubernetes Stateful Applications",
+            "link": "https://github.com/stashed/stash",
+            "githubStars": "87.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc3b9b780813c2d829d7c"
+            }
+         },
+         {
+            "name": "Reflector\t",
+            "description": "Custom Kubernetes controller that can be used to replicate secrets, configmaps and certificates.",
+            "link": "https://github.com/emberstack/kubernetes-reflector",
+            "githubStars": "59.76",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc3afb780813c2d829be1"
+            }
+         },
+         {
+            "name": "K8up Backup Operator\t",
+            "description": "K8up is a Kubernetes backup operator based on Restic that will handle PVC and application backups on a Kubernetes or OpenShift cluster",
+            "link": "https://github.com/k8up-io/k8up",
+            "githubStars": "37.19",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc3a5b780813c2d829a46"
+            }
+         },
+         {
+            "name": "VolSync",
+            "description": "\tAsynchronous data replication for Kubernetes volumes",
+            "link": "\thttps://github.com/backube/volsync\t",
+            "githubStars": "30.75",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc39ab780813c2d8298ab"
+            }
+         },
+         {
+            "name": "kube-dump\t",
+            "description": "Backup a Kubernetes cluster as a yaml manifest\t",
+            "link": "https://github.com/WoozyMasta/kube-dump",
+            "githubStars": "20.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc384b780813c2d829710"
+            }
+         },
+         {
+            "name": "Reflector",
+            "description": "\tScheduled snapshots for Kubernetes persistent volumes.",
+            "link": "https://github.com/backube/snapscheduler",
+            "githubStars": "15.95",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc37bb780813c2d829575"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:46:43.824Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "662792d3a77f11243252b6e2"
+      },
+      "index": 23,
+      "category": {
+         "name": "Multiple Tools Repo"
+      },
+      "tools": [
+         {
+            "name": "Pulumi\t",
+            "description": "Pulumi - Modern Infrastructure as Code. Any cloud, any language. Give your team cloud superpowers rocket https://www.pulumi.com",
+            "link": "https://github.com/pulumi/pulumi",
+            "githubStars": "1340.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc371b780813c2d8293d8"
+            }
+         },
+         {
+            "name": "Colima\t",
+            "description": "Container runtimes on macOS (and Linux) with minimal setup",
+            "link": "https://github.com/abiosoft/colima",
+            "githubStars": "1139.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc369b780813c2d82923b"
+            }
+         },
+         {
+            "name": "Gvisor\t",
+            "description": "Application Kernel for Containers\t",
+            "link": "https://github.com/google/gvisor\t",
+            "githubStars": "1005.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc360b780813c2d82909e"
+            }
+         },
+         {
+            "name": "Kamus\t",
+            "description": "An open source, git-ops, zero-trust secret encryption and decryption solution for Kubernetes applications",
+            "link": "https://github.com/Soluto/kamus",
+            "githubStars": " 61.37",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc357b780813c2d828f01"
+            }
+         },
+         {
+            "name": "korb\t",
+            "description": "Move Kubernetes PVCs between Storage Classes and Namespaces",
+            "link": "https://github.com/BeryJu/korb",
+            "githubStars": "26.87",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc34eb780813c2d828d64"
+            }
+         },
+         {
+            "name": "Krateo Platformops\t",
+            "description": "Open source platform to manage infrastructure, resources and applications via YAML files",
+            "link": "https://github.com/krateoplatformops/krateo",
+            "githubStars": " 14.07",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc345b780813c2d828bc7"
+            }
+         },
+         {
+            "name": "Chaos Toolkit Kubernetes Support\t",
+            "description": "Kubernetes driver extension of the Chaos Toolkit probes and actions API\t",
+            "link": "https://github.com/chaostoolkit/chaostoolkit-kubernetes\t",
+            "githubStars": "12.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc339b780813c2d828a2a"
+            }
+         },
+         {
+            "name": "k14s\t",
+            "description": "Kubernetes Tools that follow Unix philosophy to be simple and composable\t",
+            "link": "https://github.com/k14s",
+            "githubStars": "\t0",
+            "publishDate": {
+               "$date": "2024-04-28T15:04:05.271Z"
+            },
+            "_id": {
+               "$oid": "662e6565c0718c80ab65639a"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:52:03.023Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "6627948ea77f11243252c72b"
+      },
+      "index": 24,
+      "category": {
+         "name": "Cost Optimisation"
+      },
+      "tools": [
+         {
+            "name": "Kubecost",
+            "description": "Cross-cloud cost allocation models for workloads running on Kubernetes",
+            "link": "https://github.com/opencost/opencost",
+            "githubStars": "314.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc50ab780813c2d82b0ad"
+            }
+         },
+         {
+            "name": "OpenCost\t",
+            "description": "OpenCost — your favorite open source cost monitoring tool for Kubernetes",
+            "link": "https://github.com/opencost/opencost",
+            "githubStars": "321.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc500b780813c2d82af14"
+            }
+         },
+         {
+            "name": "kube-green\t",
+            "description": "kube-green is a simple k8s addon that automatically shuts down (some of) your resources when you don't need them",
+            "link": "https://github.com/kube-green/kube-green",
+            "githubStars": "58.42",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc4f2b780813c2d82ad7b"
+            }
+         },
+         {
+            "name": "PerfectScale\t",
+            "description": "Reduce Kubernetes costs while improving performance and resilience with data-driven intelligence built for continuous optimization\t",
+            "link": "https://www.perfectscale.io",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-28T14:38:49.467Z"
+            },
+            "_id": {
+               "$oid": "662e5f79687a5d85ea32e1f1"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T10:59:26.097Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66279568a77f11243252d02a"
+      },
+      "index": 25,
+      "category": {
+         "name": "Function as a Service FaaS"
+      },
+      "tools": [
+         {
+            "name": "OpenFaaS\t",
+            "description": "OpenFaaS - Serverless Functions Made Simple",
+            "link": "https://github.com/openfaas/faas",
+            "githubStars": "1675.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc4e9b780813c2d82abe1"
+            }
+         },
+         {
+            "name": "Fission\t",
+            "description": "Fast and Simple Serverless Functions for Kubernetes",
+            "link": "https://github.com/fission/fission",
+            "githubStars": "549.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc4e0b780813c2d82aa47"
+            }
+         },
+         {
+            "name": "Kubeless\t",
+            "description": "Kubernetes Native Serverless Framework\t",
+            "link": "https://github.com/vmware-archive/kubeless\t",
+            "githubStars": "462.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc4d5b780813c2d82a8ad"
+            }
+         },
+         {
+            "name": "Knative Serving\t",
+            "description": "Kubernetes-based, scale-to-zero, request-driven compute\t",
+            "link": "https://github.com/knative/serving",
+            "githubStars": "361.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc4c5b780813c2d82a713"
+            }
+         },
+         {
+            "name": "Nuclio\t",
+            "description": "High-Performance Serverless event and data processing platform",
+            "link": "https://github.com/nuclio/nuclio",
+            "githubStars": "348.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc4bcb780813c2d82a579"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T11:03:04.929Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "6627967fa77f11243252dacc"
+      },
+      "index": 2,
+      "category": {
+         "name": "Artificial Intelligence"
+      },
+      "tools": [
+         {
+            "name": "k8sgpt\t",
+            "description": "Giving Kubernetes SRE superpowers to everyone",
+            "link": "https://github.com/k8sgpt-ai/k8sgpt",
+            "githubStars": "328.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458d17b780813c2d79fca8"
+            }
+         },
+         {
+            "name": "aiac",
+            "description": "Artificial Intelligence K8s manifest and package generator",
+            "link": "https://github.com/gofireflyio/aiac\t",
+            "githubStars": "221.10",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458d29b780813c2d79fe44"
+            }
+         },
+         {
+            "name": "kserve\t\t",
+            "description": "Standardized Serverless ML Inference Platform on Kubernets",
+            "link": "https://github.com/kserve/kserve\t",
+            "githubStars": "201.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458f0ab780813c2d7a2d15"
+            }
+         },
+         {
+            "name": "kubectl-ai\t",
+            "description": "Kubectl plugin for OpenAI GPT",
+            "link": "https://github.com/sozercan/kubectl-ai",
+            "githubStars": "65.79",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458d58b780813c2d7a04aa"
+            }
+         },
+         {
+            "name": "kopilot\t",
+            "description": "Your AI Kubernetes Expert",
+            "link": "https://github.com/knight42/kopilot",
+            "githubStars": "10.98",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458d6ab780813c2d7a0646"
+            }
+         },
+         {
+            "name": "kopylot\t",
+            "description": "An AI-Powered assistant for Kubernetes developers",
+            "link": "https://github.com/avsthiago/kopylot",
+            "githubStars": "10.11",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458d7eb780813c2d7a0b1c"
+            }
+         },
+         {
+            "name": "mico\t",
+            "description": "An AI assisted kubectl helper",
+            "link": "https://github.com/tahtaciburak/mico",
+            "githubStars": "2.47",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458d97b780813c2d7a0e54"
+            }
+         },
+         {
+            "name": "kubectl-assistant\t",
+            "description": "This tool uses OpenAI's GPT3 API to generate Kubernetes kubectl commands to run against a cluster",
+            "link": "https://github.com/dkoshkin/kubectl-assistant",
+            "githubStars": "0.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458dabb780813c2d7a0ff0"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T11:07:43.862Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "6627985da77f11243252ebd1"
+      },
+      "index": 27,
+      "category": {
+         "name": "Caching"
+      },
+      "tools": [
+         {
+            "name": "harbor\t",
+            "description": "A trusted cloud native registry project that stores,caches, signs, and scans content.",
+            "link": "https://github.com/goharbor/harbor",
+            "githubStars": "1474.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc5aeb780813c2d82ba41"
+            }
+         },
+         {
+            "name": "kube-fledged\t\t",
+            "description": "A kubernetes operator for creating and managing a cache of container images directly on the cluster worker nodes",
+            "link": "https://github.com/senthilrch/kube-fledged\t",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc5a2b780813c2d82b8a7"
+            }
+         },
+         {
+            "name": "kube-image-keeper (kuik)\t",
+            "description": "kuik is a container image caching system for Kubernetes\t",
+            "link": "https://github.com/enix/kube-image-keeper\t",
+            "githubStars": "26.87",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc598b780813c2d82b70d"
+            }
+         },
+         {
+            "name": "kubernetes-image-puller\t",
+            "description": "It is used for caching images on a cluster. It creates a DaemonSet downloading and running the relevant container images on each node.\t",
+            "link": "https://github.com/che-incubator/kubernetes-image-puller",
+            "githubStars": " 10.05",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc58ab780813c2d82b573"
+            }
+         },
+         {
+            "name": "Tugger\t\t",
+            "description": "Kubernetes Admission Webhook to enforce pulling of Docker images from the private registry",
+            "link": "https://github.com/jainishshah17/tugger\t",
+            "githubStars": "2.81",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc581b780813c2d82b3d9"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T11:15:41.493Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "662799efa77f11243252f9e7"
+      },
+      "index": 28,
+      "category": {
+         "name": "Clients"
+      },
+      "tools": [
+         {
+            "name": "Dapr\t",
+            "description": "Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge",
+            "link": "https://github.com/dapr/dapr",
+            "githubStars": "1541.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7e9b780813c2d82e7b9"
+            }
+         },
+         {
+            "name": "DevPod\t\t",
+            "description": "client-only tool to create reproducible developer environments based on a devcontainer.json on any backend",
+            "link": "https://github.com/loft-sh/devpod",
+            "githubStars": "515.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7e1b780813c2d82e61d"
+            }
+         },
+         {
+            "name": "Python Client for Kubernetes",
+            "description": "\tOfficial Python client library for kubernetes\t",
+            "link": "https://github.com/kubernetes-client/python\t",
+            "githubStars": "428.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7d9b780813c2d82e481"
+            }
+         },
+         {
+            "name": "Java Client for Kubernetes\t",
+            "description": "Official Java client library for kubernetes\t",
+            "link": "https://github.com/kubernetes-client/java\t",
+            "githubStars": "227.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7cfb780813c2d82e2e5"
+            }
+         },
+         {
+            "name": "Javascript Client for Kubernetes\t",
+            "description": "Official Javascript client library for kubernetes\t",
+            "link": "https://github.com/kubernetes-client/javascript\t",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7c6b780813c2d82e149"
+            }
+         },
+         {
+            "name": "csharp Client for Kubernetes\t",
+            "description": "Official dotnet client library for kubernetes\t",
+            "link": "https://github.com/kubernetes-client/csharp\t",
+            "githubStars": "67.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7b8b780813c2d82dfad"
+            }
+         },
+         {
+            "name": "Go Client for Kubernetes\t\t",
+            "description": "Official Golang client library for kubernetes",
+            "link": "https://github.com/kubernetes-client/go",
+            "githubStars": "13.74",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc7acb780813c2d82de11"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T11:22:23.188Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "66279b53ccf79a0da83a5d37"
+      },
+      "index": 4,
+      "category": {
+         "name": "Cleanup"
+      },
+      "tools": [
+         {
+            "name": "k8s-cleaner\t",
+            "description": "Cleaner is a Kubernetes controller that helps you maintain a clean and efficient Kubernetes environment by proactively identifying, removing, or updating stale resources\t",
+            "link": "https://github.com/gianlucam76/k8s-cleaner",
+            "githubStars": "10.38",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458ddfb780813c2d7a14d4"
+            }
+         },
+         {
+            "name": "kube-fencing\t",
+            "description": "cleaning resources from the failed nodes that's blocks any further operation and recovery",
+            "link": "https://github.com/kvaps/kube-fencing",
+            "githubStars": "8.174",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458df4b780813c2d7a166b"
+            }
+         },
+         {
+            "name": "CRI-Purge\t",
+            "description": "CRI Purge - Cleanup of Cached Kubernetes CRI Images",
+            "link": "https://github.com/reefland/cri-purge",
+            "githubStars": "2.14",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458e10b780813c2d7a1802"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T11:28:19.133Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "6627a02585859d6a2cc57448"
+      },
+      "index": 29,
+      "category": {
+         "name": "Non-Categorize"
+      },
+      "tools": [
+         {
+            "name": "Rudr\t",
+            "description": "A Kubernetes implementation of the Open Application Model specification",
+            "link": "https://github.com/oam-dev/rudr",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc796b780813c2d82dc6a"
+            }
+         },
+         {
+            "name": "Keel\t",
+            "description": "Kubernetes Operator to automate Helm, DaemonSet, StatefulSet & Deployment updates",
+            "link": "https://keel.sh",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T11:50:10.405Z"
+            },
+            "_id": {
+               "$oid": "6627a072e0b53687b695c2f2"
+            }
+         },
+         {
+            "name": "Cabin, the mobile app for Kubernetes -\t",
+            "description": "The Mobile Dashboard for Kubernetes",
+            "link": "https://github.com/vmware-archive/cabin",
+            "githubStars": "43.95",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc78cb780813c2d82dac3"
+            }
+         },
+         {
+            "name": "Funktion\t",
+            "description": "CLI tool for working with funktion",
+            "link": "https://github.com/funktionio/funktion",
+            "githubStars": "19.90",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc780b780813c2d82d91c"
+            }
+         },
+         {
+            "name": "Alterant\t",
+            "description": "A simple Kubernetes configuration modifier",
+            "link": "https://github.com/cloud66-oss/alterant",
+            "githubStars": "3.35",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc776b780813c2d82d775"
+            }
+         },
+         {
+            "name": "BUCK\t",
+            "description": "Brigade Universal Controller for Kubernetes",
+            "link": "https://github.com/brigadecore/buck",
+            "githubStars": "2.48",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc76ab780813c2d82d5ce"
+            }
+         },
+         {
+            "name": "kube-fledged\t",
+            "description": "A kubernetes add-on for creating and managing a cache of container images directly on the cluster worker nodes, so application pods start almost instantly",
+            "link": "https://github.com/senthilrch/kube-fledged",
+            "githubStars": "80.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc75eb780813c2d82d427"
+            }
+         },
+         {
+            "name": "kpt\t",
+            "description": "toolkit to help you manage, manipulate, customize, and apply Kubernetes Resource configuration",
+            "link": "https://github.com/kptdev/kpt",
+            "githubStars": "107.20",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc757b780813c2d82d280"
+            }
+         },
+         {
+            "name": "capsule\t",
+            "description": "Capsule helps to implement a multi-tenancy and policy-based environment in your Kubernetes cluster",
+            "link": "https://github.com/projectcapsule/capsule",
+            "githubStars": "100.50",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc74eb780813c2d82d0d9"
+            }
+         },
+         {
+            "name": "\tKubeSlice\t",
+            "description": "KubeSlice enables Kubernetes pods and services to communicate seamlessly across clusters, clouds, edges, and data centers by creating logical application boundaries known as Slices",
+            "link": "https://github.com/kubeslice",
+            "githubStars": "32.43",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc746b780813c2d82cf32"
+            }
+         },
+         {
+            "name": "routernetes\t",
+            "description": "Use Kubernetes to make a home router!",
+            "link": "https://github.com/routernetes/routernetes",
+            "githubStars": "12.33",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc73db780813c2d82cd8b"
+            }
+         },
+         {
+            "name": "Symbiosis\t",
+            "description": "Symbiosis is a cloud service provider optimized for Kubernetes. Launch clusters in <2 min with better tools and lower costs",
+            "link": "https://symbiosis.host",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-04-23T11:58:40.511Z"
+            },
+            "_id": {
+               "$oid": "6627a270e0b53687b695e2e9"
+            }
+         },
+         {
+            "name": "Projectsveltos\t",
+            "description": "Kubernetes add-on controller for hundreds of clusters that automatically discovers and classifies clusters, making it easy to manage add-ons at scale",
+            "link": "https://github.com/projectsveltos/addon-controller",
+            "githubStars": "11.26",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc72bb780813c2d82ca3d"
+            }
+         },
+         {
+            "name": "MayFly\t",
+            "description": "Mayfly is a Kubernetes operator that enables you to create temporary resources on the cluster that will expire after a certain period of time",
+            "link": "https://github.com/NCCloud/mayfly",
+            "githubStars": "11.26",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc723b780813c2d82c896"
+            }
+         },
+         {
+            "name": "yupd\t",
+            "description": "Yupd is a command-line tool that allows updating YAML files the GitOps way",
+            "link": "https://github.com/srozange/yupd",
+            "githubStars": "0",
+            "publishDate": {
+               "$date": "2024-04-23T12:01:20.381Z"
+            },
+            "_id": {
+               "$oid": "6627a310e0b53687b695e9ad"
+            }
+         },
+         {
+            "name": "yupd\t",
+            "description": "Yupd is a command-line tool that allows updating YAML files the GitOps way",
+            "link": "https://github.com/srozange/yupd",
+            "githubStars": "0",
+            "publishDate": {
+               "$date": "2024-04-23T12:01:20.385Z"
+            },
+            "_id": {
+               "$oid": "6627a31085859d6a2cc57e63"
+            }
+         },
+         {
+            "name": "yupd\t",
+            "description": "Yupd is a command-line tool that allows updating YAML files the GitOps way",
+            "link": "https://github.com/srozange/yupd",
+            "githubStars": "0",
+            "publishDate": {
+               "$date": "2024-04-23T12:01:20.401Z"
+            },
+            "_id": {
+               "$oid": "6627a310a77f112432532c51"
+            }
+         },
+         {
+            "name": "kube-job\t",
+            "description": "Run one off job on kubernetes from the command line tool",
+            "link": "https://github.com/h3poteto/kube-job",
+            "githubStars": "5.43",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664dc71ab780813c2d82c6ef"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-23T11:48:53.674Z"
+      },
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "662befcca1a2cee9834537f6"
+      },
+      "index": 1,
+      "category": {
+         "name": "Alert and Monitoring"
+      },
+      "tools": [
+         {
+            "name": "Grafana\t",
+            "description": "The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More",
+            "link": "https://github.com/grafana/grafana",
+            "githubStars": "4035.45",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "664589ddb780813c2d799f24"
+            }
+         },
+         {
+            "name": "Prometheus\t",
+            "description": "The Prometheus monitoring system and time series database.",
+            "link": "https://github.com/prometheus/prometheus",
+            "githubStars": "3549.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458a79b780813c2d79add0"
+            }
+         },
+         {
+            "name": "Thanos\t",
+            "description": "Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project. https://thanos.io",
+            "link": "https://github.com/thanos-io/thanos",
+            "githubStars": "871.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458aa7b780813c2d79b2bc"
+            }
+         },
+         {
+            "name": "Kubeshark\t",
+            "description": "TCPDump and Wireshark re-invented for Kubernetes",
+            "link": "https://github.com/kubeshark/kubeshark",
+            "githubStars": "737.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458adcb780813c2d79b7a8"
+            }
+         },
+         {
+            "name": "Scope\t",
+            "description": "Monitoring, visualisation & management for Docker & Kubernetes",
+            "link": "https://github.com/weaveworks/scope",
+            "githubStars": "388.60",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458afeb780813c2d79bc94"
+            }
+         },
+         {
+            "name": "Kubetail\t",
+            "description": "Bash script to tail Kubernetes logs from multiple pods at the same time",
+            "link": "https://github.com/johanhaleby/kubetail",
+            "githubStars": "214.40",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458b1ab780813c2d79be40"
+            }
+         },
+         {
+            "name": "Ksniff\t",
+            "description": "Kubectl plugin to ease sniffing on kubernetes pods using tcpdump and wireshark",
+            "link": "https://github.com/eldadru/ksniff",
+            "githubStars": "201.00",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458b93b780813c2d79cb40"
+            }
+         },
+         {
+            "name": "Kuberhealthy\t",
+            "description": "A Kubernetes operator for running synthetic checks as pods. Works great with Prometheus!",
+            "link": "https://github.com/kuberhealthy/kuberhealthy",
+            "githubStars": "127.30",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458bacb780813c2d79d02c"
+            }
+         },
+         {
+            "name": "Kwatch\t",
+            "description": "monitor & detect crashes in your Kubernetes(K8s) cluster instantly",
+            "link": "https://github.com/abahmed/kwatch",
+            "githubStars": "61.96",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458bc9b780813c2d79d384"
+            }
+         },
+         {
+            "name": "ktop\t",
+            "description": "A top-like tool for your Kubernetes clusters",
+            "link": "https://github.com/vladimirvivien/ktop",
+            "githubStars": "43.75",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458bddb780813c2d79d530"
+            }
+         },
+         {
+            "name": "X.509 Certificate Exporter\t",
+            "description": "Watch certificates for expiration in Kubernetes Secrets and control-plane files. Alerts and dashboard available.",
+            "link": "https://github.com/enix/x509-certificate-exporter/",
+            "githubStars": "39.66",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458beeb780813c2d79d6dc"
+            }
+         },
+         {
+            "name": "Searchlight\t",
+            "description": "Alerts for Kubernetes",
+            "link": "https://github.com/searchlight/searchlight",
+            "githubStars": "21.44",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458c17b780813c2d79dbc8"
+            }
+         },
+         {
+            "name": "Kube-Prometheus-Top [ kptop ]\t",
+            "description": "Monitoring for Kubernetes Nodes, Pods, Containers, and PVCs resources on the terminal through Prometheus metircs",
+            "link": "https://github.com/eslam-gomaa/kptop",
+            "githubStars": "18.09",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458c2ab780813c2d79dd74"
+            }
+         },
+         {
+            "name": "kurt\t",
+            "description": "A Kubernetes plugin that gives context to what is restarting in your Kubernetes cluster",
+            "link": "https://github.com/soraro/kurt",
+            "githubStars": "9.38",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458c3eb780813c2d79df20"
+            }
+         },
+         {
+            "name": "Kubernetes Job/CronJob Notifier\t",
+            "description": "This tool sends an alert to slack whenever there is a Kubernetes cronJob/Job failure/success",
+            "link": "https://github.com/sukeesh/k8s-job-notify",
+            "githubStars": "8.576",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458c50b780813c2d79e0cc"
+            }
+         },
+         {
+            "name": "KlusterView\t",
+            "description": "Get instant insights on your Kubernetes clusters with our lightweight, plug-and-play performance monitoring tool",
+            "link": "https://github.com/oslabs-beta/KlusterView",
+            "githubStars": "8.107",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458c62b780813c2d79e278"
+            }
+         },
+         {
+            "name": "Kube-Scout\t",
+            "description": "Scout for alarming issues across your Kubernetes clusters",
+            "link": "https://github.com/ReallyLiri/kubescout",
+            "githubStars": "7.839",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458c74b780813c2d79e424"
+            }
+         },
+         {
+            "name": "kuberhaus\t",
+            "description": "Kubernetes resource dashboard with node/pod layout and resource requests",
+            "link": "https://github.com/stephenlacy/kuberhaus",
+            "githubStars": "3.68",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458f1cb780813c2d7a3059"
+            }
+         },
+         {
+            "name": "linkerd2 Monitoring Mixin for Grafana\t",
+            "description": "Grafana dashboards for linkerd2 monitoring and can work in standalone (default) or in multi cluster setup",
+            "link": "https://github.com/andrew-waters/linkerd2-mixin",
+            "githubStars": "0.80",
+            "publishDate": {
+               "$date": "2024-05-14T08:43:52.017Z"
+            },
+            "_id": {
+               "$oid": "66458f18b780813c2d7a2eb1"
+            }
+         },
+         {
+            "name": "Argus\t",
+            "description": "This tool monitors changes in the filesystem on specified paths",
+            "link": "https://clustergarage.io/argus/docs/overview/",
+            "githubStars": "-",
+            "publishDate": {
+               "$date": "2024-05-13T19:42:49.165Z"
+            },
+            "_id": {
+               "$oid": "66426ebd5260fb24c617d898"
+            }
+         }
+      ],
+      "publishDate": {
+         "$date": "2024-04-26T18:17:48.806Z"
+      },
+      "__v": 0
+   }
+]

@@ -187,6 +187,17 @@ The cluster is using the following tools:
 +-------------+--------+----------------------+---------------+
 ```
 
+## krs Version
+
+ krs version
+
+```
+Created missing directory: krs/data
+KRS version: 1.0.0
+2024-06-24 13:36:43,357 - INFO - Displayed KRS version: 1.0.0
+```
+
+
 ## Kubetools Recommender System
 
 Generates a table of recommended tools from our ranking database and their CNCF project status.
@@ -399,6 +410,10 @@ special_tokens_map.json: 100%|████████████████�
 config.json: 100%|██████████████████████████████████████████████████████| 589/589 [00:00<00:00, 1.09MB/s]
 model.safetensors.index.json: 100%|█████████████████████████████████| 31.4k/31.4k [00:00<00:00, 13.9MB/s]
 ...
+```
+To run the krs health command and test it with different options for change_model and device, you would execute the command from your terminal after ensuring that your environment is set up correctly with the krs CLI.
+```
+krs health --change-model  --device gpu
 ```
 
 ## Community

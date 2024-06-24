@@ -2,4 +2,8 @@ typer==0.12.3
 requests==2.32.2
 kubernetes==29.0.0
 tabulate==0.9.0
-
+torch==2.3.0+cu121
+torchvision==0.18.0+cu121
+torchaudio==2.3.0+cu121
+transformers==4.41.0
+openai==1.30.1
