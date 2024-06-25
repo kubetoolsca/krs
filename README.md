@@ -44,7 +44,7 @@ It also utilizes a language model (LLM) for the health check feature.
 The project's directory structure and package management are managed using requirements.txt. 
 The project's data, such as tool rankings, CNCF status, and Kubernetes cluster information, are stored in JSON files and pickled files.
 
-<img width="1499" alt="image" src="bhive.png">
+<img width="299" alt="image" src="bhive.png">
 
 
 ## Prerequisites:
