@@ -27,7 +27,7 @@ A GenAI-powered Kubetools Recommender system for your Kubernetes cluster.
 
 The main functionalities of the project include:
 
-<img width="1499" alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/14fa0beb-2203-4ab4-b34b-d90888584177">
+<img width="1499" alt="image" src="arch.png">
 
 
 - **Scanning the Kubernetes cluster**: The tool scans the cluster to identify the deployed pods, services, and deployments. It retrieves information about the tools used in the cluster and their rankings.
@@ -44,7 +44,7 @@ It also utilizes a language model (LLM) for the health check feature.
 The project's directory structure and package management are managed using requirements.txt. 
 The project's data, such as tool rankings, CNCF status, and Kubernetes cluster information, are stored in JSON files and pickled files.
 
-<img width="300" alt="image" src="https://github.com/KrsGPTs/krs/assets/313480/ea071bb8-1282-4b06-8bb6-01f082e4cce0">
+<img width="1499" alt="image" src="bhive.png">
 
 
 ## Prerequisites:
