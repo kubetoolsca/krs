@@ -20,7 +20,8 @@ A GenAI-powered Kubetools Recommender system for your Kubernetes cluster.
 - [Kubetools Recommender System](#kubetools-recommender-system-1)
 - [Krs health](#krs-health)
   - [Using OpenAI](#using-openai)
-  - [Using Hugging Face](#using-hugging-face)# Kubetools Recommender System
+  - [Using Hugging Face](#using-hugging-face) 
+- [FAQs](#faqs)
 
 
 
