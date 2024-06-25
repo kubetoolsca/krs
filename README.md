@@ -401,6 +401,16 @@ model.safetensors.index.json: 100%|███████████████
 ...
 ```
 
+## FAQs
+
+<details>
+<summary> How safe is Krs for Prod environment</summary>
+
+The tool is designed to be a non-invasive tool that provides insights into the current state of a Kubernetes cluster without making any changes to the cluster itself. It does not store any sensitive data or credentials, and it only retrieves information from the cluster and external data sources.
+</details>
+
+
+
 ## Community
 Find us on [Slack](https://www.launchpass.com/kubetoolsio)
 
