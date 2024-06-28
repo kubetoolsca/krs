@@ -2,9 +2,9 @@
 
 ## Goals
 
-- <a href="https://github.com/kubetoolsca/krs/edit/eks/eks.md#setting-up-a-fully-connected-eks-cluster">Setting up a fully connected EKS cluster<\a>
-- <a href="https://github.com/kubetoolsca/krs/edit/eks/eks.md#permitting-your-local-machine-access-to-a-running-eks-cluster">Permitting your local machine access to a running EKS cluster <\a>
-- <a href="https://github.com/kubetoolsca/krs/edit/eks/eks.md#permitting-your-local-machine-access-to-a-running-eks-cluster">Interacting with your cluster through KRS<\a>
+- <a href="https://github.com/kubetoolsca/krs/blob/eks/eks.md#setting-up-a-fully-connected-eks-cluster">Setting up a fully connected EKS cluster<\a>
+- <a href="https://github.com/kubetoolsca/krs/blob/eks/eks.md#permitting-your-local-machine-access-to-a-running-eks-cluster">Permitting your local machine access to a running EKS cluster <\a>
+- <a href="https://github.com/kubetoolsca/krs/blob/eks/eks.md#interacting-with-eks-using-krs">Interacting with your cluster through KRS<\a>
 
 ## Prerequisites
 
