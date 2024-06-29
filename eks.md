@@ -3,73 +3,65 @@
 
 ## Prerequisites
 
-- An Existing Amazon Elastic Kubernetes Service(EKS)
+- AWS Account
+- AWSCLI installed on your system
+- Homebrew(if you're on Mac)
+
+
+## Getting Started
+
+### 1. Setup Amazon EKS Cluster
+
+```
+$ eksctl create cluster --name <cluster_name> --version <kubernetes_version> --region <aws_region_name e.g us-east-1> --nodegroup-name <linux_nodes> --node-type <node_type>  --nodes <number_of_nodes> --zones=<zone_names, e.g: us-east-1a,us-east-1b>
+```
+
 
 
 ![EKS_Clusters](https://github.com/kubetoolsca/krs/assets/171302280/edd250c6-12d6-4380-b430-302b06c98a73)
 
-- An awscli tool installed on your local system
-- Install Homebrew(if you're using Macbook)
 
+### 2. Authenticate your AWS account 
 
-   ```
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
-   Then, run the following commands to complete its setup:<br>
-   
-  ```
-  (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/oluchukwu/.bashrc
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  sudo apt-get install build-essential
-  brew install gcc
-  ```     
-#### 1. Authenticate your AWS account on your local machine <br><br>
-
-   First, get access to your AWS user account details following this tutorial: https://www.youtube.com/watch?v=HuE-QhrmE1c <br><br>
-   Install AWS CLI following this tutorial: https://www.cyberciti.biz/faq/how-to-install-aws-cli-on-linux/ <br><br>
-   Then authenticate your AWS account on your Linux system using your attained user credentials and this command: <br><br>
    
    ```
    aws configure 
    ```
-![AWS_Configure](https://github.com/kubetoolsca/krs/assets/171302280/21737821-0c28-4346-aa7e-33ec95b8389d)
 
-#### 2. Set up your fully functional EKS cluster following this tutorial: https://youtu.be/p6xDCz00TxU?t=451 <br><br>
 
-   Note: If you encounter errors creating your cluster due to your selected region, first go to AWS’s CloudFormation and delete your cluster’s related stacks, then modify and run this command :
+
+### 3. Extract the list of running clusters on AWS using this command:
    
-   ```
-   eksctl create cluster --name <cluster_name> --version <kubernetes_version> --region <aws_region_name e.g us-east-1> --nodegroup-name <linux_nodes> --node-type <node_type>  --nodes <number_of_nodes> --zones=<zone_names, e.g: us-east-1a,us-east-1b>
- 
-   ```
-## Permit Your Local Machine Access To A Running EKS Cluster
+```
+$ aws eks list-clusters
+```
 
-#### 1. Extract the list of running clusters on AWS using this command:<br><br>
-   ```
-   aws eks list-clusters 
-   ```
-#### 2. Create a config file that permits KRS access to the EKS cluster using this command:<br><br>
-   ```
-   aws eks update-kubeconfig --name <cluster_name> 
-   ```
-## Interacting with EKS using KRS
+### 4. Create a config file that permits KRS access to the EKS cluster using this command:<br><be>
 
-#### 1. Setup KRS using these commands:<br><br>
-   ```
-   git clone https://github.com/kubetoolsca/krs.git
-   cd krs
-   pip install
-   ```
-#### 2. Initialize KRS to permit it access to your cluster using the given command,<br><br>
-   ```
-   krs init
-   ```
-#### 3. Get a view of all possible actions with KRS, by running the given command <br><br>
-   ```
-   krs --help
-   ```
-   ```
-   krs --help
+```
+aws eks update-kubeconfig --name <cluster_name> 
+```
+
+
+### 5. Setup KRS using these commands:<br><be>
+
+```
+$git clone https://github.com/kubetoolsca/krs.git
+$ cd krs
+$ pip install
+```
+
+### 6. Initialize KRS to permit it access to your cluster using the given command,<br><be>
+
+```
+krs init
+```
+
+### 7. Get a view of all possible actions with KRS, by running the given command <br><be>
+
+
+```
+krs --help
                                                                                 
  Usage: krs [OPTIONS] COMMAND [ARGS]...                                         
                                                                                 
@@ -97,14 +89,11 @@
 │ scan         Scans the cluster and extracts a list of tools that are         │
 │              currently used.                                                 │
 ╰──────────────────────────────────────────────────────────────────────────────╯
+```
 
-   ```
+### 8. Permit KRS to get information on the tools utilized in your cluster by running the given command <br><be>
 
-#### 4. Permit KRS to get information on the tools utilized in your cluster by running the given command <br><br>
-   ```
-   krs scan
-   ```
-   ```
+```
    krs scan
 
    Scanning your cluster...
@@ -124,10 +113,11 @@
    +-------------+--------+-----------------------------+---------------+
    | kserve      |      3 | Artificial Intelligence     | listed        |
    +-------------+--------+-----------------------------+---------------+
+```
 
-   ```
-#### 5. Get recommendations on possible tools to use in your cluster by running the given command <br><br>
-   ```
+#### 9. Get recommendations on possible tools to use in your cluster by running the given command <br><be>
+
+```
    krs recommend
    ```
    ```
@@ -140,11 +130,11 @@
    +-----------------------------+------------------+-------------+---------------+
    | Artificial Intelligence     | Recommended tool | k8sgpt      | sandbox       |
    +-----------------------------+------------------+-------------+---------------+
+```
 
-   ```
+#### 10. Check the pod and namespace status in your Kubernetes cluster, including errors. 
 
-#### 6. Check pod and namespace status in your Kubernetes cluster, including errors. Utilize a GPT client for debugging assistance if needed. Simply run the given command <br><br>
-   ```
+```
    krs health
    ```
    ```
@@ -204,10 +194,8 @@ Interactive session started. Type 'end chat' to exit from the session!
 
 >> Wonderful, so what next
 >>  If you have any specific questions or another set of log entries you would like me to analyze, feel free to provide them. I'm here to help with any DevOps or Kubernetes-related queries you may have. Just let me know how I can assist you further!
+```
 
-   ```
-
-### If you are at this point, congratulations on successfully interacting with KRS. Take care!
 
 
 
