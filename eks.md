@@ -46,7 +46,7 @@ aws eks update-kubeconfig --name <cluster_name>
 ### 5. Setup KRS using these commands:<br><be>
 
 ```
-$git clone https://github.com/kubetoolsca/krs.git
+$ git clone https://github.com/kubetoolsca/krs.git
 $ cd krs
 $ pip install
 ```
