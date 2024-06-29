@@ -1,22 +1,17 @@
 # Install and Configure Krs with EKS (AWS)
 
-## Goals
-
-- <a href="https://github.com/kubetoolsca/krs/blob/eks/eks.md#setting-up-a-fully-connected-eks-cluster">Setting up a fully connected EKS cluster
-- <a href="https://github.com/kubetoolsca/krs/blob/eks/eks.md#permitting-your-local-machine-access-to-a-running-eks-cluster">Permitting your local machine access to a running EKS cluster
-- <a href="https://github.com/kubetoolsca/krs/blob/eks/eks.md#interacting-with-eks-using-krs">Interacting with your cluster through KRS
 
 ## Prerequisites
 
-- AWS account
-- Linux CLI
-- Kubectl installation
+- An Existing Amazon Elastic Kubernetes Service(EKS)
 
-## Setting up a fully connected EKS cluster
 
 ![EKS_Clusters](https://github.com/kubetoolsca/krs/assets/171302280/edd250c6-12d6-4380-b430-302b06c98a73)
 
-#### 1. Install Homebrew in your system using this command:<br><br>
+- An awscli tool installed on your local system
+- Install Homebrew(if you're using Macbook)
+
+
    ```
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
@@ -28,7 +23,7 @@
   sudo apt-get install build-essential
   brew install gcc
   ```     
-#### 2. Authenticate your AWS account on your local machine <br><br>
+#### 1. Authenticate your AWS account on your local machine <br><br>
 
    First, get access to your AWS user account details following this tutorial: https://www.youtube.com/watch?v=HuE-QhrmE1c <br><br>
    Install AWS CLI following this tutorial: https://www.cyberciti.biz/faq/how-to-install-aws-cli-on-linux/ <br><br>
@@ -39,7 +34,7 @@
    ```
 ![AWS_Configure](https://github.com/kubetoolsca/krs/assets/171302280/21737821-0c28-4346-aa7e-33ec95b8389d)
 
-#### 3. Finally set up your fully functional EKS cluster following this tutorial: https://youtu.be/p6xDCz00TxU?t=451 <br><br>
+#### 2. Set up your fully functional EKS cluster following this tutorial: https://youtu.be/p6xDCz00TxU?t=451 <br><br>
 
    Note: If you encounter errors creating your cluster due to your selected region, first go to AWS’s CloudFormation and delete your cluster’s related stacks, then modify and run this command :
    
@@ -47,7 +42,7 @@
    eksctl create cluster --name <cluster_name> --version <kubernetes_version> --region <aws_region_name e.g us-east-1> --nodegroup-name <linux_nodes> --node-type <node_type>  --nodes <number_of_nodes> --zones=<zone_names, e.g: us-east-1a,us-east-1b>
  
    ```
-## Permitting Your Local Machine Access To A Running EKS Cluster
+## Permit Your Local Machine Access To A Running EKS Cluster
 
 #### 1. Extract the list of running clusters on AWS using this command:<br><br>
    ```
@@ -58,6 +53,7 @@
    aws eks update-kubeconfig --name <cluster_name> 
    ```
 ## Interacting with EKS using KRS
+
 #### 1. Setup KRS using these commands:<br><br>
    ```
    git clone https://github.com/kubetoolsca/krs.git
