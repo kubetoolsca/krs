@@ -56,7 +56,9 @@ krs init
 ```
 
 ### 7. Get a view of all possible actions with KRS, by running the given command
-
+```
+krs --help
+```
 
 ```
 krs --help
@@ -91,7 +93,10 @@ krs --help
 ### 8. Permit KRS to get information on the tools utilized in your cluster by running the given command 
 
 ```
+krs scan
+```
 
+```
 krs scan
 
 Scanning your cluster...
@@ -117,6 +122,10 @@ The cluster is using the following tools:
 
 ```
 krs recommend
+```
+
+```
+krs recommend
 
 Our recommended tools for this deployment are:
 
@@ -133,7 +142,10 @@ Our recommended tools for this deployment are:
 ### 10. Check the pod and namespace status in your Kubernetes cluster, including errors.
 
 ```
+krs health
+```
 
+```
 krs health
 
 Starting interactive terminal...
