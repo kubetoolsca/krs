@@ -61,6 +61,7 @@ Note: If the kube config path for your cluster is not the default *(~/.kube/conf
 - [Google Kubernetes Engine](https://github.com/kubetoolsca/krs/blob/main/gke.md)
 - [Amazon Elastic Kubernetes Service](eks.md)
 - [Azure Kubernetes Service](aks.md)
+- [DigitalOcean Kubernetes Cluster](dokc.md)
 
 
 ## Getting Started
