@@ -6,8 +6,6 @@ Thank you for your interest in contributing to the Kubernetes Resource Scanner (
 
 Before contributing, please review and adhere to the [Code of Conduct](CODE_OF_CONDUCT.md). We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.
 
-## How to Contribute
-
 ## Release Management and Pull Request Submission Guidelines
 
 ### Repository Branch Structure
@@ -22,19 +20,20 @@ Our project employs a three-branch workflow to manage the development and releas
 
 To contribute to our project, follow these steps to ensure your changes are properly integrated:
 
-1. **Selecting the Correct Branch**
+**Selecting the Correct Branch**
 
 - Always base your work on the latest **release-vx.x.x** branch. This branch will be named according to the version, for example, release-v0.1.0.
 - Ensure you check the branch name in the repository for the most current version branch.
 
-2. **Working on Issues**
+**Working on Issues**
 
 - Before you start working on an issue, comment on that issue stating that you are taking it on. This helps prevent multiple contributors from working on the same issue simultaneously.
 - Include the issue number in your branch name for traceability, e.g., 123-fix-login-bug.
 
-3. **Pull Request (PR) Process**
+**Pull Request (PR) Process**
 
 To maintain code quality and orderly management, all contributors must follow this PR process:
+
 
 **Step 1: Sync Your Fork**
 
@@ -44,6 +43,7 @@ Before starting your work, sync your fork with the upstream repository to ensure
     git pull origin release-vx.x.x
 ```
 
+
 **Step 2: Create a New Branch**
 
 Create a new branch from the **release-vx.x.x** branch for your work:
@@ -51,12 +51,14 @@ Create a new branch from the **release-vx.x.x** branch for your work:
     git checkout -b your-branch-name
 ```
 
+
 **Step 3: Make Changes and Commit**
 
 Make your changes locally and commit them with clear, concise commit messages. Your commits should reference the issue number:
 ```
     git commit -m "Fix issue #123: resolve login bug"
 ```
+
 
 **Step 4: Push Changes**
 
@@ -66,20 +68,24 @@ Push your branch and changes to your fork:
     git push -u origin your-branch-name
 ```
 
+
 **Step 5: Open a Pull Request**
 
 - Go to the original repository on GitHub and open a pull request from your branch to the **release-vx.x.x** branch.
 - Clearly describe the changes you are proposing in the PR description. Link the PR to any relevant issues.
+
 
 **Step 6: PR Review**
 
 - All pull requests must undergo review by at least two peers before merging.
 - Address any feedback and make required updates to your PR; this may involve additional commits.
 
+
 **Step 7: Final Merging**
 
 - Once your PR is approved by the reviewers, one of the maintainers will merge it into the release-v0.x.x branch.
 - The changes will eventually be merged into pre-release and then main as part of our release process.
+
 
 **Notes on Contribution**
 
