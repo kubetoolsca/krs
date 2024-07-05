@@ -5,6 +5,11 @@
 
 A GenAI-powered Kubetools Recommender system for your Kubernetes cluster. 
 
+<img src="https://github.com/kubetoolsca/krs/assets/313480/5da391ba-6b15-4010-8bc7-404978bef1e7" width="400">
+
+
+
+
 # Table of Contents
 
 - [Kubetools Recommender System](#kubetools-recommender-system)
