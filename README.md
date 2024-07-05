@@ -57,7 +57,7 @@ Note: If the kube config path for your cluster is not the default *(~/.kube/conf
 ## Tested Environment
 
 - [Docker Desktop(Mac, Linux and Windows)](https://github.com/kubetoolsca/krs?tab=readme-ov-file#getting-started)
-- Minikube
+- [Minikube](https://github.com/kubetoolsca/krs/blob/main/mkc.md)
 - [Google Kubernetes Engine](https://github.com/kubetoolsca/krs/blob/main/gke.md)
 - [Amazon Elastic Kubernetes Service](eks.md)
 - [Azure Kubernetes Service](aks.md)
