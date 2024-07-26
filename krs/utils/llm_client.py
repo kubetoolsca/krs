@@ -95,9 +95,10 @@ class KrsGPTClient:
         
         import openai
         from openai import OpenAI
+        import getpass
 
         self.provider = 'OpenAI'
-        self.openai_api_key = input("\nEnter your OpenAI API key: ") if not reinitialize else self.openai_api_key
+        self.openai_api_key = getpass.getpass("\nEnter your OpenAI API key: ") if not reinitialize else self.openai_api_key
         self.model = input("\nEnter the OpenAI model name: ") if not reinitialize else self.model
 
         self.client = OpenAI(api_key=self.openai_api_key)
