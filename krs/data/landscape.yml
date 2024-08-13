@@ -1343,9 +1343,18 @@ landscape:
               summary_integrations: Prometheus, Kubernetes API, VSCode, Lens, GitHub, Jenkins
           - item:
             name: Kubewarden
+            description: >-
+              Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML,
+              and others. Kubewarden simplifies Policy-As-Code by allowing policy authors and consumers to use their preferred tooling and stack, develop and
+              test policies out of cluster. 
             homepage_url: https://www.kubewarden.io
             project: sandbox
             repo_url: https://github.com/kubewarden/kubewarden-controller
+            additional_repos:
+              - repo_url: https://github.com/kubewarden/policy-server
+              - repo_url: https://github.com/kubewarden/kwctl
+              - repo_url: https://github.com/kubewarden/audit-scanner
+              - repo_url: https://github.com/kubewarden/community
             logo: kubewarden.svg
             twitter: https://twitter.com/kubewarden
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -1354,9 +1363,29 @@ landscape:
               accepted: '2022-06-17'
               blog_url: https://kubewarden.io/blog
               slack_url: https://kubernetes.slack.com/
+              mailing_list_url: https://lists.cncf.io/g/cncf-kubewarden-maintainers
               dev_stats_url: https://kubewarden.devstats.cncf.io/
               chat_channel: '#kubewarden'
               clomonitor_name: kubewarden
+              documentation_url: https://docs.kubewarden.io
+              github_discussions_url: https://github.com/kubewarden/community/discussions
+              package_manager_url: https://artifacthub.io/packages/search?kind=0&kind=13&ts_query_web=kubewarden&official=true&sort=relevance
+              summary_personas: Platform engineering,DevOps engineers,Security admins,Cluster admins,Policy authors
+              summary_tags: wasm, webassembly, web assembly, policy,policy-as-code,governance,software supply chain, pod security, compliance
+              summary_use_case: >-
+                Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML,
+                and others. Kubewarden simplifies Policy-As-Code by allowing policy authors and consumers to use their preferred tooling and stack, develop and
+                test policies out of cluster. 
+              summary_business_use_case: >-
+                Embracing WebAssembly for policies means that Policy Authors can use their preferred tooling (language libraries, Git, CI);
+                thus lowering knowledge barrier and silos, reducing training, and minimizing ad-hoc solutions.
+                Thanks to policies being WebAssembly, Kubewarden policies can leverage and reuse upstream libraries to expand on current policy solutions while
+                keeping compatibility (e.g: its cel-policy uses Kubernetes' cel-go interpreter, its kyverno-policy compiles a subset of Kyverno codebase to
+                support Kyverno's YAML-like DSL). 
+                Kubewarden policy CRDs and PolicyServer CRD enable insulation of consumers per namespace, and self-service.
+              summary_release_rate: Approximately monthly for minor releases, when needed for patch releases.
+              summary_intro_url: https://docs.kubewarden.io/quick-start
+              summary_integrations: Sigstore, Cosign, OpenTelemetry, Prometheus, Grafana, Jaeger, Policy Reporter
           - item:
             name: Kyverno
             homepage_url: https://kyverno.io/
@@ -11796,14 +11825,6 @@ landscape:
             logo: kubeops.svg
             crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
-            name: Kuberix (KCSP)
-            description: >-
-              Kuberix works with innovative companies that actively seek the benefits of modern software development practices. Also, as a company of
-              experienced Kubernetes experts, we provide services so that customers can focus on their business.
-            homepage_url: https://kuberix.com/consulting/
-            logo: kuberix.svg
-            crunchbase: https://www.crunchbase.com/organization/kuberix
-          - item:
             name: Kubermatic (KCSP)
             description: >-
               Kubermatic provides enterprise-grade software solutions and professional services to help organizations worldwide to fully automate their
@@ -12002,15 +12023,6 @@ landscape:
             logo: okestro.svg
             crunchbase: https://www.crunchbase.com/organization/okestro
           - item:
-            name: OnGres (KCSP)
-            description: >-
-              OnGres (which means "ON postGRES") is a tech startup focused on the open-source relational database PostgreSQL and its wide ecosystem. We offer
-              Professional Services (including 24x7 support, training and consulting projects) on PostgreSQL, tools supporting PostgreSQL, extensions and
-              related projects. OnGres additionally provides Professional Services for users of Kubernetes that want to run stateful workloads.
-            homepage_url: https://www.ongres.com/professional-services/kubernetes/
-            logo: ongres.svg
-            crunchbase: https://www.crunchbase.com/organization/ongres
-          - item:
             name: Open Source Consulting (KCSP)
             description: >-
               Open Source Consulting, a cloud migration company, has experience in technical, application, and system architecture consulting. We provide
@@ -12042,14 +12054,6 @@ landscape:
             homepage_url: https://www.ovhcloud.com/en-ie/professional-services/
             logo: ovhcloud.svg
             crunchbase: https://www.crunchbase.com/organization/ovh-com
-          - item:
-            name: Ozone (KCSP)
-            description: >-
-              Ozone provides consulting services on Kubernetes and enables continuous delivery of modern applications using Kubernetes and cloud native
-              technologies.
-            homepage_url: https://www.ozone.one/
-            logo: ozone.svg
-            crunchbase: https://www.crunchbase.com/organization/ozone-cd
           - item:
             name: Palark (KCSP)
             description: >-
@@ -13732,6 +13736,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/atix
             joined: '2021-06-01'
           - item:
+            name: Atolio (member)
+            homepage_url: https://www.atolio.com
+            logo: atolio.svg
+            crunchbase: https://www.crunchbase.com/organization/atolio
+            joined: '2024-08-01'            
+          - item:
             name: Audi (member)
             homepage_url: https://www.audi.de/de/brand/de.html
             logo: audi.svg
@@ -14112,6 +14122,12 @@ landscape:
             logo: cloudmate.svg
             crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
             joined: '2023-04-01'
+          - item:
+            name: Cloudoor (member)
+            homepage_url: https://cloudoor.com
+            logo: cloudoor.svg
+            crunchbase: https://www.crunchbase.com/organization/cno
+            joined: '2024-08-01'             
           - item:
             name: CloudOps (member)
             homepage_url: https://www.cloudops.com/
@@ -14509,12 +14525,6 @@ landscape:
             logo: edgeless-systems.svg
             crunchbase: https://www.crunchbase.com/organization/edgeless-systems
             joined: '2022-05-01'
-          - item:
-            name: Edgenesis (member)
-            homepage_url: https://www.shifu.run/
-            logo: edgenesis.svg
-            crunchbase: https://www.crunchbase.com/organization/edgenesis
-            joined: '2023-04-01'
           - item:
             name: Effectual (member)
             homepage_url: https://www.effectual.com/
@@ -15129,12 +15139,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/kubernative
             joined: '2019-11-01'
           - item:
-            name: Kuberix (member)
-            homepage_url: https://www.kuberix.com/
-            logo: kuberix.svg
-            crunchbase: https://www.crunchbase.com/organization/kuberix
-            joined: '2023-03-01'
-          - item:
             name: Kubermatic (member)
             homepage_url: https://www.kubermatic.com
             logo: kubermatic.svg
@@ -15682,12 +15686,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/omnistrate
             joined: '2024-07-01'            
           - item:
-            name: OnGres (member)
-            homepage_url: https://www.ongres.com/
-            logo: ongres.svg
-            crunchbase: https://www.crunchbase.com/organization/ongres
-            joined: '2022-01-01'
-          - item:
             name: OpenMetal.io (member)
             homepage_url: https://openmetal.io/
             logo: openmetal.svg
@@ -15765,12 +15763,6 @@ landscape:
             logo: ovhcloud.svg
             crunchbase: https://www.crunchbase.com/organization/ovh-com
             joined: '2018-08-01'
-          - item:
-            name: Ozone (member)
-            homepage_url: https://www.ozone.one/home
-            logo: ozone.svg
-            crunchbase: https://www.crunchbase.com/organization/ozone-cd
-            joined: '2020-03-01'
           - item:
             name: P0 Security (member)
             homepage_url: https://www.p0.dev/
@@ -16505,6 +16497,12 @@ landscape:
             logo: sva.svg
             crunchbase: https://www.crunchbase.com/organization/sva
             joined: '2020-11-01'
+          - item:
+            name: Svix (member)
+            homepage_url: https://www.svix.com
+            logo: svix.svg
+            crunchbase: https://www.crunchbase.com/organization/svix
+            joined: '2024-08-01'             
           - item:
             name: Swisscom (member)
             homepage_url: https://www.swisscom.ch/en/residential.html

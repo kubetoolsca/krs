@@ -140,30 +140,54 @@ def handle_chat(chat_history):
         print(f"Assistant: {response['choices'][0]['message']['content']}")
 
 
-def chat(chat_question,chat_history):
+# def chat(chat_question,chat_history):
+
+#     localai_start()
+
+#     url = "http://localhost:8080/v1/chat/completions"
+#     headers = {"Content-Type": "application/json"}
+
+#     # chat_history.append({"role": "user", "content": chat_question})
+
+#     data = {
+#     "model": "luna-ai-llama2",
+#     #"messages": [{"role": "user", "content": chat_question}],
+#     "messages": chat_history,
+#     "temperature": 0.9
+#     }
+
+#     response = requests.post(url, headers=headers, json=data)
+#     response_data = response.json()
+
+#     # chat_history.append({"role": "assistant", "content": response_data['choices'][0]['message']['content']})
+
+#     #save_chat_history()
+
+#     return response_data['choices'][0]['message']['content']
+
+
+def chat(chat_question, chat_history):
 
     localai_start()
 
     url = "http://localhost:8080/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
 
-    # chat_history.append({"role": "user", "content": chat_question})
-
     data = {
-    "model": "luna-ai-llama2",
-    #"messages": [{"role": "user", "content": chat_question}],
-    "messages": chat_history,
-    "temperature": 0.9
+        "model": "luna-ai-llama2",
+        "messages": chat_history,
+        "temperature": 0.9
     }
 
-    response = requests.post(url, headers=headers, json=data)
-    response_data = response.json()
-
-    # chat_history.append({"role": "assistant", "content": response_data['choices'][0]['message']['content']})
-
-    #save_chat_history()
-
-    return response_data['choices'][0]['message']['content']
+    try:
+        response = requests.post(url, headers=headers, json=data, timeout=360)  # Set timeout to 10 seconds
+        response.raise_for_status()  # Raise an error for bad status codes
+        response_data = response.json()
+        return response_data['choices'][0]['message']['content']
+    except requests.exceptions.Timeout:
+        print("The request timed out")
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred: {e}")
 
 
 def total_initialization():

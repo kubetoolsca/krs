@@ -67,9 +67,13 @@ def init_setup():
 def localai_start():
     if (check_docker() == True) and (init_complete == 1):
         if not check_containers_running():
-            #if os.path.basename(os.getcwd()) != "LocalAI":
+            if os.path.basename(os.getcwd()) != "LocalAI":
                 #os.chdir("../LocalAI")
-            os.chdir("LocalAI")
+                # project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+                # localai_path = os.path.join(project_root, "LocalAI")
+                # os.chdir(localai_path)
+                os.chdir("LocalAI")
+            # os.chdir("../../LocalAI")
             run_command("docker compose up -d --pull always", retries=3, timeout=360)
 
 
@@ -138,11 +142,12 @@ def handle_chat(chat_history):
 
 def chat(chat_question,chat_history):
 
+    localai_start()
 
     url = "http://localhost:8080/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
 
-    chat_history.append({"role": "user", "content": chat_question})
+    # chat_history.append({"role": "user", "content": chat_question})
 
     data = {
     "model": "luna-ai-llama2",
@@ -154,7 +159,7 @@ def chat(chat_question,chat_history):
     response = requests.post(url, headers=headers, json=data)
     response_data = response.json()
 
-    chat_history.append({"role": "assistant", "content": response_data['choices'][0]['message']['content']})
+    # chat_history.append({"role": "assistant", "content": response_data['choices'][0]['message']['content']})
 
     #save_chat_history()
 
