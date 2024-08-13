@@ -79,13 +79,29 @@ class KrsGPTClient:
 
     def initialize_client(self):
         if not self.client and not self.pipeline:
-            choice = input("\nChoose the model provider for healthcheck: \n\n[1] OpenAI \n[2] Huggingface\n\n>> ")
+            choice = input("\nChoose the model provider for healthcheck: \n\n[1] OpenAI \n[2] Huggingface \n[3] Local AI\n\n>> ")
             if choice == '1':
                 self.init_openai_client()
             elif choice == '2':
                 self.init_huggingface_client()
+            elif choice == '3':
+                self.init_localai_client()
             else:
                 raise ValueError("Invalid option selected")
+    
+    def init_localai_client(self, reinitialize=False):
+
+        from krs.utils.localai import total_initialization
+
+
+        self.provider = 'LocalAI'
+        self.model = 'luna-ai-llama2'
+        total_initialization()
+
+        self.save_state()
+        
+        
+
 
     def init_openai_client(self, reinitialize=False):
 
@@ -172,6 +188,11 @@ class KrsGPTClient:
             responses = self.pipeline(input_prompt, max_new_tokens=self.max_tokens)
             output = responses[0]['generated_text']
 
+        elif self.provider == "LocalAI":
+            from krs.utils.localai import chat
+
+            output = chat(input_prompt,self.history)
+
         self.history.append({"role": "assistant", "content": output})
         print(">> ", output)
 
@@ -185,7 +206,7 @@ class KrsGPTClient:
             self.infer(initial_prompt)
 
         while True:
-            prompt = input("\n>> ")
+            prompt = input("\n>>You:  ")
             if prompt.lower() == 'end chat':
                 break
             self.infer(prompt)

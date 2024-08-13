@@ -16,3 +16,4 @@ krs/utils/constants.py
 krs/utils/fetch_tools_krs.py
 krs/utils/functional.py
 krs/utils/llm_client.py
+krs/utils/localai.py
