@@ -60,6 +60,8 @@ class KrsGPTClient:
                     self.init_openai_client(reinitialize=True)
                 elif self.provider == 'huggingface':
                     self.init_huggingface_client(reinitialize=True)
+                elif self.provider == 'LocalAI':
+                    self.init_localai_client(reinitialize=True)
         except (FileNotFoundError, EOFError):
             pass
 
@@ -217,6 +219,8 @@ class KrsGPTClient:
             return self.history
         elif self.provider == 'huggingface':
             return " ".join([item["content"] for item in self.history])
+        elif self.provider == 'LocalAI':
+            return self.history
 
 if __name__ == "__main__":
     client = KrsGPTClient(reinitialize=False)
