@@ -162,7 +162,7 @@ def localai_start() -> None:
         print("Failed to start LocalAI.")
         
 
-def run_command(command_str: str, retries=3: int, timeout=120: int) -> bool:
+def run_command(command_str: str, retries: int=3, timeout: int=120) -> bool:
 
     """
     Run a command in the shell and handle retries and timeouts
