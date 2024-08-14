@@ -193,7 +193,7 @@ class KrsGPTClient:
         elif self.provider == "LocalAI":
             from krs.utils.localai import chat
 
-            output = chat(input_prompt,self.history)
+            output = chat(self.history)
 
         self.history.append({"role": "assistant", "content": output})
         print(">> ", output)

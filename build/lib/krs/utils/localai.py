@@ -1,6 +1,22 @@
-# import requests
-# import subprocess
-# import shlex
+# Author: Oluchukwu Obi-Njoku
+# Date: 2024-08-13
+
+
+""" 
+Description: 
+
+This script facilitates interaction with the LocalAI API. It includes functionality to:
+1. Start and manage LocalAI Docker containers.
+2. Handle chat interactions with the LocalAI API.
+3. Initialize the LocalAI API if it has not been initialized yet.
+
+The script ensures seamless communication with the LocalAI service, 
+providing methods to send chat messages and receive responses, while also managing the 
+lifecycle of the LocalAI Docker containers.
+
+"""
+
+#import required libraries
 
 import subprocess
 import sys
@@ -10,19 +26,45 @@ import time
 import json
 
 
+
+# Global variables
+
+# Define required packages
 required_packages = [
     "requests",
 ]
 
+# Define global variable to track initialization status
 init_complete = 0
-chat_history_file = "chat_history.json"
-chat_history = []
 
 
-def install_lib(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
-def install_packages(req_packages):
+def install_lib(package: str) -> None:
+
+    """
+    Install a Python package using pip
+    
+    Args: package (str): The name of the package to install
+    Returns: None
+    """
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package]) # Install the package
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing package: {package}")
+        print(e)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    except:
+        print(f"Failed to install {package}.")
+
+def install_packages(req_packages: list) -> None:
+
+    """
+    Install required Python packages using pip
+
+    Args: req_packages (list): A list of required package names
+    Returns: None
+    """
 
     for package in req_packages:
         try:
@@ -30,96 +72,180 @@ def install_packages(req_packages):
         except ImportError:
             print(f"{package} not found. Installing...")
             install_lib(package)
+        except Exception as e:
+            print(f"An error occurred: {e}")
+        except:
+            print(f"Failed to install {package}.")
+
+
+# Import required packages if they are installed
+# If not, install the required packages
+# Then import the packages
 
 try:
     import requests
 except ImportError:
-    install_packages(required_packages)
+    install_packages(required_packages) # Install required packages
     import requests
 
 
-def check_initialization_complete():
+def check_initialization_complete()-> bool:
 
-    global init_complete
-    repo_path = os.path.join(os.getcwd(), "LocalAI")
-    model_path = os.path.join(repo_path, "models", "luna-ai-llama2")
-    tmpl_path = os.path.join(repo_path, "models", "luna-ai-llama2.tmpl")
-    
-    if os.path.isdir(repo_path) and os.path.isfile(model_path) and os.path.isfile(tmpl_path):
-        print("Initialization is complete.")
-        init_complete = 1
-        return True
-    else:
-        print("Initialization is not complete.")
+    """
+    Check if the LocalAI API has been initialized
+
+    Args: None
+    Returns: bool: True if initialization is complete, False otherwise
+    """
+
+    try:
+        # Define paths for model and template files
+        global init_complete
+        repo_path = os.path.join(os.getcwd(), "LocalAI")
+        model_path = os.path.join(repo_path, "models", "luna-ai-llama2")
+        tmpl_path = os.path.join(repo_path, "models", "luna-ai-llama2.tmpl")
+        
+        # Check if the required files and directories exist
+        if os.path.isdir(repo_path) and os.path.isfile(model_path) and os.path.isfile(tmpl_path): # Check if the model and template files exist
+            print("Initialization is complete.") # Initialization is complete
+            init_complete = 1
+            return True
+        else:
+            print("Initialization is not complete.") # Initialization is not complete
+            return False
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return False
+    except:
+        print("Failed to check initialization status.")
         return False
 
-def init_setup():
+
+def init_setup() -> None:
+
+    """
+    Initialize the LocalAI API by cloning the repository and downloading the model and template files
+
+    Args: None
+    Returns: None
+    """
+
+    try:
+        run_command("git clone https://github.com/go-skynet/LocalAI")
+        os.chdir("LocalAI")
+        run_command("wget https://huggingface.co/TheBloke/Luna-AI-Llama2-Uncensored-GGUF/resolve/main/luna-ai-llama2-uncensored.Q4_0.gguf -O models/luna-ai-llama2")
+        run_command("cp -rf prompt-templates/getting_started.tmpl models/luna-ai-llama2.tmpl")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    except:
+        print("Failed to initialize LocalAI.")
+
+
+def localai_start() -> None:
+
+    """
+    Start the LocalAI API Docker containers
+
+    Args: None
+    Returns: None
+    """
+
+    try:
+        if (check_docker() == True) and (init_complete == 1):
+            if not check_containers_running():
+                if os.path.basename(os.getcwd()) != "LocalAI":
+                    os.chdir("LocalAI")
+                run_command("docker compose up -d --pull always", retries=3, timeout=360)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    except:
+        print("Failed to start LocalAI.")
+        
+
+def run_command(command_str: str, retries=3: int, timeout=120: int) -> bool:
+
+    """
+    Run a command in the shell and handle retries and timeouts
+
+    Args:   command_str (str): The command to run
+            retries (int): The number of times to retry the command
+            timeout (int): The timeout for the command
+
+    Returns: bool: True if the command was successful, False otherwise
+    """
 
     global init_complete
-    init_complete = 1
-    
-    # os.chdir("..")
-    run_command("git clone https://github.com/go-skynet/LocalAI")
-    os.chdir("LocalAI")
-    run_command("wget https://huggingface.co/TheBloke/Luna-AI-Llama2-Uncensored-GGUF/resolve/main/luna-ai-llama2-uncensored.Q4_0.gguf -O models/luna-ai-llama2")
-    run_command("cp -rf prompt-templates/getting_started.tmpl models/luna-ai-llama2.tmpl")
+    command_list = shlex.split(command_str) # Split the command string into a list
 
-def localai_start():
-    if (check_docker() == True) and (init_complete == 1):
-        if not check_containers_running():
-            if os.path.basename(os.getcwd()) != "LocalAI":
-                #os.chdir("../LocalAI")
-                # project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-                # localai_path = os.path.join(project_root, "LocalAI")
-                # os.chdir(localai_path)
-                os.chdir("LocalAI")
-            # os.chdir("../../LocalAI")
-            run_command("docker compose up -d --pull always", retries=3, timeout=360)
-
-
-def run_command(command_str, retries=3, timeout=120):
-    global init_complete
-    command_list = shlex.split(command_str)
+    # Retry the command multiple times
     for attempt in range(retries):
         try:
+
             print(f"Running: {command_str} (Attempt {attempt + 1}/{retries})")
-            result = subprocess.run(command_list, capture_output=True, check=True, timeout=timeout, text=True)
-            print(f"Completed: {command_str}")
-            init_complete = init_complete & 1
-            return result.returncode == 0
+            result = subprocess.run(command_list, capture_output=True, check=True, timeout=timeout, text=True) # Run the command
+            print(f"Completed: {command_str}") # Print the command completion message
+            init_complete = init_complete & 1 # Set initialization status to complete
+            return result.returncode == 0 # Return True if the command was successful
+
         except subprocess.TimeoutExpired:
             print(f"Timeout expired for: {command_str}")
             init_complete = init_complete & 0
+            return False
+
         except subprocess.CalledProcessError as e:
             print(f"Command failed with error: {e}")
             init_complete = init_complete & 0
+            return False
+        
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            init_complete = init_complete & 0
+            return False
+        
+        except:
+            print(f"Failed to run command: {command_str}")
+            init_complete = init_complete & 0
+            return False
+
         time.sleep(5)  # Wait before retrying
     return False
 
 
-def check_docker():
-    output = run_command("docker --version")
-    if output != True:
-        print("You need to install docker to commmense with LocalAI")
-        return False
-    return True
+def check_docker() -> bool:
 
-def load_chat_history():
-    global chat_history
-    if os.path.exists(chat_history_file):
-        with open(chat_history_file, "r") as file:
-            chat_history = json.load(file)
-            print("Chat history loaded.")
+    """
+    Check if Docker is installed on the system
 
-def save_chat_history():
-    with open(chat_history_file, "w") as file:
-        json.dump(chat_history, file)
-        print("Chat history saved.")
+    Args: None
+    Returns: bool: True if Docker is installed, False otherwise
+    """
 
-def check_containers_running():
     try:
-        result = subprocess.run(["docker", "ps"], capture_output=True, check=True, text=True)
-        if "localai-api-1" in result.stdout: 
+        output = run_command("docker --version")
+        if output != True:
+            print("You need to install docker to commmense with LocalAI")
+            return False
+        return True
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return False
+    except:
+        print("Failed to check Docker installation.")
+        return False
+
+
+def check_containers_running() -> bool:
+
+    """
+    Check if the required LocalAI Docker containers are running
+
+    Args: None
+    Returns: bool: True if the containers are running, False otherwise
+    """
+
+    try:
+        result = subprocess.run(["docker", "ps"], capture_output=True, check=True, text=True) # Run the command to check running containers
+        if "localai-api-1" in result.stdout:  # Check if the required containers are running
             print("Required containers are already running.")
             return True
         else:
@@ -128,83 +254,86 @@ def check_containers_running():
     except subprocess.CalledProcessError:
         print("Failed to check running containers.")
         return False
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return False
+    except:
+        print("Failed to check running containers.")
+        return False
 
-def handle_chat(chat_history):
-    localai_start()
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() == "end chat":
-            print("Ending chat. Goodbye!")
-            break
-        response = chat(user_input,chat_history)
-        print(f"Assistant: {response['choices'][0]['message']['content']}")
+def handle_chat(chat_history: list) -> None:
 
+    """
+    Handle chat interactions with the LocalAI API
 
-# def chat(chat_question,chat_history):
+    Args: chat_history (list): A list of chat messages
+    Returns: None
+    """
 
-#     localai_start()
-
-#     url = "http://localhost:8080/v1/chat/completions"
-#     headers = {"Content-Type": "application/json"}
-
-#     # chat_history.append({"role": "user", "content": chat_question})
-
-#     data = {
-#     "model": "luna-ai-llama2",
-#     #"messages": [{"role": "user", "content": chat_question}],
-#     "messages": chat_history,
-#     "temperature": 0.9
-#     }
-
-#     response = requests.post(url, headers=headers, json=data)
-#     response_data = response.json()
-
-#     # chat_history.append({"role": "assistant", "content": response_data['choices'][0]['message']['content']})
-
-#     #save_chat_history()
-
-#     return response_data['choices'][0]['message']['content']
+    try:
+        localai_start() # Start the LocalAI API
+        while True:
+            user_input = input("You: ")
+            if user_input.lower() == "end chat":
+                print("Ending chat. Goodbye!")
+                break
+            response = chat(chat_history) # Get a response from the LocalAI API
+            print(f"Assistant: {response['choices'][0]['message']['content']}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    except:
+        print("Failed to handle chat interactions.")
 
 
-def chat(chat_question, chat_history):
+def chat(chat_history: list) -> str:
 
-    localai_start()
+    """
+    Send chat messages to the LocalAI API and receive responses
 
-    url = "http://localhost:8080/v1/chat/completions"
-    headers = {"Content-Type": "application/json"}
+    Args: chat_history (list): A list of chat messages
+    Returns: str: The response from the LocalAI API
+    """
+
+    localai_start() # Start the LocalAI API
+
+    url = "http://localhost:8080/v1/chat/completions" # Define the API endpoint
+    headers = {"Content-Type": "application/json"} # Define the request headers
 
     data = {
         "model": "luna-ai-llama2",
         "messages": chat_history,
         "temperature": 0.9
-    }
+    } # Define the request data
 
     try:
         response = requests.post(url, headers=headers, json=data, timeout=360)  # Set timeout to 10 seconds
         response.raise_for_status()  # Raise an error for bad status codes
-        response_data = response.json()
+        response_data = response.json() # Get the response data
         return response_data['choices'][0]['message']['content']
     except requests.exceptions.Timeout:
-        print("The request timed out")
+        return "The request timed out"
     except requests.exceptions.RequestException as e:
+        return f"An error occurred: {e}"
+    except Exception as e:
+        return f"An error occurred: {e}"
+    except:
+        return "Failed to send chat message."
+
+def total_initialization() -> None:
+
+    """
+    Initialize the LocalAI API and start the LocalAI Docker containers
+
+    Args: None
+    Returns: None
+    """
+    try:
+        global init_complete 
+        if not check_initialization_complete(): # Check if the LocalAI API has been initialized
+            init_setup() # Initialize the LocalAI API
+        localai_start() # Start the LocalAI Docker containers
+    except Exception as e:
         print(f"An error occurred: {e}")
+    except:
+        print("Failed to complete initialization.")
 
-
-def total_initialization():
-    global init_complete
-    if not check_initialization_complete():
-        init_setup()
-    localai_start()
-
-
-def main():
-    global init_complete
-    if not check_initialization_complete():
-        init_setup()
-    localai_start()
-    load_chat_history()
-
-    handle_chat(chat_history)
-
-if __name__ == "__main__":
-    main()
