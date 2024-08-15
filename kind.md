@@ -1,4 +1,4 @@
-# Install and Configure Krs with MiniKube
+# Install and Configure Krs with Kind
 
 ## Prerequisites
 
