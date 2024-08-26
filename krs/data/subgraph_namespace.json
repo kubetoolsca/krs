@@ -1,0 +1,19 @@
+{
+    "nodes": [
+        {
+            "id": "default/kubernetes",
+            "kind": "Service",
+            "namespace": "default",
+            "name": "kubernetes",
+            "status": {
+                "loadBalancer": {}
+            },
+            "labels": {
+                "component": "apiserver",
+                "provider": "kubernetes"
+            },
+            "annotations": {}
+        }
+    ],
+    "edges": []
+}

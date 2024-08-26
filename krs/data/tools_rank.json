@@ -1,0 +1,2770 @@
+{
+    "k9s": [
+        {
+            "rank": 1,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/derailed/k9s"
+        },
+        {
+            "rank": 1,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/derailed/k9s"
+        }
+    ],
+    "krew": [
+        {
+            "rank": 2,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/kubernetes-sigs/krew"
+        }
+    ],
+    "kubectx + kubens": [
+        {
+            "rank": 3,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/ahmetb/kubectx"
+        }
+    ],
+    "karpenter": [
+        {
+            "rank": 4,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/aws/karpenter-provider-aws"
+        }
+    ],
+    "autoscaler": [
+        {
+            "rank": 5,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/kubernetes/autoscaler"
+        }
+    ],
+    "kubeoperator": [
+        {
+            "rank": 6,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://kubeoperator.io/"
+        }
+    ],
+    "vimkubectl": [
+        {
+            "rank": 7,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/WsdlToPhp/Vimkubectl"
+        }
+    ],
+    "descheduler": [
+        {
+            "rank": 8,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/kubernetes-sigs/descheduler"
+        }
+    ],
+    "kubehelper": [
+        {
+            "rank": 9,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/IlyaKruglov/kube-helper"
+        }
+    ],
+    "conftest": [
+        {
+            "rank": 10,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/open-policy-agent/conftest"
+        }
+    ],
+    "finch": [
+        {
+            "rank": 11,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/runfinch/finch"
+        }
+    ],
+    "bootkube": [
+        {
+            "rank": 12,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/kubernetes-sigs/bootkube"
+        }
+    ],
+    "ktunnel": [
+        {
+            "rank": 13,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/omrikiei/ktunnel"
+        }
+    ],
+    "kube-ps1": [
+        {
+            "rank": 14,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/jonmosco/kube-ps1"
+        }
+    ],
+    "kube-shell": [
+        {
+            "rank": 15,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/cloudnativelabs/kube-shell"
+        }
+    ],
+    "fubectl": [
+        {
+            "rank": 16,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/brendandburns/fubectl"
+        }
+    ],
+    "kured": [
+        {
+            "rank": 17,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/kubereboot/kured"
+        }
+    ],
+    "kubectl sudo": [
+        {
+            "rank": 18,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/dtan4/kubectl-sudo"
+        }
+    ],
+    "kubecolor": [
+        {
+            "rank": 19,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/dty1er/kubecolor"
+        }
+    ],
+    "kube-capacity": [
+        {
+            "rank": 20,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/robscott/kube-capacity"
+        }
+    ],
+    "pluto": [
+        {
+            "rank": 21,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/FairwindsOps/pluto"
+        }
+    ],
+    "kueue": [
+        {
+            "rank": 22,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/ameerthehacker/kueue"
+        },
+        {
+            "rank": 30,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kubernetes-sigs/kueue"
+        }
+    ],
+    "kube-prompt": [
+        {
+            "rank": 23,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/c-bata/kube-prompt"
+        }
+    ],
+    "kubie": [
+        {
+            "rank": 24,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/sbstp/kubie"
+        }
+    ],
+    "kuttle": [
+        {
+            "rank": 25,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/itaysk/kuttle"
+        }
+    ],
+    "click": [
+        {
+            "rank": 26,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/databricks/click"
+        }
+    ],
+    "ksync": [
+        {
+            "rank": 27,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/collabnix/kubetools"
+        }
+    ],
+    "fleet": [
+        {
+            "rank": 28,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/rancher/fleet"
+        }
+    ],
+    "stash": [
+        {
+            "rank": 29,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/stashed/stash"
+        },
+        {
+            "rank": 1,
+            "category": "Backup Tools",
+            "url": "https://github.com/stashed/stash"
+        }
+    ],
+    "kubeview": [
+        {
+            "rank": 30,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/benc-uk/kubeview"
+        },
+        {
+            "rank": 3,
+            "category": "Cluster Management",
+            "url": "https://github.com/benc-uk/kubeview"
+        }
+    ],
+    "kor": [
+        {
+            "rank": 31,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/yonahd/kor"
+        },
+        {
+            "rank": 36,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/yonahd/kor"
+        }
+    ],
+    "cloudtty": [
+        {
+            "rank": 32,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/cloudtty/cloudtty"
+        }
+    ],
+    "image-builder": [
+        {
+            "rank": 33,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/kubernetes-sigs/image-builder"
+        }
+    ],
+    "kubernetes image puller": [
+        {
+            "rank": 34,
+            "category": "Cluster with Core CLI tools",
+            "url": "https://github.com/che-incubator/kubernetes-image-puller"
+        }
+    ],
+    "elk": [
+        {
+            "rank": 1,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/elastic"
+        }
+    ],
+    "loki": [
+        {
+            "rank": 2,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/grafana/loki"
+        }
+    ],
+    "jaeger": [
+        {
+            "rank": 3,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/jaegertracing/jaeger\t"
+        }
+    ],
+    "fluentbit": [
+        {
+            "rank": 4,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/fluent/fluent-bit"
+        }
+    ],
+    "kiali": [
+        {
+            "rank": 5,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/kiali/kiali\t"
+        }
+    ],
+    "retina": [
+        {
+            "rank": 6,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/microsoft/retina"
+        }
+    ],
+    "goldpinger": [
+        {
+            "rank": 7,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/bloomberg/goldpinger\t"
+        }
+    ],
+    "kail": [
+        {
+            "rank": 8,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/boz/kail\t"
+        }
+    ],
+    "k8spacket": [
+        {
+            "rank": 9,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/k8spacket/k8spacket"
+        }
+    ],
+    "network mapper": [
+        {
+            "rank": 10,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/otterize/network-mapper"
+        }
+    ],
+    "otterize network mapper": [
+        {
+            "rank": 11,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/otterize/network-mapper\t"
+        }
+    ],
+    "kube-audit-rest": [
+        {
+            "rank": 12,
+            "category": "Logging and Tracing",
+            "url": "https://github.com/RichardoC/kube-audit-rest"
+        }
+    ],
+    "kubectl-mtail": [
+        {
+            "rank": 13,
+            "category": "Logging and Tracing",
+            "url": "https://gitlab.com/grzesuav/kubectl-mtail"
+        }
+    ],
+    "kubent": [
+        {
+            "rank": 2,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/doitintl/kube-no-trouble\t"
+        }
+    ],
+    "kubectl-debug": [
+        {
+            "rank": 3,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/aylei/kubectl-debug"
+        }
+    ],
+    "powerfulseal": [
+        {
+            "rank": 4,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/powerfulseal/powerfulseal\t"
+        }
+    ],
+    "monokle": [
+        {
+            "rank": 5,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/kubeshop/monokle"
+        },
+        {
+            "rank": 26,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kubeshop/monokle"
+        },
+        {
+            "rank": 16,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubeshop/monokle"
+        }
+    ],
+    "kubeskoop": [
+        {
+            "rank": 6,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/alibaba/kubeskoop\t"
+        }
+    ],
+    "koolkits": [
+        {
+            "rank": 7,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/lightrun-platform/koolkits"
+        }
+    ],
+    "kubernetes cli plugin - doctor": [
+        {
+            "rank": 8,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/emirozer/kubectl-doctor"
+        }
+    ],
+    "crash-diagnostic": [
+        {
+            "rank": 9,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/vmware-tanzu/crash-diagnostics"
+        }
+    ],
+    "kubeman": [
+        {
+            "rank": 10,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/walmartlabs/kubeman"
+        }
+    ],
+    "kpexec": [
+        {
+            "rank": 11,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/ssup2/kpexec"
+        }
+    ],
+    "kubespy": [
+        {
+            "rank": 12,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/huazhihao/kubespy"
+        },
+        {
+            "rank": 5,
+            "category": "Observability",
+            "url": "https://github.com/pulumi/kubespy"
+        }
+    ],
+    "knative inspect": [
+        {
+            "rank": 13,
+            "category": "Troubleshooting / Debugging",
+            "url": "https://github.com/nimakaviani/knative-inspect"
+        }
+    ],
+    "kaniko": [
+        {
+            "rank": 1,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/GoogleContainerTools/kaniko"
+        }
+    ],
+    "terraformer": [
+        {
+            "rank": 2,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/GoogleCloudPlatform/terraformer\t"
+        }
+    ],
+    "kompose": [
+        {
+            "rank": 3,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kubernetes/kompose"
+        }
+    ],
+    "kubebuilder": [
+        {
+            "rank": 4,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kubernetes-sigs/kubebuilder\t"
+        }
+    ],
+    "tilt": [
+        {
+            "rank": 5,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/tilt-dev/tilt\t"
+        }
+    ],
+    "ko": [
+        {
+            "rank": 6,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/ko-build/ko"
+        }
+    ],
+    "tilt: tilt manages local development instances for teams that deploy to kubernetes": [
+        {
+            "rank": 7,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/tilt-dev/tilt"
+        }
+    ],
+    "operator-sdk": [
+        {
+            "rank": 8,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/operator-framework/operator-sdk"
+        }
+    ],
+    "eclipse che ide for k8s": [
+        {
+            "rank": 9,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/eclipse-che/che"
+        }
+    ],
+    "reloader": [
+        {
+            "rank": 10,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/stakater/Reloader"
+        }
+    ],
+    "python client for kuberenetes": [
+        {
+            "rank": 11,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kubernetes-client/python"
+        }
+    ],
+    "devspace": [
+        {
+            "rank": 12,
+            "category": "Development Tools/Kit",
+            "url": "https://www.devspace.sh"
+        }
+    ],
+    "cdk8s": [
+        {
+            "rank": 13,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/cdk8s-team/cdk8s"
+        }
+    ],
+    "arkade": [
+        {
+            "rank": 14,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/alexellis/arkade"
+        }
+    ],
+    "gitkube": [
+        {
+            "rank": 15,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/hasura/gitkube"
+        }
+    ],
+    "mirrord": [
+        {
+            "rank": 16,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/metalbear-co/mirrord"
+        }
+    ],
+    "garden: kubernetes from source to finish": [
+        {
+            "rank": 17,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/garden-io/garden"
+        }
+    ],
+    "garden": [
+        {
+            "rank": 18,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/garden-io/garden"
+        }
+    ],
+    "okteto: a tool for cloud native developers": [
+        {
+            "rank": 19,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/okteto/okteto"
+        }
+    ],
+    "helmfile": [
+        {
+            "rank": 20,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/helmfile/helmfile"
+        }
+    ],
+    "brigade": [
+        {
+            "rank": 21,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/brigadecore/brigade"
+        }
+    ],
+    "atomix": [
+        {
+            "rank": 22,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/atomix/atomix"
+        }
+    ],
+    "kdash": [
+        {
+            "rank": 23,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kdash-rs/kdash"
+        }
+    ],
+    "spread": [
+        {
+            "rank": 24,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/redspread/spread"
+        }
+    ],
+    "kubeblocks": [
+        {
+            "rank": 25,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/apecloud/kubeblocks"
+        }
+    ],
+    "kubefirst": [
+        {
+            "rank": 27,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/kubefirst/kubefirst"
+        },
+        {
+            "rank": 11,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/kubefirst/kubefirst\t"
+        },
+        {
+            "rank": 17,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubefirst/kubefirst"
+        }
+    ],
+    "radius": [
+        {
+            "rank": 28,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/radius-project/radius"
+        }
+    ],
+    "helmify": [
+        {
+            "rank": 29,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/arttor/helmify"
+        }
+    ],
+    "k2tf": [
+        {
+            "rank": 31,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/sl1pm4t/k2tf"
+        }
+    ],
+    "sablier": [
+        {
+            "rank": 32,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/acouvreur/sablier"
+        }
+    ],
+    "config syncer": [
+        {
+            "rank": 33,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/config-syncer/config-syncer"
+        }
+    ],
+    "kubernetes configmap reload": [
+        {
+            "rank": 34,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/jimmidyson/configmap-reload"
+        }
+    ],
+    "configmap-reload": [
+        {
+            "rank": 35,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/jimmidyson/configmap-reload"
+        }
+    ],
+    "docketeer": [
+        {
+            "rank": 37,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/open-source-labs/Docketeer"
+        }
+    ],
+    "kubernetes-replicator": [
+        {
+            "rank": 38,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/mittwald/kubernetes-replicator"
+        }
+    ],
+    "odo": [
+        {
+            "rank": 39,
+            "category": "Development Tools/Kit",
+            "url": "https://odo.dev"
+        }
+    ],
+    "kubernix": [
+        {
+            "rank": 40,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/saschagrunert/kubernix"
+        }
+    ],
+    "validkube": [
+        {
+            "rank": 41,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/komodorio/validkube"
+        }
+    ],
+    "k8studio": [
+        {
+            "rank": 42,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/guiqui/k8Studio"
+        }
+    ],
+    "k'exp": [
+        {
+            "rank": 43,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/iximiuz/kexp"
+        }
+    ],
+    "gefyra": [
+        {
+            "rank": 44,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/gefyrahq/gefyra"
+        }
+    ],
+    "ingress monitor controller": [
+        {
+            "rank": 45,
+            "category": "Development Tools/Kit",
+            "url": "https://github.com/stakater/IngressMonitorController"
+        }
+    ],
+    "minikube": [
+        {
+            "rank": 1,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/kubernetes/minikube"
+        }
+    ],
+    "kubesphere": [
+        {
+            "rank": 2,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/kubernetes/minikube"
+        }
+    ],
+    "kind": [
+        {
+            "rank": 3,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/kubernetes-sigs/kind"
+        },
+        {
+            "rank": 4,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubernetes-sigs/kind"
+        }
+    ],
+    "rainbond": [
+        {
+            "rank": 4,
+            "category": "Alternative Tools for Development",
+            "url": "\thttps://github.com/goodrain/rainbond\t"
+        }
+    ],
+    "otomi": [
+        {
+            "rank": 5,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/redkubes/otomi-core"
+        }
+    ],
+    "systemk: virtual kubelet for systemd": [
+        {
+            "rank": 6,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/virtual-kubelet/systemk"
+        }
+    ],
+    "mokbox": [
+        {
+            "rank": 7,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/bashtools/mokctl"
+        }
+    ],
+    "skippbox": [
+        {
+            "rank": 8,
+            "category": "Alternative Tools for Development",
+            "url": "https://github.com/skippbox/skippbox"
+        }
+    ],
+    "k3d": [
+        {
+            "rank": 9,
+            "category": "Alternative Tools for Development",
+            "url": "https://k3d.io/v5.6.3/"
+        }
+    ],
+    "drone": [
+        {
+            "rank": 1,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/harness/gitnes"
+        }
+    ],
+    "argo cd": [
+        {
+            "rank": 2,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/argoproj/argo-cd\t"
+        }
+    ],
+    "skaffold": [
+        {
+            "rank": 3,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/GoogleContainerTools/skaffold\t"
+        }
+    ],
+    "spinnaker": [
+        {
+            "rank": 4,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/spinnaker/spinnaker"
+        }
+    ],
+    "tekton": [
+        {
+            "rank": 5,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/tektoncd/pipeline"
+        }
+    ],
+    "flux": [
+        {
+            "rank": 6,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/fluxcd/flux"
+        }
+    ],
+    "flagger": [
+        {
+            "rank": 7,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/fluxcd/flagger"
+        }
+    ],
+    "jenkins x": [
+        {
+            "rank": 8,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/jenkins-x/jx"
+        }
+    ],
+    "devtron": [
+        {
+            "rank": 9,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/devtron-labs/devtron"
+        }
+    ],
+    "werf": [
+        {
+            "rank": 10,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/werf/werf"
+        }
+    ],
+    "helmsman": [
+        {
+            "rank": 12,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/Praqma/helmsman\t"
+        }
+    ],
+    "pipecd": [
+        {
+            "rank": 13,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/pipe-cd/pipecd"
+        }
+    ],
+    "helmwave": [
+        {
+            "rank": 14,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/helmwave/helmwave"
+        }
+    ],
+    "kubedog": [
+        {
+            "rank": 15,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/werf/kubedog"
+        }
+    ],
+    "kluctl": [
+        {
+            "rank": 16,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/kluctl/kluctl\t"
+        }
+    ],
+    "autoapply": [
+        {
+            "rank": 17,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/autoapply/autoapply"
+        }
+    ],
+    "helm cabin": [
+        {
+            "rank": 18,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/Nick-Triller/helm-cabin"
+        }
+    ],
+    "apollo": [
+        {
+            "rank": 19,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/logzio/apollo"
+        }
+    ],
+    "hybridk8s droid": [
+        {
+            "rank": 20,
+            "category": "CI/CD Integration Tools",
+            "url": "https://hybridk8s.tech"
+        }
+    ],
+    "kubeform": [
+        {
+            "rank": 21,
+            "category": "CI/CD Integration Tools",
+            "url": "https://github.com/kubeform/kubeform"
+        }
+    ],
+    "trivy": [
+        {
+            "rank": 1,
+            "category": "Security Tools",
+            "url": "https://github.com/aquasecurity/trivy"
+        }
+    ],
+    "clair": [
+        {
+            "rank": 2,
+            "category": "Security Tools",
+            "url": "https://github.com/quay/clair"
+        }
+    ],
+    "kube-bench": [
+        {
+            "rank": 3,
+            "category": "Security Tools",
+            "url": "https://github.com/aquasecurity/kube-bench"
+        }
+    ],
+    "datree": [
+        {
+            "rank": 4,
+            "category": "Security Tools",
+            "url": "https://github.com/datreeio/datree"
+        }
+    ],
+    "kube-hunter": [
+        {
+            "rank": 5,
+            "category": "Security Tools",
+            "url": "https://github.com/aquasecurity/kube-hunter"
+        }
+    ],
+    "terrascan": [
+        {
+            "rank": 6,
+            "category": "Security Tools",
+            "url": "https://github.com/tenable/terrascan"
+        }
+    ],
+    "hubble": [
+        {
+            "rank": 7,
+            "category": "Security Tools",
+            "url": "https://github.com/cilium/hubble"
+        }
+    ],
+    "kubeval": [
+        {
+            "rank": 8,
+            "category": "Security Tools",
+            "url": "https://github.com/instrumenta/kubeval"
+        }
+    ],
+    "kubelinter": [
+        {
+            "rank": 9,
+            "category": "Security Tools",
+            "url": "https://github.com/stackrox/kube-linter"
+        }
+    ],
+    "kubeaudit": [
+        {
+            "rank": 10,
+            "category": "Security Tools",
+            "url": "https://github.com/Shopify/kubeaudit"
+        }
+    ],
+    "starboard": [
+        {
+            "rank": 11,
+            "category": "Security Tools",
+            "url": "https://github.com/aquasecurity/starboard"
+        }
+    ],
+    "kiosk": [
+        {
+            "rank": 12,
+            "category": "Security Tools",
+            "url": "https://github.com/loft-sh/kiosk"
+        }
+    ],
+    "kubesec": [
+        {
+            "rank": 13,
+            "category": "Security Tools",
+            "url": "https://github.com/controlplaneio/kubesec"
+        }
+    ],
+    "peirates": [
+        {
+            "rank": 14,
+            "category": "Security Tools",
+            "url": "https://github.com/inguardians/peirates"
+        }
+    ],
+    "audit2rbac": [
+        {
+            "rank": 15,
+            "category": "Security Tools",
+            "url": "https://github.com/liggitt/audit2rbac"
+        }
+    ],
+    "kubestriker": [
+        {
+            "rank": 16,
+            "category": "Security Tools",
+            "url": "https://github.com/vchinnipilli/kubestriker"
+        }
+    ],
+    "paralus": [
+        {
+            "rank": 17,
+            "category": "Security Tools",
+            "url": "https://github.com/paralus/paralus"
+        }
+    ],
+    "kube2iam": [
+        {
+            "rank": 18,
+            "category": "Security Tools",
+            "url": "https://github.com/jtblin/kube2iam"
+        },
+        {
+            "rank": 4,
+            "category": "Testing Tools",
+            "url": "https://github.com/jtblin/kube2iam"
+        }
+    ],
+    "simulator": [
+        {
+            "rank": 19,
+            "category": "Security Tools",
+            "url": "https://github.com/controlplaneio/simulator"
+        }
+    ],
+    "rbac-tool": [
+        {
+            "rank": 20,
+            "category": "Security Tools",
+            "url": "https://github.com/alcideio/rbac-tool"
+        }
+    ],
+    "rbac lookup": [
+        {
+            "rank": 21,
+            "category": "Security Tools",
+            "url": "https://github.com/FairwindsOps/rbac-lookup"
+        }
+    ],
+    "hardeneks": [
+        {
+            "rank": 22,
+            "category": "Security Tools",
+            "url": "https://github.com/aws-samples/hardeneks"
+        }
+    ],
+    "kube-who-can": [
+        {
+            "rank": 23,
+            "category": "Security Tools",
+            "url": "https://github.com/aquasecurity/kubectl-who-can"
+        }
+    ],
+    "vault-k8s": [
+        {
+            "rank": 24,
+            "category": "Security Tools",
+            "url": "https://github.com/hashicorp/vault-k8s"
+        }
+    ],
+    "krane": [
+        {
+            "rank": 25,
+            "category": "Security Tools",
+            "url": "https://github.com/appvia/krane"
+        }
+    ],
+    "kubezoo": [
+        {
+            "rank": 26,
+            "category": "Security Tools",
+            "url": "https://github.com/kubewharf/kubezoo"
+        }
+    ],
+    "kubectl-kubesec": [
+        {
+            "rank": 27,
+            "category": "Security Tools",
+            "url": "https://github.com/controlplaneio/kubectl-kubesec"
+        }
+    ],
+    "gangway": [
+        {
+            "rank": 28,
+            "category": "Security Tools",
+            "url": "https://github.com/vmware-archive/gangway"
+        }
+    ],
+    "klum": [
+        {
+            "rank": 29,
+            "category": "Security Tools",
+            "url": "https://github.com/ibuildthecloud/klum"
+        }
+    ],
+    "m9sweeper": [
+        {
+            "rank": 30,
+            "category": "Security Tools",
+            "url": "https://github.com/m9sweeper/m9sweeper"
+        }
+    ],
+    "mtkpi": [
+        {
+            "rank": 31,
+            "category": "Security Tools",
+            "url": "https://github.com/r0binak/MTKPI"
+        }
+    ],
+    "icekube": [
+        {
+            "rank": 32,
+            "category": "Security Tools",
+            "url": "https://github.com/WithSecureLabs/IceKube"
+        }
+    ],
+    "netchecks": [
+        {
+            "rank": 33,
+            "category": "Security Tools",
+            "url": "https://github.com/hardbyte/netchecks/"
+        },
+        {
+            "rank": 12,
+            "category": "Testing Tools",
+            "url": "https://github.com/hardbyte/netchecks"
+        }
+    ],
+    "kubectl-modify-secrets": [
+        {
+            "rank": 34,
+            "category": "Security Tools",
+            "url": "https://github.com/rajatjindal/kubectl-modify-secret"
+        }
+    ],
+    "kubevious cli": [
+        {
+            "rank": 35,
+            "category": "Security Tools",
+            "url": "https://github.com/kubevious/cli"
+        }
+    ],
+    "kube-rebac-authorizer": [
+        {
+            "rank": 36,
+            "category": "Security Tools",
+            "url": "https://github.com/luxas/kube-rebac-authorizer"
+        }
+    ],
+    "chartsec": [
+        {
+            "rank": 37,
+            "category": "Security Tools",
+            "url": "https://github.com/banzaicloud/chartsec"
+        }
+    ],
+    "kyverno": [
+        {
+            "rank": 38,
+            "category": "Security Tools",
+            "url": "https://github.com/nirmata/kyverno"
+        },
+        {
+            "rank": 14,
+            "category": "Testing Tools",
+            "url": "https://github.com/nirmata/kyverno"
+        }
+    ],
+    "falco": [
+        {
+            "rank": 39,
+            "category": "Security Tools",
+            "url": "https://falco.org"
+        }
+    ],
+    "jspolicy": [
+        {
+            "rank": 40,
+            "category": "Security Tools",
+            "url": "https://github.com/pavan-kumar-99/medium-manifests/tree/jsPolicy"
+        }
+    ],
+    "cilium": [
+        {
+            "rank": 1,
+            "category": "Network Policies",
+            "url": "https://github.com/cilium/cilium"
+        }
+    ],
+    "metallb": [
+        {
+            "rank": 2,
+            "category": "Network Policies",
+            "url": "https://github.com/metallb/metallb"
+        }
+    ],
+    "kubefwd (kube forward)": [
+        {
+            "rank": 3,
+            "category": "Network Policies",
+            "url": "https://github.com/txn2/kubefwd"
+        }
+    ],
+    "submariner": [
+        {
+            "rank": 4,
+            "category": "Network Policies",
+            "url": "https://github.com/submariner-io/submariner"
+        },
+        {
+            "rank": 5,
+            "category": "Network Policies",
+            "url": "https://github.com/redhat-nfvpe/kokotap"
+        }
+    ],
+    "kilo (k8s + wg)": [
+        {
+            "rank": 6,
+            "category": "Network Policies",
+            "url": "https://github.com/squat/kilo"
+        }
+    ],
+    "loxilb": [
+        {
+            "rank": 7,
+            "category": "Network Policies",
+            "url": "https://github.com/loxilb-io/loxilb"
+        }
+    ],
+    "spiderpool": [
+        {
+            "rank": 8,
+            "category": "Network Policies",
+            "url": "https://github.com/spidernet-io/spiderpool"
+        }
+    ],
+    "calico": [
+        {
+            "rank": 9,
+            "category": "Network Policies",
+            "url": "https://github.com/projectcalico/calico"
+        }
+    ],
+    "egress-operator": [
+        {
+            "rank": 10,
+            "category": "Network Policies",
+            "url": "https://github.com/monzo/egress-operator"
+        }
+    ],
+    "netfetch": [
+        {
+            "rank": 11,
+            "category": "Network Policies",
+            "url": "https://github.com/deggja/netfetch"
+        }
+    ],
+    "network policy api": [
+        {
+            "rank": 12,
+            "category": "Network Policies",
+            "url": "https://github.com/kubernetes-sigs/network-policy-api"
+        }
+    ],
+    "kokotap": [
+        {
+            "rank": 13,
+            "category": "Network Policies",
+            "url": "https://github.com/redhat-nfvpe/kokotap"
+        }
+    ],
+    "kubetail": [
+        {
+            "rank": 1,
+            "category": "Pods",
+            "url": "https://github.com/johanhaleby/kubetail"
+        },
+        {
+            "rank": 6,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/johanhaleby/kubetail"
+        }
+    ],
+    "kube-s3": [
+        {
+            "rank": 2,
+            "category": "Pods",
+            "url": "https://github.com/freegroup/kube-s3"
+        }
+    ],
+    "kubectl-ports-rs": [
+        {
+            "rank": 3,
+            "category": "Pods",
+            "url": "https://github.com/widnyana/kubectl-ports-rs"
+        }
+    ],
+    "rancher": [
+        {
+            "rank": 1,
+            "category": "Cluster Management",
+            "url": "https://github.com/rancher/rancher"
+        }
+    ],
+    "kops": [
+        {
+            "rank": 2,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubernetes/kops"
+        }
+    ],
+    "cert-manager": [
+        {
+            "rank": 5,
+            "category": "Cluster Management",
+            "url": "https://github.com/cert-manager/cert-manager"
+        }
+    ],
+    "keda": [
+        {
+            "rank": 6,
+            "category": "Cluster Management",
+            "url": "https://keda.sh"
+        }
+    ],
+    "sealed secrets": [
+        {
+            "rank": 7,
+            "category": "Cluster Management",
+            "url": "https://github.com/bitnami-labs/sealed-secrets"
+        }
+    ],
+    "octant": [
+        {
+            "rank": 8,
+            "category": "Cluster Management",
+            "url": "https://github.com/vmware-archive/octant"
+        }
+    ],
+    "vcluster": [
+        {
+            "rank": 9,
+            "category": "Cluster Management",
+            "url": "https://github.com/loft-sh/vcluster"
+        }
+    ],
+    "meshery": [
+        {
+            "rank": 10,
+            "category": "Cluster Management",
+            "url": "https://github.com/meshery/meshery"
+        }
+    ],
+    "openkruise/kruise": [
+        {
+            "rank": 11,
+            "category": "Cluster Management",
+            "url": "https://github.com/openkruise/kruise"
+        }
+    ],
+    "node-problem-detector": [
+        {
+            "rank": 12,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubernetes/node-problem-detector"
+        }
+    ],
+    "k0s": [
+        {
+            "rank": 13,
+            "category": "Cluster Management",
+            "url": "https://github.com/k0sproject/k0s"
+        }
+    ],
+    "goldilocks": [
+        {
+            "rank": 14,
+            "category": "Cluster Management",
+            "url": "https://github.com/FairwindsOps/goldilock"
+        }
+    ],
+    "kube-ops-view": [
+        {
+            "rank": 15,
+            "category": "Cluster Management",
+            "url": "https://github.com/hjacobs/kube-ops-view"
+        }
+    ],
+    "cluster-template": [
+        {
+            "rank": 18,
+            "category": "Cluster Management",
+            "url": "https://github.com/onedr0p/cluster-template"
+        }
+    ],
+    "xlskubectl": [
+        {
+            "rank": 19,
+            "category": "Cluster Management",
+            "url": "https://github.com/learnk8s/xlskubectl"
+        }
+    ],
+    "kudo": [
+        {
+            "rank": 20,
+            "category": "Cluster Management",
+            "url": "https://github.com/kudobuilder/kudo"
+        }
+    ],
+    "liqo": [
+        {
+            "rank": 21,
+            "category": "Cluster Management",
+            "url": "https://github.com/liqotech/liqo"
+        }
+    ],
+    "kapp": [
+        {
+            "rank": 22,
+            "category": "Cluster Management",
+            "url": "https://github.com/carvel-dev/kapp"
+        }
+    ],
+    "kamaji": [
+        {
+            "rank": 23,
+            "category": "Cluster Management",
+            "url": "https://github.com/clastix/kamaji"
+        }
+    ],
+    "clusterpedia": [
+        {
+            "rank": 24,
+            "category": "Cluster Management",
+            "url": "https://github.com/clusterpedia-io/clusterpedia"
+        }
+    ],
+    "guard": [
+        {
+            "rank": 25,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubeguard/guard"
+        }
+    ],
+    "claudie": [
+        {
+            "rank": 26,
+            "category": "Cluster Management",
+            "url": "https://github.com/berops/claudie"
+        }
+    ],
+    "cyclops": [
+        {
+            "rank": 27,
+            "category": "Cluster Management",
+            "url": "https://github.com/cyclops-ui/cyclops"
+        }
+    ],
+    "kubean": [
+        {
+            "rank": 28,
+            "category": "Cluster Management",
+            "url": "https://github.com/kubean-io/kubean"
+        }
+    ],
+    "k0smotron": [
+        {
+            "rank": 29,
+            "category": "Cluster Management",
+            "url": "https://github.com/k0sproject/k0smotron"
+        },
+        {
+            "rank": 30,
+            "category": "Cluster Management",
+            "url": "https://github.com/k0sproject/k0smotron"
+        }
+    ],
+    "metalk8s": [
+        {
+            "rank": 31,
+            "category": "Cluster Management",
+            "url": "https://github.com/scality/metalk8s"
+        }
+    ],
+    "silver-surfer": [
+        {
+            "rank": 32,
+            "category": "Cluster Management",
+            "url": "https://github.com/devtron-labs/silver-surfer"
+        }
+    ],
+    "clusterman": [
+        {
+            "rank": 33,
+            "category": "Cluster Management",
+            "url": "https://github.com/Yelp/clusterman"
+        }
+    ],
+    "kustomizer": [
+        {
+            "rank": 34,
+            "category": "Cluster Management",
+            "url": "https://github.com/stefanprodan/kustomizer"
+        }
+    ],
+    "kubestellar": [
+        {
+            "rank": 35,
+            "category": "Cluster Management",
+            "url": "a flexible solution for challenges associated with multi-cluster configuration management for edge, multi-cloud, and hybrid cloud"
+        }
+    ],
+    "katafygio": [
+        {
+            "rank": 36,
+            "category": "Cluster Management",
+            "url": "https://github.com/bpineau/katafygio"
+        }
+    ],
+    "kubemarine": [
+        {
+            "rank": 37,
+            "category": "Cluster Management",
+            "url": "https://github.com/Netcracker/KubeMarine"
+        }
+    ],
+    "trolley": [
+        {
+            "rank": 38,
+            "category": "Cluster Management",
+            "url": "https://github.com/Trolley-MGMT/trolleymgmt"
+        }
+    ],
+    "portainer": [
+        {
+            "rank": 39,
+            "category": "Cluster Management",
+            "url": "https://github.com/portainer/k8s"
+        }
+    ],
+    "kubeprompt": [
+        {
+            "rank": 40,
+            "category": "Cluster Management",
+            "url": "https://github.com/jlesquembre/kubeprompt"
+        }
+    ],
+    "punq": [
+        {
+            "rank": 41,
+            "category": "Cluster Management",
+            "url": "https://github.com/mogenius/punq"
+        },
+        {
+            "rank": 42,
+            "category": "Cluster Management",
+            "url": "https://github.com/mogenius/punq"
+        }
+    ],
+    "kubectl snapshot": [
+        {
+            "rank": 43,
+            "category": "Cluster Management",
+            "url": "https://github.com/fbrubbo/kubectl-snapshot"
+        }
+    ],
+    "kindscaler": [
+        {
+            "rank": 44,
+            "category": "Cluster Management",
+            "url": "https://github.com/lobuhi/kindscaler"
+        }
+    ],
+    "k8s-duplicator": [
+        {
+            "rank": 45,
+            "category": "Cluster Management",
+            "url": "https://github.com/Nick-Triller/k8s-duplicator"
+        }
+    ],
+    "gardener": [
+        {
+            "rank": 46,
+            "category": "Cluster Management",
+            "url": "https://gardener.cloud"
+        }
+    ],
+    "k6d": [
+        {
+            "rank": 1,
+            "category": "Testing Tools",
+            "url": "https://github.com/grafana/k6"
+        }
+    ],
+    "litmusd": [
+        {
+            "rank": 2,
+            "category": "Testing Tools",
+            "url": "https://github.com/litmuschaos/litmus"
+        }
+    ],
+    "keploy": [
+        {
+            "rank": 3,
+            "category": "Testing Tools",
+            "url": "https://github.com/keploy/keploy"
+        }
+    ],
+    "powerfulseald": [
+        {
+            "rank": 5,
+            "category": "Testing Tools",
+            "url": "https://github.com/powerfulseal/powerfulseal"
+        }
+    ],
+    "testkube": [
+        {
+            "rank": 6,
+            "category": "Testing Tools",
+            "url": "https://github.com/kubeshop/testkube"
+        }
+    ],
+    "microcks": [
+        {
+            "rank": 7,
+            "category": "Testing Tools",
+            "url": "Kubernetes native tool for mocking and testing API and micro-services"
+        }
+    ],
+    "tracetest": [
+        {
+            "rank": 8,
+            "category": "Testing Tools",
+            "url": "https://github.com/kubeshop/tracetest"
+        },
+        {
+            "rank": 18,
+            "category": "Observability",
+            "url": "https://github.com/kubeshop/tracetest"
+        }
+    ],
+    "perf-tests": [
+        {
+            "rank": 9,
+            "category": "Testing Tools",
+            "url": "https://github.com/kubernetes/perf-tests"
+        }
+    ],
+    "kwok": [
+        {
+            "rank": 10,
+            "category": "Testing Tools",
+            "url": "https://github.com/kubernetes-sigs/kwok"
+        }
+    ],
+    "network bandwith and load testingd -": [
+        {
+            "rank": 11,
+            "category": "Testing Tools",
+            "url": "https://github.com/mrahbar/k8s-testsuite"
+        }
+    ],
+    "nighthawk": [
+        {
+            "rank": 13,
+            "category": "Testing Tools",
+            "url": "https://github.com/layer5io/getnighthawk"
+        }
+    ],
+    "kube-burnerd": [
+        {
+            "rank": 15,
+            "category": "Testing Tools",
+            "url": "https://kube-burner.readthedocs.io/en/latest/"
+        }
+    ],
+    "traefik": [
+        {
+            "rank": 1,
+            "category": "Service Mesh",
+            "url": "https://github.com/traefik/traefik"
+        }
+    ],
+    "istio": [
+        {
+            "rank": 2,
+            "category": "Service Mesh",
+            "url": "https://github.com/istio/istio"
+        }
+    ],
+    "apisix": [
+        {
+            "rank": 3,
+            "category": "Service Mesh",
+            "url": "https://github.com/apache/apisix"
+        }
+    ],
+    "nginx ingress controller": [
+        {
+            "rank": 4,
+            "category": "Service Mesh",
+            "url": "https://github.com/nginxinc/kubernetes-ingress"
+        }
+    ],
+    "osm": [
+        {
+            "rank": 5,
+            "category": "Service Mesh",
+            "url": "https://github.com/openservicemesh/osm"
+        }
+    ],
+    "kong": [
+        {
+            "rank": 6,
+            "category": "Service Mesh",
+            "url": "https://github.com/Kong/kubernetes-ingress-controller"
+        }
+    ],
+    "merbridge": [
+        {
+            "rank": 7,
+            "category": "Service Mesh",
+            "url": "https://github.com/merbridge/merbridge"
+        }
+    ],
+    "kusk gateway": [
+        {
+            "rank": 8,
+            "category": "Service Mesh",
+            "url": "https://kusk.io"
+        }
+    ],
+    "linkerd-config": [
+        {
+            "rank": 9,
+            "category": "Service Mesh",
+            "url": "https://github.com/ihcsim/linkerd-config"
+        }
+    ],
+    "autopilot": [
+        {
+            "rank": 10,
+            "category": "Service Mesh",
+            "url": "https://docs.solo.io/autopilot/latest"
+        }
+    ],
+    "gloo mesh": [
+        {
+            "rank": 11,
+            "category": "Service Mesh",
+            "url": "https://github.com/solo-io/gloo-mesh"
+        }
+    ],
+    "contour": [
+        {
+            "rank": 12,
+            "category": "Service Mesh",
+            "url": "https://projectcontour.io"
+        }
+    ],
+    "chaos mesh": [
+        {
+            "rank": 1,
+            "category": "Observability",
+            "url": "https://github.com/chaos-mesh/chaos-mesh"
+        }
+    ],
+    "kube-state-metrics": [
+        {
+            "rank": 2,
+            "category": "Observability",
+            "url": "https://github.com/kubernetes/kube-state-metrics"
+        }
+    ],
+    "popeye": [
+        {
+            "rank": 3,
+            "category": "Observability",
+            "url": "https://github.com/derailed/popeye"
+        }
+    ],
+    "grafana tempo": [
+        {
+            "rank": 4,
+            "category": "Observability",
+            "url": "https://github.com/grafana/tempo"
+        }
+    ],
+    "stern": [
+        {
+            "rank": 6,
+            "category": "Observability",
+            "url": "https://github.com/stern/stern"
+        }
+    ],
+    "kubectl tree \ud83c\udf84": [
+        {
+            "rank": 7,
+            "category": "Observability",
+            "url": "https://github.com/ahmetb/kubectl-tree"
+        }
+    ],
+    "pumba": [
+        {
+            "rank": 8,
+            "category": "Observability",
+            "url": "https://github.com/alexei-led/pumba"
+        }
+    ],
+    "kubewatch": [
+        {
+            "rank": 9,
+            "category": "Observability",
+            "url": "https://github.com/vmware-archive/kubewatch"
+        }
+    ],
+    "robusta": [
+        {
+            "rank": 10,
+            "category": "Observability",
+            "url": "https://github.com/robusta-dev/robusta"
+        }
+    ],
+    "kubebox": [
+        {
+            "rank": 11,
+            "category": "Observability",
+            "url": "https://github.com/astefanutti/kubebox"
+        }
+    ],
+    "chaoskube": [
+        {
+            "rank": 12,
+            "category": "Observability",
+            "url": "https://github.com/linki/chaoskube"
+        }
+    ],
+    "cri-tools": [
+        {
+            "rank": 13,
+            "category": "Observability",
+            "url": "https://github.com/kubernetes-sigs/cri-tools"
+        }
+    ],
+    "headlamp": [
+        {
+            "rank": 14,
+            "category": "Observability",
+            "url": "https://github.com/headlamp-k8s/headlamp"
+        }
+    ],
+    "sloop": [
+        {
+            "rank": 15,
+            "category": "Observability",
+            "url": "https://github.com/salesforce/sloop?utm_sq=g90yo8t8s1"
+        }
+    ],
+    "kubernetes-event-exporter": [
+        {
+            "rank": 16,
+            "category": "Observability",
+            "url": "https://github.com/opsgenie/kubernetes-event-exporter"
+        }
+    ],
+    "kubeinvaders": [
+        {
+            "rank": 17,
+            "category": "Observability",
+            "url": "https://github.com/lucky-sideburn/kubeinvaders"
+        }
+    ],
+    "lemur": [
+        {
+            "rank": 19,
+            "category": "Observability",
+            "url": "https://github.com/turbonomic/lemur"
+        }
+    ],
+    "botkube": [
+        {
+            "rank": 20,
+            "category": "Observability",
+            "url": "https://botkube.io"
+        }
+    ],
+    "kubestone": [
+        {
+            "rank": 21,
+            "category": "Observability",
+            "url": "https://kubestone.io/en/latest"
+        }
+    ],
+    "kubevious": [
+        {
+            "rank": 22,
+            "category": "Observability",
+            "url": "https://kubevious.io"
+        }
+    ],
+    "opentelemetry": [
+        {
+            "rank": 23,
+            "category": "Observability",
+            "url": "https://opentelemetry.io"
+        }
+    ],
+    "kubeflow": [
+        {
+            "rank": 1,
+            "category": "Machine Learning/Deep Learning",
+            "url": "https://github.com/kubeflow/kubeflow"
+        }
+    ],
+    "volcano": [
+        {
+            "rank": 2,
+            "category": "Machine Learning/Deep Learning",
+            "url": "https://github.com/volcano-sh/volcano"
+        }
+    ],
+    "nos": [
+        {
+            "rank": 3,
+            "category": "Machine Learning/Deep Learning",
+            "url": "\thttps://github.com/nebuly-ai/nos\t"
+        }
+    ],
+    "microk8s": [
+        {
+            "rank": 1,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/canonical/microk8s"
+        }
+    ],
+    "kubeedge": [
+        {
+            "rank": 2,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/kubeedge/kubeedge"
+        }
+    ],
+    "openyurt": [
+        {
+            "rank": 3,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/openyurtio/openyurt"
+        }
+    ],
+    "shifu": [
+        {
+            "rank": 4,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/Edgenesis/shifu"
+        }
+    ],
+    "akri": [
+        {
+            "rank": 5,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/project-akri/akri"
+        }
+    ],
+    "superedge": [
+        {
+            "rank": 6,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/superedge/superedge"
+        }
+    ],
+    "kairos": [
+        {
+            "rank": 7,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/kairos-io/kairos"
+        }
+    ],
+    "keylime": [
+        {
+            "rank": 8,
+            "category": "Compute Edge Tools",
+            "url": "https://github.com/keylime/keylime"
+        }
+    ],
+    "sealos": [
+        {
+            "rank": 1,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/labring/sealos"
+        }
+    ],
+    "porter": [
+        {
+            "rank": 2,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/porter-dev/porter"
+        }
+    ],
+    "aws workshop for kubernetes": [
+        {
+            "rank": 3,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/aws-samples/aws-workshop-for-kubernetes"
+        }
+    ],
+    "kubicorn": [
+        {
+            "rank": 4,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/kubicorn/kubicorn"
+        }
+    ],
+    "kubernetes on aws (kube-aws)": [
+        {
+            "rank": 5,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/kubernetes-retired/kube-aws"
+        }
+    ],
+    "draft: streamlined kubernetes development": [
+        {
+            "rank": 6,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/azure/draft"
+        }
+    ],
+    "eksdemo": [
+        {
+            "rank": 7,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/awslabs/eksdemo"
+        }
+    ],
+    "helm-ssm": [
+        {
+            "rank": 8,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://github.com/totango/helm-ssm"
+        }
+    ],
+    "skupper": [
+        {
+            "rank": 9,
+            "category": "Kubernetes Tools for Specific Cloud",
+            "url": "https://skupper.io"
+        }
+    ],
+    "seaweedfs": [
+        {
+            "rank": 1,
+            "category": "Storage Providers",
+            "url": "https://github.com/seaweedfs/seaweedfs"
+        }
+    ],
+    "vitess": [
+        {
+            "rank": 2,
+            "category": "Storage Providers",
+            "url": "https://github.com/vitessio/vitess"
+        }
+    ],
+    "tikv": [
+        {
+            "rank": 3,
+            "category": "Storage Providers",
+            "url": "https://github.com/tikv/tikv"
+        }
+    ],
+    "rook": [
+        {
+            "rank": 4,
+            "category": "Storage Providers",
+            "url": "https://github.com/rook/rook"
+        }
+    ],
+    "openebs": [
+        {
+            "rank": 5,
+            "category": "Storage Providers",
+            "url": "https://github.com/openebs/openebs"
+        }
+    ],
+    "velero": [
+        {
+            "rank": 6,
+            "category": "Storage Providers",
+            "url": "https://github.com/vmware-tanzu/velero"
+        }
+    ],
+    "longhorn": [
+        {
+            "rank": 7,
+            "category": "Storage Providers",
+            "url": "https://github.com/longhorn/longhorn"
+        }
+    ],
+    "chubaofs": [
+        {
+            "rank": 8,
+            "category": "Storage Providers",
+            "url": "https://github.com/cubefs/cubefs"
+        }
+    ],
+    "topolvm": [
+        {
+            "rank": 9,
+            "category": "Storage Providers",
+            "url": "https://github.com/topolvm/topolvm"
+        }
+    ],
+    "kadalu": [
+        {
+            "rank": 10,
+            "category": "Storage Providers",
+            "url": "https://github.com/kadalu/kadalu"
+        }
+    ],
+    "hwameistor": [
+        {
+            "rank": 11,
+            "category": "Storage Providers",
+            "url": "https://github.com/hwameistor/hwameistor"
+        }
+    ],
+    "reflector": [
+        {
+            "rank": 2,
+            "category": "Backup Tools",
+            "url": "https://github.com/emberstack/kubernetes-reflector"
+        },
+        {
+            "rank": 6,
+            "category": "Backup Tools",
+            "url": "https://github.com/backube/snapscheduler"
+        }
+    ],
+    "k8up backup operator": [
+        {
+            "rank": 3,
+            "category": "Backup Tools",
+            "url": "https://github.com/k8up-io/k8up"
+        }
+    ],
+    "volsync": [
+        {
+            "rank": 4,
+            "category": "Backup Tools",
+            "url": "\thttps://github.com/backube/volsync\t"
+        }
+    ],
+    "kube-dump": [
+        {
+            "rank": 5,
+            "category": "Backup Tools",
+            "url": "https://github.com/WoozyMasta/kube-dump"
+        }
+    ],
+    "pulumi": [
+        {
+            "rank": 1,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/pulumi/pulumi"
+        }
+    ],
+    "colima": [
+        {
+            "rank": 2,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/abiosoft/colima"
+        }
+    ],
+    "gvisor": [
+        {
+            "rank": 3,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/google/gvisor\t"
+        }
+    ],
+    "kamus": [
+        {
+            "rank": 4,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/Soluto/kamus"
+        }
+    ],
+    "korb": [
+        {
+            "rank": 5,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/BeryJu/korb"
+        }
+    ],
+    "krateo platformops": [
+        {
+            "rank": 6,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/krateoplatformops/krateo"
+        }
+    ],
+    "chaos toolkit kubernetes support": [
+        {
+            "rank": 7,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/chaostoolkit/chaostoolkit-kubernetes\t"
+        }
+    ],
+    "k14s": [
+        {
+            "rank": 8,
+            "category": "Multiple Tools Repo",
+            "url": "https://github.com/k14s"
+        }
+    ],
+    "opencost": [
+        {
+            "rank": 1,
+            "category": "Cost Optimisation",
+            "url": "https://github.com/opencost/opencost"
+        }
+    ],
+    "kubecost": [
+        {
+            "rank": 2,
+            "category": "Cost Optimisation",
+            "url": "https://github.com/opencost/opencost"
+        }
+    ],
+    "kube-green": [
+        {
+            "rank": 3,
+            "category": "Cost Optimisation",
+            "url": "https://github.com/kube-green/kube-green"
+        }
+    ],
+    "perfectscale": [
+        {
+            "rank": 4,
+            "category": "Cost Optimisation",
+            "url": "https://www.perfectscale.io"
+        }
+    ],
+    "openfaas": [
+        {
+            "rank": 1,
+            "category": "Function as a Service FaaS",
+            "url": "https://github.com/openfaas/faas"
+        }
+    ],
+    "fission": [
+        {
+            "rank": 2,
+            "category": "Function as a Service FaaS",
+            "url": "https://github.com/fission/fission"
+        }
+    ],
+    "kubeless": [
+        {
+            "rank": 3,
+            "category": "Function as a Service FaaS",
+            "url": "https://github.com/vmware-archive/kubeless\t"
+        }
+    ],
+    "knative serving": [
+        {
+            "rank": 4,
+            "category": "Function as a Service FaaS",
+            "url": "https://github.com/knative/serving"
+        }
+    ],
+    "nuclio": [
+        {
+            "rank": 5,
+            "category": "Function as a Service FaaS",
+            "url": "https://github.com/nuclio/nuclio"
+        }
+    ],
+    "k8sgpt": [
+        {
+            "rank": 1,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/k8sgpt-ai/k8sgpt"
+        }
+    ],
+    "aiac": [
+        {
+            "rank": 2,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/gofireflyio/aiac\t"
+        }
+    ],
+    "kserve": [
+        {
+            "rank": 3,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/kserve/kserve\t"
+        }
+    ],
+    "kubectl-ai": [
+        {
+            "rank": 4,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/sozercan/kubectl-ai"
+        }
+    ],
+    "kopilot": [
+        {
+            "rank": 5,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/knight42/kopilot"
+        }
+    ],
+    "kopylot": [
+        {
+            "rank": 6,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/avsthiago/kopylot"
+        }
+    ],
+    "mico": [
+        {
+            "rank": 7,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/tahtaciburak/mico"
+        }
+    ],
+    "kubectl-assistant": [
+        {
+            "rank": 8,
+            "category": "Artificial Intelligence",
+            "url": "https://github.com/dkoshkin/kubectl-assistant"
+        }
+    ],
+    "harbor": [
+        {
+            "rank": 1,
+            "category": "Caching",
+            "url": "https://github.com/goharbor/harbor"
+        }
+    ],
+    "kube-fledged": [
+        {
+            "rank": 2,
+            "category": "Caching",
+            "url": "https://github.com/senthilrch/kube-fledged\t"
+        },
+        {
+            "rank": 4,
+            "category": "Non-Categorize",
+            "url": "https://github.com/senthilrch/kube-fledged"
+        }
+    ],
+    "kube-image-keeper (kuik)": [
+        {
+            "rank": 3,
+            "category": "Caching",
+            "url": "https://github.com/enix/kube-image-keeper\t"
+        }
+    ],
+    "kubernetes-image-puller": [
+        {
+            "rank": 4,
+            "category": "Caching",
+            "url": "https://github.com/che-incubator/kubernetes-image-puller"
+        }
+    ],
+    "tugger": [
+        {
+            "rank": 5,
+            "category": "Caching",
+            "url": "https://github.com/jainishshah17/tugger\t"
+        }
+    ],
+    "dapr": [
+        {
+            "rank": 1,
+            "category": "Clients",
+            "url": "https://github.com/dapr/dapr"
+        }
+    ],
+    "devpod": [
+        {
+            "rank": 2,
+            "category": "Clients",
+            "url": "https://github.com/loft-sh/devpod"
+        }
+    ],
+    "python client for kubernetes": [
+        {
+            "rank": 3,
+            "category": "Clients",
+            "url": "https://github.com/kubernetes-client/python\t"
+        }
+    ],
+    "java client for kubernetes": [
+        {
+            "rank": 4,
+            "category": "Clients",
+            "url": "https://github.com/kubernetes-client/java\t"
+        }
+    ],
+    "javascript client for kubernetes": [
+        {
+            "rank": 5,
+            "category": "Clients",
+            "url": "https://github.com/kubernetes-client/javascript\t"
+        }
+    ],
+    "csharp client for kubernetes": [
+        {
+            "rank": 6,
+            "category": "Clients",
+            "url": "https://github.com/kubernetes-client/csharp\t"
+        }
+    ],
+    "go client for kubernetes": [
+        {
+            "rank": 7,
+            "category": "Clients",
+            "url": "https://github.com/kubernetes-client/go"
+        }
+    ],
+    "k8s-cleaner": [
+        {
+            "rank": 1,
+            "category": "Cleanup",
+            "url": "https://github.com/gianlucam76/k8s-cleaner"
+        }
+    ],
+    "kube-fencing": [
+        {
+            "rank": 2,
+            "category": "Cleanup",
+            "url": "https://github.com/kvaps/kube-fencing"
+        }
+    ],
+    "cri-purge": [
+        {
+            "rank": 3,
+            "category": "Cleanup",
+            "url": "https://github.com/reefland/cri-purge"
+        }
+    ],
+    "kpt": [
+        {
+            "rank": 1,
+            "category": "Non-Categorize",
+            "url": "https://github.com/kptdev/kpt"
+        }
+    ],
+    "rudr": [
+        {
+            "rank": 2,
+            "category": "Non-Categorize",
+            "url": "https://github.com/oam-dev/rudr"
+        }
+    ],
+    "capsule": [
+        {
+            "rank": 3,
+            "category": "Non-Categorize",
+            "url": "https://github.com/projectcapsule/capsule"
+        }
+    ],
+    "cabin, the mobile app for kubernetes -": [
+        {
+            "rank": 5,
+            "category": "Non-Categorize",
+            "url": "https://github.com/vmware-archive/cabin"
+        }
+    ],
+    "kubeslice": [
+        {
+            "rank": 6,
+            "category": "Non-Categorize",
+            "url": "https://github.com/kubeslice"
+        }
+    ],
+    "funktion": [
+        {
+            "rank": 7,
+            "category": "Non-Categorize",
+            "url": "https://github.com/funktionio/funktion"
+        }
+    ],
+    "routernetes": [
+        {
+            "rank": 8,
+            "category": "Non-Categorize",
+            "url": "https://github.com/routernetes/routernetes"
+        }
+    ],
+    "projectsveltos": [
+        {
+            "rank": 9,
+            "category": "Non-Categorize",
+            "url": "https://github.com/projectsveltos/addon-controller"
+        }
+    ],
+    "mayfly": [
+        {
+            "rank": 10,
+            "category": "Non-Categorize",
+            "url": "https://github.com/NCCloud/mayfly"
+        }
+    ],
+    "kube-job": [
+        {
+            "rank": 11,
+            "category": "Non-Categorize",
+            "url": "https://github.com/h3poteto/kube-job"
+        }
+    ],
+    "alterant": [
+        {
+            "rank": 12,
+            "category": "Non-Categorize",
+            "url": "https://github.com/cloud66-oss/alterant"
+        }
+    ],
+    "buck": [
+        {
+            "rank": 13,
+            "category": "Non-Categorize",
+            "url": "https://github.com/brigadecore/buck"
+        }
+    ],
+    "keel": [
+        {
+            "rank": 14,
+            "category": "Non-Categorize",
+            "url": "https://keel.sh"
+        }
+    ],
+    "symbiosis": [
+        {
+            "rank": 15,
+            "category": "Non-Categorize",
+            "url": "https://symbiosis.host"
+        }
+    ],
+    "yupd": [
+        {
+            "rank": 16,
+            "category": "Non-Categorize",
+            "url": "https://github.com/srozange/yupd"
+        },
+        {
+            "rank": 17,
+            "category": "Non-Categorize",
+            "url": "https://github.com/srozange/yupd"
+        },
+        {
+            "rank": 18,
+            "category": "Non-Categorize",
+            "url": "https://github.com/srozange/yupd"
+        }
+    ],
+    "grafana": [
+        {
+            "rank": 1,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/grafana/grafana"
+        }
+    ],
+    "prometheus": [
+        {
+            "rank": 2,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/prometheus/prometheus"
+        }
+    ],
+    "thanos": [
+        {
+            "rank": 3,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/thanos-io/thanos"
+        }
+    ],
+    "kubeshark": [
+        {
+            "rank": 4,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/kubeshark/kubeshark"
+        }
+    ],
+    "scope": [
+        {
+            "rank": 5,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/weaveworks/scope"
+        }
+    ],
+    "ksniff": [
+        {
+            "rank": 7,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/eldadru/ksniff"
+        }
+    ],
+    "kuberhealthy": [
+        {
+            "rank": 8,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/kuberhealthy/kuberhealthy"
+        }
+    ],
+    "kwatch": [
+        {
+            "rank": 9,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/abahmed/kwatch"
+        }
+    ],
+    "ktop": [
+        {
+            "rank": 10,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/vladimirvivien/ktop"
+        }
+    ],
+    "x.509 certificate exporter": [
+        {
+            "rank": 11,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/enix/x509-certificate-exporter/"
+        }
+    ],
+    "searchlight": [
+        {
+            "rank": 12,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/searchlight/searchlight"
+        }
+    ],
+    "kube-prometheus-top [ kptop ]": [
+        {
+            "rank": 13,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/eslam-gomaa/kptop"
+        }
+    ],
+    "kurt": [
+        {
+            "rank": 14,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/soraro/kurt"
+        }
+    ],
+    "kubernetes job/cronjob notifier": [
+        {
+            "rank": 15,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/sukeesh/k8s-job-notify"
+        }
+    ],
+    "klusterview": [
+        {
+            "rank": 16,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/oslabs-beta/KlusterView"
+        }
+    ],
+    "kube-scout": [
+        {
+            "rank": 17,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/ReallyLiri/kubescout"
+        }
+    ],
+    "kuberhaus": [
+        {
+            "rank": 18,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/stephenlacy/kuberhaus"
+        }
+    ],
+    "linkerd2 monitoring mixin for grafana": [
+        {
+            "rank": 19,
+            "category": "Alert and Monitoring",
+            "url": "https://github.com/andrew-waters/linkerd2-mixin"
+        }
+    ],
+    "argus": [
+        {
+            "rank": 20,
+            "category": "Alert and Monitoring",
+            "url": "https://clustergarage.io/argus/docs/overview/"
+        }
+    ]
+}

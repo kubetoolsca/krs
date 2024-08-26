@@ -1,9 +1,16 @@
+#Author: Oluchukwu Obi-Njoku
+#Date: 8-26-2024
+#Description: Kubernetes cluster graph generating program
+
+
+
 import subprocess
 import sys
 import json
+from krs.utils.constants import (SUPER_GRAPH_PATH, GRAPH_DATA_PATH, SUBGRAPH_PATH,SUBGRAPH_NAMESPACES_PATH,SUBGRAPH_POD_PATH)
 
 
-def create_super_graph() -> None:
+def create_super_graph() -> dict:
 
     """
     Create a graph representation of the Kubernetes cluster and write it to a file
@@ -11,33 +18,34 @@ def create_super_graph() -> None:
     Args:
         None
     Returns:
-        None
+        dict
     """
 
     try:
         output = run_command("kubectl get all --all-namespaces -o json") # Run the command
         if(output):
-            write_output_to_file("cluster_data.json", output) # Write the output to a file
-            graph = create_graph_data("cluster_data.json") # Create the graph data
-            write_output_to_file("cluster_graph.json", json.dumps(graph)) # Write the graph data to a file
+            write_output_to_file(GRAPH_DATA_PATH, output) # Write the output to a file
+            graph = create_graph_data(GRAPH_DATA_PATH) # Create the graph data
+            write_output_to_file(SUPER_GRAPH_PATH, json.dumps(graph)) # Write the graph data to a file
+            return graph
     except subprocess.TimeoutExpired:
         print(f"Timeout expired for: kubectl get all --all-namespaces -o json")
-        sys.exit(1)
+        return {"Error" : "Timeout expired for: kubectl get all --all-namespaces -o json"}
     except subprocess.CalledProcessError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except FileNotFoundError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except OSError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except Exception as e:
         print(f"An error occurred: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except:
         print(f"An error occurred.")
-        sys.exit(1)
+        return {"Error" : f"Error Occurred"}
     
 
 def write_output_to_file(filename: str, input: str) -> None:
@@ -250,7 +258,7 @@ def identify_error_prone_nodes(filename: str) -> list:
         print(f"An error occurred.")
         sys.exit(1)
 
-def create_subgraph(main_graph_filename: str, subgraph_filename: str, error_nodes: list) -> None:
+def create_subgraph(main_graph_filename: str, subgraph_filename: str, error_nodes: list) -> dict:
     """
     Create a subgraph from the main graph based on error-prone nodes.
 
@@ -260,7 +268,7 @@ def create_subgraph(main_graph_filename: str, subgraph_filename: str, error_node
         error_nodes (list): A list of error-prone nodes.
 
     Returns:
-        None
+        dict
     """
 
     try:
@@ -283,20 +291,22 @@ def create_subgraph(main_graph_filename: str, subgraph_filename: str, error_node
         # Write subgraph to file
         with open(subgraph_filename, "w") as f:
             json.dump(subgraph, f, indent=4)
+
+        return subgraph
     except FileNotFoundError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except OSError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except Exception as e:
         print(f"An error occurred: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except:
         print(f"An error occurred.")
-        sys.exit(1)
+        return {"Error" : f"An error occurred."}
 
-def create_subgraph_by_namespace(main_graph_filename: str, subgraph_filename: str, namespace: str) -> None:
+def create_subgraph_by_namespace(main_graph_filename: str, subgraph_filename: str, namespace: str) -> dict:
     """
     Create a subgraph from the main graph based on a specific namespace.
 
@@ -306,7 +316,7 @@ def create_subgraph_by_namespace(main_graph_filename: str, subgraph_filename: st
         namespace (str): The namespace to filter by.
 
     Returns:
-        None
+        dict
     """
 
     try:
@@ -330,20 +340,21 @@ def create_subgraph_by_namespace(main_graph_filename: str, subgraph_filename: st
         # Write subgraph to file
         with open(subgraph_filename, "w") as f:
             json.dump(subgraph, f, indent=4)
+        return subgraph
     except FileNotFoundError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except OSError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except Exception as e:
         print(f"An error occurred: {e}")
-        sys.exit(1)
+        return {"Error" : f"An error occurred: {e}"}
     except:
         print(f"An error occurred.")
-        sys.exit(1)
+        return {"Error" : f"An error occurred"}
 
-def create_pod_subgraph(main_graph_filename: str, subgraph_filename: str, namespace: str, pod_name: str) -> None:
+def create_pod_subgraph(main_graph_filename: str, subgraph_filename: str, namespace: str, pod_name: str) -> dict:
     """
     Create a subgraph from the main graph based on a specific namespace and pod name.
 
@@ -354,7 +365,7 @@ def create_pod_subgraph(main_graph_filename: str, subgraph_filename: str, namesp
         pod_name (str): The name of the pod to filter by.
 
     Returns:
-        None
+        dict
     """
 
     try:
@@ -384,26 +395,27 @@ def create_pod_subgraph(main_graph_filename: str, subgraph_filename: str, namesp
         with open(subgraph_filename, "w") as f:
             json.dump(subgraph, f, indent=4)
 
+        return subgraph
     except FileNotFoundError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except OSError as e:
         print(f"Command failed with error: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except Exception as e:
         print(f"An error occurred: {e}")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
     except:
         print(f"An error occurred.")
-        sys.exit(1)
+        return {"Error" : f"Command failed with error: {e}"}
 
 def main():
     create_super_graph() # Create the super graph
-    error_nodes = identify_error_prone_nodes("cluster_graph.json") # Identify error-prone nodes
-    print(json.dumps(error_nodes, indent=4)) # Print the error-prone nodes
-    create_subgraph("cluster_graph.json", "subgraph.json", error_nodes) # Create a subgraph based on error-prone nodes
-    create_subgraph_by_namespace("cluster_graph.json", "subgraph_namespace.json", "kube-system") # Create a subgraph based on a specific namespace
-    create_pod_subgraph("cluster_graph.json", "pod_subgraph.json", "kube-system", "coredns-7db6d8ff4d-hghgp") # Create a subgraph based on a specific pod
+    error_nodes = identify_error_prone_nodes(SUPER_GRAPH_PATH) # Identify error-prone nodes
+    # print(json.dumps(error_nodes, indent=4)) # Print the error-prone nodes
+    create_subgraph(SUPER_GRAPH_PATH, SUBGRAPH_PATH, error_nodes) # Create a subgraph based on error-prone nodes
+    create_subgraph_by_namespace(SUPER_GRAPH_PATH, SUBGRAPH_NAMESPACES_PATH, "kube-system") # Create a subgraph based on a specific namespace
+    create_pod_subgraph(SUPER_GRAPH_PATH, SUBGRAPH_POD_PATH, "kube-system", "coredns-7db6d8ff4d-hghgp") # Create a subgraph based on a specific pod
 
 
 

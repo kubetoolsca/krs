@@ -1,0 +1,95 @@
+{
+    "nodes": [
+        {
+            "id": "local-path-storage/local-path-provisioner-988d74bc-8mv9j",
+            "kind": "Pod",
+            "namespace": "local-path-storage",
+            "name": "local-path-provisioner-988d74bc-8mv9j",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-26T17:51:23Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:46Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-26T17:53:02Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-26T17:53:02Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:46Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://21d7a0c6f2b237b6cccdb85515981170c31611f4e30f18c5dbf05559d05b80ca",
+                        "image": "docker.io/kindest/local-path-provisioner:v20240202-8f1494ea",
+                        "imageID": "sha256:0500518ebaa68d16973c65dc0b776813b50ab6e7e8f112fca41aca387a549d4f",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://9734809937e3b365ab9f767f0455b42518ecb9f6bee2d897f52aa1ac31713539",
+                                "exitCode": 1,
+                                "finishedAt": "2024-08-26T17:52:18Z",
+                                "reason": "Error",
+                                "startedAt": "2024-08-26T17:51:46Z"
+                            }
+                        },
+                        "name": "local-path-provisioner",
+                        "ready": true,
+                        "restartCount": 38,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-26T17:53:02Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.0.3",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.3"
+                    }
+                ],
+                "qosClass": "BestEffort",
+                "startTime": "2024-07-26T20:18:46Z"
+            },
+            "labels": {
+                "app": "local-path-provisioner",
+                "pod-template-hash": "988d74bc"
+            },
+            "annotations": {}
+        }
+    ],
+    "edges": [
+        {
+            "source": "local-path-storage/local-path-provisioner-988d74bc",
+            "target": "local-path-storage/local-path-provisioner-988d74bc-8mv9j"
+        }
+    ]
+}

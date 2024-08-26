@@ -2,9 +2,11 @@ from krs.utils.fetch_tools_krs import krs_tool_ranking_info
 from krs.utils.cluster_scanner import KubetoolsScanner
 from krs.utils.llm_client import KrsGPTClient
 from krs.utils.functional import extract_log_entries, CustomJSONEncoder
+from krs.utils.graph import create_super_graph, create_subgraph, create_subgraph_by_namespace, identify_error_prone_nodes
 import os, pickle, time, json
 from tabulate import tabulate
-from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY)
+from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY,SUPER_GRAPH_PATH, GRAPH_DATA_PATH, SUBGRAPH_PATH,SUBGRAPH_NAMESPACES_PATH,SUBGRAPH_POD_PATH)
+
 
 class KrsMain:
     
@@ -24,6 +26,8 @@ class KrsMain:
         self.cluster_tool_list = None
         self.detailed_cluster_tool_list = None
         self.category_cluster_tools_dict = None
+        self.nms_subgraph = None
+        self.supergraph = None
 
         self.load_state()
 
@@ -48,7 +52,9 @@ class KrsMain:
             'isScanned': self.isClusterScanned,
             'cluster_tool_list': self.cluster_tool_list,
             'detailed_tool_list': self.detailed_cluster_tool_list,
-            'category_tool_list': self.category_cluster_tools_dict
+            'category_tool_list': self.category_cluster_tools_dict,
+            'nms_subgraph' : self.nms_subgraph,
+            'supergraph' : self.supergraph
         }
         os.makedirs(os.path.dirname(self.state_file), exist_ok=True)
         with open(self.state_file, 'wb') as f:
@@ -71,6 +77,9 @@ class KrsMain:
                 self.cluster_tool_list = state.get('cluster_tool_list')
                 self.detailed_cluster_tool_list = state.get('detailed_tool_list')
                 self.category_cluster_tools_dict = state.get('category_tool_list')
+                self.nms_subgraph = state.get('nms_subgraph')
+                self.supergraph = state.get('supergraph')
+                
             self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file)
     
     def check_scanned(self):
@@ -174,6 +183,7 @@ class KrsMain:
     
     def health_check(self, change_model=False, device='cpu'):
 
+        self.supergraph = create_super_graph()
         if os.path.exists(LLMSTATE_PICKLE_FILEPATH) and not change_model:
             continue_previous_chat = input("\nDo you want to continue fixing the previously selected pod ? (y/n): >> ")
             while True:
@@ -207,6 +217,7 @@ class KrsMain:
                 if self.selected_namespace_index not in list(range(1, namespace_len+1)):
                     self.selected_namespace_index = int(input(f"\nWrong input! Select a namespace number between {1} to {namespace_len}: >> "))   
                 else:
+                    self.nms_subgraph = create_subgraph_by_namespace(SUPER_GRAPH_PATH, SUBGRAPH_NAMESPACES_PATH, namespaces[self.selected_namespace_index-1])
                     break
 
             self.selected_namespace = namespaces[self.selected_namespace_index - 1]
@@ -250,9 +261,12 @@ class KrsMain:
             return None
 
     def create_prompt(self, log_entries):
-        prompt = "You are a DevOps expert with experience in Kubernetes. Analyze the following log entries:\n{\n"
+        prompt = "You are a DevOps expert with experience in Kubernetes. Analyze the following log entries and cluster graph data:\n{\n"
         for entry in sorted(log_entries):  # Sort to maintain consistent order
             prompt += f"{entry}\n"
+        prompt += str(self.supergraph)
+        prompt += str(create_subgraph(SUPER_GRAPH_PATH, SUBGRAPH_PATH, identify_error_prone_nodes(SUPER_GRAPH_PATH)))
+        prompt += str(self.nms_subgraph)
         prompt += "}\nIf there is nothing of concern in between { }, return a message stating that 'Everything looks good!'. Explain the warnings and errors and the steps that should be taken to resolve the issues, only if they exist."
         return prompt
     
