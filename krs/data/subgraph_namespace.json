@@ -1,0 +1,869 @@
+{
+    "nodes": [
+        {
+            "id": "kube-system/coredns-7db6d8ff4d-g589d",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "coredns-7db6d8ff4d-g589d",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:03Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:46Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:47Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:47Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:46Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://0fd19f043a8ec0781748cadd75cfd2cdd943ee676bf748a16f8958e9c67ce471",
+                        "image": "registry.k8s.io/coredns/coredns:v1.11.1",
+                        "imageID": "sha256:cbb01a7bd410dc08ba382018ab909a674fb0e48687f0c00797ed5bc34fcc6bb4",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://918c93dacb8ac684ae9659915f669db522a06c73b82c95010099a0e5c5094f12",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:52Z"
+                            }
+                        },
+                        "name": "coredns",
+                        "ready": true,
+                        "restartCount": 22,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:46:03Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.0.4",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.4"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-07-26T20:18:46Z"
+            },
+            "labels": {
+                "k8s-app": "kube-dns",
+                "pod-template-hash": "7db6d8ff4d"
+            },
+            "annotations": {}
+        },
+        {
+            "id": "kube-system/coredns-7db6d8ff4d-vdgkw",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "coredns-7db6d8ff4d-vdgkw",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:03Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:46Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:46Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:46Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:46Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://9ccce8e997514d479a9ca2c0f4f83e20ff52ffabe5e54a0a693652161fdbfe2f",
+                        "image": "registry.k8s.io/coredns/coredns:v1.11.1",
+                        "imageID": "sha256:cbb01a7bd410dc08ba382018ab909a674fb0e48687f0c00797ed5bc34fcc6bb4",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://edddd988a5d8874a3e9055c516396f6d1b41fe479f95c534c4b2d17db1f74e30",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:55Z"
+                            }
+                        },
+                        "name": "coredns",
+                        "ready": true,
+                        "restartCount": 22,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:46:02Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.0.2",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.2"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-07-26T20:18:46Z"
+            },
+            "labels": {
+                "k8s-app": "kube-dns",
+                "pod-template-hash": "7db6d8ff4d"
+            },
+            "annotations": {}
+        },
+        {
+            "id": "kube-system/etcd-kind-control-plane",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "etcd-kind-control-plane",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:16Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:41Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:41Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://1de13434f91f5d071745b367cbe7d02ddd3b2ede326065c114e475a0ad504a32",
+                        "image": "registry.k8s.io/etcd:3.5.12-0",
+                        "imageID": "sha256:3861cfcd7c04ccac1f062788eca39487248527ef0c0cfd477a83d7691a75a899",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://b76c974b4b384fff049882501201af774df25e73fa693b8500e420995c9d2bb5",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:22Z"
+                            }
+                        },
+                        "name": "etcd",
+                        "ready": true,
+                        "restartCount": 22,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:45:15Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "172.19.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-08-28T19:45:11Z"
+            },
+            "labels": {
+                "component": "etcd",
+                "tier": "control-plane"
+            },
+            "annotations": {
+                "kubeadm.kubernetes.io/etcd.advertise-client-urls": "https://172.19.0.2:2379",
+                "kubernetes.io/config.hash": "6d2e29530d9e03583f0c7a9a9e3640e9",
+                "kubernetes.io/config.mirror": "6d2e29530d9e03583f0c7a9a9e3640e9",
+                "kubernetes.io/config.seen": "2024-07-26T20:18:04.944308343Z",
+                "kubernetes.io/config.source": "file"
+            }
+        },
+        {
+            "id": "kube-system/kindnet-82fhl",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "kindnet-82fhl",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:04Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:39Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:04Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:04Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:39Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://c97329fee14509758fdc713a94ae4cc3cd20b9c3d3942301c4ec009fae6178dd",
+                        "image": "docker.io/kindest/kindnetd:v20240202-8f1494ea",
+                        "imageID": "sha256:4950bb10b3f87e8d4a8f772a0d8934625cac4ccfa3675fea34cad0dab83fd5a5",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://c98bcf7d90cd564f47de024fa64ff6ce8e61c4d19739ce0cd56371118f6134ab",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:56Z"
+                            }
+                        },
+                        "name": "kindnet-cni",
+                        "ready": true,
+                        "restartCount": 23,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:46:02Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "172.19.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "qosClass": "Guaranteed",
+                "startTime": "2024-07-26T20:18:39Z"
+            },
+            "labels": {
+                "app": "kindnet",
+                "controller-revision-hash": "6d98877769",
+                "k8s-app": "kindnet",
+                "pod-template-generation": "1",
+                "tier": "node"
+            },
+            "annotations": {}
+        },
+        {
+            "id": "kube-system/kube-apiserver-kind-control-plane",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "kube-apiserver-kind-control-plane",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:16Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:47Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:47Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://920c8b71b8aee8afb16515a2118b568af7e11d591af7531395f6e3b239b72cb8",
+                        "image": "registry.k8s.io/kube-apiserver-amd64:v1.30.0",
+                        "imageID": "docker.io/library/import-2024-05-13@sha256:d147453847b7c5b8c33045e54d6e0301edea08b5ae152e84b9b5cab377e20321",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://334c235ade9ac3204e52d79e60c0a33ecf6de01c540d47cc64c45c0e5fcb4394",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:22Z"
+                            }
+                        },
+                        "name": "kube-apiserver",
+                        "ready": true,
+                        "restartCount": 23,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:45:15Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "172.19.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-08-28T19:45:11Z"
+            },
+            "labels": {
+                "component": "kube-apiserver",
+                "tier": "control-plane"
+            },
+            "annotations": {
+                "kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint": "172.19.0.2:6443",
+                "kubernetes.io/config.hash": "9b9385441982d70eb57d44375845a458",
+                "kubernetes.io/config.mirror": "9b9385441982d70eb57d44375845a458",
+                "kubernetes.io/config.seen": "2024-07-26T20:18:25.084962817Z",
+                "kubernetes.io/config.source": "file"
+            }
+        },
+        {
+            "id": "kube-system/kube-controller-manager-kind-control-plane",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "kube-controller-manager-kind-control-plane",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:16Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:28Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:28Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://9f80621d63f350770b20b33bfccba3bb4889e3b67b27edac753e2dd3a5729b53",
+                        "image": "registry.k8s.io/kube-controller-manager-amd64:v1.30.0",
+                        "imageID": "docker.io/library/import-2024-05-13@sha256:9615dec64d132ce44d42c15d071da7477499ab2aa9a44ff073b8d85944949023",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://7914d49e63c66b8dbec97dd42f12a0f900a686db7dd2584402b7fd175a5ebb17",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:22Z"
+                            }
+                        },
+                        "name": "kube-controller-manager",
+                        "ready": true,
+                        "restartCount": 24,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:45:16Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "172.19.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-08-28T19:45:11Z"
+            },
+            "labels": {
+                "component": "kube-controller-manager",
+                "tier": "control-plane"
+            },
+            "annotations": {
+                "kubernetes.io/config.hash": "b15a39def8c127158fba5be8bbcdbeaf",
+                "kubernetes.io/config.mirror": "b15a39def8c127158fba5be8bbcdbeaf",
+                "kubernetes.io/config.seen": "2024-07-26T20:18:25.084964694Z",
+                "kubernetes.io/config.source": "file"
+            }
+        },
+        {
+            "id": "kube-system/kube-proxy-pfdlw",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "kube-proxy-pfdlw",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:02Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:39Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:02Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:46:02Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-07-26T20:18:39Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://78cb2002a7cd66600a883b122a8977759118b3284a0cb3e4fe5d780c31f3eab0",
+                        "image": "registry.k8s.io/kube-proxy-amd64:v1.30.0",
+                        "imageID": "docker.io/library/import-2024-05-13@sha256:98e54aaf0614547ead5c0bd7df946f6eb58f0abf0386240df20565d9dd2a2e8d",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://bcfbc66c24f82cf40025ecc80fa15ea5d26bc7d0e5dc0d632384d36f90c1a3c7",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:55Z"
+                            }
+                        },
+                        "name": "kube-proxy",
+                        "ready": true,
+                        "restartCount": 22,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:46:02Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "172.19.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "qosClass": "BestEffort",
+                "startTime": "2024-07-26T20:18:39Z"
+            },
+            "labels": {
+                "controller-revision-hash": "79cf874c65",
+                "k8s-app": "kube-proxy",
+                "pod-template-generation": "1"
+            },
+            "annotations": {}
+        },
+        {
+            "id": "kube-system/kube-scheduler-kind-control-plane",
+            "kind": "Pod",
+            "namespace": "kube-system",
+            "name": "kube-scheduler-kind-control-plane",
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:16Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:41Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:41Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2024-08-28T19:45:11Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://39d0bdeccee491ed52ada7e1b03208c2a9c46ce9a605b8d181a73139a2ba97ef",
+                        "image": "registry.k8s.io/kube-scheduler-amd64:v1.30.0",
+                        "imageID": "docker.io/library/import-2024-05-13@sha256:06e68f241fc2e56756800474858d7b359f7cf4da31eddae316a342059c20c274",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "containerd://e800dfb36b4c48ffbfa17e7c22f918bc6d4db981bcf05bdde9e7e0baf0f33456",
+                                "exitCode": 255,
+                                "finishedAt": "2024-08-28T19:45:10Z",
+                                "reason": "Unknown",
+                                "startedAt": "2024-08-28T15:28:22Z"
+                            }
+                        },
+                        "name": "kube-scheduler",
+                        "ready": true,
+                        "restartCount": 24,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2024-08-28T19:45:16Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "172.19.0.2",
+                "podIPs": [
+                    {
+                        "ip": "172.19.0.2"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2024-08-28T19:45:11Z"
+            },
+            "labels": {
+                "component": "kube-scheduler",
+                "tier": "control-plane"
+            },
+            "annotations": {
+                "kubernetes.io/config.hash": "9bdf7f956212aa6f2f85e496c389a56e",
+                "kubernetes.io/config.mirror": "9bdf7f956212aa6f2f85e496c389a56e",
+                "kubernetes.io/config.seen": "2024-07-26T20:18:04.944317805Z",
+                "kubernetes.io/config.source": "file"
+            }
+        },
+        {
+            "id": "kube-system/kube-dns",
+            "kind": "Service",
+            "namespace": "kube-system",
+            "name": "kube-dns",
+            "status": {
+                "loadBalancer": {}
+            },
+            "labels": {
+                "k8s-app": "kube-dns",
+                "kubernetes.io/cluster-service": "true",
+                "kubernetes.io/name": "CoreDNS"
+            },
+            "annotations": {
+                "prometheus.io/port": "9153",
+                "prometheus.io/scrape": "true"
+            }
+        },
+        {
+            "id": "kube-system/kindnet",
+            "kind": "DaemonSet",
+            "namespace": "kube-system",
+            "name": "kindnet",
+            "status": {
+                "currentNumberScheduled": 1,
+                "desiredNumberScheduled": 1,
+                "numberAvailable": 1,
+                "numberMisscheduled": 0,
+                "numberReady": 1,
+                "observedGeneration": 1,
+                "updatedNumberScheduled": 1
+            },
+            "labels": {
+                "app": "kindnet",
+                "k8s-app": "kindnet",
+                "tier": "node"
+            },
+            "annotations": {
+                "deprecated.daemonset.template.generation": "1"
+            }
+        },
+        {
+            "id": "kube-system/kube-proxy",
+            "kind": "DaemonSet",
+            "namespace": "kube-system",
+            "name": "kube-proxy",
+            "status": {
+                "currentNumberScheduled": 1,
+                "desiredNumberScheduled": 1,
+                "numberAvailable": 1,
+                "numberMisscheduled": 0,
+                "numberReady": 1,
+                "observedGeneration": 1,
+                "updatedNumberScheduled": 1
+            },
+            "labels": {
+                "k8s-app": "kube-proxy"
+            },
+            "annotations": {
+                "deprecated.daemonset.template.generation": "1"
+            }
+        },
+        {
+            "id": "kube-system/coredns",
+            "kind": "Deployment",
+            "namespace": "kube-system",
+            "name": "coredns",
+            "status": {
+                "availableReplicas": 2,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2024-07-26T20:18:38Z",
+                        "lastUpdateTime": "2024-07-26T20:18:51Z",
+                        "message": "ReplicaSet \"coredns-7db6d8ff4d\" has successfully progressed.",
+                        "reason": "NewReplicaSetAvailable",
+                        "status": "True",
+                        "type": "Progressing"
+                    },
+                    {
+                        "lastTransitionTime": "2024-08-28T19:46:46Z",
+                        "lastUpdateTime": "2024-08-28T19:46:46Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 1,
+                "readyReplicas": 2,
+                "replicas": 2,
+                "updatedReplicas": 2
+            },
+            "labels": {
+                "k8s-app": "kube-dns"
+            },
+            "annotations": {
+                "deployment.kubernetes.io/revision": "1"
+            }
+        },
+        {
+            "id": "kube-system/coredns-7db6d8ff4d",
+            "kind": "ReplicaSet",
+            "namespace": "kube-system",
+            "name": "coredns-7db6d8ff4d",
+            "status": {
+                "availableReplicas": 2,
+                "fullyLabeledReplicas": 2,
+                "observedGeneration": 1,
+                "readyReplicas": 2,
+                "replicas": 2
+            },
+            "labels": {
+                "k8s-app": "kube-dns",
+                "pod-template-hash": "7db6d8ff4d"
+            },
+            "annotations": {
+                "deployment.kubernetes.io/desired-replicas": "2",
+                "deployment.kubernetes.io/max-replicas": "3",
+                "deployment.kubernetes.io/revision": "1"
+            }
+        }
+    ],
+    "edges": [
+        {
+            "source": "kube-system/coredns-7db6d8ff4d",
+            "target": "kube-system/coredns-7db6d8ff4d-g589d"
+        },
+        {
+            "source": "kube-system/coredns-7db6d8ff4d",
+            "target": "kube-system/coredns-7db6d8ff4d-vdgkw"
+        },
+        {
+            "source": "kube-system/kind-control-plane",
+            "target": "kube-system/etcd-kind-control-plane"
+        },
+        {
+            "source": "kube-system/kindnet",
+            "target": "kube-system/kindnet-82fhl"
+        },
+        {
+            "source": "kube-system/kind-control-plane",
+            "target": "kube-system/kube-apiserver-kind-control-plane"
+        },
+        {
+            "source": "kube-system/kind-control-plane",
+            "target": "kube-system/kube-controller-manager-kind-control-plane"
+        },
+        {
+            "source": "kube-system/kube-proxy",
+            "target": "kube-system/kube-proxy-pfdlw"
+        },
+        {
+            "source": "kube-system/kind-control-plane",
+            "target": "kube-system/kube-scheduler-kind-control-plane"
+        },
+        {
+            "source": "kube-system/coredns",
+            "target": "kube-system/coredns-7db6d8ff4d"
+        }
+    ]
+}

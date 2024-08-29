@@ -1,0 +1,1664 @@
+{
+    "Cluster with Core CLI tools": {
+        "1": {
+            "name": "k9s",
+            "url": "https://github.com/derailed/k9s"
+        },
+        "2": {
+            "name": "krew",
+            "url": "https://github.com/kubernetes-sigs/krew"
+        },
+        "3": {
+            "name": "kubectx + kubens",
+            "url": "https://github.com/ahmetb/kubectx"
+        },
+        "4": {
+            "name": "karpenter",
+            "url": "https://github.com/aws/karpenter-provider-aws"
+        },
+        "5": {
+            "name": "autoscaler",
+            "url": "https://github.com/kubernetes/autoscaler"
+        },
+        "6": {
+            "name": "kubeoperator",
+            "url": "https://kubeoperator.io/"
+        },
+        "7": {
+            "name": "vimkubectl",
+            "url": "https://github.com/WsdlToPhp/Vimkubectl"
+        },
+        "8": {
+            "name": "descheduler",
+            "url": "https://github.com/kubernetes-sigs/descheduler"
+        },
+        "9": {
+            "name": "kubehelper",
+            "url": "https://github.com/IlyaKruglov/kube-helper"
+        },
+        "10": {
+            "name": "conftest",
+            "url": "https://github.com/open-policy-agent/conftest"
+        },
+        "11": {
+            "name": "finch",
+            "url": "https://github.com/runfinch/finch"
+        },
+        "12": {
+            "name": "bootkube",
+            "url": "https://github.com/kubernetes-sigs/bootkube"
+        },
+        "13": {
+            "name": "ktunnel",
+            "url": "https://github.com/omrikiei/ktunnel"
+        },
+        "14": {
+            "name": "kube-ps1",
+            "url": "https://github.com/jonmosco/kube-ps1"
+        },
+        "15": {
+            "name": "kube-shell",
+            "url": "https://github.com/cloudnativelabs/kube-shell"
+        },
+        "16": {
+            "name": "fubectl",
+            "url": "https://github.com/brendandburns/fubectl"
+        },
+        "17": {
+            "name": "kured",
+            "url": "https://github.com/kubereboot/kured"
+        },
+        "18": {
+            "name": "kubectl sudo",
+            "url": "https://github.com/dtan4/kubectl-sudo"
+        },
+        "19": {
+            "name": "kubecolor",
+            "url": "https://github.com/dty1er/kubecolor"
+        },
+        "20": {
+            "name": "kube-capacity",
+            "url": "https://github.com/robscott/kube-capacity"
+        },
+        "21": {
+            "name": "pluto",
+            "url": "https://github.com/FairwindsOps/pluto"
+        },
+        "22": {
+            "name": "kueue",
+            "url": "https://github.com/ameerthehacker/kueue"
+        },
+        "23": {
+            "name": "kube-prompt",
+            "url": "https://github.com/c-bata/kube-prompt"
+        },
+        "24": {
+            "name": "kubie",
+            "url": "https://github.com/sbstp/kubie"
+        },
+        "25": {
+            "name": "kuttle",
+            "url": "https://github.com/itaysk/kuttle"
+        },
+        "26": {
+            "name": "click",
+            "url": "https://github.com/databricks/click"
+        },
+        "27": {
+            "name": "ksync",
+            "url": "https://github.com/collabnix/kubetools"
+        },
+        "28": {
+            "name": "fleet",
+            "url": "https://github.com/rancher/fleet"
+        },
+        "29": {
+            "name": "stash",
+            "url": "https://github.com/stashed/stash"
+        },
+        "30": {
+            "name": "kubeview",
+            "url": "https://github.com/benc-uk/kubeview"
+        },
+        "31": {
+            "name": "kor",
+            "url": "https://github.com/yonahd/kor"
+        },
+        "32": {
+            "name": "cloudtty",
+            "url": "https://github.com/cloudtty/cloudtty"
+        },
+        "33": {
+            "name": "image-builder",
+            "url": "https://github.com/kubernetes-sigs/image-builder"
+        },
+        "34": {
+            "name": "kubernetes image puller",
+            "url": "https://github.com/che-incubator/kubernetes-image-puller"
+        }
+    },
+    "Logging and Tracing": {
+        "1": {
+            "name": "elk",
+            "url": "https://github.com/elastic"
+        },
+        "2": {
+            "name": "loki",
+            "url": "https://github.com/grafana/loki"
+        },
+        "3": {
+            "name": "jaeger",
+            "url": "https://github.com/jaegertracing/jaeger\t"
+        },
+        "4": {
+            "name": "fluentbit",
+            "url": "https://github.com/fluent/fluent-bit"
+        },
+        "5": {
+            "name": "kiali",
+            "url": "https://github.com/kiali/kiali\t"
+        },
+        "6": {
+            "name": "retina",
+            "url": "https://github.com/microsoft/retina"
+        },
+        "7": {
+            "name": "goldpinger",
+            "url": "https://github.com/bloomberg/goldpinger\t"
+        },
+        "8": {
+            "name": "kail",
+            "url": "https://github.com/boz/kail\t"
+        },
+        "9": {
+            "name": "k8spacket",
+            "url": "https://github.com/k8spacket/k8spacket"
+        },
+        "10": {
+            "name": "network mapper",
+            "url": "https://github.com/otterize/network-mapper"
+        },
+        "11": {
+            "name": "otterize network mapper",
+            "url": "https://github.com/otterize/network-mapper\t"
+        },
+        "12": {
+            "name": "kube-audit-rest",
+            "url": "https://github.com/RichardoC/kube-audit-rest"
+        },
+        "13": {
+            "name": "kubectl-mtail",
+            "url": "https://gitlab.com/grzesuav/kubectl-mtail"
+        }
+    },
+    "Troubleshooting / Debugging": {
+        "1": {
+            "name": "k9s",
+            "url": "https://github.com/derailed/k9s"
+        },
+        "2": {
+            "name": "kubent",
+            "url": "https://github.com/doitintl/kube-no-trouble\t"
+        },
+        "3": {
+            "name": "kubectl-debug",
+            "url": "https://github.com/aylei/kubectl-debug"
+        },
+        "4": {
+            "name": "powerfulseal",
+            "url": "https://github.com/powerfulseal/powerfulseal\t"
+        },
+        "5": {
+            "name": "monokle",
+            "url": "https://github.com/kubeshop/monokle"
+        },
+        "6": {
+            "name": "kubeskoop",
+            "url": "https://github.com/alibaba/kubeskoop\t"
+        },
+        "7": {
+            "name": "koolkits",
+            "url": "https://github.com/lightrun-platform/koolkits"
+        },
+        "8": {
+            "name": "kubernetes cli plugin - doctor",
+            "url": "https://github.com/emirozer/kubectl-doctor"
+        },
+        "9": {
+            "name": "crash-diagnostic",
+            "url": "https://github.com/vmware-tanzu/crash-diagnostics"
+        },
+        "10": {
+            "name": "kubeman",
+            "url": "https://github.com/walmartlabs/kubeman"
+        },
+        "11": {
+            "name": "kpexec",
+            "url": "https://github.com/ssup2/kpexec"
+        },
+        "12": {
+            "name": "kubespy",
+            "url": "https://github.com/huazhihao/kubespy"
+        },
+        "13": {
+            "name": "knative inspect",
+            "url": "https://github.com/nimakaviani/knative-inspect"
+        }
+    },
+    "Development Tools/Kit": {
+        "1": {
+            "name": "kaniko",
+            "url": "https://github.com/GoogleContainerTools/kaniko"
+        },
+        "2": {
+            "name": "terraformer",
+            "url": "https://github.com/GoogleCloudPlatform/terraformer\t"
+        },
+        "3": {
+            "name": "kompose",
+            "url": "https://github.com/kubernetes/kompose"
+        },
+        "4": {
+            "name": "kubebuilder",
+            "url": "https://github.com/kubernetes-sigs/kubebuilder\t"
+        },
+        "5": {
+            "name": "tilt",
+            "url": "https://github.com/tilt-dev/tilt\t"
+        },
+        "6": {
+            "name": "ko",
+            "url": "https://github.com/ko-build/ko"
+        },
+        "7": {
+            "name": "tilt: tilt manages local development instances for teams that deploy to kubernetes",
+            "url": "https://github.com/tilt-dev/tilt"
+        },
+        "8": {
+            "name": "operator-sdk",
+            "url": "https://github.com/operator-framework/operator-sdk"
+        },
+        "9": {
+            "name": "eclipse che ide for k8s",
+            "url": "https://github.com/eclipse-che/che"
+        },
+        "10": {
+            "name": "reloader",
+            "url": "https://github.com/stakater/Reloader"
+        },
+        "11": {
+            "name": "python client for kuberenetes",
+            "url": "https://github.com/kubernetes-client/python"
+        },
+        "12": {
+            "name": "devspace",
+            "url": "https://www.devspace.sh"
+        },
+        "13": {
+            "name": "cdk8s",
+            "url": "https://github.com/cdk8s-team/cdk8s"
+        },
+        "14": {
+            "name": "arkade",
+            "url": "https://github.com/alexellis/arkade"
+        },
+        "15": {
+            "name": "gitkube",
+            "url": "https://github.com/hasura/gitkube"
+        },
+        "16": {
+            "name": "mirrord",
+            "url": "https://github.com/metalbear-co/mirrord"
+        },
+        "17": {
+            "name": "garden: kubernetes from source to finish",
+            "url": "https://github.com/garden-io/garden"
+        },
+        "18": {
+            "name": "garden",
+            "url": "https://github.com/garden-io/garden"
+        },
+        "19": {
+            "name": "okteto: a tool for cloud native developers",
+            "url": "https://github.com/okteto/okteto"
+        },
+        "20": {
+            "name": "helmfile",
+            "url": "https://github.com/helmfile/helmfile"
+        },
+        "21": {
+            "name": "brigade",
+            "url": "https://github.com/brigadecore/brigade"
+        },
+        "22": {
+            "name": "atomix",
+            "url": "https://github.com/atomix/atomix"
+        },
+        "23": {
+            "name": "kdash",
+            "url": "https://github.com/kdash-rs/kdash"
+        },
+        "24": {
+            "name": "spread",
+            "url": "https://github.com/redspread/spread"
+        },
+        "25": {
+            "name": "kubeblocks",
+            "url": "https://github.com/apecloud/kubeblocks"
+        },
+        "26": {
+            "name": "monokle",
+            "url": "https://github.com/kubeshop/monokle"
+        },
+        "27": {
+            "name": "kubefirst",
+            "url": "https://github.com/kubefirst/kubefirst"
+        },
+        "28": {
+            "name": "radius",
+            "url": "https://github.com/radius-project/radius"
+        },
+        "29": {
+            "name": "helmify",
+            "url": "https://github.com/arttor/helmify"
+        },
+        "30": {
+            "name": "kueue",
+            "url": "https://github.com/kubernetes-sigs/kueue"
+        },
+        "31": {
+            "name": "k2tf",
+            "url": "https://github.com/sl1pm4t/k2tf"
+        },
+        "32": {
+            "name": "sablier",
+            "url": "https://github.com/acouvreur/sablier"
+        },
+        "33": {
+            "name": "config syncer",
+            "url": "https://github.com/config-syncer/config-syncer"
+        },
+        "34": {
+            "name": "kubernetes configmap reload",
+            "url": "https://github.com/jimmidyson/configmap-reload"
+        },
+        "35": {
+            "name": "configmap-reload",
+            "url": "https://github.com/jimmidyson/configmap-reload"
+        },
+        "36": {
+            "name": "kor",
+            "url": "https://github.com/yonahd/kor"
+        },
+        "37": {
+            "name": "docketeer",
+            "url": "https://github.com/open-source-labs/Docketeer"
+        },
+        "38": {
+            "name": "kubernetes-replicator",
+            "url": "https://github.com/mittwald/kubernetes-replicator"
+        },
+        "39": {
+            "name": "odo",
+            "url": "https://odo.dev"
+        },
+        "40": {
+            "name": "kubernix",
+            "url": "https://github.com/saschagrunert/kubernix"
+        },
+        "41": {
+            "name": "validkube",
+            "url": "https://github.com/komodorio/validkube"
+        },
+        "42": {
+            "name": "k8studio",
+            "url": "https://github.com/guiqui/k8Studio"
+        },
+        "43": {
+            "name": "k'exp",
+            "url": "https://github.com/iximiuz/kexp"
+        },
+        "44": {
+            "name": "gefyra",
+            "url": "https://github.com/gefyrahq/gefyra"
+        },
+        "45": {
+            "name": "ingress monitor controller",
+            "url": "https://github.com/stakater/IngressMonitorController"
+        }
+    },
+    "Alternative Tools for Development": {
+        "1": {
+            "name": "minikube",
+            "url": "https://github.com/kubernetes/minikube"
+        },
+        "2": {
+            "name": "kubesphere",
+            "url": "https://github.com/kubernetes/minikube"
+        },
+        "3": {
+            "name": "kind",
+            "url": "https://github.com/kubernetes-sigs/kind"
+        },
+        "4": {
+            "name": "rainbond",
+            "url": "\thttps://github.com/goodrain/rainbond\t"
+        },
+        "5": {
+            "name": "otomi",
+            "url": "https://github.com/redkubes/otomi-core"
+        },
+        "6": {
+            "name": "systemk: virtual kubelet for systemd",
+            "url": "https://github.com/virtual-kubelet/systemk"
+        },
+        "7": {
+            "name": "mokbox",
+            "url": "https://github.com/bashtools/mokctl"
+        },
+        "8": {
+            "name": "skippbox",
+            "url": "https://github.com/skippbox/skippbox"
+        },
+        "9": {
+            "name": "k3d",
+            "url": "https://k3d.io/v5.6.3/"
+        }
+    },
+    "CI/CD Integration Tools": {
+        "1": {
+            "name": "drone",
+            "url": "https://github.com/harness/gitnes"
+        },
+        "2": {
+            "name": "argo cd",
+            "url": "https://github.com/argoproj/argo-cd\t"
+        },
+        "3": {
+            "name": "skaffold",
+            "url": "https://github.com/GoogleContainerTools/skaffold\t"
+        },
+        "4": {
+            "name": "spinnaker",
+            "url": "https://github.com/spinnaker/spinnaker"
+        },
+        "5": {
+            "name": "tekton",
+            "url": "https://github.com/tektoncd/pipeline"
+        },
+        "6": {
+            "name": "flux",
+            "url": "https://github.com/fluxcd/flux"
+        },
+        "7": {
+            "name": "flagger",
+            "url": "https://github.com/fluxcd/flagger"
+        },
+        "8": {
+            "name": "jenkins x",
+            "url": "https://github.com/jenkins-x/jx"
+        },
+        "9": {
+            "name": "devtron",
+            "url": "https://github.com/devtron-labs/devtron"
+        },
+        "10": {
+            "name": "werf",
+            "url": "https://github.com/werf/werf"
+        },
+        "11": {
+            "name": "kubefirst",
+            "url": "https://github.com/kubefirst/kubefirst\t"
+        },
+        "12": {
+            "name": "helmsman",
+            "url": "https://github.com/Praqma/helmsman\t"
+        },
+        "13": {
+            "name": "pipecd",
+            "url": "https://github.com/pipe-cd/pipecd"
+        },
+        "14": {
+            "name": "helmwave",
+            "url": "https://github.com/helmwave/helmwave"
+        },
+        "15": {
+            "name": "kubedog",
+            "url": "https://github.com/werf/kubedog"
+        },
+        "16": {
+            "name": "kluctl",
+            "url": "https://github.com/kluctl/kluctl\t"
+        },
+        "17": {
+            "name": "autoapply",
+            "url": "https://github.com/autoapply/autoapply"
+        },
+        "18": {
+            "name": "helm cabin",
+            "url": "https://github.com/Nick-Triller/helm-cabin"
+        },
+        "19": {
+            "name": "apollo",
+            "url": "https://github.com/logzio/apollo"
+        },
+        "20": {
+            "name": "hybridk8s droid",
+            "url": "https://hybridk8s.tech"
+        },
+        "21": {
+            "name": "kubeform",
+            "url": "https://github.com/kubeform/kubeform"
+        }
+    },
+    "Security Tools": {
+        "1": {
+            "name": "trivy",
+            "url": "https://github.com/aquasecurity/trivy"
+        },
+        "2": {
+            "name": "clair",
+            "url": "https://github.com/quay/clair"
+        },
+        "3": {
+            "name": "kube-bench",
+            "url": "https://github.com/aquasecurity/kube-bench"
+        },
+        "4": {
+            "name": "datree",
+            "url": "https://github.com/datreeio/datree"
+        },
+        "5": {
+            "name": "kube-hunter",
+            "url": "https://github.com/aquasecurity/kube-hunter"
+        },
+        "6": {
+            "name": "terrascan",
+            "url": "https://github.com/tenable/terrascan"
+        },
+        "7": {
+            "name": "hubble",
+            "url": "https://github.com/cilium/hubble"
+        },
+        "8": {
+            "name": "kubeval",
+            "url": "https://github.com/instrumenta/kubeval"
+        },
+        "9": {
+            "name": "kubelinter",
+            "url": "https://github.com/stackrox/kube-linter"
+        },
+        "10": {
+            "name": "kubeaudit",
+            "url": "https://github.com/Shopify/kubeaudit"
+        },
+        "11": {
+            "name": "starboard",
+            "url": "https://github.com/aquasecurity/starboard"
+        },
+        "12": {
+            "name": "kiosk",
+            "url": "https://github.com/loft-sh/kiosk"
+        },
+        "13": {
+            "name": "kubesec",
+            "url": "https://github.com/controlplaneio/kubesec"
+        },
+        "14": {
+            "name": "peirates",
+            "url": "https://github.com/inguardians/peirates"
+        },
+        "15": {
+            "name": "audit2rbac",
+            "url": "https://github.com/liggitt/audit2rbac"
+        },
+        "16": {
+            "name": "kubestriker",
+            "url": "https://github.com/vchinnipilli/kubestriker"
+        },
+        "17": {
+            "name": "paralus",
+            "url": "https://github.com/paralus/paralus"
+        },
+        "18": {
+            "name": "kube2iam",
+            "url": "https://github.com/jtblin/kube2iam"
+        },
+        "19": {
+            "name": "simulator",
+            "url": "https://github.com/controlplaneio/simulator"
+        },
+        "20": {
+            "name": "rbac-tool",
+            "url": "https://github.com/alcideio/rbac-tool"
+        },
+        "21": {
+            "name": "rbac lookup",
+            "url": "https://github.com/FairwindsOps/rbac-lookup"
+        },
+        "22": {
+            "name": "hardeneks",
+            "url": "https://github.com/aws-samples/hardeneks"
+        },
+        "23": {
+            "name": "kube-who-can",
+            "url": "https://github.com/aquasecurity/kubectl-who-can"
+        },
+        "24": {
+            "name": "vault-k8s",
+            "url": "https://github.com/hashicorp/vault-k8s"
+        },
+        "25": {
+            "name": "krane",
+            "url": "https://github.com/appvia/krane"
+        },
+        "26": {
+            "name": "kubezoo",
+            "url": "https://github.com/kubewharf/kubezoo"
+        },
+        "27": {
+            "name": "kubectl-kubesec",
+            "url": "https://github.com/controlplaneio/kubectl-kubesec"
+        },
+        "28": {
+            "name": "gangway",
+            "url": "https://github.com/vmware-archive/gangway"
+        },
+        "29": {
+            "name": "klum",
+            "url": "https://github.com/ibuildthecloud/klum"
+        },
+        "30": {
+            "name": "m9sweeper",
+            "url": "https://github.com/m9sweeper/m9sweeper"
+        },
+        "31": {
+            "name": "mtkpi",
+            "url": "https://github.com/r0binak/MTKPI"
+        },
+        "32": {
+            "name": "icekube",
+            "url": "https://github.com/WithSecureLabs/IceKube"
+        },
+        "33": {
+            "name": "netchecks",
+            "url": "https://github.com/hardbyte/netchecks/"
+        },
+        "34": {
+            "name": "kubectl-modify-secrets",
+            "url": "https://github.com/rajatjindal/kubectl-modify-secret"
+        },
+        "35": {
+            "name": "kubevious cli",
+            "url": "https://github.com/kubevious/cli"
+        },
+        "36": {
+            "name": "kube-rebac-authorizer",
+            "url": "https://github.com/luxas/kube-rebac-authorizer"
+        },
+        "37": {
+            "name": "chartsec",
+            "url": "https://github.com/banzaicloud/chartsec"
+        },
+        "38": {
+            "name": "kyverno",
+            "url": "https://github.com/nirmata/kyverno"
+        },
+        "39": {
+            "name": "falco",
+            "url": "https://falco.org"
+        },
+        "40": {
+            "name": "jspolicy",
+            "url": "https://github.com/pavan-kumar-99/medium-manifests/tree/jsPolicy"
+        }
+    },
+    "Network Policies": {
+        "1": {
+            "name": "cilium",
+            "url": "https://github.com/cilium/cilium"
+        },
+        "2": {
+            "name": "metallb",
+            "url": "https://github.com/metallb/metallb"
+        },
+        "3": {
+            "name": "kubefwd (kube forward)",
+            "url": "https://github.com/txn2/kubefwd"
+        },
+        "4": {
+            "name": "submariner",
+            "url": "https://github.com/submariner-io/submariner"
+        },
+        "5": {
+            "name": "submariner",
+            "url": "https://github.com/redhat-nfvpe/kokotap"
+        },
+        "6": {
+            "name": "kilo (k8s + wg)",
+            "url": "https://github.com/squat/kilo"
+        },
+        "7": {
+            "name": "loxilb",
+            "url": "https://github.com/loxilb-io/loxilb"
+        },
+        "8": {
+            "name": "spiderpool",
+            "url": "https://github.com/spidernet-io/spiderpool"
+        },
+        "9": {
+            "name": "calico",
+            "url": "https://github.com/projectcalico/calico"
+        },
+        "10": {
+            "name": "egress-operator",
+            "url": "https://github.com/monzo/egress-operator"
+        },
+        "11": {
+            "name": "netfetch",
+            "url": "https://github.com/deggja/netfetch"
+        },
+        "12": {
+            "name": "network policy api",
+            "url": "https://github.com/kubernetes-sigs/network-policy-api"
+        },
+        "13": {
+            "name": "kokotap",
+            "url": "https://github.com/redhat-nfvpe/kokotap"
+        }
+    },
+    "Pods": {
+        "1": {
+            "name": "kubetail",
+            "url": "https://github.com/johanhaleby/kubetail"
+        },
+        "2": {
+            "name": "kube-s3",
+            "url": "https://github.com/freegroup/kube-s3"
+        },
+        "3": {
+            "name": "kubectl-ports-rs",
+            "url": "https://github.com/widnyana/kubectl-ports-rs"
+        }
+    },
+    "Cluster Management": {
+        "1": {
+            "name": "rancher",
+            "url": "https://github.com/rancher/rancher"
+        },
+        "2": {
+            "name": "kops",
+            "url": "https://github.com/kubernetes/kops"
+        },
+        "3": {
+            "name": "kubeview",
+            "url": "https://github.com/benc-uk/kubeview"
+        },
+        "4": {
+            "name": "kind",
+            "url": "https://github.com/kubernetes-sigs/kind"
+        },
+        "5": {
+            "name": "cert-manager",
+            "url": "https://github.com/cert-manager/cert-manager"
+        },
+        "6": {
+            "name": "keda",
+            "url": "https://keda.sh"
+        },
+        "7": {
+            "name": "sealed secrets",
+            "url": "https://github.com/bitnami-labs/sealed-secrets"
+        },
+        "8": {
+            "name": "octant",
+            "url": "https://github.com/vmware-archive/octant"
+        },
+        "9": {
+            "name": "vcluster",
+            "url": "https://github.com/loft-sh/vcluster"
+        },
+        "10": {
+            "name": "meshery",
+            "url": "https://github.com/meshery/meshery"
+        },
+        "11": {
+            "name": "openkruise/kruise",
+            "url": "https://github.com/openkruise/kruise"
+        },
+        "12": {
+            "name": "node-problem-detector",
+            "url": "https://github.com/kubernetes/node-problem-detector"
+        },
+        "13": {
+            "name": "k0s",
+            "url": "https://github.com/k0sproject/k0s"
+        },
+        "14": {
+            "name": "goldilocks",
+            "url": "https://github.com/FairwindsOps/goldilock"
+        },
+        "15": {
+            "name": "kube-ops-view",
+            "url": "https://github.com/hjacobs/kube-ops-view"
+        },
+        "16": {
+            "name": "monokle",
+            "url": "https://github.com/kubeshop/monokle"
+        },
+        "17": {
+            "name": "kubefirst",
+            "url": "https://github.com/kubefirst/kubefirst"
+        },
+        "18": {
+            "name": "cluster-template",
+            "url": "https://github.com/onedr0p/cluster-template"
+        },
+        "19": {
+            "name": "xlskubectl",
+            "url": "https://github.com/learnk8s/xlskubectl"
+        },
+        "20": {
+            "name": "kudo",
+            "url": "https://github.com/kudobuilder/kudo"
+        },
+        "21": {
+            "name": "liqo",
+            "url": "https://github.com/liqotech/liqo"
+        },
+        "22": {
+            "name": "kapp",
+            "url": "https://github.com/carvel-dev/kapp"
+        },
+        "23": {
+            "name": "kamaji",
+            "url": "https://github.com/clastix/kamaji"
+        },
+        "24": {
+            "name": "clusterpedia",
+            "url": "https://github.com/clusterpedia-io/clusterpedia"
+        },
+        "25": {
+            "name": "guard",
+            "url": "https://github.com/kubeguard/guard"
+        },
+        "26": {
+            "name": "claudie",
+            "url": "https://github.com/berops/claudie"
+        },
+        "27": {
+            "name": "cyclops",
+            "url": "https://github.com/cyclops-ui/cyclops"
+        },
+        "28": {
+            "name": "kubean",
+            "url": "https://github.com/kubean-io/kubean"
+        },
+        "29": {
+            "name": "k0smotron",
+            "url": "https://github.com/k0sproject/k0smotron"
+        },
+        "30": {
+            "name": "k0smotron",
+            "url": "https://github.com/k0sproject/k0smotron"
+        },
+        "31": {
+            "name": "metalk8s",
+            "url": "https://github.com/scality/metalk8s"
+        },
+        "32": {
+            "name": "silver-surfer",
+            "url": "https://github.com/devtron-labs/silver-surfer"
+        },
+        "33": {
+            "name": "clusterman",
+            "url": "https://github.com/Yelp/clusterman"
+        },
+        "34": {
+            "name": "kustomizer",
+            "url": "https://github.com/stefanprodan/kustomizer"
+        },
+        "35": {
+            "name": "kubestellar",
+            "url": "a flexible solution for challenges associated with multi-cluster configuration management for edge, multi-cloud, and hybrid cloud"
+        },
+        "36": {
+            "name": "katafygio",
+            "url": "https://github.com/bpineau/katafygio"
+        },
+        "37": {
+            "name": "kubemarine",
+            "url": "https://github.com/Netcracker/KubeMarine"
+        },
+        "38": {
+            "name": "trolley",
+            "url": "https://github.com/Trolley-MGMT/trolleymgmt"
+        },
+        "39": {
+            "name": "portainer",
+            "url": "https://github.com/portainer/k8s"
+        },
+        "40": {
+            "name": "kubeprompt",
+            "url": "https://github.com/jlesquembre/kubeprompt"
+        },
+        "41": {
+            "name": "punq",
+            "url": "https://github.com/mogenius/punq"
+        },
+        "42": {
+            "name": "punq",
+            "url": "https://github.com/mogenius/punq"
+        },
+        "43": {
+            "name": "kubectl snapshot",
+            "url": "https://github.com/fbrubbo/kubectl-snapshot"
+        },
+        "44": {
+            "name": "kindscaler",
+            "url": "https://github.com/lobuhi/kindscaler"
+        },
+        "45": {
+            "name": "k8s-duplicator",
+            "url": "https://github.com/Nick-Triller/k8s-duplicator"
+        },
+        "46": {
+            "name": "gardener",
+            "url": "https://gardener.cloud"
+        }
+    },
+    "Testing Tools": {
+        "1": {
+            "name": "k6d",
+            "url": "https://github.com/grafana/k6"
+        },
+        "2": {
+            "name": "litmusd",
+            "url": "https://github.com/litmuschaos/litmus"
+        },
+        "3": {
+            "name": "keploy",
+            "url": "https://github.com/keploy/keploy"
+        },
+        "4": {
+            "name": "kube2iam",
+            "url": "https://github.com/jtblin/kube2iam"
+        },
+        "5": {
+            "name": "powerfulseald",
+            "url": "https://github.com/powerfulseal/powerfulseal"
+        },
+        "6": {
+            "name": "testkube",
+            "url": "https://github.com/kubeshop/testkube"
+        },
+        "7": {
+            "name": "microcks",
+            "url": "Kubernetes native tool for mocking and testing API and micro-services"
+        },
+        "8": {
+            "name": "tracetest",
+            "url": "https://github.com/kubeshop/tracetest"
+        },
+        "9": {
+            "name": "perf-tests",
+            "url": "https://github.com/kubernetes/perf-tests"
+        },
+        "10": {
+            "name": "kwok",
+            "url": "https://github.com/kubernetes-sigs/kwok"
+        },
+        "11": {
+            "name": "network bandwith and load testingd -",
+            "url": "https://github.com/mrahbar/k8s-testsuite"
+        },
+        "12": {
+            "name": "netchecks",
+            "url": "https://github.com/hardbyte/netchecks"
+        },
+        "13": {
+            "name": "nighthawk",
+            "url": "https://github.com/layer5io/getnighthawk"
+        },
+        "14": {
+            "name": "kyverno",
+            "url": "https://github.com/nirmata/kyverno"
+        },
+        "15": {
+            "name": "kube-burnerd",
+            "url": "https://kube-burner.readthedocs.io/en/latest/"
+        }
+    },
+    "Service Mesh": {
+        "1": {
+            "name": "traefik",
+            "url": "https://github.com/traefik/traefik"
+        },
+        "2": {
+            "name": "istio",
+            "url": "https://github.com/istio/istio"
+        },
+        "3": {
+            "name": "apisix",
+            "url": "https://github.com/apache/apisix"
+        },
+        "4": {
+            "name": "nginx ingress controller",
+            "url": "https://github.com/nginxinc/kubernetes-ingress"
+        },
+        "5": {
+            "name": "osm",
+            "url": "https://github.com/openservicemesh/osm"
+        },
+        "6": {
+            "name": "kong",
+            "url": "https://github.com/Kong/kubernetes-ingress-controller"
+        },
+        "7": {
+            "name": "merbridge",
+            "url": "https://github.com/merbridge/merbridge"
+        },
+        "8": {
+            "name": "kusk gateway",
+            "url": "https://kusk.io"
+        },
+        "9": {
+            "name": "linkerd-config",
+            "url": "https://github.com/ihcsim/linkerd-config"
+        },
+        "10": {
+            "name": "autopilot",
+            "url": "https://docs.solo.io/autopilot/latest"
+        },
+        "11": {
+            "name": "gloo mesh",
+            "url": "https://github.com/solo-io/gloo-mesh"
+        },
+        "12": {
+            "name": "contour",
+            "url": "https://projectcontour.io"
+        }
+    },
+    "Observability": {
+        "1": {
+            "name": "chaos mesh",
+            "url": "https://github.com/chaos-mesh/chaos-mesh"
+        },
+        "2": {
+            "name": "kube-state-metrics",
+            "url": "https://github.com/kubernetes/kube-state-metrics"
+        },
+        "3": {
+            "name": "popeye",
+            "url": "https://github.com/derailed/popeye"
+        },
+        "4": {
+            "name": "grafana tempo",
+            "url": "https://github.com/grafana/tempo"
+        },
+        "5": {
+            "name": "kubespy",
+            "url": "https://github.com/pulumi/kubespy"
+        },
+        "6": {
+            "name": "stern",
+            "url": "https://github.com/stern/stern"
+        },
+        "7": {
+            "name": "kubectl tree \ud83c\udf84",
+            "url": "https://github.com/ahmetb/kubectl-tree"
+        },
+        "8": {
+            "name": "pumba",
+            "url": "https://github.com/alexei-led/pumba"
+        },
+        "9": {
+            "name": "kubewatch",
+            "url": "https://github.com/vmware-archive/kubewatch"
+        },
+        "10": {
+            "name": "robusta",
+            "url": "https://github.com/robusta-dev/robusta"
+        },
+        "11": {
+            "name": "kubebox",
+            "url": "https://github.com/astefanutti/kubebox"
+        },
+        "12": {
+            "name": "chaoskube",
+            "url": "https://github.com/linki/chaoskube"
+        },
+        "13": {
+            "name": "cri-tools",
+            "url": "https://github.com/kubernetes-sigs/cri-tools"
+        },
+        "14": {
+            "name": "headlamp",
+            "url": "https://github.com/headlamp-k8s/headlamp"
+        },
+        "15": {
+            "name": "sloop",
+            "url": "https://github.com/salesforce/sloop?utm_sq=g90yo8t8s1"
+        },
+        "16": {
+            "name": "kubernetes-event-exporter",
+            "url": "https://github.com/opsgenie/kubernetes-event-exporter"
+        },
+        "17": {
+            "name": "kubeinvaders",
+            "url": "https://github.com/lucky-sideburn/kubeinvaders"
+        },
+        "18": {
+            "name": "tracetest",
+            "url": "https://github.com/kubeshop/tracetest"
+        },
+        "19": {
+            "name": "lemur",
+            "url": "https://github.com/turbonomic/lemur"
+        },
+        "20": {
+            "name": "botkube",
+            "url": "https://botkube.io"
+        },
+        "21": {
+            "name": "kubestone",
+            "url": "https://kubestone.io/en/latest"
+        },
+        "22": {
+            "name": "kubevious",
+            "url": "https://kubevious.io"
+        },
+        "23": {
+            "name": "opentelemetry",
+            "url": "https://opentelemetry.io"
+        }
+    },
+    "Machine Learning/Deep Learning": {
+        "1": {
+            "name": "kubeflow",
+            "url": "https://github.com/kubeflow/kubeflow"
+        },
+        "2": {
+            "name": "volcano",
+            "url": "https://github.com/volcano-sh/volcano"
+        },
+        "3": {
+            "name": "nos",
+            "url": "\thttps://github.com/nebuly-ai/nos\t"
+        }
+    },
+    "Compute Edge Tools": {
+        "1": {
+            "name": "microk8s",
+            "url": "https://github.com/canonical/microk8s"
+        },
+        "2": {
+            "name": "kubeedge",
+            "url": "https://github.com/kubeedge/kubeedge"
+        },
+        "3": {
+            "name": "openyurt",
+            "url": "https://github.com/openyurtio/openyurt"
+        },
+        "4": {
+            "name": "shifu",
+            "url": "https://github.com/Edgenesis/shifu"
+        },
+        "5": {
+            "name": "akri",
+            "url": "https://github.com/project-akri/akri"
+        },
+        "6": {
+            "name": "superedge",
+            "url": "https://github.com/superedge/superedge"
+        },
+        "7": {
+            "name": "kairos",
+            "url": "https://github.com/kairos-io/kairos"
+        },
+        "8": {
+            "name": "keylime",
+            "url": "https://github.com/keylime/keylime"
+        }
+    },
+    "Kubernetes Tools for Specific Cloud": {
+        "1": {
+            "name": "sealos",
+            "url": "https://github.com/labring/sealos"
+        },
+        "2": {
+            "name": "porter",
+            "url": "https://github.com/porter-dev/porter"
+        },
+        "3": {
+            "name": "aws workshop for kubernetes",
+            "url": "https://github.com/aws-samples/aws-workshop-for-kubernetes"
+        },
+        "4": {
+            "name": "kubicorn",
+            "url": "https://github.com/kubicorn/kubicorn"
+        },
+        "5": {
+            "name": "kubernetes on aws (kube-aws)",
+            "url": "https://github.com/kubernetes-retired/kube-aws"
+        },
+        "6": {
+            "name": "draft: streamlined kubernetes development",
+            "url": "https://github.com/azure/draft"
+        },
+        "7": {
+            "name": "eksdemo",
+            "url": "https://github.com/awslabs/eksdemo"
+        },
+        "8": {
+            "name": "helm-ssm",
+            "url": "https://github.com/totango/helm-ssm"
+        },
+        "9": {
+            "name": "skupper",
+            "url": "https://skupper.io"
+        }
+    },
+    "Storage Providers": {
+        "1": {
+            "name": "seaweedfs",
+            "url": "https://github.com/seaweedfs/seaweedfs"
+        },
+        "2": {
+            "name": "vitess",
+            "url": "https://github.com/vitessio/vitess"
+        },
+        "3": {
+            "name": "tikv",
+            "url": "https://github.com/tikv/tikv"
+        },
+        "4": {
+            "name": "rook",
+            "url": "https://github.com/rook/rook"
+        },
+        "5": {
+            "name": "openebs",
+            "url": "https://github.com/openebs/openebs"
+        },
+        "6": {
+            "name": "velero",
+            "url": "https://github.com/vmware-tanzu/velero"
+        },
+        "7": {
+            "name": "longhorn",
+            "url": "https://github.com/longhorn/longhorn"
+        },
+        "8": {
+            "name": "chubaofs",
+            "url": "https://github.com/cubefs/cubefs"
+        },
+        "9": {
+            "name": "topolvm",
+            "url": "https://github.com/topolvm/topolvm"
+        },
+        "10": {
+            "name": "kadalu",
+            "url": "https://github.com/kadalu/kadalu"
+        },
+        "11": {
+            "name": "hwameistor",
+            "url": "https://github.com/hwameistor/hwameistor"
+        }
+    },
+    "Backup Tools": {
+        "1": {
+            "name": "stash",
+            "url": "https://github.com/stashed/stash"
+        },
+        "2": {
+            "name": "reflector",
+            "url": "https://github.com/emberstack/kubernetes-reflector"
+        },
+        "3": {
+            "name": "k8up backup operator",
+            "url": "https://github.com/k8up-io/k8up"
+        },
+        "4": {
+            "name": "volsync",
+            "url": "\thttps://github.com/backube/volsync\t"
+        },
+        "5": {
+            "name": "kube-dump",
+            "url": "https://github.com/WoozyMasta/kube-dump"
+        },
+        "6": {
+            "name": "reflector",
+            "url": "https://github.com/backube/snapscheduler"
+        }
+    },
+    "Multiple Tools Repo": {
+        "1": {
+            "name": "pulumi",
+            "url": "https://github.com/pulumi/pulumi"
+        },
+        "2": {
+            "name": "colima",
+            "url": "https://github.com/abiosoft/colima"
+        },
+        "3": {
+            "name": "gvisor",
+            "url": "https://github.com/google/gvisor\t"
+        },
+        "4": {
+            "name": "kamus",
+            "url": "https://github.com/Soluto/kamus"
+        },
+        "5": {
+            "name": "korb",
+            "url": "https://github.com/BeryJu/korb"
+        },
+        "6": {
+            "name": "krateo platformops",
+            "url": "https://github.com/krateoplatformops/krateo"
+        },
+        "7": {
+            "name": "chaos toolkit kubernetes support",
+            "url": "https://github.com/chaostoolkit/chaostoolkit-kubernetes\t"
+        },
+        "8": {
+            "name": "k14s",
+            "url": "https://github.com/k14s"
+        }
+    },
+    "Cost Optimisation": {
+        "1": {
+            "name": "opencost",
+            "url": "https://github.com/opencost/opencost"
+        },
+        "2": {
+            "name": "kubecost",
+            "url": "https://github.com/opencost/opencost"
+        },
+        "3": {
+            "name": "kube-green",
+            "url": "https://github.com/kube-green/kube-green"
+        },
+        "4": {
+            "name": "perfectscale",
+            "url": "https://www.perfectscale.io"
+        }
+    },
+    "Function as a Service FaaS": {
+        "1": {
+            "name": "openfaas",
+            "url": "https://github.com/openfaas/faas"
+        },
+        "2": {
+            "name": "fission",
+            "url": "https://github.com/fission/fission"
+        },
+        "3": {
+            "name": "kubeless",
+            "url": "https://github.com/vmware-archive/kubeless\t"
+        },
+        "4": {
+            "name": "knative serving",
+            "url": "https://github.com/knative/serving"
+        },
+        "5": {
+            "name": "nuclio",
+            "url": "https://github.com/nuclio/nuclio"
+        }
+    },
+    "Artificial Intelligence": {
+        "1": {
+            "name": "k8sgpt",
+            "url": "https://github.com/k8sgpt-ai/k8sgpt"
+        },
+        "2": {
+            "name": "aiac",
+            "url": "https://github.com/gofireflyio/aiac\t"
+        },
+        "3": {
+            "name": "kserve",
+            "url": "https://github.com/kserve/kserve\t"
+        },
+        "4": {
+            "name": "kubectl-ai",
+            "url": "https://github.com/sozercan/kubectl-ai"
+        },
+        "5": {
+            "name": "kopilot",
+            "url": "https://github.com/knight42/kopilot"
+        },
+        "6": {
+            "name": "kopylot",
+            "url": "https://github.com/avsthiago/kopylot"
+        },
+        "7": {
+            "name": "mico",
+            "url": "https://github.com/tahtaciburak/mico"
+        },
+        "8": {
+            "name": "kubectl-assistant",
+            "url": "https://github.com/dkoshkin/kubectl-assistant"
+        }
+    },
+    "Caching": {
+        "1": {
+            "name": "harbor",
+            "url": "https://github.com/goharbor/harbor"
+        },
+        "2": {
+            "name": "kube-fledged",
+            "url": "https://github.com/senthilrch/kube-fledged\t"
+        },
+        "3": {
+            "name": "kube-image-keeper (kuik)",
+            "url": "https://github.com/enix/kube-image-keeper\t"
+        },
+        "4": {
+            "name": "kubernetes-image-puller",
+            "url": "https://github.com/che-incubator/kubernetes-image-puller"
+        },
+        "5": {
+            "name": "tugger",
+            "url": "https://github.com/jainishshah17/tugger\t"
+        }
+    },
+    "Clients": {
+        "1": {
+            "name": "dapr",
+            "url": "https://github.com/dapr/dapr"
+        },
+        "2": {
+            "name": "devpod",
+            "url": "https://github.com/loft-sh/devpod"
+        },
+        "3": {
+            "name": "python client for kubernetes",
+            "url": "https://github.com/kubernetes-client/python\t"
+        },
+        "4": {
+            "name": "java client for kubernetes",
+            "url": "https://github.com/kubernetes-client/java\t"
+        },
+        "5": {
+            "name": "javascript client for kubernetes",
+            "url": "https://github.com/kubernetes-client/javascript\t"
+        },
+        "6": {
+            "name": "csharp client for kubernetes",
+            "url": "https://github.com/kubernetes-client/csharp\t"
+        },
+        "7": {
+            "name": "go client for kubernetes",
+            "url": "https://github.com/kubernetes-client/go"
+        }
+    },
+    "Cleanup": {
+        "1": {
+            "name": "k8s-cleaner",
+            "url": "https://github.com/gianlucam76/k8s-cleaner"
+        },
+        "2": {
+            "name": "kube-fencing",
+            "url": "https://github.com/kvaps/kube-fencing"
+        },
+        "3": {
+            "name": "cri-purge",
+            "url": "https://github.com/reefland/cri-purge"
+        }
+    },
+    "Non-Categorize": {
+        "1": {
+            "name": "kpt",
+            "url": "https://github.com/kptdev/kpt"
+        },
+        "2": {
+            "name": "rudr",
+            "url": "https://github.com/oam-dev/rudr"
+        },
+        "3": {
+            "name": "capsule",
+            "url": "https://github.com/projectcapsule/capsule"
+        },
+        "4": {
+            "name": "kube-fledged",
+            "url": "https://github.com/senthilrch/kube-fledged"
+        },
+        "5": {
+            "name": "cabin, the mobile app for kubernetes -",
+            "url": "https://github.com/vmware-archive/cabin"
+        },
+        "6": {
+            "name": "kubeslice",
+            "url": "https://github.com/kubeslice"
+        },
+        "7": {
+            "name": "funktion",
+            "url": "https://github.com/funktionio/funktion"
+        },
+        "8": {
+            "name": "routernetes",
+            "url": "https://github.com/routernetes/routernetes"
+        },
+        "9": {
+            "name": "projectsveltos",
+            "url": "https://github.com/projectsveltos/addon-controller"
+        },
+        "10": {
+            "name": "mayfly",
+            "url": "https://github.com/NCCloud/mayfly"
+        },
+        "11": {
+            "name": "kube-job",
+            "url": "https://github.com/h3poteto/kube-job"
+        },
+        "12": {
+            "name": "alterant",
+            "url": "https://github.com/cloud66-oss/alterant"
+        },
+        "13": {
+            "name": "buck",
+            "url": "https://github.com/brigadecore/buck"
+        },
+        "14": {
+            "name": "keel",
+            "url": "https://keel.sh"
+        },
+        "15": {
+            "name": "symbiosis",
+            "url": "https://symbiosis.host"
+        },
+        "16": {
+            "name": "yupd",
+            "url": "https://github.com/srozange/yupd"
+        },
+        "17": {
+            "name": "yupd",
+            "url": "https://github.com/srozange/yupd"
+        },
+        "18": {
+            "name": "yupd",
+            "url": "https://github.com/srozange/yupd"
+        }
+    },
+    "Alert and Monitoring": {
+        "1": {
+            "name": "grafana",
+            "url": "https://github.com/grafana/grafana"
+        },
+        "2": {
+            "name": "prometheus",
+            "url": "https://github.com/prometheus/prometheus"
+        },
+        "3": {
+            "name": "thanos",
+            "url": "https://github.com/thanos-io/thanos"
+        },
+        "4": {
+            "name": "kubeshark",
+            "url": "https://github.com/kubeshark/kubeshark"
+        },
+        "5": {
+            "name": "scope",
+            "url": "https://github.com/weaveworks/scope"
+        },
+        "6": {
+            "name": "kubetail",
+            "url": "https://github.com/johanhaleby/kubetail"
+        },
+        "7": {
+            "name": "ksniff",
+            "url": "https://github.com/eldadru/ksniff"
+        },
+        "8": {
+            "name": "kuberhealthy",
+            "url": "https://github.com/kuberhealthy/kuberhealthy"
+        },
+        "9": {
+            "name": "kwatch",
+            "url": "https://github.com/abahmed/kwatch"
+        },
+        "10": {
+            "name": "ktop",
+            "url": "https://github.com/vladimirvivien/ktop"
+        },
+        "11": {
+            "name": "x.509 certificate exporter",
+            "url": "https://github.com/enix/x509-certificate-exporter/"
+        },
+        "12": {
+            "name": "searchlight",
+            "url": "https://github.com/searchlight/searchlight"
+        },
+        "13": {
+            "name": "kube-prometheus-top [ kptop ]",
+            "url": "https://github.com/eslam-gomaa/kptop"
+        },
+        "14": {
+            "name": "kurt",
+            "url": "https://github.com/soraro/kurt"
+        },
+        "15": {
+            "name": "kubernetes job/cronjob notifier",
+            "url": "https://github.com/sukeesh/k8s-job-notify"
+        },
+        "16": {
+            "name": "klusterview",
+            "url": "https://github.com/oslabs-beta/KlusterView"
+        },
+        "17": {
+            "name": "kube-scout",
+            "url": "https://github.com/ReallyLiri/kubescout"
+        },
+        "18": {
+            "name": "kuberhaus",
+            "url": "https://github.com/stephenlacy/kuberhaus"
+        },
+        "19": {
+            "name": "linkerd2 monitoring mixin for grafana",
+            "url": "https://github.com/andrew-waters/linkerd2-mixin"
+        },
+        "20": {
+            "name": "argus",
+            "url": "https://clustergarage.io/argus/docs/overview/"
+        }
+    }
+}
