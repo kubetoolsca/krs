@@ -15,11 +15,15 @@ def check_initialized():
 if not os.path.exists(KRS_DATA_DIRECTORY):
     os.mkdir(KRS_DATA_DIRECTORY)
 
+def get_kubeconfig():
+    return os.getenv('KUBECONFIG', os.path.expanduser('~/.kube/config'))
+
 @app.command()
-def init(kubeconfig: str = typer.Option('~/.kube/config', help="Custom path for kubeconfig file if not default")):
+def init(kubeconfig: str = typer.Option(None, help="Custom path for kubeconfig file if not default")):
     """
     Initializes the services and loads the scanner.
     """
+    kubeconfig = kubeconfig or get_kubeconfig()
     krs.initialize(kubeconfig)
     typer.echo("Services initialized and scanner loaded.")
 
