@@ -2,9 +2,11 @@ from krs.utils.fetch_tools_krs import krs_tool_ranking_info
 from krs.utils.cluster_scanner import KubetoolsScanner
 from krs.utils.llm_client import KrsGPTClient
 from krs.utils.functional import extract_log_entries, CustomJSONEncoder
+from krs.utils.graph import create_super_graph, create_subgraph, create_subgraph_by_namespace, identify_error_prone_nodes, create_pod_subgraph
 import os, pickle, time, json
 from tabulate import tabulate
-from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY)
+from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY,SUPER_GRAPH_PATH, GRAPH_DATA_PATH, SUBGRAPH_PATH,SUBGRAPH_NAMESPACES_PATH,SUBGRAPH_POD_PATH)
+
 
 class KrsMain:
     
@@ -24,6 +26,11 @@ class KrsMain:
         self.cluster_tool_list = None
         self.detailed_cluster_tool_list = None
         self.category_cluster_tools_dict = None
+        self.nms_subgraph = None
+        self.supergraph = None
+        self.error_subgraph = None
+        self.pod_graph = None
+        self.choice = 1
 
         self.load_state()
 
@@ -48,7 +55,11 @@ class KrsMain:
             'isScanned': self.isClusterScanned,
             'cluster_tool_list': self.cluster_tool_list,
             'detailed_tool_list': self.detailed_cluster_tool_list,
-            'category_tool_list': self.category_cluster_tools_dict
+            'category_tool_list': self.category_cluster_tools_dict,
+            'nms_subgraph' : self.nms_subgraph,
+            'supergraph' : self.supergraph,
+            'error_subgraph' : self.error_subgraph,
+            'pod_graph' : self.pod_graph
         }
         os.makedirs(os.path.dirname(self.state_file), exist_ok=True)
         with open(self.state_file, 'wb') as f:
@@ -71,6 +82,11 @@ class KrsMain:
                 self.cluster_tool_list = state.get('cluster_tool_list')
                 self.detailed_cluster_tool_list = state.get('detailed_tool_list')
                 self.category_cluster_tools_dict = state.get('category_tool_list')
+                self.nms_subgraph = state.get('nms_subgraph')
+                self.supergraph = state.get('supergraph')
+                self.error_subgraph = state.get('error_subgraph')
+                self.pod_graph = state.get('pod_graph')
+                
             self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file)
     
     def check_scanned(self):
@@ -174,8 +190,11 @@ class KrsMain:
     
     def health_check(self, change_model=False, device='cpu'):
 
+        self.supergraph = create_super_graph()
+        self.error_subgraph = create_subgraph(SUPER_GRAPH_PATH, SUBGRAPH_PATH, identify_error_prone_nodes(SUPER_GRAPH_PATH))
+
         if os.path.exists(LLMSTATE_PICKLE_FILEPATH) and not change_model:
-            continue_previous_chat = input("\nDo you want to continue fixing the previously selected pod ? (y/n): >> ")
+            continue_previous_chat = input("\nDo you want to continue fixing the previously selected cluster, namespace or pod ? (y/n): >> ")
             while True:
                 if continue_previous_chat not in ['y', 'n']:
                     continue_previous_chat = input("\nPlease enter one of the given options ? (y/n): >> ")
@@ -196,48 +215,77 @@ class KrsMain:
 
             self.check_scanned()
 
-            print("\nNamespaces in the cluster:\n")
-            namespaces = self.list_namespaces()
-            namespace_len = len(namespaces)
-            for i, namespace in enumerate(namespaces, start=1):
-                print(f"{i}. {namespace}")
+            choice = input("\nDebug: \n\n[1] Entire Cluster \n[2] Specific Namespace \n[3] Specific Pod\n\n>> ")
 
-            self.selected_namespace_index = int(input("\nWhich namespace do you want to check the health for? Select a namespace by entering its number: >> "))
-            while True:
-                if self.selected_namespace_index not in list(range(1, namespace_len+1)):
-                    self.selected_namespace_index = int(input(f"\nWrong input! Select a namespace number between {1} to {namespace_len}: >> "))   
-                else:
-                    break
+            # while choice != '1' or choice != '2' or choice != '3':
+            #     choice = input("\nWrong Input! Enter values from 1 to 3 to debug: \n\n[1] Entire Cluster \n[2] Specific Namespace \n[3] Specific Pod\n\n>> ")
+        
 
-            self.selected_namespace = namespaces[self.selected_namespace_index - 1]
-            pod_list = self.list_pods(self.selected_namespace)
-            pod_len = len(pod_list)
-            print(f"\nPods in the namespace {self.selected_namespace}:\n")
-            for i, pod in enumerate(pod_list, start=1):
-                print(f"{i}. {pod}")
-            self.selected_pod_index = int(input(f"\nWhich pod from {self.selected_namespace} do you want to check the health for? Select a pod by entering its number: >> "))
+            if (choice == '1'):
+                self.choice = 1
+                pass
+            elif (choice == '2'):
+                self.choice = 2
+                print("\nNamespaces in the cluster:\n")
+                namespaces = self.list_namespaces()
+                namespace_len = len(namespaces)
+                for i, namespace in enumerate(namespaces, start=1):
+                    print(f"{i}. {namespace}")
 
-            while True:
-                if self.selected_pod_index not in list(range(1, pod_len+1)):
-                    self.selected_pod_index = int(input(f"\nWrong input! Select a pod number between {1} to {pod_len}: >> "))   
-                else:
-                    break
+                self.selected_namespace_index = int(input("\nWhich namespace do you want to check the health for? Select a namespace by entering its number: >> "))
+                while True:
+                    if self.selected_namespace_index not in list(range(1, namespace_len+1)):
+                        self.selected_namespace_index = int(input(f"\nWrong input! Select a namespace number between {1} to {namespace_len}: >> "))   
+                    else:
+                        self.nms_subgraph = create_subgraph_by_namespace(SUPER_GRAPH_PATH, SUBGRAPH_NAMESPACES_PATH, namespaces[self.selected_namespace_index-1])
+                        break
 
-            print("\nChecking status of the pod...")
+            elif (choice == '3'):
+                self.choice = 3
+                print("\nNamespaces in the cluster:\n")
+                namespaces = self.list_namespaces()
+                namespace_len = len(namespaces)
+                for i, namespace in enumerate(namespaces, start=1):
+                    print(f"{i}. {namespace}")
 
-            print("\nExtracting logs and events from the pod...")
+                self.selected_namespace_index = int(input("\nWhich namespace do you want to check the health for? Select a namespace by entering its number: >> "))
+                while True:
+                    if self.selected_namespace_index not in list(range(1, namespace_len+1)):
+                        self.selected_namespace_index = int(input(f"\nWrong input! Select a namespace number between {1} to {namespace_len}: >> "))   
+                    else:
+                        #self.nms_subgraph = create_subgraph_by_namespace(SUPER_GRAPH_PATH, SUBGRAPH_NAMESPACES_PATH, namespaces[self.selected_namespace_index-1])
+                        break
 
-            logs_from_pod = self.get_logs_from_pod(self.selected_namespace_index, self.selected_pod_index)
+                self.selected_namespace = namespaces[self.selected_namespace_index - 1]
+                pod_list = self.list_pods(self.selected_namespace)
+                pod_len = len(pod_list)
+                print(f"\nPods in the namespace {self.selected_namespace}:\n")
+                for i, pod in enumerate(pod_list, start=1):
+                    print(f"{i}. {pod}")
+                self.selected_pod_index = int(input(f"\nWhich pod from {self.selected_namespace} do you want to check the health for? Select a pod by entering its number: >> "))
 
-            self.logs_extracted = extract_log_entries(logs_from_pod)
+                while True:
+                    if self.selected_pod_index not in list(range(1, pod_len+1)):
+                        self.selected_pod_index = int(input(f"\nWrong input! Select a pod number between {1} to {pod_len}: >> "))   
+                    else:
+                        self.pod_graph = create_pod_subgraph(SUPER_GRAPH_PATH, SUBGRAPH_POD_PATH, namespaces[self.selected_namespace_index-1], pod_list[self.selected_pod_index - 1])
+                        break
 
-            print("\nLogs and events from the pod extracted successfully!\n")
+                print("\nChecking status of the pod...")
 
-        prompt_to_llm = self.create_prompt(self.logs_extracted)
+                print("\nExtracting logs and events from the pod...")
 
-        krsllmclient.interactive_session(prompt_to_llm)
+                logs_from_pod = self.get_logs_from_pod(self.selected_namespace_index, self.selected_pod_index)
 
-        self.save_state()
+                self.logs_extracted = extract_log_entries(logs_from_pod)
+
+                print("\nLogs and events from the pod extracted successfully!\n")
+
+            prompt_to_llm = self.create_prompt(self.logs_extracted)
+
+            krsllmclient.interactive_session(prompt_to_llm)
+
+            self.save_state()
 
     def get_logs_from_pod(self, namespace_index, pod_index):
         try:
@@ -250,9 +298,13 @@ class KrsMain:
             return None
 
     def create_prompt(self, log_entries):
-        prompt = "You are a DevOps expert with experience in Kubernetes. Analyze the following log entries:\n{\n"
+        prompt = "You are a DevOps expert with experience in Kubernetes. Analyze the following log entries and cluster graph data:\n{\n"
         for entry in sorted(log_entries):  # Sort to maintain consistent order
             prompt += f"{entry}\n"
+        prompt += str(self.supergraph) if self.choice == 1 else '\n'
+        prompt += str(self.error_subgraph) + '\n'
+        prompt += str(self.nms_subgraph) + '\n' if self.choice == 2 else '\n'
+        prompt += str(self.pod_graph) + '\n' if self.pod_graph == 3 else '\n'
         prompt += "}\nIf there is nothing of concern in between { }, return a message stating that 'Everything looks good!'. Explain the warnings and errors and the steps that should be taken to resolve the issues, only if they exist."
         return prompt
     
