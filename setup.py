@@ -10,7 +10,7 @@ setup(
     description='Kubernetes Recommendation Service with LLM integration',
     author='Abhijeet Mazumdar , Karan Singh & Ajeet Singh Raina',
     author_email='abhijeet@kubetools.ca, karan@kubetools.ca, ajeet@kubetools.ca',
-    url='https://github.com/KrsGPTs/krs',
+    url='https://github.com/kubetoolsca/krs',
     packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
