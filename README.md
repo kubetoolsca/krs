@@ -1,4 +1,7 @@
-
+![stars](https://img.shields.io/github/stars/kubetoolsca/krs)
+![forks](https://img.shields.io/github/forks/kubetoolsca/krs)
+![issues](https://img.shields.io/github/issues/kubetoolsca/krs)
+![Twitter](https://img.shields.io/twitter/follow/kubetools?style=social)
 
 
 # Kubetools Recommender System(a.k.a Krs)
