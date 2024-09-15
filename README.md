@@ -62,6 +62,9 @@ The project's data, such as tool rankings, CNCF status, and Kubernetes cluster i
 
 <img width="299" alt="image" src="bhive.png">
 
+<img src="demo.gif" width=650px />
+
+
 
 ## Prerequisites:
 
