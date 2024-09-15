@@ -8,7 +8,9 @@
 
 A GenAI-powered Kubetools Recommender system for your Kubernetes cluster. 
 
-<img src="https://github.com/kubetoolsca/krs/assets/313480/5da391ba-6b15-4010-8bc7-404978bef1e7" width="400">
+<img src="https://github.com/user-attachments/assets/47432702-0d16-49c9-af23-6331f753cf76" alt="krs_logo" width="300" height="320">
+
+
 
 
 
