@@ -1,7 +1,10 @@
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kubetoolsca/krs)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kubetoolsca/krs)
 ![stars](https://img.shields.io/github/stars/kubetoolsca/krs)
 ![forks](https://img.shields.io/github/forks/kubetoolsca/krs)
 ![issues](https://img.shields.io/github/issues/kubetoolsca/krs)
 ![Twitter](https://img.shields.io/twitter/follow/kubetools?style=social)
+
 
 
 # Kubetools Recommender System(a.k.a Krs)
