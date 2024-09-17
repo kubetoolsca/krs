@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: log-simulation-script
+  namespace: ns4
+data:
+  simulate_logs.sh: |
+    #!/bin/sh
+    while true; do
+      echo '10.1.1.5 - - [17/Sep/2024:12:34:56 +0000] "GET /index.html HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"' >> /var/log/nginx/access.log
+      sleep 1
+      if [ $((RANDOM % 10)) -lt 3 ]; then
+        echo '2024/09/17 12:36:22 [error] 34#34: *23 connect() failed (111: Connection refused) while connecting to upstream, client: 10.1.1.10, server: example.com, request: "GET /api/data HTTP/1.1", upstream: "http://10.1.1.20:8080/api/data", host: "example.com"' >> /var/log/nginx/error.log
+      fi
+      sleep 1
+    done
