@@ -433,7 +433,6 @@ The tool is designed to be a non-invasive tool that provides insights into the c
 </details>
 
 
-
 ## Community
 Find us on [Slack](https://www.launchpass.com/kubetoolsio)
 
