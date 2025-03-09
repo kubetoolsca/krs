@@ -5,7 +5,7 @@ from krs.utils.constants import (KUBETOOLS_DATA_JSONURL, KUBETOOLS_JSONPATH, CNC
 
 # Function to convert 'githubStars' to a float, or return 0 if it cannot be converted
 def get_github_stars(tool):
-    stars = tool.get('githubStars', 0)
+    stars = tool.get('rankedScore', 0)
     try:
         return float(stars)
     except ValueError:
@@ -48,7 +48,7 @@ def krs_tool_ranking_info():
     download_file(KUBETOOLS_DATA_JSONURL, KUBETOOLS_JSONPATH)
     download_file(CNCF_YMLURL, CNCF_YMLPATH)
 
-    with open(KUBETOOLS_JSONPATH) as f:
+    with open(KUBETOOLS_JSONPATH, encoding='utf-8') as f:
         data = json.load(f)
 
     for category in data:
