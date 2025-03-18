@@ -4,10 +4,10 @@ import yaml
 from krs.utils.constants import (KUBETOOLS_DATA_JSONURL, KUBETOOLS_JSONPATH, CNCF_YMLPATH, CNCF_YMLURL, CNCF_TOOLS_JSONPATH, TOOLS_RANK_JSONPATH, CATEGORY_RANK_JSONPATH)
 
 # Function to convert 'githubStars' to a float, or return 0 if it cannot be converted
-def get_github_stars(tool):
-    stars = tool.get('rankedScore', 0)
+def get_ranked_score(tool):
+    score = tool.get('rankedScore', 0)
     try:
-        return float(stars)
+        return float(score)
     except ValueError:
         return 0.0
     
@@ -53,7 +53,7 @@ def krs_tool_ranking_info():
 
     for category in data:
         # Sort the tools in the current category by the number of GitHub stars
-        sorted_tools = sorted(category['tools'], key=get_github_stars, reverse=True)
+        sorted_tools = sorted(category['tools'], key=get_ranked_score, reverse=True)
 
         for i, tool in enumerate(sorted_tools, start=1):
             tool["name"] = tool['name'].replace("\t", "").lower()
