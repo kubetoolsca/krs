@@ -34,28 +34,28 @@ jobs:
             echo "- No ranking changes detected." > out/summary.md
           else
             python - <<'PY'
-import json
-import subprocess
-from pathlib import Path
-from krs.utils.ranking.diffs import summarize_repo_diff
+            import json
+            import subprocess
+            from pathlib import Path
+            from krs.utils.ranking.diffs import summarize_repo_diff
 
-current_path = Path("krs/data/tool_rankings/canonical.json")
-current = json.loads(current_path.read_text(encoding="utf-8"))
+            current_path = Path("krs/data/tool_rankings/canonical.json")
+            current = json.loads(current_path.read_text(encoding="utf-8"))
 
-try:
-    previous_text = subprocess.check_output(
-        ["git", "show", "HEAD:krs/data/tool_rankings/canonical.json"],
-        text=True,
-    )
-    previous = json.loads(previous_text)
-except subprocess.CalledProcessError:
-    previous = {"categories": []}
+            try:
+                previous_text = subprocess.check_output(
+                    ["git", "show", "HEAD:krs/data/tool_rankings/canonical.json"],
+                    text=True,
+                )
+                previous = json.loads(previous_text)
+            except subprocess.CalledProcessError:
+                previous = {"categories": []}
 
-summary = summarize_repo_diff(previous, current)
-summary_path = Path("out/summary.md")
-summary_path.write_text(summary, encoding="utf-8")
-print(summary)
-PY
+            summary = summarize_repo_diff(previous, current)
+            summary_path = Path("out/summary.md")
+            summary_path.write_text(summary, encoding="utf-8")
+            print(summary)
+            PY
           fi
       - name: Collect artifacts
         run: |
