@@ -16,3 +16,7 @@ POD_INFO_FILEPATH = './exported_pod_info.json'
 MAX_OUTPUT_TOKENS = 512
 
 KRS_DATA_DIRECTORY = 'krs/data'
+
+TOOL_RANKINGS_DIR = 'krs/data/tool_rankings'
+TOOL_RANKINGS_SOURCES_PATH = 'krs/data/tool_rankings/sources.yaml'
+TOOL_RANKINGS_CANONICAL_PATH = 'krs/data/tool_rankings/canonical.json'

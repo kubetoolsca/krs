@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "generated_at": "1970-01-01T00:00:00Z",
+    "source_repos": [],
+    "version": "1.0"
+  },
+  "categories": [],
+  "legacy": {
+    "kubetools_data": [],
+    "category_rank": {}
+  },
+  "weights": {
+    "popularity": 0.35,
+    "recency": 0.25,
+    "issue_velocity": 0.2,
+    "growth": 0.15,
+    "cncf_status": 0.05
+  }
+}

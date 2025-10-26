@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 
-import typer, os
+import os
+from typing import Optional
+
+import typer
 from krs.main import KrsMain
 from krs.utils.constants import KRSSTATE_PICKLE_FILEPATH, KRS_DATA_DIRECTORY
 
 app = typer.Typer(help="krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster")
+rank_app = typer.Typer(help="Manage and refresh Kubetools ranking data")
+app.add_typer(rank_app, name="rank")
 krs = KrsMain()
 
 def check_initialized():
@@ -71,8 +76,18 @@ def recommend():
     krs.generate_recommendations()
 
 @app.command()
-def health(change_model: bool = typer.Option(False, help="Option to reinitialize/change the LLM, if set to True"),
-           device: str = typer.Option('cpu', help='Option to run Huggingface models on GPU by entering the option as "gpu"')):
+def health(
+    change_model: bool = typer.Option(
+        False,
+        "--change-model",
+        help="Reinitialize or change the configured LLM provider.",
+        is_flag=True,
+    ),
+    device: str = typer.Option(
+        'cpu',
+        help='Option to run Huggingface models on GPU by entering the option as "gpu"',
+    ),
+):
     """
     Starts an interactive terminal using an LLM of your choice to detect and fix issues with your cluster
     """
@@ -97,6 +112,29 @@ def exit():
     check_initialized()
     krs.exit()
     typer.echo("Krs services closed safely.")
+
+
+@rank_app.command("update")
+def rank_update(
+    dry_run: bool = typer.Option(
+        False,
+        "--dry-run",
+        help="Execute workflow without writing files",
+        is_flag=True,
+        flag_value=True,
+    ),
+):
+    """
+    Refresh the ranking snapshot, canonical data set, and legacy JSON payloads.
+    """
+    outputs = krs.update_rankings(dry_run=dry_run)
+    typer.echo("Ranking snapshot collected.")
+    if outputs.diff_summary:
+        typer.echo(outputs.diff_summary)
+    if dry_run:
+        typer.echo("Dry run complete; no files were written.")
+    else:
+        typer.echo(f"Canonical rankings updated at {outputs.canonical['metadata']['generated_at']}.")
 
 if __name__ == "__main__":
     app()

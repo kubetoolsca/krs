@@ -1,0 +1,20 @@
+{
+  "ai-operations": {
+    "1": {
+      "name": "krs",
+      "url": "https://github.com/kubetoolsca/krs"
+    }
+  },
+  "ai-troubleshooting": {
+    "1": {
+      "name": "k8sgpt",
+      "url": "https://github.com/k8sgpt-ai/k8sgpt"
+    }
+  },
+  "manifest-generation": {
+    "1": {
+      "name": "kubectl-ai",
+      "url": "https://github.com/sozercan/kubectl-ai"
+    }
+  }
+}
