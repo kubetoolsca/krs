@@ -1,0 +1,20 @@
+tools:
+- name: k8sgpt
+  repo: k8sgpt-ai/k8sgpt
+  category: ai-troubleshooting
+  cncf_status: sandbox
+  capabilities:
+  - diagnose
+  - explain
+- name: kubectl-ai
+  repo: sozercan/kubectl-ai
+  category: manifest-generation
+  capabilities:
+  - generate-manifests
+  - chat
+- name: krs
+  repo: kubetoolsca/krs
+  category: ai-operations
+  capabilities:
+  - recommend
+  - diagnose

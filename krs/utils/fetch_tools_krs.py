@@ -1,7 +1,17 @@
 import json
 import requests
 import yaml
-from krs.utils.constants import (KUBETOOLS_DATA_JSONURL, KUBETOOLS_JSONPATH, CNCF_YMLPATH, CNCF_YMLURL, CNCF_TOOLS_JSONPATH, TOOLS_RANK_JSONPATH, CATEGORY_RANK_JSONPATH)
+from pathlib import Path
+from krs.utils.constants import (
+    KUBETOOLS_DATA_JSONURL,
+    KUBETOOLS_JSONPATH,
+    CNCF_YMLPATH,
+    CNCF_YMLURL,
+    CNCF_TOOLS_JSONPATH,
+    TOOLS_RANK_JSONPATH,
+    CATEGORY_RANK_JSONPATH,
+    TOOL_RANKINGS_CANONICAL_PATH,
+)
 
 # Function to convert 'githubStars' to a float, or return 0 if it cannot be converted
 def get_github_stars(tool):
@@ -40,7 +50,42 @@ def save_json_file(jsondict, jsonpath):
         json.dump(jsondict, f, indent=4)
 
 
+def load_canonical_payload():
+    canonical_path = Path(TOOL_RANKINGS_CANONICAL_PATH)
+    if not canonical_path.exists():
+        return None
+
+    with canonical_path.open('r', encoding='utf-8') as fh:
+        return json.load(fh)
+
+
+def build_dicts_from_canonical(canonical_data):
+    tools_dict = {}
+    category_tools_dict = {}
+    cncf_tools = {}
+
+    for category in canonical_data.get('categories', []):
+        name = category['name']
+        category_tools_dict.setdefault(name, {})
+        for tool in category.get('tools', []):
+            tool_name = tool['name']
+            rank = tool['rank']
+            url = f"https://github.com/{tool['repo']}"
+            cncf_tools[tool_name] = tool.get('cncf_status', 'unlisted')
+
+            tools_dict.setdefault(tool_name, []).append(
+                {'rank': rank, 'category': name, 'url': url}
+            )
+            category_tools_dict[name][rank] = {'name': tool_name, 'url': url}
+
+    return tools_dict, category_tools_dict, {'cncftools': cncf_tools}
+
+
 def krs_tool_ranking_info():
+    canonical_data = load_canonical_payload()
+    if canonical_data:
+        return build_dicts_from_canonical(canonical_data)
+
     # New dictionaries 
     tools_dict = {}
     category_tools_dict = {}
@@ -80,4 +125,3 @@ def krs_tool_ranking_info():
 if __name__=='__main__':
     tools_dict, category_tools_dict, cncf_tools_dict = krs_tool_ranking_info()
     print(cncf_tools_dict)
-

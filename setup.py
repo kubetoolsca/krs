@@ -14,6 +14,13 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
+    extras_require={
+        'dev': [
+            'pytest>=7.4',
+            'pytest-mock>=3.10',
+            'requests-mock>=1.11',
+        ],
+    },
     entry_points={
         'console_scripts': [
             'krs=krs.krs:app',  # Adjust the module and function path as needed

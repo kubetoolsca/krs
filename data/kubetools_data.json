@@ -1,0 +1,38 @@
+[
+  {
+    "category": {
+      "name": "ai-operations"
+    },
+    "tools": [
+      {
+        "githubStars": 185,
+        "link": "https://github.com/kubetoolsca/krs",
+        "name": "krs"
+      }
+    ]
+  },
+  {
+    "category": {
+      "name": "ai-troubleshooting"
+    },
+    "tools": [
+      {
+        "githubStars": 7077,
+        "link": "https://github.com/k8sgpt-ai/k8sgpt",
+        "name": "k8sgpt"
+      }
+    ]
+  },
+  {
+    "category": {
+      "name": "manifest-generation"
+    },
+    "tools": [
+      {
+        "githubStars": 1194,
+        "link": "https://github.com/sozercan/kubectl-ai",
+        "name": "kubectl-ai"
+      }
+    ]
+  }
+]

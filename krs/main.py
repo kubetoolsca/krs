@@ -1,10 +1,24 @@
+from pathlib import Path
+from typing import List
+
+import os, pickle, time, json
+
+import yaml
+from tabulate import tabulate
+
 from krs.utils.fetch_tools_krs import krs_tool_ranking_info
 from krs.utils.cluster_scanner import KubetoolsScanner
 from krs.utils.llm_client import KrsGPTClient
 from krs.utils.functional import extract_log_entries, CustomJSONEncoder
-import os, pickle, time, json
-from tabulate import tabulate
-from krs.utils.constants import (KRSSTATE_PICKLE_FILEPATH, LLMSTATE_PICKLE_FILEPATH, POD_INFO_FILEPATH, KRS_DATA_DIRECTORY)
+from krs.utils.ranking import update_rankings, ToolSource
+from krs.utils.constants import (
+    KRSSTATE_PICKLE_FILEPATH,
+    LLMSTATE_PICKLE_FILEPATH,
+    POD_INFO_FILEPATH,
+    KRS_DATA_DIRECTORY,
+    TOOL_RANKINGS_DIR,
+    TOOL_RANKINGS_SOURCES_PATH,
+)
 
 class KrsMain:
     
@@ -24,6 +38,8 @@ class KrsMain:
         self.cluster_tool_list = None
         self.detailed_cluster_tool_list = None
         self.category_cluster_tools_dict = None
+
+        self.rankings_data_dir = Path(TOOL_RANKINGS_DIR)
 
         self.load_state()
 
@@ -72,6 +88,83 @@ class KrsMain:
                 self.detailed_cluster_tool_list = state.get('detailed_tool_list')
                 self.category_cluster_tools_dict = state.get('category_tool_list')
             self.scanner = KubetoolsScanner(self.get_events, self.get_logs, self.config_file)
+
+    def _load_tool_sources(self) -> List[ToolSource]:
+        config_path = Path(TOOL_RANKINGS_SOURCES_PATH)
+        if not config_path.exists():
+            self._initialise_default_sources(config_path)
+
+        if not config_path.exists():
+            raise FileNotFoundError(
+                f"Ranking sources file missing at {config_path}. "
+                "Define at least one tool entry to proceed."
+            )
+
+        with config_path.open('r', encoding='utf-8') as source_file:
+            data = yaml.safe_load(source_file) or {}
+
+        tools = []
+        for entry in data.get('tools', []):
+            tools.append(
+                ToolSource(
+                    name=entry['name'],
+                    repo=entry['repo'],
+                    category=entry['category'],
+                    cncf_status=entry.get('cncf_status', 'unlisted'),
+                    mcp_support=entry.get('mcp_support', False),
+                    capabilities=entry.get('capabilities', []),
+                )
+            )
+
+        if not tools:
+            raise ValueError("No tool entries defined under 'tools' in ranking configuration.")
+        return tools
+
+    def _initialise_default_sources(self, target_path: Path) -> None:
+        """
+        Seed a minimal sources.yaml so that the ranking workflow can run on a
+        fresh checkout without additional setup.
+        """
+
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+
+        if target_path.exists():
+            return
+
+        default_sources = {
+            "tools": [
+                {
+                    "name": "k8sgpt",
+                    "repo": "k8sgpt-ai/k8sgpt",
+                    "category": "ai-troubleshooting",
+                    "cncf_status": "sandbox",
+                    "capabilities": ["diagnose", "explain"],
+                },
+                {
+                    "name": "kubectl-ai",
+                    "repo": "sozercan/kubectl-ai",
+                    "category": "manifest-generation",
+                    "capabilities": ["generate-manifests", "chat"],
+                },
+                {
+                    "name": "krs",
+                    "repo": "kubetoolsca/krs",
+                    "category": "ai-operations",
+                    "capabilities": ["recommend", "diagnose"],
+                },
+            ]
+        }
+
+        with target_path.open('w', encoding='utf-8') as fh:
+            yaml.safe_dump(default_sources, fh, sort_keys=False)
+
+    def update_rankings(self, dry_run: bool = False):
+        sources = self._load_tool_sources()
+        return update_rankings(
+            sources=sources,
+            data_dir=self.rankings_data_dir,
+            dry_run=dry_run,
+        )
     
     def check_scanned(self):
         if not self.isClusterScanned:
@@ -293,4 +386,3 @@ if __name__=='__main__':
     # logs = recommender.extract_log_entries(logs_info)
     # print(logs)
     # print(recommender.create_prompt(logs))
-
