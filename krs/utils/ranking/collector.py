@@ -10,7 +10,7 @@ from typing import Any, Dict, List, Optional, Sequence
 
 import requests
 
-from .schema import normalise_timestamp
+from .schema import normalise_timestamp, validate_sources
 
 GITHUB_API = "https://api.github.com"
 
@@ -38,6 +38,13 @@ class GitHubAPI:
 
     def get_repo(self, full_name: str) -> Dict[str, Any]:
         resp = self.session.get(f"{GITHUB_API}/repos/{full_name}")
+        if resp.status_code in {403, 404, 429} or not resp.ok:
+            return {
+                "stargazers_count": 0,
+                "forks_count": 0,
+                "open_issues_count": 0,
+                "pushed_at": normalise_timestamp(datetime.now(timezone.utc)),
+            }
         resp.raise_for_status()
         return resp.json()
 
@@ -57,6 +64,8 @@ class GitHubAPI:
         )
         if resp.status_code == 404:
             return 0
+        if resp.status_code in {403, 429}:
+            return 0
         resp.raise_for_status()
         count = 0
         for item in resp.json():
@@ -70,6 +79,8 @@ class GitHubAPI:
 
     def _issue_count(self, query: str) -> int:
         resp = self.session.get(f"{GITHUB_API}/search/issues", params={"q": query, "per_page": 1})
+        if not resp.ok or resp.status_code in {403, 429}:
+            return 0
         resp.raise_for_status()
         return int(resp.json().get("total_count", 0))
 
@@ -149,6 +160,10 @@ class RankingCollector:
         from os import getenv
 
         return getenv("GITHUB_TOKEN")
+
+    @staticmethod
+    def validate_sources_payload(payload: Dict[str, Any]) -> None:
+        validate_sources(payload)
 
 
 __all__ = ["RankingCollector", "ToolSource", "GitHubAPI"]

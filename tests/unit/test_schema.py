@@ -7,6 +7,7 @@ from krs.utils.ranking.schema import (
     normalise_timestamp,
     validate_canonical,
     validate_snapshot,
+    validate_sources,
 )
 
 
@@ -94,3 +95,23 @@ def test_validate_canonical_requires_rank():
     canonical["categories"][0]["tools"][0].pop("rank")
     with pytest.raises(ValidationError):
         validate_canonical(canonical)
+
+
+def test_validate_sources_accepts_curated_payload():
+    payload = {
+        "tools": [
+            {
+                "name": "krs",
+                "repo": "kubetoolsca/krs",
+                "category": "ai-operations",
+                "capabilities": ["diagnose"],
+            }
+        ]
+    }
+    validate_sources(payload)
+
+
+def test_validate_sources_rejects_missing_repo():
+    payload = {"tools": [{"name": "missing", "category": "test"}]}
+    with pytest.raises(ValidationError):
+        validate_sources(payload)

@@ -116,17 +116,17 @@ def exit():
 
 @rank_app.command("update")
 def rank_update(
-    dry_run: Optional[bool] = typer.Option(
-        None,
+    dry_run: bool = typer.Option(
+        False,
         "--dry-run",
         help="Execute workflow without writing files",
         is_flag=True,
+        flag_value=True,
     ),
 ):
     """
     Refresh the ranking snapshot, canonical data set, and legacy JSON payloads.
     """
-    dry_run = bool(dry_run)
     outputs = krs.update_rankings(dry_run=dry_run)
     typer.echo("Ranking snapshot collected.")
     if outputs.diff_summary:

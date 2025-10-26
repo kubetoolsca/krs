@@ -1,176 +1,19 @@
 {
-  "categories": [
-    {
-      "name": "ai-operations",
-      "tools": [
-        {
-          "capabilities": [
-            "recommend",
-            "diagnose"
-          ],
-          "category": "ai-operations",
-          "cncf_status": "unlisted",
-          "forks": 36,
-          "issue_velocity_30d": 0.0,
-          "last_commit_at": "2025-03-18T14:02:14Z",
-          "mcp_support": false,
-          "name": "krs",
-          "open_issues": 9,
-          "rank": 1,
-          "reason": "recommend, diagnose",
-          "repo": "kubetoolsca/krs",
-          "score": 0.04537,
-          "score_inputs": {
-            "cncf": 0.0,
-            "growth": 0.0,
-            "issue_velocity": 0.0,
-            "popularity": 0.0,
-            "recency": 0.181481
-          },
-          "stars": 185,
-          "trend_30d_stars": 0
-        }
-      ]
-    },
-    {
-      "name": "ai-troubleshooting",
-      "tools": [
-        {
-          "capabilities": [
-            "diagnose",
-            "explain"
-          ],
-          "category": "ai-troubleshooting",
-          "cncf_status": "sandbox",
-          "forks": 886,
-          "issue_velocity_30d": 0.0,
-          "last_commit_at": "2025-10-25T03:56:31Z",
-          "mcp_support": false,
-          "name": "k8sgpt",
-          "open_issues": 120,
-          "rank": 1,
-          "reason": "active commits; diagnose, explain",
-          "repo": "k8sgpt-ai/k8sgpt",
-          "score": 0.625,
-          "score_inputs": {
-            "cncf": 0.5,
-            "growth": 0.0,
-            "issue_velocity": 0.0,
-            "popularity": 1.0,
-            "recency": 1.0
-          },
-          "stars": 7077,
-          "trend_30d_stars": 0
-        }
-      ]
-    },
-    {
-      "name": "manifest-generation",
-      "tools": [
-        {
-          "capabilities": [
-            "generate-manifests",
-            "chat"
-          ],
-          "category": "manifest-generation",
-          "cncf_status": "unlisted",
-          "forks": 91,
-          "issue_velocity_30d": 0.0,
-          "last_commit_at": "2025-01-27T22:00:14Z",
-          "mcp_support": false,
-          "name": "kubectl-ai",
-          "open_issues": 15,
-          "rank": 1,
-          "reason": "generate-manifests, chat",
-          "repo": "sozercan/kubectl-ai",
-          "score": 0.048101,
-          "score_inputs": {
-            "cncf": 0.0,
-            "growth": 0.0,
-            "issue_velocity": 0.0,
-            "popularity": 0.137432,
-            "recency": 0.0
-          },
-          "stars": 1194,
-          "trend_30d_stars": 0
-        }
-      ]
-    }
-  ],
-  "legacy": {
-    "category_rank": {
-      "ai-operations": {
-        "1": {
-          "name": "krs",
-          "url": "https://github.com/kubetoolsca/krs"
-        }
-      },
-      "ai-troubleshooting": {
-        "1": {
-          "name": "k8sgpt",
-          "url": "https://github.com/k8sgpt-ai/k8sgpt"
-        }
-      },
-      "manifest-generation": {
-        "1": {
-          "name": "kubectl-ai",
-          "url": "https://github.com/sozercan/kubectl-ai"
-        }
-      }
-    },
-    "kubetools_data": [
-      {
-        "category": {
-          "name": "ai-operations"
-        },
-        "tools": [
-          {
-            "githubStars": 185,
-            "link": "https://github.com/kubetoolsca/krs",
-            "name": "krs"
-          }
-        ]
-      },
-      {
-        "category": {
-          "name": "ai-troubleshooting"
-        },
-        "tools": [
-          {
-            "githubStars": 7077,
-            "link": "https://github.com/k8sgpt-ai/k8sgpt",
-            "name": "k8sgpt"
-          }
-        ]
-      },
-      {
-        "category": {
-          "name": "manifest-generation"
-        },
-        "tools": [
-          {
-            "githubStars": 1194,
-            "link": "https://github.com/sozercan/kubectl-ai",
-            "name": "kubectl-ai"
-          }
-        ]
-      }
-    ]
-  },
   "metadata": {
-    "generated_at": "2025-10-26T15:55:41Z",
-    "source_repos": [
-      "k8sgpt-ai/k8sgpt",
-      "kubetoolsca/krs",
-      "sozercan/kubectl-ai"
-    ],
+    "generated_at": "1970-01-01T00:00:00Z",
+    "source_repos": [],
     "version": "1.0"
   },
+  "categories": [],
+  "legacy": {
+    "kubetools_data": [],
+    "category_rank": {}
+  },
   "weights": {
-    "cncf_status": 0.05,
-    "growth": 0.15,
-    "issue_velocity": 0.2,
     "popularity": 0.35,
-    "recency": 0.25
+    "recency": 0.25,
+    "issue_velocity": 0.2,
+    "growth": 0.15,
+    "cncf_status": 0.05
   }
 }

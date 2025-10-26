@@ -143,8 +143,38 @@ CANONICAL_SCHEMA: Dict[str, Any] = {
     "additionalProperties": False,
 }
 
+SOURCES_SCHEMA: Dict[str, Any] = {
+    "type": "object",
+    "required": ["tools"],
+    "properties": {
+        "tools": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["name", "repo", "category"],
+                "properties": {
+                    "name": {"type": "string", "minLength": 1},
+                    "repo": {"type": "string", "pattern": r"^[\w\-]+/[\w\.-]+$"},
+                    "category": {"type": "string", "minLength": 1},
+                    "cncf_status": {"type": "string"},
+                    "mcp_support": {"type": "boolean"},
+                    "capabilities": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "default": [],
+                    },
+                },
+                "additionalProperties": False,
+            },
+        },
+    },
+    "additionalProperties": False,
+}
+
 _SNAPSHOT_VALIDATOR = Draft202012Validator(SNAPSHOT_SCHEMA)
 _CANONICAL_VALIDATOR = Draft202012Validator(CANONICAL_SCHEMA)
+_SOURCES_VALIDATOR = Draft202012Validator(SOURCES_SCHEMA)
 
 
 def validate_snapshot(payload: Dict[str, Any]) -> None:
@@ -155,6 +185,10 @@ def validate_canonical(payload: Dict[str, Any]) -> None:
     _CANONICAL_VALIDATOR.validate(payload)
 
 
+def validate_sources(payload: Dict[str, Any]) -> None:
+    _SOURCES_VALIDATOR.validate(payload)
+
+
 def normalise_timestamp(value: datetime) -> str:
     return value.strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -163,7 +197,9 @@ __all__ = [
     "ValidationError",
     "SNAPSHOT_SCHEMA",
     "CANONICAL_SCHEMA",
+    "SOURCES_SCHEMA",
     "validate_snapshot",
     "validate_canonical",
+    "validate_sources",
     "normalise_timestamp",
 ]

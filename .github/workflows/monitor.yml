@@ -1,0 +1,92 @@
+name: monitor
+
+on:
+  schedule:
+    - cron: "0 3 * * 2,6"
+  workflow_dispatch: {}
+
+jobs:
+  ranking-refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -e ".[dev]"
+      - name: Dry run snapshot
+        run: |
+          krs rank update --dry-run || true
+      - name: Live ranking update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          krs rank update
+      - name: Prepare summary
+        run: |
+          mkdir -p out
+          if git diff --quiet; then
+            echo "- No ranking changes detected." > out/summary.md
+          else
+            python - <<'PY'
+import json
+import subprocess
+from pathlib import Path
+from krs.utils.ranking.diffs import summarize_repo_diff
+
+current_path = Path("krs/data/tool_rankings/canonical.json")
+current = json.loads(current_path.read_text(encoding="utf-8"))
+
+try:
+    previous_text = subprocess.check_output(
+        ["git", "show", "HEAD:krs/data/tool_rankings/canonical.json"],
+        text=True,
+    )
+    previous = json.loads(previous_text)
+except subprocess.CalledProcessError:
+    previous = {"categories": []}
+
+summary = summarize_repo_diff(previous, current)
+summary_path = Path("out/summary.md")
+summary_path.write_text(summary, encoding="utf-8")
+print(summary)
+PY
+          fi
+      - name: Collect artifacts
+        run: |
+          mkdir -p out/tool_rankings
+          cp -r krs/data/tool_rankings out/tool_rankings/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rankings
+          path: out/
+      - name: Open PR if changes detected
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          BRANCH="chore/rankings-$(date +%Y%m%d)"
+          git checkout -b "$BRANCH"
+          git add krs/data/tool_rankings
+          git commit -m "chore(rankings): refresh $(date +%Y-%m-%d)"
+          git push -u origin "$BRANCH"
+          SUMMARY=$(cat out/summary.md)
+          BODY_FILE="out/pr_body.md"
+          {
+            printf '## Automated Ranking Update\n\n'
+            printf '%s\n' "$SUMMARY"
+            printf '\nArtifact archive: rankings\n'
+          } > "$BODY_FILE"
+          gh pr create \
+            --title "chore(rankings): refresh $(date +%Y-%m-%d)" \
+            --body-file "$BODY_FILE"

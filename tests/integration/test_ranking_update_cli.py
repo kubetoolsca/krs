@@ -2,9 +2,6 @@ import json
 from datetime import datetime, timezone
 from types import SimpleNamespace
 
-import pytest
-
-pytest.importorskip("typer")
 from typer.testing import CliRunner
 
 

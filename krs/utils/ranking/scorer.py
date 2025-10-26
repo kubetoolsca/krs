@@ -11,15 +11,23 @@ from typing import Any, Dict, List, Optional
 
 def _parse_ts(value: str) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+WEIGHTS = {
+    "popularity": 0.35,
+    "recency": 0.25,
+    "issue_velocity": 0.20,
+    "growth": 0.15,
+    "cncf_status": 0.05,
+}
 
 
 @dataclass(frozen=True)
 class ScoreWeights:
-    popularity: float = 0.35
-    recency: float = 0.25
-    issue_velocity: float = 0.20
-    growth: float = 0.15
-    cncf_status: float = 0.05
+    # v0 baseline – change via version bump
+    popularity: float = WEIGHTS["popularity"]
+    recency: float = WEIGHTS["recency"]
+    issue_velocity: float = WEIGHTS["issue_velocity"]
+    growth: float = WEIGHTS["growth"]
+    cncf_status: float = WEIGHTS["cncf_status"]
 
     def as_dict(self) -> Dict[str, float]:
         return {

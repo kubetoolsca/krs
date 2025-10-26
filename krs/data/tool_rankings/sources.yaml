@@ -15,8 +15,135 @@ tools:
   - name: krs
     repo: kubetoolsca/krs
     category: ai-operations
-    cncf_status: unlisted
-    mcp_support: false
     capabilities:
       - recommend
       - diagnose
+  - name: kagent
+    repo: kagent-dev/kagent
+    category: agent-orchestration
+    capabilities:
+      - orchestrate-agents
+      - manage-tools
+  - name: mcp-toolkit
+    repo: docker/mcp
+    category: mcp-tooling
+    mcp_support: true
+    capabilities:
+      - mcp-server
+      - cluster-ops
+  - name: botkube
+    repo: kubeshop/botkube
+    category: chatops
+    capabilities:
+      - notifications
+      - chat-commands
+  - name: loki
+    repo: grafana/loki
+    category: observability
+    cncf_status: incubating
+    capabilities:
+      - logs
+      - observability
+  - name: vector
+    repo: timberio/vector
+    category: observability
+    capabilities:
+      - log-collection
+      - processing
+  - name: prometheus
+    repo: prometheus/prometheus
+    category: observability
+    cncf_status: graduated
+    capabilities:
+      - metrics
+      - alerting
+  - name: metrics-server
+    repo: kubernetes-sigs/metrics-server
+    category: observability
+    capabilities:
+      - metrics
+      - api
+  - name: prometheus-operator
+    repo: prometheus-operator/prometheus-operator
+    category: observability
+    capabilities:
+      - metrics-operator
+      - monitoring
+  - name: trivy
+    repo: aquasecurity/trivy
+    category: security
+    capabilities:
+      - image-scan
+      - vulnerability-audit
+  - name: kube-bench
+    repo: aquasecurity/kube-bench
+    category: security
+    capabilities:
+      - cis-benchmark
+  - name: kubescape
+    repo: kubescape/kubescape
+    category: security
+    capabilities:
+      - compliance
+      - runtime-security
+  - name: ingress-nginx
+    repo: kubernetes/ingress-nginx
+    category: ingress
+    capabilities:
+      - ingress-controller
+  - name: traefik
+    repo: traefik/traefik
+    category: ingress
+    capabilities:
+      - ingress-controller
+      - service-mesh
+  - name: istio
+    repo: istio/istio
+    category: service-mesh
+    capabilities:
+      - traffic-management
+      - zero-trust
+  - name: linkerd
+    repo: linkerd/linkerd2
+    category: service-mesh
+    capabilities:
+      - service-mesh
+      - mTLS
+  - name: rook
+    repo: rook/rook
+    category: storage
+    cncf_status: graduated
+    capabilities:
+      - ceph
+      - storage-orchestration
+  - name: longhorn
+    repo: longhorn/longhorn
+    category: storage
+    cncf_status: sandbox
+    capabilities:
+      - block-storage
+      - snapshots
+  - name: argo-cd
+    repo: argoproj/argo-cd
+    category: gitops
+    capabilities:
+      - gitops
+      - progressive-delivery
+  - name: flux
+    repo: fluxcd/flux2
+    category: gitops
+    capabilities:
+      - gitops
+      - automation
+  - name: litmus
+    repo: litmuschaos/litmus
+    category: chaos-engineering
+    capabilities:
+      - chaos-tests
+      - resiliency
+  - name: velero
+    repo: vmware-tanzu/velero
+    category: backup
+    capabilities:
+      - backup
+      - disaster-recovery

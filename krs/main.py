@@ -11,6 +11,7 @@ from krs.utils.cluster_scanner import KubetoolsScanner
 from krs.utils.llm_client import KrsGPTClient
 from krs.utils.functional import extract_log_entries, CustomJSONEncoder
 from krs.utils.ranking import update_rankings, ToolSource
+from krs.utils.ranking.collector import RankingCollector
 from krs.utils.constants import (
     KRSSTATE_PICKLE_FILEPATH,
     LLMSTATE_PICKLE_FILEPATH,
@@ -102,6 +103,8 @@ class KrsMain:
 
         with config_path.open('r', encoding='utf-8') as source_file:
             data = yaml.safe_load(source_file) or {}
+
+        RankingCollector.validate_sources_payload(data)
 
         tools = []
         for entry in data.get('tools', []):
